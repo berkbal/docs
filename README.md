@@ -16,3 +16,7 @@ Bu projede Linux, Linux Sistem Yönetimi ve Yazılım Geliştirme hakkında ald�
   </tr>
 </table>
 
+<<<<<<< HEAD
+=======
+[Click Click](https://berkbal.github.io/docs/)
+>>>>>>> refs/remotes/origin/master

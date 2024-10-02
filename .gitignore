@@ -1,0 +1,14 @@
+# Python3 Virtual
+venv/
+env/
+
+# MkDocs Content
+/site/
+
+# Python
+__pycache__/
+*.py[cod]
+
+# Other
+*.log
+.DS_Store

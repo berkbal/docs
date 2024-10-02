@@ -1,0 +1,6 @@
+site_name: Berk Bal - Docs for Sysadmins
+theme:
+  name: material
+nav:
+  - Anasayfa: index.md
+  - Hakkımda: about.md

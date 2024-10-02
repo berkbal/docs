@@ -3,7 +3,6 @@ venv/
 env/
 
 # MkDocs Content
-/site/
 
 # Python
 __pycache__/

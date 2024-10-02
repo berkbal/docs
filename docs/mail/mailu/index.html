@@ -71,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#mailu-nedir" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -348,6 +353,19 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Mailu
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -358,6 +376,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailu-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mailu Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mailu Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ekstra-tercihler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ekstra Tercihler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sunucu-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sunucu Ayarları
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -388,6 +458,49 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#mailu-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mailu Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Mailu Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ekstra-tercihler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ekstra Tercihler
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sunucu-ayarlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sunucu Ayarları
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -402,9 +515,91 @@
                   
 
 
-  <h1>Mailu</h1>
-
-<p>asdf</p>
+<h1 id="mailu-nedir">Mailu Nedir?</h1>
+<p><img alt="Mailu-Logo" src="mailu.png" /></p>
+<p>Mailu, güvenli, özelleştirilebilir ve açık kaynaklı bir e-posta sunucu çözümüdür. Modern teknolojilerle geliştirilen Mailu, bireyler ve işletmeler için bağımsız e-posta sunucusu işletimini kolaylaştırır. Docker konteynerlerinde çalışarak kolay kurulum ve bakım imkanı sağlar. Mailu, kullanıcı dostu bir arayüzle e-posta yönetimini basitleştirir, spam ve virüs koruması gibi gelişmiş güvenlik özellikleri sunar. IMAP, SMTP ve Webmail gibi yaygın e-posta protokollerini destekler. Ayrıca, yüksek ölçeklenebilirliği sayesinde küçük işletmelerden büyük organizasyonlara kadar geniş bir kullanıcı yelpazesi için idealdir. Mailu, açık kaynak topluluğundan gelen katkılarla sürekli gelişir ve güncellenir, bu da onu esnek ve güvenilir bir e-posta çözümü haline getirir.</p>
+<p>Docker Compose dosyasını generate etmek için <a href="https://setup.mailu.io/">bu adresi</a> kullanabilirsiniz.</p>
+<h2 id="mailu-kurulumu">Mailu Kurulumu</h2>
+<p>Mailu en güncel Docker ve Docker Compose teknolojilerini kullandığı için bu kurulumların Docker’ın resmi repolarından yapılması gerekmektedir. Muhtemelen kullandığınız Linux dağıtımının repolarında bulunan Docker Engine ve Docker Compose Mailu için uygun olmayacaktır. Mailu’nun sistem gereksinimleri ve kullanılacak Docker ve Docker Compose versiyonları hakkında bilgi almak için <a href="https://mailu.io/2024.06/compose/requirements.html">resmi sitesini</a> ziyaret edebilirsiniz.</p>
+<p><img alt="Docker Logo" src="docker-logo-blue-300x68.png" /></p>
+<ol>
+<li>
+<p>Mailu Storage Path: Mailu’nun verilerini depolayacağı dizini belirtir. Mailu'nun docker volume dosyalarının, gerekli env dosyasının ve docker compose dosyasının bulunacağı dizini buraya girin. Örneğin <code>/mailu.</code></p>
+</li>
+<li>
+<p>Main Mail Domain and Server Display Name: Ana mail domaini ve sunucu adı bu alana girilmelidir. Örneğin, <code>berkbal.com.tr.</code></p>
+</li>
+<li>
+<p>Postmaster Local Part: Postmaster e-posta adresinin yerel kısmını belirtir. Genellikle admin olarak kullanılır.</p>
+</li>
+<li>
+<p>TLS Sertifikaları: TLS sertifikalarını nasıl yönetmek istediğinizi seçin. letsencrypt gibi bir seçenek belirleyebilirsiniz.</p>
+</li>
+<li>
+<p>Giriş Denemesi Limitleri: Belirli bir IP adresinden yapılan başarısız giriş denemeleri için saatlik limit. Örneğin, 5/saat.
+Kullanıcı başına günlük giriş deneme limiti. Örneğin, <code>50/gün.</code></p>
+</li>
+<li>
+<p>Gönderim Limitleri: Kullanıcı başına günlük gönderilebilecek mesaj limiti. Örneğin, <code>200/gün.</code></p>
+</li>
+<li>
+<p>Anonim İstatistikler: Anonimleştirilmiş istatistiklere katılmak isteyip istemediğinizi belirleyin.</p>
+</li>
+<li>
+<p>Website Name: Web sitesinin adını girin. Örneğin, <code>Berk Bal.</code></p>
+</li>
+<li>
+<p>Linked Website URL: Bağlantılı web sitesinin URL’sini girin. Örneğin, <code>https://berkbal.com.tr</code></p>
+</li>
+<li>
+<p>Yönetim Arayüzü: Yönetim arayüzünü etkinleştirin. Bu seçenek, Mailu’nun yönetim araçlarına erişim sağlar.</p>
+</li>
+<li>
+<p>API: API’yi etkinleştirin. Mailu’nun yapılandırmasını değiştirmek için RESTful API’yi kullanabilirsiniz. API’yi etkinleştirdiğinizde size bir TOKEN üretip verecektir.</p>
+</li>
+</ol>
+<h3 id="ekstra-tercihler">Ekstra Tercihler</h3>
+<p>Mailu, bir yönetici arayüzü, web e-posta istemcileri, antispam, antivirüs gibi birden fazla temel özellik ile birlikte gelir. Bu bölümde, tercihlerinize göre servisleri etkinleştirebilirsiniz:</p>
+<ol>
+<li>
+<p><strong>Web E-posta İstemcisi:</strong> Bu seçenek, kullanıcıların web üzerinden posta kutularına erişmelerini sağlar. <code>Roundcube</code>, veya <code>rainloop</code> seçeneklerinden birini seçebilirsiniz.</p>
+</li>
+<li>
+<p><strong>Antivirüs Hizmeti:</strong> <strong>ClamAV</strong> kullanarak büyük ölçekli virüs yayılma kampanyalarına karşı koruma sağlar. Bu hizmeti etkinleştirmek için <strong>en az 1GB bellek gereklidir.</strong></p>
+</li>
+<li>
+<p><strong>Webdav Hizmeti:</strong> Kullanıcıların HTTP üzerinden takvim ve rehber gibi bilgileri depolamalarını sağlar.</p>
+</li>
+<li>
+<p><strong>Fetchmail:</strong> Kullanıcıların harici bir mail sunucusundan <code>IMAP/POP3</code> ile posta çekip gelen kutularına yerleştirmelerini sağlar.</p>
+</li>
+<li>
+<p><strong>Oletools:</strong> E-posta eklerindeki belgeleri kötü amaçlı makrolara karşı tarar. Tam teşekküllü bir antivirüs programına göre daha düşük bellek kullanır.</p>
+</li>
+<li>
+<p><strong>Tika:</strong> Tika’yı etkinleştirir. E-posta ekleri içinde arama yapma işlevini sağlar. Tika, e-posta eklerindeki belgeleri tarar, işler (OCR, anahtar kelime çıkarımı) ve verimli bir şekilde aranabilir hale getirir. Bu işlem önemli miktarda kaynak (RAM, CPU ve depolama) gerektirir.</p>
+</li>
+</ol>
+<h2 id="sunucu-ayarlar">Sunucu Ayarları</h2>
+<p>Mail sunucusunun e-posta alabilmesi, gönderebilmesi ve kullanıcıların posta kutularına erişebilmesi için dünyaya açılması gerekmektedir. Mailu, bu işlemi çeşitli yollarla yapabilir:</p>
+<ol>
+<li>
+<p><strong>IPv4 Listen Address:</strong> IPv4 listen address alanına satın aldığınız sunucunun IP adresini yazmalısınız. Örneğin, 192.168.1.50.</p>
+</li>
+<li>
+<p><strong>Subnet of the Docker Network:</strong> Docker ağının alt ağını belirtin. Bu ağ, sisteminizin bağlı olduğu herhangi bir ağ ile çakışmamalıdır. Genellikle format <em>.</em>.*.0/24 şeklindedir. Örneğin, 192.168.203.0/24.</p>
+</li>
+<li>
+<p><strong>IPv6:</strong> Bu, Mailu’nun DNSSEC doğrulamasını yapmasına, DNS kök sorgularını ve önbelleklemesini gerçekleştirmesine olanak tanır.</p>
+</li>
+<li>
+<p><strong>Internal DNS Resolver (Unbound):</strong> Bu seçenek, antispam hizmetinin genel veya ISS DNS sunucuları tarafından engellenmemesine yardımcı olur.</p>
+</li>
+<li>
+<p><strong>Public Hostnames:</strong> Sunucunun barındıracağı genel ana bilgisayar adlarını girin. Bu alan adları, e-posta alan adlarının MX kayıtlarında belirtilmelidir. Ana bilgisayar adları virgülle ayrılmalıdır. Örneğin: mail.berkbal.com.tr.</p>
+</li>
+</ol>
+<p>Bu adımları tamamladıktan sonra, <code>docker-compose.yml</code> ve <code>mailu.env</code> dosyalarını oluşturup wget ile sisteme indirip kullanabileceksiniz.</p>
 
 
 

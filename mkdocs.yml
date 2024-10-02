@@ -1,4 +1,6 @@
 site_name: Docs for SysAdmins
+docs_dir: docs
+site_dir: site
 theme:
   name: material
   favicon: images/favicon.png

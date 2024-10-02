@@ -1,1 +1,1 @@
-{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Docs for Sysadmins","text":""}]}
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"","title":"Docs for Sysadmins","text":"<p>Main Page</p>"},{"location":"mail/mailu/","title":"Mailu","text":"<p>asdf</p>"}]}

@@ -1,1 +1,3 @@
-berkbal.github.io/docs/
+# GitHub Pages
+
+[Mkdocs](berkbal.github.io/docs/)

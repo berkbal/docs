@@ -4,7 +4,7 @@ docs_dir: docs_src  # Kaynak dosyalarınızın olduğu dizin
 site_dir: docs      # Derlenmiş site dosyalarının yerleştirileceği dizin
 theme:
   name: material
-  favicon: images/favicon.png
+  favicon: images/berk-bal.png
   features:
     - palette.toggle  # Karanlık mod geçişini etkinleştirir
   palette: 
@@ -26,5 +26,8 @@ theme:
         name: Switch to light mode
 
 nav:
-  - Home: index.md
-  - Linux: linux.md
+  - Ana Sayfa: index.md
+  - Linux:
+      - Logrotate: linux/logrotate.md
+  - Mail:
+      - Mailu: mail/mailu.md

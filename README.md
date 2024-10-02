@@ -15,8 +15,3 @@ Bu projede Linux, Linux Sistem Yönetimi ve Yazılım Geliştirme hakkında ald�
     <td><a href="https://www.linkedin.com/in/ben-berkbal/">Linkedin Profile</a></td>
   </tr>
 </table>
-
-<<<<<<< HEAD
-=======
-[Click Click](https://berkbal.github.io/docs/)
->>>>>>> refs/remotes/origin/master

@@ -8,28 +8,26 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/logrotate/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/docker/docker-compose-dosyalari/wireguard/wireguard/">
       
       
-        <link rel="prev" href="../..">
+        <link rel="prev" href="../../../../guncelleme/gitlab/">
       
       
-        <link rel="next" href="../../mail/mailu/">
       
-      
-      <link rel="icon" href="../../images/berk-bal.png">
+      <link rel="icon" href="../../../../images/berk-bal.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Logrotate - Docs for SysAdmins</title>
+        <title>Wireguard - Docs for SysAdmins</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +46,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#log-rotasyonu-nedir" class="md-skip">
+        <a href="#wireguard-sunucu-kurulumu" class="md-skip">
           Skip to content
         </a>
       
@@ -90,7 +88,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../../../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -110,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Logrotate
+              Wireguard
             
           </span>
         </div>
@@ -211,7 +209,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../../../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -229,7 +227,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -246,19 +244,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -272,7 +268,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -283,30 +279,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Logrotate
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../linux/logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -315,92 +291,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kurulum
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Kurulum">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rhelcentos" class="md-nav__link">
-    <span class="md-ellipsis">
-      RHEL/CentOS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debianubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debian/Ubuntu
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fedora" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fedora
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nasl-calsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nasıl çalışır?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nasıl çalışır?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ayar-dosyas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ayar Dosyası
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -455,7 +345,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mail/mailu/" class="md-nav__link">
+      <a href="../../../../mail/mailu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -518,7 +408,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guncelleme/gitlab/" class="md-nav__link">
+      <a href="../../../../guncelleme/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -543,17 +433,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -567,7 +459,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             Docker
@@ -578,17 +470,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
         
           
           <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
@@ -602,7 +496,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5_1">
             <span class="md-nav__icon md-icon"></span>
             Docker-Compose Dosyaları
@@ -613,10 +507,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Wireguard
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -625,6 +539,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker-compose-dosyas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker-Compose Dosyası
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -672,68 +615,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
+  <a href="#docker-compose-dosyas" class="md-nav__link">
     <span class="md-ellipsis">
-      Kurulum
+      Docker-Compose Dosyası
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Kurulum">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rhelcentos" class="md-nav__link">
-    <span class="md-ellipsis">
-      RHEL/CentOS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debianubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debian/Ubuntu
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fedora" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fedora
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nasl-calsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nasıl çalışır?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nasıl çalışır?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ayar-dosyas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ayar Dosyası
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -752,57 +638,40 @@
                   
 
 
-<h1 id="log-rotasyonu-nedir">Log Rotasyonu Nedir?</h1>
-<p>Log rotasyonu güncel/yeni log dosyalarını etkilemeden eski log dosyalarını silme/yedekleme işlemidir. Kullanıldığı alana göre her uygulama önemli loglar üretir ve bu logları genelde kaybetmek istemeyiz. Eğer bu logları silmezsek kullandığımız sunucunun disk kapasitesi kısa bir süre sonra dolabilir.</p>
-<p>Logları silmek yerine bizim için otomatik olarak gzip formatında arşivleyen Logrotate adında bir yazılım var.</p>
-<p>Logrotate, log dosyalarını yönetmeye, sıkıştırmaya, kaldırmaya ve hatta belirli bir zaman aralığından sonra (örneğin günlük, haftalık, aylık vb.) e-postayla bir yere göndermeye yardımcı olur.</p>
-<h2 id="kurulum">Kurulum</h2>
-<p>Çoğu Linux dağıtımı varsayılan olarak Logrotate ile gelir. Eğer sisteminizde mevcut değilse, aşağıdaki komutlarla kolayca kurulabilir:</p>
-<h3 id="rhelcentos">RHEL/CentOS</h3>
-<p><code>yum install logrotate</code></p>
-<h3 id="debianubuntu">Debian/Ubuntu</h3>
-<p><code>apt-get install logrotate</code></p>
-<h3 id="fedora">Fedora</h3>
-<p><code>dnf install logrotate</code></p>
-<h2 id="nasl-calsr">Nasıl çalışır?</h2>
-<p>Logrotate, işlem yapmak istediğiniz tüm log dosyalarını belirtebileceğiniz bir yapılandırma dosyasına sahiptir. Günlük, haftalık, aylık vb. gibi bir zaman periyodu birimine ve her döndürme için 3, 4, 5 gibi döndürme sayısına ihtiyacı vardır. Log dosyaları kaldırılmadan önce döndürme sayısı kadar döndürülür. Varsayılan döndürme sayısı 0'dır, bu da eski günlük sürümlerinin döndürülmek yerine kaldırılacağı anlamına gelir. Yani günlükleriniz <strong>my-application.log</strong> adlı bir dosyaya kaydediliyorsa, bir döndürmeden sonra my-application.1.log adlı yeni bir dosya oluşturulur.</p>
-<h3 id="ayar-dosyas">Ayar Dosyası</h3>
-<p>Logrotate yapılandırma dosyası <code>/etc/logrotate.conf</code>'da bulunur. Örnek bir yapılandırma dosyası şuna benzer bloklar içerir:</p>
-<pre><code>/var/lib/docker/containers/*/*.log {
-    rotate 5
-    copytruncate
-    missingok
-    notifempty
-    compress
-    maxsize 200M
-    daily
-}
+<p><img src="wireguard.png" height="250" width="250"/></p>
+<h1 id="wireguard-sunucu-kurulumu">Wireguard Sunucu Kurulumu</h1>
+<p>Kişisel kullanım için kullanıma hazır bir wireguard sunucu konteyneridir. Hızlı kullanım için eşleri ve yapılandırma dosyalarını otomatik olarak oluşturur. Konteyneri kurmadan önce düzenlemeniz gereken yalnızca 2 değişken vardır.</p>
+<h2 id="docker-compose-dosyas">Docker-Compose Dosyası</h2>
+<pre><code>version: '3.7'
+services:
+  wireguard:
+    image: linuxserver/wireguard
+    container_name: wireguard
+    cap_add:
+      - NET_ADMIN
+      - SYS_MODULE
+    environment:
+      - PUID=1000
+      - PGID=1000
+      - TZ=Turkey/Istanbul # timezone
+      - SERVERPORT=51820 # wireguard server portu
+      - PEERS=5 #optional
+      - PEERDNS=auto #optional
+      - ALLOWEDIPS=0.0.0.0/0 # Baglantiya izin verilen subnetler
+      - INTERNAL_SUBNET=10.13.13.0/24 # Wireguard Subneti
+      - SERVERURL= # Public IP
+    volumes:
+      - ./config:/config
+      - /usr/src:/usr/src # location of kernel headers
+      - /lib/modules:/lib/modules
+    ports:
+      - 51820:51820/udp
+    sysctls:
+      - net.ipv4.conf.all.src_valid_mark=1
+    restart: always
 </code></pre>
-<p>Şimdi bu log dosyasını adım adım inceleyelim:</p>
-<p><code>/var/lib/docker/containers/*/*.log</code></p>
-<p>Logrotate'in hangi dosyayı veya dosyalara işlem uygulayacağını gösteren yoldur.  <code>{ }</code> içerisindeki kuralları <code>/var/lib/docker/containers</code> dizinindeki bütün dizinlerin içerisindeki <code>.log</code> ile biten dosyalara aşağıdaki kuralları uygulayacak:</p>
-<p><code>rotate 5</code></p>
-<p>Loglari en fazla 5 kere saklar, yani işlem yapıldığında en fazla 5 dosya eski günlük saklanacak ve halihazırda 5 dosya olduğunda en eski günlükler silinecek.</p>
-<p>Örnek: </p>
-<pre><code>my-application.log 
-my-application.log1 
-my-application.log2 
-my-application.log3 
-my-application.log4 
-my-application.log5
-</code></pre>
-<p><code>copytruncate</code></p>
-<p>Eski log dosyalarını taşıyıp isteğe bağlı olarak yenisini oluşturmak yerine, bir kopya oluşturduktan sonra orijinal log dosyasını bulunduğu yerde, 0 KB boyutuna küçültür. <strong><em>Bazı uygulamaların</em></strong> log dosyasını kapatması mümkün olmadığında ve önceki log dosyasına yazmaya devam edebileceği durumlarda kullanılabilir. Dosyanın kopyalanması ve küçültülmesi arasında çok küçük bir zaman dilimi olduğu için log kaybı olabilir.</p>
-<p><code>missingok</code></p>
-<p>Eğer log dosyası eksikse, bir hata oluşturmaz ve bir sonraki dosyaya geçer.</p>
-<p><code>notifempty</code></p>
-<p>Log dosyasının içeriği boşsa log rotate işlemi gerçekleştirmez.</p>
-<p><code>compress</code></p>
-<p>Eski log dosyalarını gzip formatında sıkıştırır.</p>
-<p><code>maxsize 200M</code></p>
-<p>Log dosyası, rotate kuralından bağımsız olarak 200 MB boyutunu aşarsa rotate işlemini gerçekleştirir. Bu ayar ileride <strong><em>zgrep</em></strong> kullanılarak sıkıştırılmış dosyaların içerisinde bir log ararken dosyanın boyutunun fazla büyük olmaması sağlanırsa avantaj sağlar.</p>
-<p><code>daily</code></p>
-<p>Log rotate işlemini günlük olarak gerçekleştirir.</p>
+<p>18 ve 14. satırları düzenlemek gerekmektedir. 18. satıra public IP adresini, 14. satıra ise sunucunuzda kaç istemci olmasını istediğinizi belirten bir sayı yazın.</p>
+<p>Not: Sistemde bir firewall var ise WireGuard'ın kullandığı porta izin vermek gerekmektedir. Kullanılan port 51820 olarak belirlenmiştir.(Wireguard'ın default portu) İsteğe göre bu compose dosyasından düzenlenebilir.</p>
 
 
 
@@ -849,10 +718,10 @@ my-application.log5
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["palette.toggle"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["palette.toggle"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

@@ -1,4 +1,4 @@
-<img src="wireguard.png" height="250" width="250"/>
+![wireguard logo](wireguard.png)
 
 # Wireguard Sunucu Kurulumu
 

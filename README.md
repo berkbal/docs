@@ -10,8 +10,20 @@ Bu projede Linux, Linux Sistem Yönetimi ve Yazılım Geliştirme hakkında ald�
     <th width="50" ><img src="./docs_src/images/linkedin-50x50.png"/></th>
   </tr>
   <tr>
-    <td><a href="https://berkbal.github.io/docs/">GitHub Pages</a></td>
-    <td><a href="https://berkbal.com.tr">Personal Website</a></td>
-    <td><a href="https://www.linkedin.com/in/ben-berkbal/">Linkedin Profile</a></td>
+    <td><a href="https://berkbal.github.io/docs/" target=”_blank”>GitHub Pages</a></td>
+    <td><a href="https://berkbal.com.tr" target=”_blank”>Personal Website</a></td>
+    <td><a href="https://www.linkedin.com/in/ben-berkbal/" target=”_blank”>Linkedin Profile</a></td>
   </tr>
 </table>
+
+## Projeyi Kendi Bilgisayarınızda Çalıştırmak İçin:
+
+1. ```git clone https://github.com/berkbal/docs.git```
+2. ```cd docs```
+3. ```python3 -m venv venv```
+4. ```source venv/bin/activate```
+5. ```pip install -r requirements.txt```
+6. ```mkdocs serve```
+
+<hr>
+<a href="http://localhost:8000/">http://localhost:8000/</a> adresinden Mkdocs'un ana sayfasına erişebilirsiniz.

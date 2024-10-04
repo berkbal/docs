@@ -29,3 +29,5 @@ nav:
       - Logrotate: linux/logrotate.md
   - Mail:
       - Mailu: mail/mailu.md
+  - Güncelleme:
+      - Gitlab: guncelleme/gitlab.md

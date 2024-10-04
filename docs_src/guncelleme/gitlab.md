@@ -1,4 +1,4 @@
-# GitLab Sunucusu Güncelleme Adımları
+# GitLab Güncelleme Adımları
 
 * Bu döküman GitLab'ın bir Debian sistem üzerine apt repolarından kurulu halinin güncelleme işlemlerini içerir. **Eğer GitLab bir Docker containerı olarak çalışıyorsa uygulanacak olan işlemler farklıdır.**
 

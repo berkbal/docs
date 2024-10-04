@@ -1,8 +1,8 @@
 # GitLab Sunucusu Güncelleme Adımları
 
-* Bu döküman GitLab'ın bir Debian sistem üzerine apt repolarından kurulu halinin güncelleme işlemlerini içerir. Eğer GitLab bir Docker containerı olarak çalışıyorsa uygulanacak olan işlemler farklıdır.
+* Bu döküman GitLab'ın bir Debian sistem üzerine apt repolarından kurulu halinin güncelleme işlemlerini içerir. **Eğer GitLab bir Docker containerı olarak çalışıyorsa uygulanacak olan işlemler farklıdır.**
 
-* Güncelleme işlemi gerçekleştirilmeden önce mutlaka var olan sunucunun yedeği alınmalıdır. KVM ise /var/lib/images/ dizini altındaki qcow2 dosyasının yedeklenmesi yeterlidir.
+* Güncelleme işlemi gerçekleştirilmeden önce mutlaka var olan sunucunun yedeği alınmalıdır. KVM ise ```/var/lib/images/``` dizini altındaki ```qcow2``` dosyasının yedeklenmesi yeterlidir.
 
 ## Hazırlık
 

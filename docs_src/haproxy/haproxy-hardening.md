@@ -1,0 +1,1 @@
+# Haproxy Hardening

@@ -8,8 +8,10 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/main/mail/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/javascript/bcrypt/">
       
+      
+        <link rel="prev" href="../../docker/docker-compose-dosyalari/wireguard/wireguard/">
       
       
       
@@ -18,7 +20,7 @@
     
     
       
-        <title>Mail - Docs for SysAdmins</title>
+        <title>Bcrypt - Docs for SysAdmins</title>
       
     
     
@@ -69,6 +71,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#bcrypt-nedir" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mail
+              Bcrypt
             
           </span>
         </div>
@@ -595,17 +602,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -619,7 +628,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Javascript
@@ -630,10 +639,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../javascript/bcrypt/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bcrypt
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -642,6 +671,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-ile-nasl-kullanlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript İle Nasıl Kullanılır?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -671,6 +729,25 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#javascript-ile-nasl-kullanlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      JavaScript İle Nasıl Kullanılır?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -685,9 +762,85 @@
                   
 
 
-  <h1>Mail</h1>
+<h1 id="bcrypt-nedir">Bcrypt nedir?</h1>
+<p><strong>Bcrypt</strong>, parolaların güvenli bir şekilde saklanmasını sağlamak amacıyla kullanılan bir şifreleme algoritmasıdır. Geleneksel şifreleme yöntemlerinden farklı olarak, bcrypt hem güvenli hem de yavaş çalışacak şekilde tasarlanmıştır. Bu, saldırganların parolaları kırma girişimlerini zorlaştırır, çünkü brute-force saldırılarıyla şifre çözmek çok uzun zaman alır.</p>
+<h2 id="javascript-ile-nasl-kullanlr">JavaScript İle Nasıl Kullanılır?</h2>
+<ol>
+<li>Npm üzerinden javascript projesine aşağıdaki komut ile dahil edilir.</li>
+</ol>
+<pre><code>npm install bcryptjs
+</code></pre>
+<ol>
+<li>Projeye dahil edilen npm paketi aşağıdaki gibi import edilir.</li>
+</ol>
+<p>const bcrypt = require('bcryptjs');</p>
+<ol>
+<li>
+<p>Bu adımda yüklediğimiz paketin içerisindeki fonksiyonlar kullanılarak şifreleme işlemi gerçekleştirilir.</p>
+<ul>
+<li>
+<p><strong>hash:</strong> parola olarak verilen veriyi bcrypt algoritasmı ile hashleme işlemini gerçekleştirir.</p>
+<ul>
+<li>
+<p><strong>password(String):</strong> String olarak içerisine bir veri alır. Genelde kullanıcının şifrelenmemiş parolası buraya parametre olarak verilir.</p>
+</li>
+<li>
+<p><strong>saltOrRounds(number | string):</strong> Salt maliyet faktörü (genellikle 10 veya 12 gibi değerler). Bu, bcrypt'in hashing işlemi sırasında kaç tur (round) salt işlemi yapılacağını belirler. Değer ne kadar yüksekse, hashing işlemi o kadar uzun sürer ve güvenlik o kadar artar. </p>
+</li>
+<li>
+<p><strong>callback(function):</strong> Hashleme işlemi tamamlandığında çağırılacak olan fonksiyondur. Bu fonksiyon da iki adet parametre alır.
+    <strong>- err:</strong> Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.</p>
+<p><strong>- hash:</strong> Hashlenmiş parola(şifre) burada yer alır.</p>
+<pre><code>- Örnek:
+```
+    const plainPassword = 'kullanicidan-alinan-parola';
+    const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir
 
-
+    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
+    if (err) {
+        console.error('Hashleme hatası:', err);
+    } else {
+        console.log('Hashlenmiş şifre:', hash);
+    }
+});
+```
+</code></pre>
+<ul>
+<li>
+<p><strong>compare:</strong> kullanıcı tarafından girilen plain parolayı hashlenmiş hali ile kıyaslar.</p>
+<ul>
+<li>
+<p><strong>plainPassword(string):</strong> Parametre olarak karşılaştırma işlemi için kullanının şifrelenmemiş parolasını alır. </p>
+</li>
+<li>
+<p><strong>hashedPassword(string):</strong> Veritabanında saklanan daha önce hashlenmiş parola bu parametre ile gönderilir. Bcrypt bu hashlenmiş parolayı(şifreyi) düz metin halindeki parola ile karşılaştırarak kontrol edecektir.(plainPassword)</p>
+</li>
+<li>
+<p><strong>callback(function):</strong> Karşılaştırma işlemi tamamlandığında çağırılacak olan callback fonksiyonudur. Bu fonksiyon da iki adet parametre alır;</p>
+<ul>
+<li><strong>err:</strong> Eğer karşılaştırma sırasında bir hata oluşursa bu paramtre hata mesajını içerir.</li>
+<li><strong>isMatch:</strong> Karşılaştırma yapıldıktan sonra parolanın hashlenmiş hali ile plain text hali eşleşiyorsa true, eşleşmiyorsa false değerini alır.</li>
+</ul>
+</li>
+</ul>
+<p>Örnek:</p>
+</li>
+</ul>
+</li>
+</ul>
+<p><code>bcrypt.compare(plainPassword, hashedPassword, function(err, isMatch) {
+        if (err) {
+            console.error('Karşılaştırma sırasında bir hata oluştu:', err);
+        } else if (isMatch) {
+            console.log('Şifreler eşleşiyor!');
+        } else {
+            console.log('Şifreler eşleşmiyor.');
+    }
+});</code></p>
+</li>
+</ul>
+</li>
+</ol>
 
 
 

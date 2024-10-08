@@ -1,6 +1,6 @@
 <h1>Docs</h1>
 
-Bu projede Linux, Linux Sistem Yönetimi ve Yazılım Geliştirme hakkında aldığım notları paylaşıyorum. Bu notları [MkDocs](https://www.mkdocs.org/) ile [GitHub Pages](berkbal.github.io/docs/) üzerinde yayınlıyorum.
+Bu projede Linux sistem yönetimi, sistem ile alakalı yazılımlar ve yazılım geliştirme hakkında aldığım notları paylaşıyorum. Bu notları [MkDocs](https://www.mkdocs.org/) ile [GitHub Pages](berkbal.github.io/docs/) üzerinde yayınlıyorum.
 
 ---
 <table align="center">

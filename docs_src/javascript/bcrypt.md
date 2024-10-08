@@ -27,8 +27,7 @@ const bcrypt = require('bcryptjs');
             
             **- hash:** Hashlenmiş parola(şifre) burada yer alır.
 
-                - Örnek:
-                ```
+            ```
                     const plainPassword = 'kullanicidan-alinan-parola';
                     const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir
 
@@ -39,7 +38,8 @@ const bcrypt = require('bcryptjs');
                         console.log('Hashlenmiş şifre:', hash);
                     }
                 });
-                ```
+
+            ```
 
             - **compare:** kullanıcı tarafından girilen plain parolayı hashlenmiş hali ile kıyaslar.
 
@@ -52,7 +52,7 @@ const bcrypt = require('bcryptjs');
                     - **err:** Eğer karşılaştırma sırasında bir hata oluşursa bu paramtre hata mesajını içerir.
                     - **isMatch:** Karşılaştırma yapıldıktan sonra parolanın hashlenmiş hali ile plain text hali eşleşiyorsa true, eşleşmiyorsa false değerini alır.
 
-                Örnek:
+                
 
         ```
                 bcrypt.compare(plainPassword, hashedPassword, function(err, isMatch) {

@@ -791,20 +791,18 @@
 <p><strong>callback(function):</strong> Hashleme işlemi tamamlandığında çağırılacak olan fonksiyondur. Bu fonksiyon da iki adet parametre alır.
     <strong>- err:</strong> Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.</p>
 <p><strong>- hash:</strong> Hashlenmiş parola(şifre) burada yer alır.</p>
-<pre><code>- Örnek:
-```
-    const plainPassword = 'kullanicidan-alinan-parola';
-    const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir
-
-    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
+<p>```
+        const plainPassword = 'kullanicidan-alinan-parola';
+        const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir</p>
+<pre><code>    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
     if (err) {
         console.error('Hashleme hatası:', err);
     } else {
         console.log('Hashlenmiş şifre:', hash);
     }
 });
-```
 </code></pre>
+<p>```</p>
 <ul>
 <li>
 <p><strong>compare:</strong> kullanıcı tarafından girilen plain parolayı hashlenmiş hali ile kıyaslar.</p>
@@ -823,7 +821,6 @@
 </ul>
 </li>
 </ul>
-<p>Örnek:</p>
 </li>
 </ul>
 </li>

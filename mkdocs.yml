@@ -27,6 +27,7 @@ nav:
   - Ana Sayfa: index.md
   - Linux:
       - Logrotate: linux/logrotate.md
+      - SwapFile: linux/swapfile.md
   - Mail:
       - Mailu: mail/mailu.md
   - Güncelleme:

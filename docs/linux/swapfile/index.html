@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/swapfile/">
       
       
+        <link rel="prev" href="../logrotate/">
       
-        <link rel="next" href="linux/logrotate/">
+      
+        <link rel="next" href="../../mail/mailu/">
       
       
-      <link rel="icon" href="images/berk-bal.png">
+      <link rel="icon" href="../../images/berk-bal.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Docs for SysAdmins</title>
+        <title>SwapFile - Docs for SysAdmins</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sistem-yoneticileri-icin-dokumantasyon" class="md-skip">
+        <a href="#swapfile-nedir" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ana Sayfa
+              SwapFile
             
           </span>
         </div>
@@ -209,7 +211,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -222,6 +224,84 @@
     
       
       
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ana Sayfa
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Linux
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../logrotate/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Logrotate
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
   
   
     
@@ -240,18 +320,18 @@
           
   
   <span class="md-ellipsis">
-    Ana Sayfa
+    SwapFile
   </span>
   
 
           <span class="md-nav__icon md-icon"></span>
         </label>
       
-      <a href="." class="md-nav__link md-nav__link--active">
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Ana Sayfa
+    SwapFile
   </span>
   
 
@@ -273,9 +353,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iletisim" class="md-nav__link">
+  <a href="#swapfile-nasl-olusturulur" class="md-nav__link">
     <span class="md-ellipsis">
-      İletişim
+      Swapfile Nasıl Oluşturulur?
     </span>
   </a>
   
@@ -285,82 +365,6 @@
   
 </nav>
       
-    </li>
-  
-
-    
-      
-      
-  
-  
-  
-  
-    
-    
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
-        
-          
-          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
-            
-  
-  <span class="md-ellipsis">
-    Linux
-  </span>
-  
-
-            <span class="md-nav__icon md-icon"></span>
-          </label>
-        
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_2">
-            <span class="md-nav__icon md-icon"></span>
-            Linux
-          </label>
-          <ul class="md-nav__list" data-md-scrollfix>
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="linux/logrotate/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Logrotate
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="linux/swapfile/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    SwapFile
-  </span>
-  
-
-      </a>
     </li>
   
 
@@ -415,7 +419,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mail/mailu/" class="md-nav__link">
+      <a href="../../mail/mailu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -478,7 +482,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guncelleme/gitlab/" class="md-nav__link">
+      <a href="../../guncelleme/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -576,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
+      <a href="../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +651,7 @@
   
   
     <li class="md-nav__item">
-      <a href="haproxy/haproxy-hardening" class="md-nav__link">
+      <a href="../../haproxy/haproxy-hardening" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -710,7 +714,7 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript/bcrypt/" class="md-nav__link">
+      <a href="../../javascript/bcrypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -758,9 +762,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iletisim" class="md-nav__link">
+  <a href="#swapfile-nasl-olusturulur" class="md-nav__link">
     <span class="md-ellipsis">
-      İletişim
+      Swapfile Nasıl Oluşturulur?
     </span>
   </a>
   
@@ -781,15 +785,40 @@
                   
 
 
-<h1 id="sistem-yoneticileri-icin-dokumantasyon">Sistem Yöneticileri İçin Dökümantasyon</h1>
-<p>Hoş Geldiniz!</p>
-<p>Bu sayfa, teknik dökümantasyon ve projeler için bir bilgi havuzu olarak tasarlanmıştır. Bu sitedeki içerikler kendim çalışırken uyguladığım yöntemler ve kullandığım araçlar hakkında kendi yazdığım dökümanları içeriyor. Amacım, hem kendim için düzenli bir bilgi kaynağı oluşturmak hem de benzer alanlarda çalışan kişilere yardımcı olabilecek kaynaklar sunmaktır.</p>
-<h3 id="iletisim">İletişim</h3>
-<ul>
-<li>Kişisel web sitem: <a href="berkbal.com">https://berkbal.com</a></li>
-<li>LinkedIn profilim: https://www.linkedin.com/in/ben-berkbal</li>
-<li>E-posta adresim: berkbal@berkbal.com</li>
-</ul>
+<h1 id="swapfile-nedir">Swapfile Nedir?</h1>
+<p>Swapfile, Linux işletim sisteminde bellek yetersiz kaldığında kullanılmak üzere ayrılmış bir dosya alanıdır. Swap, bellek yönetimi açısından önemli bir rol oynar ve RAM yetersiz kaldığında aktif bellekte kullanılmayan verilerin disk üzerinde depolanmasını sağlar. Eğer swap alanı olmadığı zaman makinenin ram kullanımı %100'e ulaşırsa bilgisayar erişilmez hale gelecektir, donacaktır. Bunun önüne geçmek için swap alanı mutlaka oluşturulmalıdır.</p>
+<p>Linux'ta swap, ya ayrı bir disk bölümü (swap partition) olarak ya da bir dosya olarak (swapfile) oluşturulabilir. Swapfile normal swap alanına göre daha kullanışlıdır. <strong>Swapfile, herhangi bir dosya sistemi üzerinde, bir bölümü yeniden yapılandırmadan kolayca oluşturulabilir ve kaldırılabilir. Swap partition kullanırken disk bölümlendirmesi gerekir, bu da sistemde değişiklik yapmak istediğinizde yeniden bölümlendirme gibi zaman alıcı işlemler gerektirebilir.</strong></p>
+<p>Swap partition ise, disk üzerindeki belirlenmiş bir bölüm olduğundan biraz daha hızlı olabilir çünkü dosya sistemi üzerinden değil, doğrudan donanımla çalışır. Ancak, modern sistemlerde swapfile performans kaybı genellikle minimum düzeydedir ve kullanım kolaylığı açısından swapfile tercih edilmektedir.</p>
+<h2 id="swapfile-nasl-olusturulur">Swapfile Nasıl Oluşturulur?</h2>
+<ol>
+<li>Aşağıdaki komut ile 5GB boyutunda bir swap alanı oluşturabiliriz.</li>
+</ol>
+<pre><code>fallocate -l 5G /swapfile
+</code></pre>
+<p><em>Eğer fallocate komutunu kullanamıyorsanız, dd komutuyla da swap dosyası oluşturabilirsiniz.</em></p>
+<ol>
+<li>Oluşturduğumuz swap dosyasının izinlerini güvenlik nedenleri ile ayarlamamız gerekmektedir.</li>
+</ol>
+<pre><code>chmod 600 /swapfile
+</code></pre>
+<ol>
+<li>Oluşturduğumuz dosyayı swap alanı olarak biçimlendirmemiz gerekmektedir.</li>
+</ol>
+<pre><code>mkswap /swapfile
+</code></pre>
+<ol>
+<li>Oluşturduğumuz swap dosyasını etkinleştirelim</li>
+</ol>
+<pre><code>swapon /swapfile
+</code></pre>
+<ol>
+<li>Sistemi yeniden başlattığımızda swap alanının otomatik olarak mount edilmesi için /etc/fstab dosyasını düzenlemek gerekmektedir. Aşağıdaki komut ile fstab dosyasına bu ayarları gireblirsiniz</li>
+</ol>
+<pre><code>echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+</code></pre>
+<ol>
+<li>Swap Durumunu kontrol etmek için <code>swapon --show</code> veya <code>free -h</code> komutunu kullanabilirsiniz. Fstab dosyasını da güncellediğimiz için sistemimiz reboot olduğunda swap dosyası otomatik olarak swap alanı olarak mount edilecektir.</li>
+</ol>
 
 
 
@@ -836,10 +865,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["palette.toggle"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["palette.toggle"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

@@ -26,8 +26,8 @@ const bcrypt = require('bcryptjs');
             **- err:** Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.
             
             **- hash:** Hashlenmiş parola(şifre) burada yer alır.
-
             ```
+            
                     const plainPassword = 'kullanicidan-alinan-parola';
                     const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir
 

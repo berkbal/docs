@@ -296,6 +296,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/swapfile/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SwapFile
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -790,11 +811,12 @@
 <li>
 <p><strong>callback(function):</strong> Hashleme işlemi tamamlandığında çağırılacak olan fonksiyondur. Bu fonksiyon da iki adet parametre alır.
     <strong>- err:</strong> Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.</p>
-<p><strong>- hash:</strong> Hashlenmiş parola(şifre) burada yer alır.</p>
-<p>```
-        const plainPassword = 'kullanicidan-alinan-parola';
-        const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir</p>
-<pre><code>    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
+<p><strong>- hash:</strong> Hashlenmiş parola(şifre) burada yer alır.
+```</p>
+<pre><code>    const plainPassword = 'kullanicidan-alinan-parola';
+    const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir
+
+    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
     if (err) {
         console.error('Hashleme hatası:', err);
     } else {

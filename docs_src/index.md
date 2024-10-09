@@ -6,6 +6,7 @@ Bu sayfa, teknik dökümantasyon ve projeler için bir bilgi havuzu olarak tasar
 
 ### İletişim ###
 
-- Kişisel web sitem: [https://berkbal.com](berkbal.com)
-- LinkedIn profilim: https://www.linkedin.com/in/ben-berkbal
-- E-posta adresim: berkbal@berkbal.com
+- [Kişisel web sitem](https://berkbal.com)
+- [LinkedIn profilim](https://www.linkedin.com/in/ben-berkbal)
+
+- ben@berkbal.com

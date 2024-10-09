@@ -4,6 +4,12 @@
 
 Kişisel kullanım için kullanıma hazır bir wireguard sunucu konteyneridir. Hızlı kullanım için eşleri ve yapılandırma dosyalarını otomatik olarak oluşturur. Konteyneri kurmadan önce düzenlemeniz gereken yalnızca 2 değişken vardır.
 
+Wireguard'in kernel modüllerini sistemimize aşağıdaki komut ile kurup container için compose dosyasını editledikten sonra ayağa kaldırabiliriz.
+
+```
+apt-get update ; apt-get install wireguard-tools
+```
+
 ## Docker-Compose Dosyası
 
 ```

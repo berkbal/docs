@@ -790,6 +790,9 @@
 <p><img alt="wireguard logo" src="../wireguard.png" /></p>
 <h1 id="wireguard-sunucu-kurulumu">Wireguard Sunucu Kurulumu</h1>
 <p>Kişisel kullanım için kullanıma hazır bir wireguard sunucu konteyneridir. Hızlı kullanım için eşleri ve yapılandırma dosyalarını otomatik olarak oluşturur. Konteyneri kurmadan önce düzenlemeniz gereken yalnızca 2 değişken vardır.</p>
+<p>Wireguard'in kernel modüllerini sistemimize aşağıdaki komut ile kurup container için compose dosyasını editledikten sonra ayağa kaldırabiliriz.</p>
+<pre><code>apt-get update ; apt-get install wireguard-tools
+</code></pre>
 <h2 id="docker-compose-dosyas">Docker-Compose Dosyası</h2>
 <pre><code>version: '3.7'
 services:

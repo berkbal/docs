@@ -794,7 +794,8 @@
 <ol>
 <li>Projeye dahil edilen npm paketi aşağıdaki gibi import edilir.</li>
 </ol>
-<p>const bcrypt = require('bcryptjs');</p>
+<pre><code>const bcrypt = require('bcryptjs');
+</code></pre>
 <ol>
 <li>
 <p>Bu adımda yüklediğimiz paketin içerisindeki fonksiyonlar kullanılarak şifreleme işlemi gerçekleştirilir.</p>
@@ -812,11 +813,10 @@
 <p><strong>callback(function):</strong> Hashleme işlemi tamamlandığında çağırılacak olan fonksiyondur. Bu fonksiyon da iki adet parametre alır.
     <strong>- err:</strong> Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.</p>
 <p><strong>- hash:</strong> Hashlenmiş parola(şifre) burada yer alır.
-```</p>
-<pre><code>    const plainPassword = 'kullanicidan-alinan-parola';
-    const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir
-
-    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
+```
+        const plainPassword = 'kullanicidan-alinan-parola';
+        const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir</p>
+<pre><code>    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {
     if (err) {
         console.error('Hashleme hatası:', err);
     } else {
@@ -845,17 +845,19 @@
 </ul>
 </li>
 </ul>
+<p>Örnek:</p>
+<pre><code>bcrypt.compare(plainPassword, hashedPassword, function(err, isMatch) {
+    if (err) {
+        console.error('Karşılaştırma sırasında bir hata oluştu:', err);
+    } else if (isMatch) {
+        console.log('Şifreler eşleşiyor!');
+    } else {
+        console.log('Şifreler eşleşmiyor.');
+    }
+});
+</code></pre>
 </li>
 </ul>
-<p><code>bcrypt.compare(plainPassword, hashedPassword, function(err, isMatch) {
-        if (err) {
-            console.error('Karşılaştırma sırasında bir hata oluştu:', err);
-        } else if (isMatch) {
-            console.log('Şifreler eşleşiyor!');
-        } else {
-            console.log('Şifreler eşleşmiyor.');
-    }
-});</code></p>
 </li>
 </ul>
 </li>

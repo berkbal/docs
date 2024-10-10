@@ -12,7 +12,9 @@ npm install bcryptjs
 
 2. Projeye dahil edilen npm paketi aşağıdaki gibi import edilir.
 
+```
 const bcrypt = require('bcryptjs');
+```
 
 3. Bu adımda yüklediğimiz paketin içerisindeki fonksiyonlar kullanılarak şifreleme işlemi gerçekleştirilir.
 
@@ -27,7 +29,6 @@ const bcrypt = require('bcryptjs');
             
             **- hash:** Hashlenmiş parola(şifre) burada yer alır.
             ```
-            
                     const plainPassword = 'kullanicidan-alinan-parola';
                     const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir
 
@@ -38,7 +39,6 @@ const bcrypt = require('bcryptjs');
                         console.log('Hashlenmiş şifre:', hash);
                     }
                 });
-
             ```
 
             - **compare:** kullanıcı tarafından girilen plain parolayı hashlenmiş hali ile kıyaslar.
@@ -52,16 +52,14 @@ const bcrypt = require('bcryptjs');
                     - **err:** Eğer karşılaştırma sırasında bir hata oluşursa bu paramtre hata mesajını içerir.
                     - **isMatch:** Karşılaştırma yapıldıktan sonra parolanın hashlenmiş hali ile plain text hali eşleşiyorsa true, eşleşmiyorsa false değerini alır.
 
-                
+            Örnek:
 
-        ```
                 bcrypt.compare(plainPassword, hashedPassword, function(err, isMatch) {
-                if (err) {
-                    console.error('Karşılaştırma sırasında bir hata oluştu:', err);
-                } else if (isMatch) {
-                    console.log('Şifreler eşleşiyor!');
-                } else {
-                    console.log('Şifreler eşleşmiyor.');
-            }
-        });
-        ```
+                    if (err) {
+                        console.error('Karşılaştırma sırasında bir hata oluştu:', err);
+                    } else if (isMatch) {
+                        console.log('Şifreler eşleşiyor!');
+                    } else {
+                        console.log('Şifreler eşleşmiyor.');
+                    }
+                });

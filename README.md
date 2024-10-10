@@ -1,6 +1,6 @@
 <h1>Docs</h1>
 
-Bu projede Linux sistem yönetimi, sistem ile alakalı yazılımlar ve yazılım geliştirme hakkında aldığım notları paylaşıyorum. Bu notları [MkDocs](https://www.mkdocs.org/) ile [GitHub Pages](berkbal.github.io/docs/) üzerinde yayınlıyorum.
+Bu projede Linux sistem yönetimi, sistem ile alakalı yazılımlar ve yazılım geliştirme hakkında aldığım notları paylaşıyorum. Bu notları [MkDocs](https://www.mkdocs.org/) ile [GitHub Pages](https://berkbal.github.io/docs/) üzerinde yayınlıyorum.
 
 ---
 <table align="center">
@@ -26,4 +26,4 @@ Bu projede Linux sistem yönetimi, sistem ile alakalı yazılımlar ve yazılım
 6. ```mkdocs serve```
 
 <hr>
-<a href="http://localhost:8000/">http://localhost:8000/</a> adresinden Mkdocs'un ana sayfasına erişebilirsiniz.
+<a href="https://berkbal.github.io/docs/">Bu adres üzerinden</a> dökümanların paylaşıldığı sayfaya erişebilirsiniz.

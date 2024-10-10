@@ -281,6 +281,91 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Linux Komutları
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Linux Komutları
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/linux-komutlari/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Başlamadan Önce
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../linux/komut-satirina-giris/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Komut Satırına Giriş
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
     <li class="md-nav__item">
       <a href="../../linux/logrotate/" class="md-nav__link">
         
@@ -810,10 +895,16 @@
 <p><strong>saltOrRounds(number | string):</strong> Salt maliyet faktörü (genellikle 10 veya 12 gibi değerler). Bu, bcrypt'in hashing işlemi sırasında kaç tur (round) salt işlemi yapılacağını belirler. Değer ne kadar yüksekse, hashing işlemi o kadar uzun sürer ve güvenlik o kadar artar. </p>
 </li>
 <li>
-<p><strong>callback(function):</strong> Hashleme işlemi tamamlandığında çağırılacak olan fonksiyondur. Bu fonksiyon da iki adet parametre alır.
-    <strong>- err:</strong> Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.</p>
-<p><strong>- hash:</strong> Hashlenmiş parola(şifre) burada yer alır.
-```
+<p><strong>callback(function):</strong> Hashleme işlemi tamamlandığında çağırılacak olan fonksiyondur. Bu fonksiyon da iki adet parametre alır.</p>
+<ul>
+<li>
+<p><strong>err:</strong> Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.</p>
+</li>
+<li>
+<p><strong>hash:</strong> Hashlenmiş parola(şifre) burada yer alır.</p>
+</li>
+</ul>
+<p>```
         const plainPassword = 'kullanicidan-alinan-parola';
         const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir</p>
 <pre><code>    bcrypt.hash(plainPassword, saltRounds, function(err, hash) {

@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/logrotate/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/komut-satirina-giris/">
       
       
-        <link rel="prev" href="../komut-satirina-giris/">
+        <link rel="prev" href="../linux-komutlari/">
       
       
-        <link rel="next" href="../swapfile/">
+        <link rel="next" href="../logrotate/">
       
       
       <link rel="icon" href="../../images/berk-bal.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Logrotate - Docs for SysAdmins</title>
+        <title>Komut Satırına Giriş - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#log-rotasyonu-nedir" class="md-skip">
+        <a href="#komut-satr-kullanmann-avantajlar" class="md-skip">
           Skip to content
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Logrotate
+              Komut Satırına Giriş
             
           </span>
         </div>
@@ -283,17 +283,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -307,7 +309,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux Komutları
@@ -339,10 +341,28 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../komut-satirina-giris/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Komut Satırına Giriş
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -351,6 +371,33 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#komut-satr-kullanmann-avantajlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Komut Satırı Kullanmanın Avantajları
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -368,30 +415,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Logrotate
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -400,92 +427,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kurulum
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Kurulum">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rhelcentos" class="md-nav__link">
-    <span class="md-ellipsis">
-      RHEL/CentOS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debianubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debian/Ubuntu
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fedora" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fedora
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nasl-calsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nasıl çalışır?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nasıl çalışır?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ayar-dosyas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ayar Dosyası
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -894,8 +835,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -904,68 +843,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
+  <a href="#komut-satr-kullanmann-avantajlar" class="md-nav__link">
     <span class="md-ellipsis">
-      Kurulum
+      Komut Satırı Kullanmanın Avantajları
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Kurulum">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rhelcentos" class="md-nav__link">
-    <span class="md-ellipsis">
-      RHEL/CentOS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debianubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debian/Ubuntu
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fedora" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fedora
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nasl-calsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nasıl çalışır?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nasıl çalışır?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ayar-dosyas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ayar Dosyası
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -984,57 +866,37 @@
                   
 
 
-<h1 id="log-rotasyonu-nedir">Log Rotasyonu Nedir?</h1>
-<p>Log rotasyonu güncel/yeni log dosyalarını etkilemeden eski log dosyalarını silme/yedekleme işlemidir. Kullanıldığı alana göre her uygulama önemli loglar üretir ve bu logları genelde kaybetmek istemeyiz. Eğer bu logları silmezsek kullandığımız sunucunun disk kapasitesi kısa bir süre sonra dolabilir.</p>
-<p>Logları silmek yerine bizim için otomatik olarak gzip formatında arşivleyen Logrotate adında bir yazılım var.</p>
-<p>Logrotate, log dosyalarını yönetmeye, sıkıştırmaya, kaldırmaya ve hatta belirli bir zaman aralığından sonra (örneğin günlük, haftalık, aylık vb.) e-postayla bir yere göndermeye yardımcı olur.</p>
-<h2 id="kurulum">Kurulum</h2>
-<p>Çoğu Linux dağıtımı varsayılan olarak Logrotate ile gelir. Eğer sisteminizde mevcut değilse, aşağıdaki komutlarla kolayca kurulabilir:</p>
-<h3 id="rhelcentos">RHEL/CentOS</h3>
-<p><code>yum install logrotate</code></p>
-<h3 id="debianubuntu">Debian/Ubuntu</h3>
-<p><code>apt-get install logrotate</code></p>
-<h3 id="fedora">Fedora</h3>
-<p><code>dnf install logrotate</code></p>
-<h2 id="nasl-calsr">Nasıl çalışır?</h2>
-<p>Logrotate, işlem yapmak istediğiniz tüm log dosyalarını belirtebileceğiniz bir yapılandırma dosyasına sahiptir. Günlük, haftalık, aylık vb. gibi bir zaman periyodu birimine ve her döndürme için 3, 4, 5 gibi döndürme sayısına ihtiyacı vardır. Log dosyaları kaldırılmadan önce döndürme sayısı kadar döndürülür. Varsayılan döndürme sayısı 0'dır, bu da eski günlük sürümlerinin döndürülmek yerine kaldırılacağı anlamına gelir. Yani günlükleriniz <strong>my-application.log</strong> adlı bir dosyaya kaydediliyorsa, bir döndürmeden sonra my-application.1.log adlı yeni bir dosya oluşturulur.</p>
-<h3 id="ayar-dosyas">Ayar Dosyası</h3>
-<p>Logrotate yapılandırma dosyası <code>/etc/logrotate.conf</code>'da bulunur. Örnek bir yapılandırma dosyası şuna benzer bloklar içerir:</p>
-<pre><code>/var/lib/docker/containers/*/*.log {
-    rotate 5
-    copytruncate
-    missingok
-    notifempty
-    compress
-    maxsize 200M
-    daily
-}
+  <h1>Komut Satırına Giriş</h1>
+
+<p>Komut satırı kullanarak işlemlerimizi gerçekleştirmek bizi normalden çok daha hızlı ve sistem üzerinde daha çok kontrol sahibi yapar. Kontrol sahibi yaptığı inandırıcı da gerçekten bizi daha hızlı yapıyor mu?</p>
+<p>Evet.</p>
+<p>Küçük bir örnekle açıklayalım:</p>
+<p>Diyelim ki bir fotoğraf makinesi sahibisiniz ve elinizde fotoğraflarla dolu bir dizin var ve bu dizinin içerisindeki  <em>profile.jpg</em> isimli bir fotoğrafı yeniden boyutlandırmak istediniz. Yeniden boyutlandırdıktan sonra da farklı bir isimle tekrar kaydetmek istiyorsunuz.</p>
+<p>Herhangi bir resim düzenleme programında aşağı yukarı bu adımları izlemeniz gerekir:</p>
+<p>1 – Uygulamalar menüsünden resim düzenleme programınızı açarsınız.<br />
+2 – Dosya – Aç<br />
+3 – Gelen dosya açma ekranından fotoğrafların olduğu dizine git.<br />
+4 –  <em>profile.jpg</em> isimli dosyayı bulup seçtikten sonra Aç tuşuna bas.<br />
+5 – Resim – Boyutlandır menüsünden boyutlandırma ayarlarını aç.<br />
+6 – Fotoğrafın genişliğini 300 piksel olarak ayarla.<br />
+7 – Dosya – Farklı Kaydet menüsünden kaydedilecek yeri seç.<br />
+8 – Dosya ismi olarak  <em>profile_küçük.jpg</em> yaz ve Kaydet butonuna tıkla.</p>
+<p><img alt="Gimp" src="../../images/komut_satirina_giris.png" /></p>
+<p>Komut satırını kullanarak bu işlemi tek bir satırda halledebiliriz. Nasıl mı?</p>
+<pre><code>convert -resize 300 profile.jpg profile_küçük.jpg
 </code></pre>
-<p>Şimdi bu log dosyasını adım adım inceleyelim:</p>
-<p><code>/var/lib/docker/containers/*/*.log</code></p>
-<p>Logrotate'in hangi dosyayı veya dosyalara işlem uygulayacağını gösteren yoldur.  <code>{ }</code> içerisindeki kuralları <code>/var/lib/docker/containers</code> dizinindeki bütün dizinlerin içerisindeki <code>.log</code> ile biten dosyalara aşağıdaki kuralları uygulayacak:</p>
-<p><code>rotate 5</code></p>
-<p>Loglari en fazla 5 kere saklar, yani işlem yapıldığında en fazla 5 dosya eski günlük saklanacak ve halihazırda 5 dosya olduğunda en eski günlükler silinecek.</p>
-<p>Örnek: </p>
-<pre><code>my-application.log 
-my-application.log1 
-my-application.log2 
-my-application.log3 
-my-application.log4 
-my-application.log5
-</code></pre>
-<p><code>copytruncate</code></p>
-<p>Eski log dosyalarını taşıyıp isteğe bağlı olarak yenisini oluşturmak yerine, bir kopya oluşturduktan sonra orijinal log dosyasını bulunduğu yerde, 0 KB boyutuna küçültür. <strong><em>Bazı uygulamaların</em></strong> log dosyasını kapatması mümkün olmadığında ve önceki log dosyasına yazmaya devam edebileceği durumlarda kullanılabilir. Dosyanın kopyalanması ve küçültülmesi arasında çok küçük bir zaman dilimi olduğu için log kaybı olabilir.</p>
-<p><code>missingok</code></p>
-<p>Eğer log dosyası eksikse, bir hata oluşturmaz ve bir sonraki dosyaya geçer.</p>
-<p><code>notifempty</code></p>
-<p>Log dosyasının içeriği boşsa log rotate işlemi gerçekleştirmez.</p>
-<p><code>compress</code></p>
-<p>Eski log dosyalarını gzip formatında sıkıştırır.</p>
-<p><code>maxsize 200M</code></p>
-<p>Log dosyası, rotate kuralından bağımsız olarak 200 MB boyutunu aşarsa rotate işlemini gerçekleştirir. Bu ayar ileride <strong><em>zgrep</em></strong> kullanılarak sıkıştırılmış dosyaların içerisinde bir log ararken dosyanın boyutunun fazla büyük olmaması sağlanırsa avantaj sağlar.</p>
-<p><code>daily</code></p>
-<p>Log rotate işlemini günlük olarak gerçekleştirir.</p>
+<p>Komut satırındaki bir satır, neredeyse resim düzenleme programındaki sekiz işleme eşit. Şuan belki de bu işlemi yaparken geçen 15-20 saniyenizi önemsemiyorsunuz fakat 30 farklı fotoğrafı düzenlemeniz gerekseydi ne yapmak isterdiniz? 30 farklı fotoğraf için yukarıdaki sekiz adımı sürekli tekrarlamak ister miydiniz? Totalde 240 adım ediyor. Bunun yerine bütün işlerinizi tek satırda halletmek isteyeceğinizi varsayıyorum.</p>
+<h2 id="komut-satr-kullanmann-avantajlar"><strong>Komut Satırı Kullanmanın Avantajları</strong></h2>
+<p>Komut satırına bir kere şans veren insanlar genellikle asla grafik arayüz kullanmaya geri dönmüyorlar. Sebebi çok basit, Komut satırı(Terminal) kullanmak grafik arayüzü kullanmaktan hem daha  <strong>hızlı</strong>, daha  <strong>stabil</strong>, daha esnek, çok daha  <strong>eğlenceli</strong> ve çok farklı bir  <strong>deneyim</strong>. Komut satırı kullanarak bilgisayarınızla çok dafa farklı bir şekilde iletişim kurabilirsiniz.</p>
+<p><strong>Güzel Bir Özellik Daha: Scripting</strong></p>
+<p>Kullandığınız komutları text dosyalarına dönüştürebileceğinizi biliyor muydunuz? Bu text dosyalarına  <strong>script</strong> denir ve genellikle her seferinde uzun komutlar yazmak yerine kullanmak istediğimiz komutları kaydederek sürekli kullanmamızı sağlarlar.</p>
+<p><strong><code>komutlarim.sh</code></strong></p>
+<p>.sh uzantılı bir dosyanın içerisinde komutlarınızı kombine ederek kullanabilirsiniz! İlk önce komut satırını kullanmayı öğrendikten sonra Bash Scripting öğrenebilirsiniz.</p>
+<p><strong>Grafik Arayüze Sahip Olmayan Uygulamalar</strong></p>
+<p>Komut satırı kullanmanın en çok gerektiği ve en çok işe yaradığı anlar grafik arayüze sahip olmayan uygulamaları kullanmamız gerektiğinde ortaya çıkıyor. Diyelim ki bir network’ümüz var, bu network’teki bir bilgisayarı kapatmak istiyoruz. Bilgisayarın yanına kadar gidip kapatma tuşuna basmak yerine komut satırından  <strong>shutdown</strong> komutunu çalıştırmak güzel bir fikire benziyor. Tabi bu bilgisayarın kapatma düğmesine ayağınız ile erişebiliyorsanız farklı bir seçim yapabilirsiniz. 🙂</p>
+<p><strong>Aslında Grafik Arayüze Sahip Olan Programlar da Komutlarla Çalışır</strong></p>
+<p>Grafik arayüze sahip programları kullanırken menülerden tıkladığımız seçenekler aslında birer komuttur diyebiliriz. Bir programı çalıştırmak için bir menüye veya bir ikona tıkladığınızda aslında bir komut çalıştırmış olursunuz.</p>
+<p>Komut satırının faydalarından ve ne kadar eğlenceli bir şey olduğundan yeterince bahsettik. Artık başlayabiliriz. 🙂</p>
 
 
 

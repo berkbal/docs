@@ -26,6 +26,9 @@ theme:
 nav:
   - Ana Sayfa: index.md
   - Linux:
+      - Linux Komutları:
+        - Başlamadan Önce: linux/linux-komutlari.md
+        - Komut Satırına Giriş: linux/komut-satirina-giris.md
       - Logrotate: linux/logrotate.md
       - SwapFile: linux/swapfile.md
   - Mail:

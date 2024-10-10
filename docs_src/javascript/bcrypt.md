@@ -25,9 +25,10 @@ const bcrypt = require('bcryptjs');
         - **saltOrRounds(number | string):** Salt maliyet faktörü (genellikle 10 veya 12 gibi değerler). Bu, bcrypt'in hashing işlemi sırasında kaç tur (round) salt işlemi yapılacağını belirler. Değer ne kadar yüksekse, hashing işlemi o kadar uzun sürer ve güvenlik o kadar artar. 
 
         - **callback(function):** Hashleme işlemi tamamlandığında çağırılacak olan fonksiyondur. Bu fonksiyon da iki adet parametre alır.
-            **- err:** Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.
+            - **err:** Bir hata oluştuysa bu parametre hata mesajını içerir, eğer bir hata yoksa içerisindeki değer null olur.
             
-            **- hash:** Hashlenmiş parola(şifre) burada yer alır.
+            - **hash:** Hashlenmiş parola(şifre) burada yer alır.
+            
             ```
                     const plainPassword = 'kullanicidan-alinan-parola';
                     const saltRounds = 10; // Genellikle 10 veya 12 tercih edilir

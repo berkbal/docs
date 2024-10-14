@@ -152,11 +152,13 @@ SMTP sunucusuna gönderilen ve sunucudan alınan her bir komutu ve cevabı ekran
 Kendi kullanıcı adınızı otomatik olarak belirlemek için getpwuid() fonksiyonunu zorlar. Bu genellikle default davranıştır, ancak bazı sistemlerde elle belirtilmesi gerekebilir.
 
 19. ```--verbose:```
+
 Komutun daha ayrıntılı bilgi döndürmesini sağlar. SMTP sunucusuyla olan iletişimin daha detaylı bir çıktısını verir.
 
 Örnek: ```--verbose```
 
 20. ```--debug:```
+
 Komutun debug modunda çalışmasını sağlar ve detaylı hata çıktıları verir.
 
 Örnek: ```--debug```

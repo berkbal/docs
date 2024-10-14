@@ -163,6 +163,11 @@ Komutun debug modunda çalışmasını sağlar ve detaylı hata çıktıları ve
 
 Örnek: ```--debug```
 
+21. ```--attach```
+
+Örnek: ```--attach /path/to/your/file.txt```
+
+
 ### Testler İçin Örnek Komut: 
 
 ```

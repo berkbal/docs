@@ -11,3 +11,4 @@ Aşağıdaki listeden veya direkt Linux Komutları menüsünden konu hakkında y
 ## Linux Komutları
 
 1.  [Komut Satırına Giriş](komut-satirina-giris.md)
+2. [Terminal Komutlarının Kullanımı(Syntax)](terminal-komutlarinin-kullanimi-(syntax).md)

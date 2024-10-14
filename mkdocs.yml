@@ -30,6 +30,7 @@ nav:
         - Başlamadan Önce: linux/linux-komutlari.md
         - Komut Satırına Giriş: linux/komut-satirina-giris.md
         - Terminal Komutlarının Kullanımı(Syntax): linux/terminal-komutlarinin-kullanimi-(syntax).md
+        - Bilgisayar İçerisinde Gezinmek: linux/bilgisayar-icerisinde-gezinmek.md
       - Logrotate: linux/logrotate.md
       - SwapFile: linux/swapfile.md
       - Swaks: linux/swaks.md

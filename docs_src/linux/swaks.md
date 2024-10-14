@@ -74,7 +74,7 @@ SMTP sunucusuna bağlanmak için kullanılan port numarasını belirtir. Varsay�
 
 SMTP sunucusuna gönderilen HELO veya EHLO komutunda kullanılan domain adını belirtir. SMTP sunucusuna kendinizi tanıtmak için kullanılır.
 
-Örnek: ```--helo mail.cbal.tr```
+Örnek: ```--helo mail.berkbal.tr```
 
 6. ```--auth [auth_type]:```
 

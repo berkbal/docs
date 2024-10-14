@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/swaks/">
       
       
+        <link rel="prev" href="../../mail/mailu/">
       
-        <link rel="next" href="linux/linux-komutlari/">
+      
+        <link rel="next" href="../../guncelleme/gitlab/">
       
       
-      <link rel="icon" href="images/berk-bal.png">
+      <link rel="icon" href="../../images/berk-bal.png">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Docs for SysAdmins</title>
+        <title>Swaks - Docs for SysAdmins</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sistem-yoneticileri-icin-dokumantasyon" class="md-skip">
+        <a href="#swaks-swiss-army-knife-for-smtp" class="md-skip">
           Skip to content
         </a>
       
@@ -88,7 +90,7 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href="." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -108,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ana Sayfa
+              Swaks
             
           </span>
         </div>
@@ -209,7 +211,7 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
@@ -224,30 +226,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Ana Sayfa
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -256,35 +238,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iletisim" class="md-nav__link">
-    <span class="md-ellipsis">
-      İletişim
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -366,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/linux-komutlari/" class="md-nav__link">
+      <a href="../linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -387,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/komut-satirina-giris/" class="md-nav__link">
+      <a href="../komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,7 +369,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/logrotate/" class="md-nav__link">
+      <a href="../logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -437,7 +390,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/swapfile/" class="md-nav__link">
+      <a href="../swapfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -455,10 +408,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="linux/swaks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Swaks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -467,6 +440,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#swaks-nedir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Nedir?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swaks Nedir?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kurulum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurulum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaks-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Kullanımı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaks-parametreleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Parametreleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testler-icin-ornek-komut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testler İçin Örnek Komut:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -483,17 +527,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -507,7 +553,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Mail
@@ -521,7 +567,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mail/mailu/" class="md-nav__link">
+      <a href="../../mail/mailu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -539,10 +585,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="linux/swaks/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Swaks
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -551,6 +617,77 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#swaks-nedir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Nedir?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Swaks Nedir?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kurulum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurulum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaks-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Kullanımı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaks-parametreleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Parametreleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testler-icin-ornek-komut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testler İçin Örnek Komut:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -605,7 +742,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guncelleme/gitlab/" class="md-nav__link">
+      <a href="../../guncelleme/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +840,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
+      <a href="../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -774,7 +911,7 @@
   
   
     <li class="md-nav__item">
-      <a href="haproxy/haproxy-hardening" class="md-nav__link">
+      <a href="../../haproxy/haproxy-hardening" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -837,7 +974,7 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript/bcrypt/" class="md-nav__link">
+      <a href="../../javascript/bcrypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -885,11 +1022,53 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iletisim" class="md-nav__link">
+  <a href="#swaks-nedir" class="md-nav__link">
     <span class="md-ellipsis">
-      İletişim
+      Swaks Nedir?
     </span>
   </a>
+  
+    <nav class="md-nav" aria-label="Swaks Nedir?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kurulum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurulum
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaks-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Kullanımı
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#swaks-parametreleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Swaks Parametreleri
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testler-icin-ornek-komut" class="md-nav__link">
+    <span class="md-ellipsis">
+      Testler İçin Örnek Komut:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -908,19 +1087,132 @@
                   
 
 
-<h1 id="sistem-yoneticileri-icin-dokumantasyon">Sistem Yöneticileri İçin Dökümantasyon</h1>
-<p>Hoş Geldiniz!</p>
-<p>Bu sayfa, teknik dökümantasyon ve projeler için bir bilgi havuzu olarak tasarlanmıştır. Bu sitedeki içerikler kendim çalışırken uyguladığım yöntemler ve kullandığım araçlar hakkında kendi yazdığım dökümanları içeriyor. Amacım, hem kendim için düzenli bir bilgi kaynağı oluşturmak hem de benzer alanlarda çalışan kişilere yardımcı olabilecek kaynaklar sunmaktır.</p>
-<h3 id="iletisim">İletişim</h3>
-<ul>
-<li><a href="https://berkbal.com">Kişisel web sitem</a></li>
-<li>
-<p><a href="https://www.linkedin.com/in/ben-berkbal">LinkedIn profilim</a></p>
-</li>
-<li>
-<p>ben@berkbal.com</p>
-</li>
-</ul>
+<h1 id="swaks-swiss-army-knife-for-smtp">Swaks (Swiss Army Knife for SMTP)</h1>
+<h2 id="swaks-nedir">Swaks Nedir?</h2>
+<p>Swaks (Swiss Army Knife for SMTP), Linux sistemlerde e-posta sunucularını test etmek ve SMTP protokolü üzerinden e-posta gönderme işlemlerini incelemek için kullanılan bir komut satırı aracıdır. Oldukça esnek ve kullanımı kolaydır, bu sayede SMTP, SMTPS (TLS ve STARTTLS), ve diğer protokollerle ilgili sorunları tespit etmek için yaygın olarak kullanılır.</p>
+<h3 id="kurulum">Kurulum</h3>
+<pre><code>sudo apt install swaks
+</code></pre>
+<h3 id="swaks-kullanm">Swaks Kullanımı</h3>
+<p>En basit hali ile bir test maili göndermek için:</p>
+<pre><code>swaks --to recipient@example.com
+</code></pre>
+<p>Belirli bir SMTP sunucusuna bağlanarak mail göndermek için:</p>
+<pre><code>swaks --to recipient@example.com --server smtp.example.com
+</code></pre>
+<p>TLS ile bir sunucuya bağlanmak için</p>
+<pre><code>swaks --to recipient@example.com --server smtp.example.com --tls
+</code></pre>
+<p>Kimlik doğrulaması yaparak bir sunucuya bağlanmak için</p>
+<pre><code>swaks --to recipient@example.com --server smtp.example.com --auth LOGIN --auth-user username --auth-password password
+</code></pre>
+<p>Bir mail 2 adet parçadan oluşur.(Header ve Body) Bu kısımları özelleştirerek bir mail göndermek için swaks komutu aşağıdaki gibi kullanılır:</p>
+<pre><code>swaks --to recipient@example.com --from sender@example.com --header &quot;Subject: Test Email&quot; --body &quot;This is a test email.&quot;
+</code></pre>
+<p>Genel anlamda swaks'ın nasıl kullanıldığını anladıktan sonra parametrelere ve özelliklerini inceleyebiliriz.</p>
+<h3 id="swaks-parametreleri">Swaks Parametreleri</h3>
+<ol>
+<li><code>--to [email_address]:</code></li>
+</ol>
+<p>Gönderilecek e-postanın alıcı adresini belirtir.</p>
+<p>Örnek: <code>--to mail@testsunucusu.com.tr</code></p>
+<ol>
+<li><code>--from [email_address]:</code></li>
+</ol>
+<p>Gönderici e-posta adresini belirtir. Varsayılan olarak sistemin hostname’i kullanılır.</p>
+<p>Örnek: <code>--from relay-test@testsunucusu.com.tr</code></p>
+<ol>
+<li><code>--server [hostname]:</code></li>
+</ol>
+<p>SMTP sunucusunun adresini belirtir. Sunucuya bağlanmak için kullanılan IP adresi veya hostname olabilir.</p>
+<p>Örnek: <code>--server docker.testsunucusu.com.tr</code></p>
+<ol>
+<li><code>--port [port_number]:</code></li>
+</ol>
+<p>SMTP sunucusuna bağlanmak için kullanılan port numarasını belirtir. Varsayılan olarak 25’tir, ancak SMTPS için genelde 465, STARTTLS için 587 gibi portlar kullanılır.</p>
+<p>Örnek: <code>--port 2527</code></p>
+<ol>
+<li><code>--helo [domain_name]:</code></li>
+</ol>
+<p>SMTP sunucusuna gönderilen HELO veya EHLO komutunda kullanılan domain adını belirtir. SMTP sunucusuna kendinizi tanıtmak için kullanılır.</p>
+<p>Örnek: <code>--helo mail.cbal.tr</code></p>
+<ol>
+<li><code>--auth [auth_type]:</code></li>
+</ol>
+<p>SMTP kimlik doğrulaması için kullanılan yöntemdir. Desteklenen yöntemler arasında PLAIN, LOGIN, CRAM-MD5 gibi seçenekler vardır.</p>
+<p>Örnek: <code>--auth LOGIN</code></p>
+<ol>
+<li><code>--auth-user [username]:</code></li>
+</ol>
+<p>SMTP kimlik doğrulaması için kullanılan kullanıcı adını belirtir. --auth parametresi ile birlikte kullanılır.</p>
+<p>Örnek: <code>--auth-user username</code></p>
+<ol>
+<li><code>--auth-password [password]:</code></li>
+</ol>
+<p>SMTP kimlik doğrulaması için kullanılan şifreyi belirtir. --auth ve --auth-user ile birlikte kullanılır.</p>
+<p>Örnek: <code>--auth-password password</code></p>
+<ol>
+<li><code>--tls:</code></li>
+</ol>
+<p>SMTP sunucusuna TLS (SMTPS) üzerinden bağlanmak için kullanılır. SMTPS genellikle 465 numaralı portta çalışır.</p>
+<p>Örnek: <code>--tls</code></p>
+<ol>
+<li><code>--tls-starttls:</code></li>
+</ol>
+<p>Bağlantı kurulduktan sonra STARTTLS komutu kullanarak bağlantıyı şifrelemek için kullanılır. STARTTLS genellikle 587 numaralı portta çalışır.</p>
+<p>Örnek: <code>--tls-starttls</code></p>
+<ol>
+<li><code>--header [header]:</code></li>
+</ol>
+<p>E-posta başlıklarını manuel olarak ayarlamak için kullanılır. Bu başlıklar e-posta mesajına eklenir.</p>
+<p>Örnek: <code>--header "Subject: Test Email"</code></p>
+<ol>
+<li><code>--body [message]:</code></li>
+</ol>
+<p>Gönderilecek e-posta mesajının içeriğini belirtir.</p>
+<p>Örnek: <code>--body "This is a test message"</code></p>
+<ol>
+<li><code>--quit-after [smtp_command]:</code></li>
+</ol>
+<p>Belirtilen SMTP komutundan sonra sunucuya QUIT komutunu gönderip bağlantıyı kapatır. SMTP oturumunu tamamlama zorunluluğu olmayan testler için kullanılır.</p>
+<p>Örnek: <code>--quit-after DATA</code></p>
+<ol>
+<li><code>--timeout [seconds]:</code></li>
+</ol>
+<p>Sunucuya bağlantı kurarken kullanılacak zaman aşımı süresini belirtir.</p>
+<p>Örnek: <code>--timeout 10</code></p>
+<ol>
+<li><code>--suppress-data:</code></li>
+</ol>
+<p>E-posta içeriğiyle ilgili çıktıyı bastırır. Sunucuyla ilgili geri bildirim görmek istiyorsanız ancak içerik kısmını görmek istemiyorsanız kullanılır.</p>
+<p>Örnek: <code>--suppress-data</code></p>
+<ol>
+<li><code>--add-header [header]:</code></li>
+</ol>
+<p>E-postaya ek bir başlık (header) eklemek için kullanılır.
+Örnek: --add-header "X-Custom-Header: CustomValue"</p>
+<ol>
+<li><code>--dump:</code></li>
+</ol>
+<p>SMTP sunucusuna gönderilen ve sunucudan alınan her bir komutu ve cevabı ekranınıza yazdırır. Debug amaçlı kullanılır.</p>
+<p>Örnek: <code>--dump</code></p>
+<ol>
+<li><code>--force-getpwuid:</code></li>
+</ol>
+<p>Kendi kullanıcı adınızı otomatik olarak belirlemek için getpwuid() fonksiyonunu zorlar. Bu genellikle default davranıştır, ancak bazı sistemlerde elle belirtilmesi gerekebilir.</p>
+<ol>
+<li><code>--verbose:</code>
+Komutun daha ayrıntılı bilgi döndürmesini sağlar. SMTP sunucusuyla olan iletişimin daha detaylı bir çıktısını verir.</li>
+</ol>
+<p>Örnek: <code>--verbose</code></p>
+<ol>
+<li><code>--debug:</code>
+Komutun debug modunda çalışmasını sağlar ve detaylı hata çıktıları verir.</li>
+</ol>
+<p>Örnek: <code>--debug</code></p>
+<h3 id="testler-icin-ornek-komut">Testler İçin Örnek Komut:</h3>
+<pre><code>swaks --to mail@x.com --from relay-test@berkbal.com.tr --server mail.testsunucusu.com --port 2527 --helo mail.berkbal.com.tr
+</code></pre>
 
 
 
@@ -967,10 +1259,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["palette.toggle"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["palette.toggle"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

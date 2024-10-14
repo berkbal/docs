@@ -31,8 +31,10 @@ nav:
         - Komut Satırına Giriş: linux/komut-satirina-giris.md
       - Logrotate: linux/logrotate.md
       - SwapFile: linux/swapfile.md
+      - Swaks: linux/swaks.md
   - Mail:
       - Mailu: mail/mailu.md
+      - Swaks: linux/swaks.md
   - Güncelleme:
       - Gitlab: guncelleme/gitlab.md
   - Docker:

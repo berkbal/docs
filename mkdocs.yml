@@ -7,6 +7,7 @@ theme:
   favicon: images/berk-bal.png
   features:
     - palette.toggle  # Karanlık mod geçişini etkinleştirir
+  language: tr
 
   palette:
 
@@ -31,6 +32,7 @@ nav:
         - Komut Satırına Giriş: linux/komut-satirina-giris.md
         - Terminal Komutlarının Kullanımı(Syntax): linux/terminal-komutlarinin-kullanimi-(syntax).md
         - Bilgisayar İçerisinde Gezinmek: linux/bilgisayar-icerisinde-gezinmek.md
+        - Temel Linux Komutları: linux/temel-linux-komutlari.md
       - Logrotate: linux/logrotate.md
       - SwapFile: linux/swapfile.md
       - Swaks: linux/swaks.md

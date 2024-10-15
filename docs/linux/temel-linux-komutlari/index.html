@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/terminal-komutlarinin-kullanimi-%28syntax%29/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/temel-linux-komutlari/">
       
       
-        <link rel="prev" href="../komut-satirina-giris/">
+        <link rel="prev" href="../bilgisayar-icerisinde-gezinmek/">
       
       
-        <link rel="next" href="../bilgisayar-icerisinde-gezinmek/">
+        <link rel="next" href="../logrotate/">
       
       
       <link rel="icon" href="../../images/berk-bal.png">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Terminal Komutlarının Kullanımı(Syntax) - Docs for SysAdmins</title>
+        <title>Temel Linux Komutları - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arguments-argumanlar" class="md-skip">
+        <a href="#temel-linux-komutlar" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -110,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terminal Komutlarının Kullanımı(Syntax)
+              Temel Linux Komutları
             
           </span>
         </div>
@@ -362,28 +362,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Terminal Komutlarının Kullanımı(Syntax)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -392,33 +374,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#arguments-argumanlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arguments – Argümanlar
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -449,10 +404,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../temel-linux-komutlari/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Temel Linux Komutları
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -461,6 +436,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ls-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ls komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#man-info-ve-apropos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Man, info ve apropos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apropos-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apropos komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mv-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdir-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir Komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cp-rm-ve-rmdir-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp, rm ve rmdir komutları
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cat-ve-less-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cat ve Less Komutu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -940,6 +998,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -948,9 +1008,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments-argumanlar" class="md-nav__link">
+  <a href="#ls-komutu" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments – Argümanlar
+      Ls komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#man-info-ve-apropos" class="md-nav__link">
+    <span class="md-ellipsis">
+      Man, info ve apropos
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#apropos-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apropos komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mv-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      mv komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mkdir-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      mkdir Komutu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cp-rm-ve-rmdir-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      cp, rm ve rmdir komutları
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cat-ve-less-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cat ve Less Komutu
     </span>
   </a>
   
@@ -971,45 +1085,109 @@
                   
 
 
-  <h1>Terminal Komutlarının Kullanımı(Syntax)</h1>
-
-<p>Genellikle terminale yazdığınız ilk kelime çalıştırmak istediğimiz komuttur. <a href="https://berkbal.github.io/docs/linux/linux-komutlari/">Başlamadan Önce</a> isimli yazımda sizlere <em>date</em> komutundan bahsetmiştim. Bu komut bize komutun çalıştırıldığı zamanın tarihini ve zamanını gösteriyordu.</p>
-<h2 id="arguments-argumanlar"><strong>Arguments – Argümanlar</strong></h2>
-<p>Kullanabileceğimiz diğer bir komut ise belirtilen bilgileri kullanıcıya geri gösteren <em>echo</em> komutu. Echo komutunu tek başına çalıştırdığımızda herhangi bir şey olmayacaktır çünkü echo komutu bir argüman ile birlikte çalışan bir komuttur. Echo komutu, kendisine verdiğimiz argümanı(bilgiyi) bize geri döndürür.</p>
-<pre><code>$ **echo foo** 
-foo
+<h1 id="temel-linux-komutlar">Temel Linux Komutları</h1>
+<p>Artık dizinler ve dosyalar hakkında temel bir bilgiye sahibiz. Ayrıca komut satırı aracılığıyla bilgisayarımız aracılığıyla iletişime geçebilir seviyeye geldik. Bu bölümde ise “en çok” kullanacağımız komutların birkaçından bahsetmek istiyorum.</p>
+<h2 id="ls-komutu">Ls komutu</h2>
+<p>Bir dizin içerisinde dosya/dizin oluşturmadan önce bilmemiz gereken şeylerden birisi de “Aceba bu dizinin içerisinde ne var?” sorusunun cevabıdır diye düşünüyorum. Grafik arayüz aracılığı ile bunu çok basit bir şekilde klasörü açarak gerçekleştirebiliriz. Komut satırından da ls programını, veya komutunu kullanarak bir dizinin içerisinde neler olduğunu görebiliriz.</p>
+<pre><code>$ ls
+Desktop Documents Music Photos
 </code></pre>
-<p>Yukarıdaki örnekte gördüğümüz üzere argümanımız foo olduğu için bilgisayarımız bize foo diyerek cevap verdi.</p>
-<p>Echo komutuna istediğimiz kadar argüman gönderebiliriz. <em>Echo</em> komutundan sonra ne yazarsak yazalım bilgisayarımız bunları argüman olarak algılayacaktır. Eğer birden fazla kelime yazdırmak istiyorsak <em>echo</em> komutunu bu şekilde kullanabiliriz.</p>
-<pre><code>$echo foo bar
-foo bar
+<p>ls komutu oldukça kompakt bir çıktı verir. Çoğu terminal/terminal emulatoru dizinleri, alt dizinleri ve belirli dosya tiplerini renkli bir çıktı şeklinde bize gösterir. Standart dosyalar herhangi bir renk ayarına sahip değildir. Ls komutunu kendi bilgisayarınız üzerinde deneyerek bunu görebilirsiniz. Bir taraftan grafik arayüzünüzü açıp bir diğer taraftan da terminal ile ls komutunu kullanarak karşınıza gelen çıktıya bakarak bunu gözlemlemenizi tavsiye ederim. Eğer sizin çıktınız renkli değilse ls komutuna –color optionunu göndermeyi deneyebilirsiniz.</p>
+<pre><code>$ ls --color
 </code></pre>
-<p>Argümanlar genelde aralarında boşluklar bırakılarak birbirlerinden ayrılır. Ekstra boşluklar görmezden gelinir ve iki argüman bir adet boşluk içererek bize yansıtılır. Fakat Terminale(Komut Satırı) bu boşlukların da bir argüman olduğunu söylemek istersek “ işareti ile bunu belirtmemiz gerekir.</p>
-<pre><code>$echo&quot;foo&quot; &quot;bar&quot;
-foo bar
+<h2 id="man-info-ve-apropos">Man, info ve apropos</h2>
+<p>Linux komutları hakkındaki bir makalede bu komutları size gösteriyor olmam garip olsa da linux komutlarının(aslında bunlar birer program) birlikte çalışabileceği optionlar hakkında bilgi almak için bu komutların manual sayfalarına bakabilirsiniz.</p>
+<pre><code>$ man ls
 </code></pre>
-<p><strong>Options –</strong> <strong>Seçenekler</strong></p>
-<p>Daha önceden gördüğümüz <em>date</em> komutunu hatırlıyor musunuz? Bu komut varsayılan haliyle bize komutun kullanıldığı tarihi ve saati söylüyor fakat ya biz UTC formatında bir bilgi istiyorsak? Bunun için <em>date</em> komutunu <em>–utc</em> optionı ile birlikte kullanabiliriz. Komutu bu şekilde kullandığımız zaman bilgisayar bizim UTC formatındaki zamanı istediğimizi bilerek bize buna uygun bir sonuç gönderiyor.</p>
-<pre><code>$ date --utc
-Tue 12 Oct 2021 12:38:44 PM UTC
+<p>Burada man komutu içerisine ls argümanını alarak bize ls komutunun manual sayfasını getirecek. Ok tuşları ile gelen ekran içerisinde gezinebilirsiniz. Q tuşu ile bu ekrandan çıkış yapabilirsiniz. Kullanıcı dökümantasyonunu farklı bir şekilde almak istiyorsak info komutunu kullanabiliriz.</p>
+<pre><code>$ info ls
 </code></pre>
-<p>Genelde komut seçeneklerini kısaltarak kullanırız. Bir seçeneğin(option) kısa versiyonu tek çizgi ile yazılan versiyonudur. Date komutunu <em>date -u</em> şeklinde kullandığımızda da aynı şekilde sonuç aldığımızı görebiliriz. Kendi terminalinizde bunu deneyebilirsiniz.</p>
-<p>Diyelim ki <em>date</em> komutundan bugünün verileri yerine bir önceki günün verilerini istiyoruz. Bunu nasıl yapabiliriz? Bunun için <em>date</em> komutuna <em>–date</em>, kısa haliyle <em>-d</em> seçeneğini gönderebiliriz. Bu seçeneğe de bir argüman göndererek bilgilerini istediğimiz tarihi belirtebiliriz. Kafa karışıklığını önlemek için oluşturduğumuz komutu parçalara bölerek göstereyim:</p>
-<ol>
-<li>date  </li>
-<li>date –date  </li>
-<li>date –date yesterday -u</li>
-</ol>
-<p>Birinci adımda çalıştırmak istediğimiz komutu girdik.<br />
-İkinci adımda çalıştırmak istediğimiz komuta bir seçenek gönderdik.<br />
-Üçüncü adımda ise komuta gönderdiğimiz seçeneğe(option) bir adet argüman gönderdik.(<em>yesterday</em>)<br />
-<em>-u</em> ise yukarıda da belirttiğim üzere <em>–utc</em> seçeneğinin kısaltılmış hali.</p>
-<pre><code>$ date --date yesterday -u
-Mon 11 Oct 2021 12:50:40 PM UTC
+<p>Bu yöntem oldukça kompleks GNU Programlarının nasıl kullanılacağını öğrenmek için oldukça etkilidir. Ayrıca bu dökümantasyonları emacs isimli text editöründe okuyabilirsiniz. Okunabilirliği kesinlikle arttırıyor.</p>
+<p>Az önce size bahsettiğim komutlardan sonra “bunlar bu kadar da önemli değilmiş” dediğinizi hissedebiliyorum. Şimdi bilgi almak konusunda hayatımızı kurtarıcak olan bir komuttan bahsetmek istiyorum.</p>
+<h2 id="apropos-komutu">Apropos komutu</h2>
+<p>Apropos komutu ne yapmak istediğimizi bildiğimiz ama hangi komut ile yapacağımızı bilmediğimiz zaman oldukça işimize yarar. Biraz garip bir cümle oldu fakat bunu başka türlü açıklayamazdım. 🙂 Diyelim ki bir dosyanın adını değiştirmek istiyoruz fakat bunu hangi komutun yaptığını bilmiyoruz. Bu komutu öğrenmek için apropos komutunu kullanabiliriz.</p>
+<pre><code>$ apropos rename
+...
+mv (1) - move (rename) files
+prename (1) - renames multiple files
+rename (2) - change the name or location of a file
+…
 </code></pre>
-<p>Yukarıdaki örnekte de gördüğünüz üzere bazı optionlar çalışmak için argümanlara ihtiyaç duyarlar.</p>
-<p>Daha önce çalıştırdığınız bir komutu tekrar hızlıca almak için Yukarı Ok tuşunu kullanabilirsiniz. Daha önceki ve sonraki komutları almak için de ok tuşlarını kullanarak yukarı ve aşağı hareket edebilirsiniz.</p>
-<p>Ayrıca Sol ok ve Sağ ok tuşları, tek bir komut içinde hareket etmenizi sağlar. Geri tuşu(backspace) ile birlikte bu tuşlar komutumuzun bölümlerini değiştirmenize ve onu isteğimize göre yeni bir komuta dönüştürmemize olanak tanır. Enter tuşuna her bastığınızda, değiştirilen komutu terminale gönderirsiniz ve tam olarak sıfırdan yazmışsınız gibi çalışır.</p>
+<p>Komutumuzu bu şekilde kullandığımız zaman apropos bizim için bütün manual sayfalarını tarayıp içerisinde “rename” yani isim değiştirme ile alakalı olan kısımları bizim önümüze getiriyor. Ayrıca evet, Google’da aramaktan daha hızlı bir çözüm olduğu doğru. 🙂</p>
+<p>Burada dikkatinizi çekmek istediğim bir konu var. Apropos komutundan karşımıza gelen çıktıya dikkatli baktığımızda bazı komutların yanında bazı numaraların olduğunu farkedebiliriz. Bu numara karşımıza gelen komutların hangi section’da olduğunu belirtir. yinelde section’u “1” olan programlar komut satırında kullanılabilir. Biz sadece komut satırında kullanabileceğimiz programları listelemek istiyorsak apropos’a bir option göndererek sadece section’u 1 olan programları bize göstermesini sağlayabiliriz.</p>
+<pre><code>$ apropos -s 1 rename
+...
+mv (1) - move (rename) files
+prename (1) - renames multiple files
+...
+</code></pre>
+<p>Section numarası kesinlikle ÇOK ÖNEMLİ?! Değil fakat section 1’deki manual sayfaları genellikle komut satırında kullanabileceğimiz programlar/komutlar.</p>
+<h2 id="mv-komutu">mv komutu</h2>
+<p>Apropos çıktımızdan öğrendiğimiz üzere mv komutu ile dosyalarımızın isimlerini bu komut ile değiştirebiliriz. Fakat bu komut aslında “move” anlamında. Yani dosyalarımızı bir dizinden farklı bir dizine taşımaya yarıyor. Fakat mv komutunu aşağıdaki şekilde kullanarak dosyalarımızı tekrar isimlendirebiliriz.</p>
+<pre><code>$ mv eski_isim yeni_isim
+</code></pre>
+<p>Sistem ayarlarınıza bağlı olarak dosyanızı tekrar isimlendirirken herhangi bir uyarı ile karşılaşmazsınız. Yani eğer bulunduğunuz dizinde dosyanıza vereceğiniz yeni isime sahip başka bir dosya varsa bu bir problem olabilir. Bunun için mv komutuna -i option’unu göndererek kullanmakta kesinlikle fayda var.</p>
+<pre><code>$ mv -i eski_isim yeni_isim
+</code></pre>
+<p>Ayrıca az önce yukarıda da bahsettiğim gibi mv komutunun gerçek işlevi dosyalarımızı bir dizinden alıp başka bir dizine taşımak. Eğer mv komutunun son argümanı bulunulan dizinden farklı bir dizini gösteriyorsa komutumuz taşıma işlemi gerçekleştirecektir.</p>
+<pre><code>$ mv herhangi_bir_dosya bir_tane_daha_dosya ucuncu_farkli_bir_dosya ~/belgelerim
+</code></pre>
+<p>Eğer belgelerim adında bir dizinimiz varsa mv komutu dosyalarımızı bu dizine taşıyacaktır. Eğer böyle bir dizin yoksa aşağıdaki şekilde bir hata mesajı alabiliriz.</p>
+<pre><code>$ mv herhangi_bir_dosya bir_tane_daha_dosya ucuncu_farkli_bir_dosya ~/belgelerim
+mv: target ‘belgelerim’ is not a directory
+</code></pre>
+<h2 id="mkdir-komutu">mkdir Komutu</h2>
+<p>Eee, dizin/klasör nasıl oluşturuyoruz? Mkdir komutu ile!</p>
+<pre><code>$ mkdir ~/belgelerim
+</code></pre>
+<p>Var olan bir dizini nasıl siliyoruz? Rmdir komutu ile. 🙂</p>
+<pre><code>$ rmdir ~/belgelerim
+</code></pre>
+<p>Eğer bir dizinin içerisinde alt bir dizin oluşturmak istiyorsak (diyelim ki bu halihazırda var olan dizinin adı foo) mkdir komutunu aşağıdaki gibi kullanabiliriz.</p>
+<pre><code>$ mkdir -p ~/foo/bar
+</code></pre>
+<p>Eğer rmdir komutu ile silmek istediğimiz dizin içerisinde dosyalar barındırıyorsa rmdir komutu bize hata vericektir. İçerisinde dosya olan bir klasörü nasıl silebiliriz? Rmdir komutuna -R optionunu göndererek.<br />
+Hadi bunu test edelim! Ilk önce alistirma adında bir dizin oluşturup bu dizinin içerisine girelim.</p>
+<pre><code>$ mkdir ~/alistirma
+$ cd ~/alistirma
+</code></pre>
+<h2 id="cp-rm-ve-rmdir-komutlar">cp, rm ve rmdir komutları</h2>
+<p>Cp komutumuzu kullanarak oluşturduğumuz dizinlerin içerisine dosya kopyalayabiliriz! Bilgisayarımızda hali hazırda bulunan bazı dosyaları kullanarak bu testi gerçekleştirebiliriz. Cd komutu ile alistirma isimli dizinimize az önce girdik.</p>
+<pre><code>$ cp /etc/fstab /etc/hosts /etc/issue /etc/motd .
+$ ls
+fstab hosts issue motd
+</code></pre>
+<p>Dizinler ile alakalı yazdığım bir önceki makalede sizlere . ve .. işaretlerinden bahsetmiştim. . şaretini komutunuzun sonuna koymayı unutmayın! Eğer hatırlarsanız . işaretinin komut satırında “bu dizin” anlamına geldiğini söylemiştim. Bu işareti cp komutuna bir argüman olarak gönderdikten sonra belirttiğimiz dizinleri bulunduğumuz dizine kopyalayabiliriz. Veya içerisinde bulunduğumuz dizinin içerisindei bütün dizinleri/ve dosyaları farklı bir yere kopyalayabiliriz.</p>
+<pre><code>$ cp -R . ~/hedef_dizin
+</code></pre>
+<p>Hadi şimdi oluşturduğumuz alistirma isimli dizini ve içerdiği alt dizinleri silelim.</p>
+<pre><code>$ cd ~
+$ rmdir alistirma
+rmdir: failed to remove ‘alistirma’: Directory not empty
+</code></pre>
+<p>Gördüğünüz üzere rmdir komutu ile içerisinde dosya bulunan dizinleri direkt silemiyoruz. Fakat rm komutuna -R optionunu gönderek bunu yapmamız mümkün.</p>
+<pre><code>$ rmdir -R alistirma
+</code></pre>
+<h2 id="cat-ve-less-komutu">Cat ve Less Komutu</h2>
+<p>Bir dosyanın içeriğini görüntülemek için her zaman text editörüne ihtiyaç duymayız. Eğer amacımımız sadece dosyanın içeriğini görüntülemek ise cat komutunu kullanabiliriz.</p>
+<pre><code>$ cat herhangi_bir_metin_dosyasi.txt
+Eeeeeeeeey! Terminal kullanmayı en iyi biz biliriz!
+</code></pre>
+<p>Eğer içeriğini görüntülemek istediğimiz dosya çok uzunsa less komutunu kullanmamız daha mantıklı olabilir. Less komutu ile metin dosyamızı görüntüleme ekranında ok tuşlarıyla gezinip q tuşu ile bu ekrandan çıkabiliriz.</p>
+<pre><code>$ less herhangi_bir_metin_dosyasi.txt
+</code></pre>
+<p>An itibariyle dosya silme, dosya kopyalama, dizin/klasör oluşturma, dosya ismi değiştirme, dosya silme, komutların manual sayfalarına erişme ve bulunulan dizini görüntüleyebiliyoruz! Henüz bu komutları ezberlemediğinizi düşünerek aşağıya küçük bir liste çıkartıyorum, bu listeden faydalanabilirsiniz!</p>
+<p>Bu derste öğrendiğimiz komutlar:<br />
+ls komutu : dizin içeriği görüntülemeye yarar.<br />
+man komutu : komutarın/programların manual sayfalarına erişmemize yarar.<br />
+info komutu : komutlar/programlar hakkında bilgi almamıza yarar.<br />
+apropos komutu : manual sayfaları içerisinde içerisine gönderdiğimiz argümanı arar.<br />
+cp komutu : dosya kopyalamaya yarar.<br />
+mv komutu : dosyaları/dizinleri taşımaya ve yeniden adlandırmaya(isim değiştirme) yarar.<br />
+rmdir komutu : dizinleri silmemize yarar.<br />
+mkdir komutu : dizin oluşturmamıza yarar.<br />
+cat komutu : dosyaların text içeriğini görüntülememize yarar.<br />
+less komutu : uzun text dosyalarını görüntülememizde daha kullanışlıdır.</p>
 
 
 

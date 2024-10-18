@@ -36,6 +36,7 @@ nav:
       - Logrotate: linux/logrotate.md
       - SwapFile: linux/swapfile.md
       - Swaks: linux/swaks.md
+      - Tmux: linux/tmux.md
   - Ansible: ansible.md
   - Mail:
       - Mailu: mail/mailu.md

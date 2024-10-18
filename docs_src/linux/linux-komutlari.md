@@ -10,7 +10,7 @@ Aşağıdaki listeden veya direkt Linux Komutları menüsünden konu hakkında y
 
 ## Linux Komutları
 
-1.  [Komut Satırına Giriş](komut-satirina-giris.md)
+1. [Komut Satırına Giriş](komut-satirina-giris.md)
 2. [Terminal Komutlarının Kullanımı(Syntax)](terminal-komutlarinin-kullanimi-(syntax).md)
 3. [Bilgisayar İçerisinde Gezinmek](bilgisayar-icerisinde-gezinmek.md)
 4. [Temel Linux Komutları](temel-linux-komutlari.md)

@@ -16,4 +16,4 @@ apt-get install tmux
 
 ### Önerilen Tmux Ayarları
 
-1. set -g mouse on Tmux üzerinde fare kullanımını mümkün kılar.
+1. ```set -g mouse on``` Tmux üzerinde fare kullanımını mümkün kılar.

@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/main/mail/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/root-kullanicisi/">
       
       
+        <link rel="prev" href="../daha-hizli-terminal-kullanmak/">
+      
+      
+        <link rel="next" href="../logrotate/">
       
       
       <link rel="icon" href="../../images/berk-bal.png">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Mail - Docs for SysAdmins</title>
+        <title>Root Kullanicısı ve Sudo Komutu - Docs for SysAdmins</title>
       
     
     
@@ -69,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#root-kullancs-ve-sudo-komutu" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -101,7 +110,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mail
+              Root Kullanicısı ve Sudo Komutu
             
           </span>
         </div>
@@ -237,17 +246,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -261,7 +272,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -272,17 +283,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -296,7 +309,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux Komutları
@@ -310,7 +323,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/linux-komutlari/" class="md-nav__link">
+      <a href="../linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -331,7 +344,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/komut-satirina-giris/" class="md-nav__link">
+      <a href="../komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -352,7 +365,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
+      <a href="../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -373,7 +386,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
+      <a href="../bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -394,7 +407,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/temel-linux-komutlari/" class="md-nav__link">
+      <a href="../temel-linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -415,7 +428,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/standart-akislar/" class="md-nav__link">
+      <a href="../standart-akislar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -436,7 +449,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/daha-hizli-terminal-kullanmak/" class="md-nav__link">
+      <a href="../daha-hizli-terminal-kullanmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -454,10 +467,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../linux/root-kullanicisi/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Root Kullanicısı ve Sudo Komutu
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -466,6 +499,44 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sudo-komutu-ve-root-kullancs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sudo komutu ve Root Kullanıcısı
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sudo-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sudo Komutu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -486,7 +557,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/logrotate/" class="md-nav__link">
+      <a href="../logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -507,7 +578,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/swapfile/" class="md-nav__link">
+      <a href="../swapfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -528,7 +599,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/swaks/" class="md-nav__link">
+      <a href="../swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -549,7 +620,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/tmux/" class="md-nav__link">
+      <a href="../tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -653,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/swaks/" class="md-nav__link">
+      <a href="../swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -986,6 +1057,34 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#sudo-komutu-ve-root-kullancs" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sudo komutu ve Root Kullanıcısı
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sudo-komutu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sudo Komutu
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1000,9 +1099,22 @@
                   
 
 
-  <h1>Mail</h1>
-
-
+<h1 id="root-kullancs-ve-sudo-komutu">Root Kullanıcısı ve Sudo Komutu</h1>
+<p><strong>Linux</strong> sistemimizin bazı kısımları özel korumaya ihtiyaç duyar. Eğer her kullanıcı <code>cat</code>, <code>less</code>, <code>cd</code>, <code>mkdir</code> gibi komutların işlevini değiştirebiliyor olsaydı(sadece siz değiştirebilirsiniz) ortada çok büyük bir güvenlik zaafiyeti olurdu. Sadece internet üzerinden indirdiğiniz bir programın <code>rm</code> komutunun işlevini <code>cd</code> komutuna verdiğini düşünün. Bilgisayarınızdaki dizinleri kendi elinizle silmiş olurdunuz. Bu tarz önemli değişiklikleri sadece <strong>root</strong> kullanıcısı yapabilir.</p>
+<p><img alt="Sudo komutu ve Root Kullanıcısı" src="../../images/root-sudo.png" /></p>
+<h2 id="sudo-komutu-ve-root-kullancs">Sudo komutu ve Root Kullanıcısı</h2>
+<p>Bilgisayarların bu kadar ulaşılabilir olmadığı dönemlerde çoğunlukla bir bilgisayarı birden fazla kişi kullanıyordu. <strong>Root</strong> kullanıcısı da genellikle bilgisayarın gerçek sahibine veya biraz daha tecrübeli kullanıcılara veriliyordu. Sebebini doğru tahmin ediyorsunuz.</p>
+<p>Günümüzde de hala <strong>GNU/Linux</strong> sistemlerde hassas/önemli dosyaların sahibini belirlemek için bir adet root kullanıcısı bulunur.  </p>
+<p><em>Dipnot: Linux dosya sisteminde bulunan root dizininin(/) root kullanıcısı ile aslında bir alakası yoktur.</em></p>
+<p>Root komutları maksimum yetkiye sahip olduğu için dikkatli kullanılmaları gerekir. Fakat her koşulda bilgisayarınıza bir yazılım kurmak istediğinizde bile bu yetkiye kısa bir süreliğine sahip olmanız gerekir.</p>
+<h2 id="sudo-komutu">Sudo Komutu</h2>
+<p>Çoğu modern sistemde çalıştırmak istediğiniz komutun root yetkileri ile çalışmasını istiyorsanız çalıştırmak istediğiniz komutun başına <strong>sudo</strong> yazmanız yeterli olacaktır.(Tabi bunun için sudo’nun bilgisayarınızda kurulu olması gerekir)</p>
+<pre><code>$ sudo rm -r /silinmek_istenen_dizin
+</code></pre>
+<p>Örnekteki komutu sudo ile çalıştırmak istediğinizde sistem size root parolanızı soracaktır. Bu koruma yöntemi sayesinde de her kullanıcı istediği komutu root yetkileri ile çalıştıramayacaktır. Ayrıca sistem belli bir süreliğine sizin root parolanızı hatırlayacaktır, yani sudo komutunu her kullandığınızda parolanızı tekrar girmek zorunda kalmazsınız.</p>
+<p>Bazı sistemler kullanıcının <em>su</em> komutunu kullanmasına da izin verir. Bu komut sizi yeni bir komut satırına göndererek <strong>root kullanıcısı</strong> ile otomatik giriş yapar.  </p>
+<p>Bu özelliğe varsayılan olarak her sistemin izin vermemesinin sebebi genellikle kullanıcıların dalgınlıkla root kullanıcısında olduğunu farketmeyip gündelik işlerini root kullanıcısı ile yapmaları. Örneğin kendi masaüstünüzde root kullanıcısı ile bir dizin oluşturursanız bu dizin root kullanıcısına ait olacak ve bu dizine kendi kullanıcı hesabınızla erişemeyeceksiniz. Tabii ki bunu düzeltmenin yolları var fakat neden ekstra birşey ile uğraşalım ki?</p>
+<p>Uzun lafın kısası sisteminizde root olarak gezinmeyin, root parolanızı da kimseyle paylaşmayın. 😀 <a href="https://github.com/sudo-project/sudo"><strong>Büyük güç, büyük sorumluluk gerektirir.</strong></a></p>
 
 
 

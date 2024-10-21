@@ -14,3 +14,6 @@ Aşağıdaki listeden veya direkt Linux Komutları menüsünden konu hakkında y
 2. [Terminal Komutlarının Kullanımı(Syntax)](terminal-komutlarinin-kullanimi-(syntax).md)
 3. [Bilgisayar İçerisinde Gezinmek](bilgisayar-icerisinde-gezinmek.md)
 4. [Temel Linux Komutları](temel-linux-komutlari.md)
+5. [Standart Akışlar](standart-akislar.md)
+6. [Daha Hızlı Terminal Kullanmak](daha-hizli-terminal-kullanmak.md)
+7. [Root Kullanıcısı ve Sudo Komutu](root-kullanicisi.md)

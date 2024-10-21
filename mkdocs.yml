@@ -34,6 +34,8 @@ nav:
         - Bilgisayar İçerisinde Gezinmek: linux/bilgisayar-icerisinde-gezinmek.md
         - Temel Linux Komutları: linux/temel-linux-komutlari.md
         - Standart Akışlar: linux/standart-akislar.md
+        - Daha Hızlı Terminal Kullanmak: linux/daha-hizli-terminal-kullanmak.md
+        - Root Kullanicısı ve Sudo Komutu: linux/root-kullanicisi.md
       - Logrotate: linux/logrotate.md
       - SwapFile: linux/swapfile.md
       - Swaks: linux/swaks.md

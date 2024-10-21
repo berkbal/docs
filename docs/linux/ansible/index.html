@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/logrotate/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/ansible/">
       
       
-        <link rel="prev" href="../standart-akislar/">
-      
-      
-        <link rel="next" href="../swapfile/">
       
       
       <link rel="icon" href="../../images/berk-bal.png">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Logrotate - Docs for SysAdmins</title>
+        <title>Ansible - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#log-rotasyonu-nedir" class="md-skip">
+        <a href="#ansible" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -110,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Logrotate
+              Ansible
             
           </span>
         </div>
@@ -246,19 +242,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -272,7 +266,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -452,30 +446,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Logrotate
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -484,92 +458,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
-    <span class="md-ellipsis">
-      Kurulum
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Kurulum">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#rhelcentos" class="md-nav__link">
-    <span class="md-ellipsis">
-      RHEL/CentOS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debianubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debian/Ubuntu
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fedora" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fedora
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nasl-calsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nasıl çalışır?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nasıl çalışır?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ayar-dosyas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ayar Dosyası
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1071,61 +959,19 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#kurulum" class="md-nav__link">
+  <a href="#ansible-nedir" class="md-nav__link">
     <span class="md-ellipsis">
-      Kurulum
+      Ansible Nedir?
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Kurulum">
+    <nav class="md-nav" aria-label="Ansible Nedir?">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#rhelcentos" class="md-nav__link">
+  <a href="#kurulum-ve-kullanim-adimlari" class="md-nav__link">
     <span class="md-ellipsis">
-      RHEL/CentOS
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#debianubuntu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Debian/Ubuntu
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#fedora" class="md-nav__link">
-    <span class="md-ellipsis">
-      Fedora
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#nasl-calsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nasıl çalışır?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nasıl çalışır?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#ayar-dosyas" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ayar Dosyası
+      Kurulum ve Kullanim Adimlari
     </span>
   </a>
   
@@ -1151,57 +997,74 @@
                   
 
 
-<h1 id="log-rotasyonu-nedir">Log Rotasyonu Nedir?</h1>
-<p>Log rotasyonu güncel/yeni log dosyalarını etkilemeden eski log dosyalarını silme/yedekleme işlemidir. Kullanıldığı alana göre her uygulama önemli loglar üretir ve bu logları genelde kaybetmek istemeyiz. Eğer bu logları silmezsek kullandığımız sunucunun disk kapasitesi kısa bir süre sonra dolabilir.</p>
-<p>Logları silmek yerine bizim için otomatik olarak gzip formatında arşivleyen Logrotate adında bir yazılım var.</p>
-<p>Logrotate, log dosyalarını yönetmeye, sıkıştırmaya, kaldırmaya ve hatta belirli bir zaman aralığından sonra (örneğin günlük, haftalık, aylık vb.) e-postayla bir yere göndermeye yardımcı olur.</p>
-<h2 id="kurulum">Kurulum</h2>
-<p>Çoğu Linux dağıtımı varsayılan olarak Logrotate ile gelir. Eğer sisteminizde mevcut değilse, aşağıdaki komutlarla kolayca kurulabilir:</p>
-<h3 id="rhelcentos">RHEL/CentOS</h3>
-<p><code>yum install logrotate</code></p>
-<h3 id="debianubuntu">Debian/Ubuntu</h3>
-<p><code>apt-get install logrotate</code></p>
-<h3 id="fedora">Fedora</h3>
-<p><code>dnf install logrotate</code></p>
-<h2 id="nasl-calsr">Nasıl çalışır?</h2>
-<p>Logrotate, işlem yapmak istediğiniz tüm log dosyalarını belirtebileceğiniz bir yapılandırma dosyasına sahiptir. Günlük, haftalık, aylık vb. gibi bir zaman periyodu birimine ve her döndürme için 3, 4, 5 gibi döndürme sayısına ihtiyacı vardır. Log dosyaları kaldırılmadan önce döndürme sayısı kadar döndürülür. Varsayılan döndürme sayısı 0'dır, bu da eski günlük sürümlerinin döndürülmek yerine kaldırılacağı anlamına gelir. Yani günlükleriniz <strong>my-application.log</strong> adlı bir dosyaya kaydediliyorsa, bir döndürmeden sonra my-application.1.log adlı yeni bir dosya oluşturulur.</p>
-<h3 id="ayar-dosyas">Ayar Dosyası</h3>
-<p>Logrotate yapılandırma dosyası <code>/etc/logrotate.conf</code>'da bulunur. Örnek bir yapılandırma dosyası şuna benzer bloklar içerir:</p>
-<pre><code>/var/lib/docker/containers/*/*.log {
-    rotate 5
-    copytruncate
-    missingok
-    notifempty
-    compress
-    maxsize 200M
-    daily
-}
+<h1 id="ansible">Ansible</h1>
+<h2 id="ansible-nedir">Ansible Nedir?</h2>
+<ul>
+<li>Birden fazla makinede komut calistirmak icin kullanilir. Bu komutlara(scriptlere) playbook denir.</li>
+<li>Varsayilan olarak SSH kullanir.</li>
+</ul>
+<h3 id="kurulum-ve-kullanim-adimlari">Kurulum ve Kullanim Adimlari</h3>
+<ol>
+<li>
+<p>Asagidaki komut ile secure bir ssh key olusturulur. Key dosyasina isim verilirken full path yazilmalidir. </p>
+</li>
+<li>
+<p>Ornek: /home/berk/.ssh/ISIM seklinde isim verilebilir.</p>
+</li>
+</ol>
+<pre><code>ssh-keygen -t ed25519 -C &quot;ansible&quot;
 </code></pre>
-<p>Şimdi bu log dosyasını adım adım inceleyelim:</p>
-<p><code>/var/lib/docker/containers/*/*.log</code></p>
-<p>Logrotate'in hangi dosyayı veya dosyalara işlem uygulayacağını gösteren yoldur.  <code>{ }</code> içerisindeki kuralları <code>/var/lib/docker/containers</code> dizinindeki bütün dizinlerin içerisindeki <code>.log</code> ile biten dosyalara aşağıdaki kuralları uygulayacak:</p>
-<p><code>rotate 5</code></p>
-<p>Loglari en fazla 5 kere saklar, yani işlem yapıldığında en fazla 5 dosya eski günlük saklanacak ve halihazırda 5 dosya olduğunda en eski günlükler silinecek.</p>
-<p>Örnek: </p>
-<pre><code>my-application.log 
-my-application.log1 
-my-application.log2 
-my-application.log3 
-my-application.log4 
-my-application.log5
+<p>Asagidaki komut ile olusturulan key ansible ile kontrol edilmesi istenilen bilgisayarlara kopyalanir. root kismina kullanici adi, ip adresi kismina da kontrol edilmek istenen bilgisayarin ip adresi yazilir.</p>
+<pre><code>ssh-copy-id -i ~/.ssh/ansible.pub root@192.168.1.32
 </code></pre>
-<p><code>copytruncate</code></p>
-<p>Eski log dosyalarını taşıyıp isteğe bağlı olarak yenisini oluşturmak yerine, bir kopya oluşturduktan sonra orijinal log dosyasını bulunduğu yerde, 0 KB boyutuna küçültür. <strong><em>Bazı uygulamaların</em></strong> log dosyasını kapatması mümkün olmadığında ve önceki log dosyasına yazmaya devam edebileceği durumlarda kullanılabilir. Dosyanın kopyalanması ve küçültülmesi arasında çok küçük bir zaman dilimi olduğu için log kaybı olabilir.</p>
-<p><code>missingok</code></p>
-<p>Eğer log dosyası eksikse, bir hata oluşturmaz ve bir sonraki dosyaya geçer.</p>
-<p><code>notifempty</code></p>
-<p>Log dosyasının içeriği boşsa log rotate işlemi gerçekleştirmez.</p>
-<p><code>compress</code></p>
-<p>Eski log dosyalarını gzip formatında sıkıştırır.</p>
-<p><code>maxsize 200M</code></p>
-<p>Log dosyası, rotate kuralından bağımsız olarak 200 MB boyutunu aşarsa rotate işlemini gerçekleştirir. Bu ayar ileride <strong><em>zgrep</em></strong> kullanılarak sıkıştırılmış dosyaların içerisinde bir log ararken dosyanın boyutunun fazla büyük olmaması sağlanırsa avantaj sağlar.</p>
-<p><code>daily</code></p>
-<p>Log rotate işlemini günlük olarak gerçekleştirir.</p>
+<ol>
+<li>Eger keyde parola varsa her seferinde parola kullanmamak icin asagidaki komut kullanilabilir.</li>
+</ol>
+<pre><code>eval $(ssh_agent)
+</code></pre>
+<p><code>ps aux</code> komutunun ciktisindan <code>ssh_agent</code>'in <code>PID</code>'i kontrol edilir. Terminal ekrani kapandigi zaman tekrar parola girilmesi gerekebilir. Bunun icin .bashrc dosyasinda duzenlemeler yapilabilir.</p>
+<ol>
+<li>Bilgisayara Ansible Kurulur</li>
+</ol>
+<pre><code>sudo apt-get install ansible -y
+</code></pre>
+<ol>
+<li>
+<p>Ansible adinda bir dizin oluşturulur veya hazır repo bilgisayara klonlanır.</p>
+</li>
+<li>
+<p>inventory adında bir dosya oluşturulur ve Ansible'ın bağlanacağı ip adresleri(sunucu veya kullanıcı) bu dosyanın içerisine alt alta yazılır.</p>
+</li>
+<li>
+<p>Asagidaki komut ile baglantida sorun var mi diye kontrol edilebilir.</p>
+</li>
+</ol>
+<pre><code>sudo ansible all --key-file ~/.ssh/ansible -i inventory -m ping
+</code></pre>
+<p><strong><em>Bu komutun sudo ile kullanilmasinin nedeni olusturdugumuz ssh keyinin client bilgisayarlarin root kullanicisina eklenmis olmasi.</em></strong></p>
+<p>Ansible komutuna -u ile kullanıcı adı verilebilir.</p>
+<pre><code>ansible all --key-file ~/.ssh/ansible -i inventory -m ping -u root
+</code></pre>
+<p>Veya asagidaki sekilde parametreler eklenerek ansible'in root yetkisi olan kullanicinin parolasinin sormasi saglanabilir.</p>
+<pre><code>--become --ask-become-pass
+</code></pre>
+<h1 id="ornekler">Örnekler</h1>
+<h2 id="ansible-ile-inventoryde-bulunan-butun-sunuculara-paket-kurmak">Ansible ile inventory'de bulunan butun sunuculara paket kurmak</h2>
+<pre><code>ansible all -m apt -a name=vim --become --ask-become-pass
+</code></pre>
+<p>apt modülünü kullanarak <code>-a</code> parametresi ile <code>name=PAKET-ADI</code> seklinde belirterek paket kurulumu yapabiliriz.</p>
+<h2 id="ansible-dosya-yaps">Ansible Dosya Yapısı</h2>
+<h3 id="dizinler-dosyalar-ve-islevleri">Dizinler, Dosyalar ve İşlevleri</h3>
+<ul>
+<li>Inventory: Ansible'in bağlanıp işlem yapacağı clientların ip adreslerinin bulunduğu dosya.</li>
+<li>ansible.cfg: Ansible'ın ayarlarının bulunduğu dosya. Burada inventory dosyasını ve kullanacağımız ssh keyini vs tanımlayarak ansible komutunu her çalıştırdığımızda yazacağımız komutu kısaltabiliriz.</li>
+</ul>
+<pre><code>berk@berk-notebook:~/Documents/repos/ansible-environment$ cat ansible.cfg 
+[defaults]
+inventory = inventory
+private_key_file = ~/.ssh/ansible
+remote_user = root
+</code></pre>
 
 
 

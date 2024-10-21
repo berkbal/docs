@@ -52,6 +52,22 @@ Ansible komutuna -u ile kullanıcı adı verilebilir.
 ansible all --key-file ~/.ssh/ansible -i inventory -m ping -u root
 ```
 
+Veya asagidaki sekilde parametreler eklenerek ansible'in root yetkisi olan kullanicinin parolasinin sormasi saglanabilir.
+
+```
+--become --ask-become-pass
+```
+
+# Örnekler
+
+## Ansible ile inventory'de bulunan butun sunuculara paket kurmak
+
+```
+ansible all -m apt -a name=vim --become --ask-become-pass
+```
+
+apt modülünü kullanarak ```-a``` parametresi ile ```name=PAKET-ADI``` seklinde belirterek paket kurulumu yapabiliriz.
+
 ## Ansible Dosya Yapısı
 
 ### Dizinler, Dosyalar ve İşlevleri

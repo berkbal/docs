@@ -4,7 +4,8 @@ docs_dir: docs_src  # Kaynak dosyalarınızın olduğu dizin
 site_dir: docs      # Derlenmiş site dosyalarının yerleştirileceği dizin
 theme:
   name: material
-  favicon: images/berk-bal.png
+  favicon: images/favicon.ico
+  logo: images/berk-bal.png
   features:
     - palette.toggle  # Karanlık mod geçişini etkinleştirir
   language: tr

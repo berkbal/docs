@@ -8,26 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/ss/">
       
       
+        <link rel="prev" href="../tmux/">
       
-        <link rel="next" href="linux/linux-komutlari/">
+      
+        <link rel="next" href="../../mail/mailu/">
       
       
-      <link rel="icon" href="images/favicon.ico">
+      <link rel="icon" href="../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Docs for SysAdmins</title>
+        <title>ss - Docs for SysAdmins</title>
       
     
     
-      <link rel="stylesheet" href="assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -46,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -72,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#sistem-yoneticileri-icin-dokumantasyon" class="md-skip">
+        <a href="#ss-komutu" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -88,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Başlık">
-    <a href="." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
-  <img src="images/berk-bal.png" alt="logo">
+  <img src="../../images/berk-bal.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -107,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ana Sayfa
+              ss
             
           </span>
         </div>
@@ -208,9 +210,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
-  <img src="images/berk-bal.png" alt="logo">
+  <img src="../../images/berk-bal.png" alt="logo">
 
     </a>
     Docs for SysAdmins
@@ -222,30 +224,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Ana Sayfa
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="." class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -254,35 +236,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#iletisim" class="md-nav__link">
-    <span class="md-ellipsis">
-      İletişim
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -291,17 +244,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -315,7 +270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -364,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/linux-komutlari/" class="md-nav__link">
+      <a href="../linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/komut-satirina-giris/" class="md-nav__link">
+      <a href="../komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
+      <a href="../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -427,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
+      <a href="../bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/temel-linux-komutlari/" class="md-nav__link">
+      <a href="../temel-linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -469,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/standart-akislar/" class="md-nav__link">
+      <a href="../standart-akislar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -490,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/daha-hizli-terminal-kullanmak/" class="md-nav__link">
+      <a href="../daha-hizli-terminal-kullanmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/root-kullanicisi/" class="md-nav__link">
+      <a href="../root-kullanicisi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -540,7 +495,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/logrotate/" class="md-nav__link">
+      <a href="../logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -561,7 +516,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/swapfile/" class="md-nav__link">
+      <a href="../swapfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -582,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/swaks/" class="md-nav__link">
+      <a href="../swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +558,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/tmux/" class="md-nav__link">
+      <a href="../tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -621,17 +576,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -645,7 +602,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Network
@@ -656,10 +613,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="linux/ss/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    ss
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -668,6 +645,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ss-komutu-nasl-kullanlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      SS Komutu Nasıl Kullanılır?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-baglantlarn-gorme" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Bağlantılarını Görme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listening-tcp-baglantlran-gorme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listening TCP Bağlantılraını Görme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sadece-ipv4-baglantlarn-gorme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sadece ipv4 Bağlantılarını Görme
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -695,7 +728,7 @@
   
   
     <li class="md-nav__item">
-      <a href="ansible.md" class="md-nav__link">
+      <a href="../../ansible.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -750,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="mail/mailu/" class="md-nav__link">
+      <a href="../../mail/mailu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -771,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="linux/swaks/" class="md-nav__link">
+      <a href="../swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -834,7 +867,7 @@
   
   
     <li class="md-nav__item">
-      <a href="guncelleme/gitlab/" class="md-nav__link">
+      <a href="../../guncelleme/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -932,7 +965,7 @@
   
   
     <li class="md-nav__item">
-      <a href="docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
+      <a href="../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1003,7 +1036,7 @@
   
   
     <li class="md-nav__item">
-      <a href="haproxy/haproxy-hardening" class="md-nav__link">
+      <a href="../../haproxy/haproxy-hardening" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1066,7 +1099,7 @@
   
   
     <li class="md-nav__item">
-      <a href="javascript/bcrypt/" class="md-nav__link">
+      <a href="../../javascript/bcrypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1114,9 +1147,36 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#iletisim" class="md-nav__link">
+  <a href="#ss-komutu-nasl-kullanlr" class="md-nav__link">
     <span class="md-ellipsis">
-      İletişim
+      SS Komutu Nasıl Kullanılır?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcp-baglantlarn-gorme" class="md-nav__link">
+    <span class="md-ellipsis">
+      TCP Bağlantılarını Görme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#listening-tcp-baglantlran-gorme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Listening TCP Bağlantılraını Görme
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sadece-ipv4-baglantlarn-gorme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sadece ipv4 Bağlantılarını Görme
     </span>
   </a>
   
@@ -1137,19 +1197,24 @@
                   
 
 
-<h1 id="sistem-yoneticileri-icin-dokumantasyon">Sistem Yöneticileri İçin Dökümantasyon</h1>
-<p>Hoş Geldiniz!</p>
-<p>Bu sayfa, teknik dökümantasyon ve projeler için bir bilgi havuzu olarak tasarlanmıştır. Bu sitedeki içerikler kendim çalışırken uyguladığım yöntemler ve kullandığım araçlar hakkında kendi yazdığım dökümanları içeriyor. Amacım, hem kendim için düzenli bir bilgi kaynağı oluşturmak hem de benzer alanlarda çalışan kişilere yardımcı olabilecek kaynaklar sunmaktır.</p>
-<h3 id="iletisim">İletişim</h3>
-<ul>
-<li><a href="https://berkbal.com">Kişisel web sitem</a></li>
-<li>
-<p><a href="https://www.linkedin.com/in/ben-berkbal">LinkedIn profilim</a></p>
-</li>
-<li>
-<p>ben@berkbal.com</p>
-</li>
-</ul>
+<h1 id="ss-komutu">SS Komutu</h1>
+<p><code>ss</code> komutu ile linux sunucumuzun nerelerden bağlantı aldığını öğrenebiliriz. Açık portlar ve soketler <code>ss</code> komutu ile kontrol edilebilir. Hangi portların dinlenildiği de ss ile kontrol edilebilir.</p>
+<p><strong><em>soket, iki program arasında veri alışverişini sağlayan bir haberleşme mekanizmasıdır. Soketler, bir ağ bağlantısı ya da aynı sistemde çalışan iki uygulama arasında veri aktarımı için kullanılabilir. Genellikle bir istemci ve bir sunucu uygulaması arasında veri alışverişi sağlamak amacıyla kullanılır.</em></strong></p>
+<h2 id="ss-komutu-nasl-kullanlr">SS Komutu Nasıl Kullanılır?</h2>
+<pre><code>ss
+</code></pre>
+<p>Bu komutun çıktısı sistemdeki bütün bağlantıları gösterir.</p>
+<h2 id="tcp-baglantlarn-gorme">TCP Bağlantılarını Görme</h2>
+<pre><code>ss -t
+</code></pre>
+<p>Bu komut ile sadece TCP bağlantıları izlenebilir.</p>
+<h2 id="listening-tcp-baglantlran-gorme">Listening TCP Bağlantılraını Görme</h2>
+<pre><code>ss -tl
+</code></pre>
+<p>Bu komut ile sadece TCP ve sunucunun dinlediği bağlantılar görüntülenebilir.</p>
+<h2 id="sadece-ipv4-baglantlarn-gorme">Sadece ipv4 Bağlantılarını Görme</h2>
+<pre><code>ss -4
+</code></pre>
 
 
 
@@ -1196,10 +1261,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": ".", "features": ["palette.toggle"], "search": "assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["palette.toggle"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
     
     
-      <script src="assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

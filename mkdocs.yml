@@ -38,9 +38,11 @@ nav:
         - Daha Hızlı Terminal Kullanmak: linux/daha-hizli-terminal-kullanmak.md
         - Root Kullanicısı ve Sudo Komutu: linux/root-kullanicisi.md
       - Logrotate: linux/logrotate.md
-      - SwapFile: linux/swapfile.md
+      - Swapfile: linux/swapfile.md
       - Swaks: linux/swaks.md
       - Tmux: linux/tmux.md
+      - Network:
+        - ss: linux/ss.md
   - Ansible: ansible.md
   - Mail:
       - Mailu: mail/mailu.md

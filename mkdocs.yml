@@ -37,13 +37,15 @@ nav:
         - Standart Akışlar: linux/standart-akislar.md
         - Daha Hızlı Terminal Kullanmak: linux/daha-hizli-terminal-kullanmak.md
         - Root Kullanicısı ve Sudo Komutu: linux/root-kullanicisi.md
+        - Yönlendirme ve Operatörler: linux/yonlendirme(operatorler).md
+        - Birden Fazla Dosya ile İşlem Yapmak: linux/birden-fazla-dosya-ile-islem-yapmak.md
       - Logrotate: linux/logrotate.md
       - Swapfile: linux/swapfile.md
       - Swaks: linux/swaks.md
       - Tmux: linux/tmux.md
       - Network:
         - ss: linux/ss.md
-  - Ansible: ansible.md
+  - Ansible: ansible/ansible.md
   - Mail:
       - Mailu: mail/mailu.md
       - Swaks: linux/swaks.md

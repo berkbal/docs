@@ -7,7 +7,7 @@
 
 ### Kurulum ve Kullanim Adimlari
 
-1. Asagidaki komut ile secure bir ssh key olusturulur. Key dosyasina isim verilirken full path yazilmalidir. 
+1. Asagidaki komut ile secure bir ssh key olusturulur. Key dosyasina isim verilirken full path yazilmalidir. (Veya istege gore var olan bir key kullanılabilir.)
 
 - Ornek: /home/berk/.ssh/ISIM seklinde isim verilebilir.
 
@@ -34,7 +34,7 @@ eval $(ssh_agent)
 sudo apt-get install ansible -y
 ```
 
-4. Ansible adinda bir dizin oluşturulur veya hazır repo bilgisayara klonlanır.
+4. Ansible adinda bir dizin oluşturulur veya hazır repo bilgisayara klonlanır. Ansible ile alakalı işlemler bu dizinde yapılmalıdır.
 
 5. inventory adında bir dosya oluşturulur ve Ansible'ın bağlanacağı ip adresleri(sunucu veya kullanıcı) bu dosyanın içerisine alt alta yazılır.
 
@@ -58,15 +58,13 @@ Veya asagidaki sekilde parametreler eklenerek ansible'in root yetkisi olan kulla
 --become --ask-become-pass
 ```
 
-# Örnekler
+## Modüller
 
-## Ansible ile inventory'de bulunan butun sunuculara paket kurmak
+Ansible yonetimi kolaylastirmak icin bazi modullere sahiptir. Bu modullerin dokumantasyonlari incelenerek yapabilecegi islemler hakkinda fikir edinilebilir.
 
-```
-ansible all -m apt -a name=vim --become --ask-become-pass
-```
+1. Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.
 
-apt modülünü kullanarak ```-a``` parametresi ile ```name=PAKET-ADI``` seklinde belirterek paket kurulumu yapabiliriz.
+https://docs.ansible.com/ansible/2.9/modules/apt_module.html
 
 ## Ansible Dosya Yapısı
 
@@ -82,3 +80,19 @@ inventory = inventory
 private_key_file = ~/.ssh/ansible
 remote_user = root
 ```
+
+# Ansible Playbook
+
+
+# Örnekler
+
+## Ansible ile inventory'de bulunan butun sunuculara paket kurmak
+
+```
+ansible all -m apt -a name=vim
+```
+
+apt modülünü kullanarak ```-a``` parametresi ile ```name=PAKET-ADI``` seklinde belirterek paket kurulumu yapabiliriz.
+
+
+

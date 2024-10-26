@@ -54,7 +54,5 @@ nav:
   - Docker:
       - Docker-Compose Dosyaları:
         - Wireguard: docker/docker-compose-dosyalari/wireguard/wireguard.md
-  - Haproxy:
-      - Haproxy Hardening: haproxy/haproxy-hardening
   - Javascript:
       - Bcrypt: javascript/bcrypt.md

@@ -1,16 +1,16 @@
 # Birden Fazla Dosya İle İşlem Yapmak
 
 Terminal kullanmaya alıştıktan sonra genelde çok fazla işi genelde kısa yoldan yapmaya çalışacaksınız. Bunu başarmanın en kolay yollarından biri de aynı anda birden fazla dosya üzerinde çalışmaktır. Diyelim ki birden fazla dosyayı silmek istiyoruz, şimdiye kadar öğrendiğimiz bilgiler ile aşağıdaki yöntemi izleyebiliriz.
-
+```
 $ rm this 
 $ rm that
 $ rm here
 $ rm there
-
+```
 Toplamda dört adet dosya silmek için dört adet komut girdik. Fakat rm komutu(dosya silme komutu) aynı anda birden fazla dosya ismini kullanarak işlem yapabilir.
-
+```
 $ rm here that there this
-
+```
 Bu şekilde tek bir satır komut ile dört adet dosyayı silebiliriz.
 
 ## Joker Karakterler ve Wildcardlar(Globbing)

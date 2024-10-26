@@ -1172,12 +1172,14 @@
 
 <h1 id="birden-fazla-dosya-ile-islem-yapmak">Birden Fazla Dosya İle İşlem Yapmak</h1>
 <p>Terminal kullanmaya alıştıktan sonra genelde çok fazla işi genelde kısa yoldan yapmaya çalışacaksınız. Bunu başarmanın en kolay yollarından biri de aynı anda birden fazla dosya üzerinde çalışmaktır. Diyelim ki birden fazla dosyayı silmek istiyoruz, şimdiye kadar öğrendiğimiz bilgiler ile aşağıdaki yöntemi izleyebiliriz.</p>
-<p>$ rm this 
+<pre><code>$ rm this 
 $ rm that
 $ rm here
-$ rm there</p>
+$ rm there
+</code></pre>
 <p>Toplamda dört adet dosya silmek için dört adet komut girdik. Fakat rm komutu(dosya silme komutu) aynı anda birden fazla dosya ismini kullanarak işlem yapabilir.</p>
-<p>$ rm here that there this</p>
+<pre><code>$ rm here that there this
+</code></pre>
 <p>Bu şekilde tek bir satır komut ile dört adet dosyayı silebiliriz.</p>
 <h2 id="joker-karakterler-ve-wildcardlarglobbing">Joker Karakterler ve Wildcardlar(Globbing)</h2>
 <p>Joker karakterler linux terminali üzerinde mümkün olan en az karakterle birden çok dosya üzerinde işlem yapma konusunda yardımımıza yetişir. Shell, yani kabuk bu karakterleri komutların etkilemesini istediğimiz dosyaları belirtmek için kullandığımız işaretler olarak algılar. Bu karakterlere genelde joker karakterler denir çünkü bunlar, <strong>kart</strong> <strong>oyuncularının istediği herhangi bir kartı temsil etmek için kullandığı joker kartlar gibidir.</strong></p>

@@ -1331,14 +1331,17 @@
 <h2 id="moduller">Modüller</h2>
 <p>Ansible yonetimi kolaylastirmak icin bazi modullere sahiptir. Bu modullerin dokumantasyonlari incelenerek yapabilecegi islemler hakkinda fikir edinilebilir.</p>
 <ol>
-<li>Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.</li>
+<li>Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.<ul>
+<li>https://docs.ansible.com/ansible/2.9/modules/apt_module.html</li>
+</ul>
+</li>
 </ol>
-<p>https://docs.ansible.com/ansible/2.9/modules/apt_module.html</p>
 <h2 id="ansible-dosya-yaps">Ansible Dosya Yapısı</h2>
 <h3 id="dizinler-dosyalar-ve-islevleri">Dizinler, Dosyalar ve İşlevleri</h3>
 <ul>
 <li>Inventory: Ansible'in bağlanıp işlem yapacağı clientların ip adreslerinin bulunduğu dosya.</li>
 <li>ansible.cfg: Ansible'ın ayarlarının bulunduğu dosya. Burada inventory dosyasını ve kullanacağımız ssh keyini vs tanımlayarak ansible komutunu her çalıştırdığımızda yazacağımız komutu kısaltabiliriz.</li>
+<li>Playbooks(Dizin): YML uzantili playbooklar bu dizinde durabilir.(Zorunlu degildir fakat projenin duzenli durmasi icin gerekli olabilir.)</li>
 </ul>
 <pre><code>berk@berk-notebook:~/Documents/repos/ansible-environment$ cat ansible.cfg 
 [defaults]
@@ -1346,12 +1349,30 @@ inventory = inventory
 private_key_file = ~/.ssh/ansible
 remote_user = root
 </code></pre>
-<h1 id="ansible-playbook">Ansible Playbook</h1>
 <h1 id="ornekler">Örnekler</h1>
 <h2 id="ansible-ile-inventoryde-bulunan-butun-sunuculara-paket-kurmak">Ansible ile inventory'de bulunan butun sunuculara paket kurmak</h2>
 <pre><code>ansible all -m apt -a name=vim
 </code></pre>
 <p>apt modülünü kullanarak <code>-a</code> parametresi ile <code>name=PAKET-ADI</code> seklinde belirterek paket kurulumu yapabiliriz.</p>
+<h1 id="ansible-playbook">Ansible Playbook</h1>
+<h2 id="playbook-nedir">Playbook Nedir?</h2>
+<p>otomasyon görevleri gerçekleştirmek için yazılan bir dosyadır. YAML formatında yazılır ve bir veya daha fazla sunucuda belirli görevleri yerine getirmek için talimatlar içerir. Playbooklar, bir dizi "play" denilen görevlerden oluşur ve her play, belirli bir hedef sunucu grubuna uygulanır. Her play içerisinde ise "task" adı verilen görevler bulunur. Task’lar ise modüller aracılığıyla çalışır, yani bir modül kullanarak bir görevi gerçekleştirmeye yönelik talimatlar verilir.</p>
+<h2 id="nasil-calistirilir">Nasil Calistirilir?</h2>
+<p>PLaybooklarin <code>./playbooks/</code> dizininde oldugunu varsayarsak;</p>
+<pre><code>ansible-playbook playbooks/playbook-adi.yml
+</code></pre>
+<h3 id="playbook-nasil-yazilir-ornek-playbook">Playbook Nasil Yazilir? Ornek Playbook</h3>
+<pre><code>---
+
+- hosts: all # Butun hostlarda calisacak
+  become: true # Tam yetkili kullanici olarak calistirir.
+
+  tasks:
+
+  - name: Apache2 Paketini Kur
+    apt: # BU task uzerinde kullanmak istedigimiz modulun adi. Paket kurulumu yapmak icin apt modulu kullanilir
+    name: apache2
+</code></pre>
 
 
 

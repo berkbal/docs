@@ -58,3 +58,5 @@ nav:
       - Sertifika Yenileme: freepbx/sertifika-yenileme.md
   - Javascript:
       - Bcrypt: javascript/bcrypt.md
+  - MongoDB:
+      - Mongo Shell Komutları: mongodb/mongoshell-komutlari.md

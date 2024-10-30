@@ -54,5 +54,7 @@ nav:
   - Docker:
       - Docker-Compose Dosyaları:
         - Wireguard: docker/docker-compose-dosyalari/wireguard/wireguard.md
+  - Asterisk/Freepbx:
+      - Sertifika Yenileme: freepbx/sertifika-yenileme.md
   - Javascript:
       - Bcrypt: javascript/bcrypt.md

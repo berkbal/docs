@@ -1074,7 +1074,7 @@
             
   
   <span class="md-ellipsis">
-    Javascript
+    Asterisk/Freepbx
   </span>
   
 
@@ -1083,6 +1083,69 @@
         
         <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Asterisk/Freepbx
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../freepbx/sertifika-yenileme/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sertifika Yenileme
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Javascript
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Javascript
           </label>
@@ -1268,17 +1331,42 @@
 <h2 id="moduller">Modüller</h2>
 <p>Ansible yonetimi kolaylastirmak icin bazi modullere sahiptir. Bu modullerin dokumantasyonlari incelenerek yapabilecegi islemler hakkinda fikir edinilebilir.</p>
 <ol>
-<li>Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.<ul>
+<li>
+<p>Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.</p>
+<ul>
 <li>https://docs.ansible.com/ansible/2.9/modules/apt_module.html</li>
+</ul>
+</li>
+<li>
+<p>Gather Facts: Sunucular hakkında bilgi toplar ve ekrana yazdırır. Buradaki bilgileri sunucular üzerinde değişiklik yapmak için veya playbooklar yazarken kullanabiliriz. Örneğin "ansible_distribution" özelliği kurulu olan Linux'un distrosu hakkında fikir verebilir.</p>
+<ul>
+<li>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gather_facts_module.html#</li>
+</ul>
+</li>
+<li>
+<p>Package: Otomatik olarak işletim sisteminin paket yöneticisini kullanır. Debian için apt, CentOS için dnf kullanmaya gerek kalmaz. Playbooklarda sıkça kullanılır.</p>
+<ul>
+<li>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_module.html</li>
 </ul>
 </li>
 </ol>
 <h2 id="ansible-dosya-yaps">Ansible Dosya Yapısı</h2>
 <h3 id="dizinler-dosyalar-ve-islevleri">Dizinler, Dosyalar ve İşlevleri</h3>
 <ul>
-<li>Inventory: Ansible'in bağlanıp işlem yapacağı clientların ip adreslerinin bulunduğu dosya.</li>
-<li>ansible.cfg: Ansible'ın ayarlarının bulunduğu dosya. Burada inventory dosyasını ve kullanacağımız ssh keyini vs tanımlayarak ansible komutunu her çalıştırdığımızda yazacağımız komutu kısaltabiliriz.</li>
-<li>Playbooks(Dizin): YML uzantili playbooklar bu dizinde durabilir.(Zorunlu degildir fakat projenin duzenli durmasi icin gerekli olabilir.)</li>
+<li><strong>Inventory:</strong> Ansible'in bağlanıp işlem yapacağı clientların ip adreslerinin bulunduğu dosya. Ayrıca bu dosyaya ip adreslerinin yanına değişkenler tanımlanarak playbooklar içerisinde kullanılabilir.</li>
+</ul>
+<p>Örnek bir Inventory dosyası:</p>
+<pre><code>192.168.1.30 apache_package=apache2 php_package=libapache2-mod-php
+192.168.1.31 apache_package=apache2 php_package=libapache2-mod-php
+192.168.1.32 apache_package=apache2 php_package=libapache2-mod-php
+</code></pre>
+<ul>
+<li>
+<p><strong>ansible.cfg:</strong> Ansible'ın ayarlarının bulunduğu dosya. Burada inventory dosyasını ve kullanacağımız ssh keyini vs tanımlayarak ansible komutunu her çalıştırdığımızda yazacağımız komutu kısaltabiliriz.</p>
+</li>
+<li>
+<p><strong>Playbooks(Dizin):</strong> YML uzantili playbooklar bu dizinde durabilir.(Zorunlu degildir fakat projenin duzenli durmasi icin gerekli olabilir.)</p>
+</li>
 </ul>
 <pre><code>berk@berk-notebook:~/Documents/repos/ansible-environment$ cat ansible.cfg 
 [defaults]
@@ -1309,6 +1397,31 @@ remote_user = root
   - name: Apache2 Paketini Kur
     apt: # BU task uzerinde kullanmak istedigimiz modulun adi. Paket kurulumu yapmak icin apt modulu kullanilir
     name: apache2
+</code></pre>
+<h3 id="when-kullanm">When Kullanımı</h3>
+<p>Bazı durumlarda when condutionını kullanarak belirli durumlara göre çalışacak olan komutları/modülleri değiştirebiliriz. Aşağıdaki örnekte ansible'ın sunuculardan topladığı veriler içerisinde bulunan <code>ansible_distribution</code> degerini kullanarak bir koşul yazdık. Eğer bu koşul sağlanmazsa task işleme alınmayacaktır.</p>
+<pre><code>---
+
+- hosts: all # Butun hostlarda calisacak
+  become: true # Tam yetkili kullanici olarak calistirir.
+  tasks:
+
+
+  - name: Update Repository Index
+    apt:
+      update_cache: yes
+    when: ansible_distribution in [&quot;Ubuntu&quot;, &quot;Debian&quot;]
+
+  - name: Apache2 Paketini Kur
+    apt: # Bu task uzerinde kullanmak istedigimiz modulun adi. Paket kurulumu yapmak icin apt modulu kullanilir
+     name: apache2
+     state: latest
+    when: ansible_distribution == &quot;Ubuntu&quot;
+  - name: Apache'ye PHP Paketlerini Kur.
+    apt:
+      name: libapache2-mod-php
+      state: latest
+    when: ansible_distribution == &quot;Ubuntu&quot;
 </code></pre>
 
 

@@ -44,6 +44,7 @@ nav:
       - Swaks: linux/swaks.md
       - Tmux: linux/tmux.md
       - Network:
+        - Iptables: linux/iptables.md
         - ss: linux/ss.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md

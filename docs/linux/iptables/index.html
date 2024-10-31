@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/temel-linux-komutlari/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/iptables/">
       
       
-        <link rel="prev" href="../bilgisayar-icerisinde-gezinmek/">
+        <link rel="prev" href="../tmux/">
       
       
-        <link rel="next" href="../standart-akislar/">
+        <link rel="next" href="../ss/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Temel Linux Komutları - Docs for SysAdmins</title>
+        <title>Iptables - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#temel-linux-komutlar" class="md-skip">
+        <a href="#iptables" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Temel Linux Komutları
+              Iptables
             
           </span>
         </div>
@@ -281,19 +281,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -307,7 +305,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux Komutları
@@ -402,30 +400,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Temel Linux Komutları
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../temel-linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -434,89 +412,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ls-komutu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ls komutu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#man-info-ve-apropos" class="md-nav__link">
-    <span class="md-ellipsis">
-      Man, info ve apropos
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#apropos-komutu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Apropos komutu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mv-komutu" class="md-nav__link">
-    <span class="md-ellipsis">
-      mv komutu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#mkdir-komutu" class="md-nav__link">
-    <span class="md-ellipsis">
-      mkdir Komutu
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cp-rm-ve-rmdir-komutlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      cp, rm ve rmdir komutları
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#cat-ve-less-komutu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Cat ve Less Komutu
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -723,17 +618,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -747,7 +644,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Network
@@ -758,10 +655,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../iptables/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Iptables
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -770,6 +687,146 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#iptables-nedir" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iptables Nedir?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iptables-nasl-calsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iptables Nasıl Çalışır?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iptables Nasıl Çalışır?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tablolar-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablolar (Tables)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#zincirler-chains" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zincirler (Chains)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#kurallar-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kurallar (Rules)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#hedef-targets" class="md-nav__link">
+    <span class="md-ellipsis">
+      Hedef (Targets)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#iptables-nasl-kurulur" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iptables Nasıl Kurulur?
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#iptables-komutu-nasl-kullanlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Iptables Komutu Nasıl Kullanılır?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iptables Komutu Nasıl Kullanılır?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dongusel-trafigi-aktif-etmekloopback-traffic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Döngüsel Trafiği Aktif Etmek(Loopback Traffic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ozel-servisler-icin-trafige-izin-vermek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Özel Servisler İçin Trafiğe İzin Vermek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#belirli-bir-ip-adresinden-gelen-trafik-icin-ayar-yapmak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Belirli Bir IP Adresinden Gelen Trafik İçin Ayar Yapmak
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#droplanms-paketlerin-loglanmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Droplanmış Paketlerin Loglanması
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1406,63 +1463,120 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ls-komutu" class="md-nav__link">
+  <a href="#iptables-nedir" class="md-nav__link">
     <span class="md-ellipsis">
-      Ls komutu
+      Iptables Nedir?
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#man-info-ve-apropos" class="md-nav__link">
+  <a href="#iptables-nasl-calsr" class="md-nav__link">
     <span class="md-ellipsis">
-      Man, info ve apropos
+      Iptables Nasıl Çalışır?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iptables Nasıl Çalışır?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#tablolar-tables" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tablolar (Tables)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#apropos-komutu" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#zincirler-chains" class="md-nav__link">
     <span class="md-ellipsis">
-      Apropos komutu
+      Zincirler (Chains)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mv-komutu" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#kurallar-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      mv komutu
+      Kurallar (Rules)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#mkdir-komutu" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#hedef-targets" class="md-nav__link">
     <span class="md-ellipsis">
-      mkdir Komutu
+      Hedef (Targets)
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#cp-rm-ve-rmdir-komutlar" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#iptables-nasl-kurulur" class="md-nav__link">
     <span class="md-ellipsis">
-      cp, rm ve rmdir komutları
+      Iptables Nasıl Kurulur?
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
-  <a href="#cat-ve-less-komutu" class="md-nav__link">
+  <a href="#iptables-komutu-nasl-kullanlr" class="md-nav__link">
     <span class="md-ellipsis">
-      Cat ve Less Komutu
+      Iptables Komutu Nasıl Kullanılır?
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Iptables Komutu Nasıl Kullanılır?">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#dongusel-trafigi-aktif-etmekloopback-traffic" class="md-nav__link">
+    <span class="md-ellipsis">
+      Döngüsel Trafiği Aktif Etmek(Loopback Traffic)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ozel-servisler-icin-trafige-izin-vermek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Özel Servisler İçin Trafiğe İzin Vermek
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#belirli-bir-ip-adresinden-gelen-trafik-icin-ayar-yapmak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Belirli Bir IP Adresinden Gelen Trafik İçin Ayar Yapmak
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#droplanms-paketlerin-loglanmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Droplanmış Paketlerin Loglanması
     </span>
   </a>
   
@@ -1483,109 +1597,190 @@
                   
 
 
-<h1 id="temel-linux-komutlar">Temel Linux Komutları</h1>
-<p>Artık dizinler ve dosyalar hakkında temel bir bilgiye sahibiz. Ayrıca komut satırı aracılığıyla bilgisayarımız aracılığıyla iletişime geçebilir seviyeye geldik. Bu bölümde ise “en çok” kullanacağımız komutların birkaçından bahsetmek istiyorum.</p>
-<h2 id="ls-komutu">Ls komutu</h2>
-<p>Bir dizin içerisinde dosya/dizin oluşturmadan önce bilmemiz gereken şeylerden birisi de “Aceba bu dizinin içerisinde ne var?” sorusunun cevabıdır diye düşünüyorum. Grafik arayüz aracılığı ile bunu çok basit bir şekilde klasörü açarak gerçekleştirebiliriz. Komut satırından da ls programını, veya komutunu kullanarak bir dizinin içerisinde neler olduğunu görebiliriz.</p>
-<pre><code>$ ls
-Desktop Documents Music Photos
+<h1 id="iptables">Iptables</h1>
+<h2 id="iptables-nedir">Iptables Nedir?</h2>
+<p>Iptables Linux çekirdeği içerisinde bulunan güvenlik duvarı modülünü komut satırı aracılığıyla kontrol etmemizi sağlayan bir araçtır. Iptables sayesinde gelen trafiği başka bir yere yönlendirebilir, reddedebilir veya kabul edebiliriz.  </p>
+<p>Bu yazıyı okurken iptables’ın nasıl kullanıldığını anlamayabilirsiniz, örneklere geçtiğimiz zaman muhtemelen sorunsuz bir şekilde iptables kullanabiliyor olucaksınız. Ayrıca kullanılan terimlerin ingilizce hallerini de özellikle parantezler içerisinde belirtmeye çalıştım. İlerliyen zamanlarda mutlaka bu konuda araştırma yapmanız gerekicektir. Iptables konusunda araştırma yaparken İngilizce yapmanızı tavsiye ederim. Bu konuda Türkçe kaynak pek bulunmuyor. </p>
+<h2 id="iptables-nasl-calsr">Iptables Nasıl Çalışır?</h2>
+<p>Iptables gelen network paketleri üzerinde işlem yapmak için kural sistemini kullanır. Bu kurallar aşağıdaki bileşenlerden oluşur: </p>
+<ol>
+<li>
+<p>Tablolar (Table): Tablolar, benzer kuralları gruplandıran dosyalardır. Bir tablo, birkaç kural zincirinden oluşur. </p>
+</li>
+<li>
+<p>Zincirler (Chains): Bir zincir, bir dizi kuraldan oluşur. Bir paket alındığında, iptables uygun tabloyu bulur ve paket, bir eşleşme bulunana kadar kural zinciri üzerinden filtrelenir. </p>
+</li>
+<li>
+<p>Kurallar (Rules): Kurallar bir paketin belirli koşullara uyup uymadığını kontrol eden ifadelerdir. Eğer paket bu koşullara uyarsa, kuralın hedefi olan işlemi gerçekleştirir.</p>
+</li>
+<li>
+<p>Hedefler (Targets): Hedefler bir paketle ne yapılacağına karar verilen yerlerdir. Paket kabul edilebilir (ACCEPT), düşürülebilir (DROP) veya reddedilebilir. (REJECT) </p>
+</li>
+</ol>
+<h3 id="tablolar-tables">Tablolar (Tables)</h3>
+<p>Iptables üzerinde çalışan 4 adet varsayılan tablo vardır. Bu tablolar birbirlerinden farklı amaçlarla hazırlanan kural zincilerini yönetmek için kullanılır. </p>
+<ol>
+<li>
+<p>Filtre Tablosu (Filter): Varsayılan paket filtreme tablosu bu tablodur. Hangi paketlerin kullandığımız internet ağına(network) girebileceğini ve çıkabileceğini bu tablo filtreler. </p>
+</li>
+<li>
+<p>Nat Tablosu (NAT): Uzakta bulunan ağlara(networklere) yönlenicek olan paketlerin yönlendirilme kurallarını içeren tablo. </p>
+</li>
+<li>
+<p>Mangle Tablosu (Mangle): Bu tablo, ağ paketlerinin çeşitli özelliklerini değiştirmek veya "manipüle etmek" için kullanılır. Mangle table genellikle ağ paketlerinin başlıklarını değiştirmek, belirli işaretler eklemek, TTL (Time To Live) değerini değiştirmek veya paketlerin yönlendirilmesini değiştirmek gibi işlemler için kullanılır. </p>
+</li>
+<li>
+<p>Raw: Takip edilmesi ve üzerinde işlem yapılması gerekmeyen veya bir nedenden dolayı istenmeyen internet paketleri için bu tablo kullanılır. </p>
+</li>
+</ol>
+<h3 id="zincirler-chains">Zincirler (Chains)</h3>
+<p>Zincirler tabloların içerisindeki kural listeleridir. Listeler, tablolara gelen paketlerin nasıl değerlendirileceğini ve üzerinde nasıl işlemler yapılacağını belirler. Bu işlem 4 farklı adımdan oluşur; </p>
+<ol>
+<li>
+<p>INPUT: Iptables’ın çalıştığı bilgisayar üzerindeki bir uygulamadan gelen paketleri işleyen adımdır. Filter ve Mangle tablosunda bulunur. </p>
+</li>
+<li>
+<p>OUTPUT: Kullanılan bilgisayarda çalışan uygulamalardan ve servislerden dışarıya çıkan paketlerin yönetildiği adım. Bütün tablolarda bu zincir bulunur. </p>
+</li>
+<li>
+<p>FORWARD: Sistemde bulunan network interfaceleri arasındaki paketlerin yönlendirilmesi ile alakalı olan adım. Filter, Mangle ve Security tablolarında bulunur. </p>
+</li>
+<li>
+<p>PREROUTING: Paketler yönlendirilmeden önce üzerinde işlem yapmamızı sağlayan adım. İşlemler, paketlerin nereye yönleneceğinden ÖNCE gerçekleşir. NAT, Mangle ve RAW tablosunda bulunur. </p>
+</li>
+<li>
+<p>POSTROUTING: Paketler hedefe yönlendirildikten sonra işlem yapmamızı sağlayan adım. İşlemler, paketler yönlendikten SONRA gerçekleşir. NAT ve Mangle tablosunda bulunur. </p>
+</li>
+</ol>
+<h3 id="kurallar-rules">Kurallar (Rules)</h3>
+<p>Kurallar, eşleşen paketler için koşulları tanımlayan ifadelerdir. Her kural bir zincirin parçasıdır ve spesifik kritlerler içerir. (Hedef ip adresi, port numarası veya protokoller). Kuralların koşullarına uyan her paket target’a(hedef) yönlendirilir ve yönlendirilen pakete ne yapılacağı belirlenir. </p>
+<h3 id="hedef-targets">Hedef (Targets)</h3>
+<p>Target, kural kriterlerine uyan paketlere ne olacağını belirler. Bu işlemler; </p>
+<ul>
+<li>
+<p>ACCEPT: Paketin güvenlik duvarından(firewall) geçmesini sağlar. </p>
+</li>
+<li>
+<p>DROP: Paketin güvenlik duvarından geçişini engeller fakat paketi gönderen kaynağa bu konu hakkında bir bilgi vermez. </p>
+</li>
+<li>
+<p>REJECT:  Gelen paketi reddeder ve paketi gönderen kaynağa bir hata mesajı gönderir. </p>
+</li>
+<li>
+<p>LOG: Paket bilgisini bir log dosyasına kaydeder. </p>
+</li>
+<li>
+<p>SNAT: Açılımı “Source Network Address Translation"dır. Gelen paketin kaynak adresini değiştirir. </p>
+</li>
+<li>
+<p>DNAT: Açılımı “Destination Network Adress Translation”dır. Gelen paketin hededf adresini değiştirir. </p>
+</li>
+<li>
+<p>MASQUERADE: Dinamik olarak atanan IP'ler için bir paketin kaynak adresini değiştirir. </p>
+</li>
+</ul>
+<h3 id="iptables-nasl-kurulur">Iptables Nasıl Kurulur?</h3>
+<p>Iptables çoğu Linux dağıtımında varsayılan olarak yüklü gelir. Iptables’ın kurulu olduğunu doğrulamak ve sürümünüzü öğrenmek için aşağıdaki komutu çalıştırabilirsiniz. </p>
+<pre><code>iptables --version 
 </code></pre>
-<p>ls komutu oldukça kompakt bir çıktı verir. Çoğu terminal/terminal emulatoru dizinleri, alt dizinleri ve belirli dosya tiplerini renkli bir çıktı şeklinde bize gösterir. Standart dosyalar herhangi bir renk ayarına sahip değildir. Ls komutunu kendi bilgisayarınız üzerinde deneyerek bunu görebilirsiniz. Bir taraftan grafik arayüzünüzü açıp bir diğer taraftan da terminal ile ls komutunu kullanarak karşınıza gelen çıktıya bakarak bunu gözlemlemenizi tavsiye ederim. Eğer sizin çıktınız renkli değilse ls komutuna –color optionunu göndermeyi deneyebilirsiniz.</p>
-<pre><code>$ ls --color
+<p>Debian Tabanlı Dağıtımlar İçin: </p>
+<pre><code>apt-get update ; apt-get upgrade ; apt-get install iptables
 </code></pre>
-<h2 id="man-info-ve-apropos">Man, info ve apropos</h2>
-<p>Linux komutları hakkındaki bir makalede bu komutları size gösteriyor olmam garip olsa da linux komutlarının(aslında bunlar birer program) birlikte çalışabileceği optionlar hakkında bilgi almak için bu komutların manual sayfalarına bakabilirsiniz.</p>
-<pre><code>$ man ls
+<p>Arch Linux Tabanlı Dağıtımlar için: </p>
+<pre><code>pacman –Syu ; pacman –S iptables 
 </code></pre>
-<p>Burada man komutu içerisine ls argümanını alarak bize ls komutunun manual sayfasını getirecek. Ok tuşları ile gelen ekran içerisinde gezinebilirsiniz. Q tuşu ile bu ekrandan çıkış yapabilirsiniz. Kullanıcı dökümantasyonunu farklı bir şekilde almak istiyorsak info komutunu kullanabiliriz.</p>
-<pre><code>$ info ls
+<p>Kurulumdan sonra:</p>
+<pre><code>systemctl enable netfilter-persistent 
 </code></pre>
-<p>Bu yöntem oldukça kompleks GNU Programlarının nasıl kullanılacağını öğrenmek için oldukça etkilidir. Ayrıca bu dökümantasyonları emacs isimli text editöründe okuyabilirsiniz. Okunabilirliği kesinlikle arttırıyor.</p>
-<p>Az önce size bahsettiğim komutlardan sonra “bunlar bu kadar da önemli değilmiş” dediğinizi hissedebiliyorum. Şimdi bilgi almak konusunda hayatımızı kurtarıcak olan bir komuttan bahsetmek istiyorum.</p>
-<h2 id="apropos-komutu">Apropos komutu</h2>
-<p>Apropos komutu ne yapmak istediğimizi bildiğimiz ama hangi komut ile yapacağımızı bilmediğimiz zaman oldukça işimize yarar. Biraz garip bir cümle oldu fakat bunu başka türlü açıklayamazdım. 🙂 Diyelim ki bir dosyanın adını değiştirmek istiyoruz fakat bunu hangi komutun yaptığını bilmiyoruz. Bu komutu öğrenmek için apropos komutunu kullanabiliriz.</p>
-<pre><code>$ apropos rename
-...
-mv (1) - move (rename) files
-prename (1) - renames multiple files
-rename (2) - change the name or location of a file
-…
+<h2 id="iptables-komutu-nasl-kullanlr">Iptables Komutu Nasıl Kullanılır?</h2>
+<p>Iptables komutu aşağıdaki düzende kullanılır; </p>
+<pre><code>iptables [options] [chain(zincir)] [criteria(kriter)] -j [target(hedef)] 
 </code></pre>
-<p>Komutumuzu bu şekilde kullandığımız zaman apropos bizim için bütün manual sayfalarını tarayıp içerisinde “rename” yani isim değiştirme ile alakalı olan kısımları bizim önümüze getiriyor. Ayrıca evet, Google’da aramaktan daha hızlı bir çözüm olduğu doğru. 🙂</p>
-<p>Burada dikkatinizi çekmek istediğim bir konu var. Apropos komutundan karşımıza gelen çıktıya dikkatli baktığımızda bazı komutların yanında bazı numaraların olduğunu farkedebiliriz. Bu numara karşımıza gelen komutların hangi section’da olduğunu belirtir. yinelde section’u “1” olan programlar komut satırında kullanılabilir. Biz sadece komut satırında kullanabileceğimiz programları listelemek istiyorsak apropos’a bir option göndererek sadece section’u 1 olan programları bize göstermesini sağlayabiliriz.</p>
-<pre><code>$ apropos -s 1 rename
-...
-mv (1) - move (rename) files
-prename (1) - renames multiple files
-...
+<p>Aşağıdaki tablodan en sık kullanılan iptables seçeneklerini görebilirsiniz. </p>
+<table>
+<thead>
+<tr>
+<th>Seçenek</th>
+<th>Açıklama</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>-A veya --append</td>
+<td>Halihazırda var olan bir zincire ekstra kural ekler.</td>
+</tr>
+<tr>
+<td>-C veya --check</td>
+<td>Bir zincir ile eşleşen bir kural var mı diye kontrol eder.</td>
+</tr>
+<tr>
+<td>-D veya --delete</td>
+<td>Bir zincirden kural siler.</td>
+</tr>
+<tr>
+<td>-F veya --flush</td>
+<td>Bütün iptables kurallarını siler.</td>
+</tr>
+<tr>
+<td>-I veya --insert</td>
+<td>Belirtilen zincire kural ekler.</td>
+</tr>
+<tr>
+<td>-L veya --list</td>
+<td>Zincirin içerisindeki bütün kuralları listeler</td>
+</tr>
+<tr>
+<td>-N veya --new-chain</td>
+<td>Yeni bir zincir oluşturur.</td>
+</tr>
+<tr>
+<td>-v veya --verbose</td>
+<td>Daha detaylı bir çıktı verir.</td>
+</tr>
+<tr>
+<td>-X veya --delete-chain</td>
+<td>Zinciri siler.</td>
+</tr>
+</tbody>
+</table>
+<p>iptables komutu varsayılan olarak Filtre tablosu üzerinde işlem yapar. Farklı bir tablo kullanmak için, -t seçeneğini kullanabilirsiniz. (örneğin, NAT tablosu için -t nat kullanılabilir). </p>
+<p>Var Olan Kuralları Görmek </p>
+<pre><code>sudo iptables -L 
 </code></pre>
-<p>Section numarası kesinlikle ÇOK ÖNEMLİ?! Değil fakat section 1’deki manual sayfaları genellikle komut satırında kullanabileceğimiz programlar/komutlar.</p>
-<h2 id="mv-komutu">mv komutu</h2>
-<p>Apropos çıktımızdan öğrendiğimiz üzere mv komutu ile dosyalarımızın isimlerini bu komut ile değiştirebiliriz. Fakat bu komut aslında “move” anlamında. Yani dosyalarımızı bir dizinden farklı bir dizine taşımaya yarıyor. Fakat mv komutunu aşağıdaki şekilde kullanarak dosyalarımızı tekrar isimlendirebiliriz.</p>
-<pre><code>$ mv eski_isim yeni_isim
+<p>Bu komutun çıktısı <code>INPUT</code>, <code>FORWARD</code> ve <code>OUTPUT</code> zincirlerinin nasıl gözüktüğünü listeler. </p>
+<h3 id="dongusel-trafigi-aktif-etmekloopback-traffic">Döngüsel Trafiği Aktif Etmek(Loopback Traffic)</h3>
+<p>Kendi bilgisayarınızdaki trafik akışını aktif hale getirmek hem güvenlidir hem de bilgisayarınızda çalışan uygulamaların birbirleri ile iletişim kurmasını sağlar. Aşağıdaki komutu girerek bu trafiği aktif hale getirebilirsiniz. </p>
+<pre><code>iptables -A INPUT -i lo -j ACCEPT 
 </code></pre>
-<p>Sistem ayarlarınıza bağlı olarak dosyanızı tekrar isimlendirirken herhangi bir uyarı ile karşılaşmazsınız. Yani eğer bulunduğunuz dizinde dosyanıza vereceğiniz yeni isime sahip başka bir dosya varsa bu bir problem olabilir. Bunun için mv komutuna -i option’unu göndererek kullanmakta kesinlikle fayda var.</p>
-<pre><code>$ mv -i eski_isim yeni_isim
+<h3 id="ozel-servisler-icin-trafige-izin-vermek">Özel Servisler İçin Trafiğe İzin Vermek</h3>
+<p>Bazı servislerin kullanılmasına izin vermek için bazı portlardan trafik geçişine izin vermek gerekir. Aşağıdaki örnekleri inceleyebilirsiniz </p>
+<ul>
+<li>HTTP trafiğine izin vermek için </li>
+</ul>
+<pre><code>iptables -A INPUT -p tcp --dport 80 -j ACCEPT 
 </code></pre>
-<p>Ayrıca az önce yukarıda da bahsettiğim gibi mv komutunun gerçek işlevi dosyalarımızı bir dizinden alıp başka bir dizine taşımak. Eğer mv komutunun son argümanı bulunulan dizinden farklı bir dizini gösteriyorsa komutumuz taşıma işlemi gerçekleştirecektir.</p>
-<pre><code>$ mv herhangi_bir_dosya bir_tane_daha_dosya ucuncu_farkli_bir_dosya ~/belgelerim
+<ul>
+<li>SSH trafiğine izin vermek için </li>
+</ul>
+<pre><code>iptables -A INPUT -p tcp --dport 22 -j ACCEPT 
 </code></pre>
-<p>Eğer belgelerim adında bir dizinimiz varsa mv komutu dosyalarımızı bu dizine taşıyacaktır. Eğer böyle bir dizin yoksa aşağıdaki şekilde bir hata mesajı alabiliriz.</p>
-<pre><code>$ mv herhangi_bir_dosya bir_tane_daha_dosya ucuncu_farkli_bir_dosya ~/belgelerim
-mv: target ‘belgelerim’ is not a directory
+<ul>
+<li>HTTPS trafiğine izin vermek için </li>
+</ul>
+<pre><code>iptables -A INPUT -p tcp --dport 443 -j ACCEPT 
 </code></pre>
-<h2 id="mkdir-komutu">mkdir Komutu</h2>
-<p>Eee, dizin/klasör nasıl oluşturuyoruz? Mkdir komutu ile!</p>
-<pre><code>$ mkdir ~/belgelerim
+<h3 id="belirli-bir-ip-adresinden-gelen-trafik-icin-ayar-yapmak">Belirli Bir IP Adresinden Gelen Trafik İçin Ayar Yapmak</h3>
+<p>Belirli bir ip adresinden gelen bütün trafiği kabul etmek için aşağıdaki komutu kullanabilirsiniz </p>
+<pre><code>iptables -A INPUT -s [IP-address] -j ACCEPT 
 </code></pre>
-<p>Var olan bir dizini nasıl siliyoruz? Rmdir komutu ile. 🙂</p>
-<pre><code>$ rmdir ~/belgelerim
+<p>Belirli bir ip adresinden gelen bütün trafiği droplamak için aşağıdaki komutu kullanabilirsiniz. </p>
+<pre><code>iptables -A INPUT -s [IP-address] -j DROP 
 </code></pre>
-<p>Eğer bir dizinin içerisinde alt bir dizin oluşturmak istiyorsak (diyelim ki bu halihazırda var olan dizinin adı foo) mkdir komutunu aşağıdaki gibi kullanabiliriz.</p>
-<pre><code>$ mkdir -p ~/foo/bar
+<p>Belirli bir IP adresi aralığından gelen trafiği reddetmek için aşağıdaki komutu kullanabilirsiniz. </p>
+<pre><code>iptables -A INPUT -m iprange --src-range [IP-address-range] -j REJECT 
 </code></pre>
-<p>Eğer rmdir komutu ile silmek istediğimiz dizin içerisinde dosyalar barındırıyorsa rmdir komutu bize hata vericektir. İçerisinde dosya olan bir klasörü nasıl silebiliriz? Rmdir komutuna -R optionunu göndererek.<br />
-Hadi bunu test edelim! Ilk önce alistirma adında bir dizin oluşturup bu dizinin içerisine girelim.</p>
-<pre><code>$ mkdir ~/alistirma
-$ cd ~/alistirma
-</code></pre>
-<h2 id="cp-rm-ve-rmdir-komutlar">cp, rm ve rmdir komutları</h2>
-<p>Cp komutumuzu kullanarak oluşturduğumuz dizinlerin içerisine dosya kopyalayabiliriz! Bilgisayarımızda hali hazırda bulunan bazı dosyaları kullanarak bu testi gerçekleştirebiliriz. Cd komutu ile alistirma isimli dizinimize az önce girdik.</p>
-<pre><code>$ cp /etc/fstab /etc/hosts /etc/issue /etc/motd .
-$ ls
-fstab hosts issue motd
-</code></pre>
-<p>Dizinler ile alakalı yazdığım bir önceki makalede sizlere . ve .. işaretlerinden bahsetmiştim. . şaretini komutunuzun sonuna koymayı unutmayın! Eğer hatırlarsanız . işaretinin komut satırında “bu dizin” anlamına geldiğini söylemiştim. Bu işareti cp komutuna bir argüman olarak gönderdikten sonra belirttiğimiz dizinleri bulunduğumuz dizine kopyalayabiliriz. Veya içerisinde bulunduğumuz dizinin içerisindei bütün dizinleri/ve dosyaları farklı bir yere kopyalayabiliriz.</p>
-<pre><code>$ cp -R . ~/hedef_dizin
-</code></pre>
-<p>Hadi şimdi oluşturduğumuz alistirma isimli dizini ve içerdiği alt dizinleri silelim.</p>
-<pre><code>$ cd ~
-$ rmdir alistirma
-rmdir: failed to remove ‘alistirma’: Directory not empty
-</code></pre>
-<p>Gördüğünüz üzere rmdir komutu ile içerisinde dosya bulunan dizinleri direkt silemiyoruz. Fakat rm komutuna -R optionunu gönderek bunu yapmamız mümkün.</p>
-<pre><code>$ rmdir -R alistirma
-</code></pre>
-<h2 id="cat-ve-less-komutu">Cat ve Less Komutu</h2>
-<p>Bir dosyanın içeriğini görüntülemek için her zaman text editörüne ihtiyaç duymayız. Eğer amacımımız sadece dosyanın içeriğini görüntülemek ise cat komutunu kullanabiliriz.</p>
-<pre><code>$ cat herhangi_bir_metin_dosyasi.txt
-Eeeeeeeeey! Terminal kullanmayı en iyi biz biliriz!
-</code></pre>
-<p>Eğer içeriğini görüntülemek istediğimiz dosya çok uzunsa less komutunu kullanmamız daha mantıklı olabilir. Less komutu ile metin dosyamızı görüntüleme ekranında ok tuşlarıyla gezinip q tuşu ile bu ekrandan çıkabiliriz.</p>
-<pre><code>$ less herhangi_bir_metin_dosyasi.txt
-</code></pre>
-<p>An itibariyle dosya silme, dosya kopyalama, dizin/klasör oluşturma, dosya ismi değiştirme, dosya silme, komutların manual sayfalarına erişme ve bulunulan dizini görüntüleyebiliyoruz! Henüz bu komutları ezberlemediğinizi düşünerek aşağıya küçük bir liste çıkartıyorum, bu listeden faydalanabilirsiniz!</p>
-<p>Bu derste öğrendiğimiz komutlar:<br />
-ls komutu : dizin içeriği görüntülemeye yarar.<br />
-man komutu : komutarın/programların manual sayfalarına erişmemize yarar.<br />
-info komutu : komutlar/programlar hakkında bilgi almamıza yarar.<br />
-apropos komutu : manual sayfaları içerisinde içerisine gönderdiğimiz argümanı arar.<br />
-cp komutu : dosya kopyalamaya yarar.<br />
-mv komutu : dosyaları/dizinleri taşımaya ve yeniden adlandırmaya(isim değiştirme) yarar.<br />
-rmdir komutu : dizinleri silmemize yarar.<br />
-mkdir komutu : dizin oluşturmamıza yarar.<br />
-cat komutu : dosyaların text içeriğini görüntülememize yarar.<br />
-less komutu : uzun text dosyalarını görüntülememizde daha kullanışlıdır.</p>
+<p>Paylaştığım komutlardaki ip adresi kısımlarını değiştirerek komutları kullanabilirsiniz. </p>
+<h2 id="droplanms-paketlerin-loglanmas">Droplanmış Paketlerin Loglanması</h2>
 
 
 

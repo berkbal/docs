@@ -14,7 +14,7 @@
         <link rel="prev" href="../../linux/ss/">
       
       
-        <link rel="next" href="../../mail/mailu/">
+        <link rel="next" href="../ansible-modulleri/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Ansible - Docs for SysAdmins</title>
+        <title>Ansible Kurulumu - Docs for SysAdmins</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Ansible
+              Ansible Kurulumu
             
           </span>
         </div>
@@ -691,6 +691,43 @@
   
   
   
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Ansible
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Ansible
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
     <li class="md-nav__item md-nav__item--active">
       
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
@@ -703,7 +740,7 @@
           
   
   <span class="md-ellipsis">
-    Ansible
+    Ansible Kurulumu
   </span>
   
 
@@ -714,7 +751,7 @@
         
   
   <span class="md-ellipsis">
-    Ansible
+    Ansible Kurulumu
   </span>
   
 
@@ -760,15 +797,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moduller" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modüller
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ansible-dosya-yaps" class="md-nav__link">
     <span class="md-ellipsis">
       Ansible Dosya Yapısı
@@ -795,6 +823,56 @@
     </ul>
   
 </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ansible-modulleri/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible Modülleri
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ansible-playbook/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ansible Playbook
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
       
     </li>
   
@@ -1293,15 +1371,6 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#moduller" class="md-nav__link">
-    <span class="md-ellipsis">
-      Modüller
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
   <a href="#ansible-dosya-yaps" class="md-nav__link">
     <span class="md-ellipsis">
       Ansible Dosya Yapısı
@@ -1391,28 +1460,6 @@
 <p>Veya asagidaki sekilde parametreler eklenerek ansible'in root yetkisi olan kullanicinin parolasinin sormasi saglanabilir.</p>
 <pre><code>--become --ask-become-pass
 </code></pre>
-<h2 id="moduller">Modüller</h2>
-<p>Ansible yonetimi kolaylastirmak icin bazi modullere sahiptir. Bu modullerin dokumantasyonlari incelenerek yapabilecegi islemler hakkinda fikir edinilebilir.</p>
-<ol>
-<li>
-<p>Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.</p>
-<ul>
-<li>https://docs.ansible.com/ansible/2.9/modules/apt_module.html</li>
-</ul>
-</li>
-<li>
-<p>Gather Facts: Sunucular hakkında bilgi toplar ve ekrana yazdırır. Buradaki bilgileri sunucular üzerinde değişiklik yapmak için veya playbooklar yazarken kullanabiliriz. Örneğin "ansible_distribution" özelliği kurulu olan Linux'un distrosu hakkında fikir verebilir.</p>
-<ul>
-<li>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gather_facts_module.html#</li>
-</ul>
-</li>
-<li>
-<p>Package: Otomatik olarak işletim sisteminin paket yöneticisini kullanır. Debian için apt, CentOS için dnf kullanmaya gerek kalmaz. Playbooklarda sıkça kullanılır.</p>
-<ul>
-<li>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_module.html</li>
-</ul>
-</li>
-</ol>
 <h2 id="ansible-dosya-yaps">Ansible Dosya Yapısı</h2>
 <h3 id="dizinler-dosyalar-ve-islevleri">Dizinler, Dosyalar ve İşlevleri</h3>
 <ul>
@@ -1442,50 +1489,6 @@ remote_user = root
 <pre><code>ansible all -m apt -a name=vim
 </code></pre>
 <p>apt modülünü kullanarak <code>-a</code> parametresi ile <code>name=PAKET-ADI</code> seklinde belirterek paket kurulumu yapabiliriz.</p>
-<h1 id="ansible-playbook">Ansible Playbook</h1>
-<h2 id="playbook-nedir">Playbook Nedir?</h2>
-<p>otomasyon görevleri gerçekleştirmek için yazılan bir dosyadır. YAML formatında yazılır ve bir veya daha fazla sunucuda belirli görevleri yerine getirmek için talimatlar içerir. Playbooklar, bir dizi "play" denilen görevlerden oluşur ve her play, belirli bir hedef sunucu grubuna uygulanır. Her play içerisinde ise "task" adı verilen görevler bulunur. Task’lar ise modüller aracılığıyla çalışır, yani bir modül kullanarak bir görevi gerçekleştirmeye yönelik talimatlar verilir.</p>
-<h2 id="nasil-calistirilir">Nasil Calistirilir?</h2>
-<p>PLaybooklarin <code>./playbooks/</code> dizininde oldugunu varsayarsak;</p>
-<pre><code>ansible-playbook playbooks/playbook-adi.yml
-</code></pre>
-<h3 id="playbook-nasil-yazilir-ornek-playbook">Playbook Nasil Yazilir? Ornek Playbook</h3>
-<pre><code>---
-
-- hosts: all # Butun hostlarda calisacak
-  become: true # Tam yetkili kullanici olarak calistirir.
-
-  tasks:
-
-  - name: Apache2 Paketini Kur
-    apt: # BU task uzerinde kullanmak istedigimiz modulun adi. Paket kurulumu yapmak icin apt modulu kullanilir
-    name: apache2
-</code></pre>
-<h3 id="when-kullanm">When Kullanımı</h3>
-<p>Bazı durumlarda when condutionını kullanarak belirli durumlara göre çalışacak olan komutları/modülleri değiştirebiliriz. Aşağıdaki örnekte ansible'ın sunuculardan topladığı veriler içerisinde bulunan <code>ansible_distribution</code> degerini kullanarak bir koşul yazdık. Eğer bu koşul sağlanmazsa task işleme alınmayacaktır.</p>
-<pre><code>---
-
-- hosts: all # Butun hostlarda calisacak
-  become: true # Tam yetkili kullanici olarak calistirir.
-  tasks:
-
-
-  - name: Update Repository Index
-    apt:
-      update_cache: yes
-    when: ansible_distribution in [&quot;Ubuntu&quot;, &quot;Debian&quot;]
-
-  - name: Apache2 Paketini Kur
-    apt: # Bu task uzerinde kullanmak istedigimiz modulun adi. Paket kurulumu yapmak icin apt modulu kullanilir
-     name: apache2
-     state: latest
-    when: ansible_distribution == &quot;Ubuntu&quot;
-  - name: Apache'ye PHP Paketlerini Kur.
-    apt:
-      name: libapache2-mod-php
-      state: latest
-    when: ansible_distribution == &quot;Ubuntu&quot;
-</code></pre>
 
 
 

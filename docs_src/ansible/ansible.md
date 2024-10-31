@@ -58,21 +58,6 @@ Veya asagidaki sekilde parametreler eklenerek ansible'in root yetkisi olan kulla
 --become --ask-become-pass
 ```
 
-## Modüller
-
-Ansible yonetimi kolaylastirmak icin bazi modullere sahiptir. Bu modullerin dokumantasyonlari incelenerek yapabilecegi islemler hakkinda fikir edinilebilir.
-
-1. Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.
-
-    - https://docs.ansible.com/ansible/2.9/modules/apt_module.html
-
-2. Gather Facts: Sunucular hakkında bilgi toplar ve ekrana yazdırır. Buradaki bilgileri sunucular üzerinde değişiklik yapmak için veya playbooklar yazarken kullanabiliriz. Örneğin "ansible_distribution" özelliği kurulu olan Linux'un distrosu hakkında fikir verebilir.
-    
-    - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gather_facts_module.html#
-
-3. Package: Otomatik olarak işletim sisteminin paket yöneticisini kullanır. Debian için apt, CentOS için dnf kullanmaya gerek kalmaz. Playbooklarda sıkça kullanılır.
-    - https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_module.html
-
 ## Ansible Dosya Yapısı
 
 ### Dizinler, Dosyalar ve İşlevleri
@@ -108,61 +93,3 @@ ansible all -m apt -a name=vim
 ```
 
 apt modülünü kullanarak ```-a``` parametresi ile ```name=PAKET-ADI``` seklinde belirterek paket kurulumu yapabiliriz.
-
-# Ansible Playbook
-
-## Playbook Nedir?
-
-otomasyon görevleri gerçekleştirmek için yazılan bir dosyadır. YAML formatında yazılır ve bir veya daha fazla sunucuda belirli görevleri yerine getirmek için talimatlar içerir. Playbooklar, bir dizi "play" denilen görevlerden oluşur ve her play, belirli bir hedef sunucu grubuna uygulanır. Her play içerisinde ise "task" adı verilen görevler bulunur. Task’lar ise modüller aracılığıyla çalışır, yani bir modül kullanarak bir görevi gerçekleştirmeye yönelik talimatlar verilir.
-
-## Nasil Calistirilir?
-
-PLaybooklarin ```./playbooks/``` dizininde oldugunu varsayarsak;
-
-```
-ansible-playbook playbooks/playbook-adi.yml
-```
-
-### Playbook Nasil Yazilir? Ornek Playbook
-
-```
----
-
-- hosts: all # Butun hostlarda calisacak
-  become: true # Tam yetkili kullanici olarak calistirir.
-  
-  tasks:
-
-  - name: Apache2 Paketini Kur
-    apt: # BU task uzerinde kullanmak istedigimiz modulun adi. Paket kurulumu yapmak icin apt modulu kullanilir
-    name: apache2
-```
-
-### When Kullanımı
-
-Bazı durumlarda when condutionını kullanarak belirli durumlara göre çalışacak olan komutları/modülleri değiştirebiliriz. Aşağıdaki örnekte ansible'ın sunuculardan topladığı veriler içerisinde bulunan ```ansible_distribution``` degerini kullanarak bir koşul yazdık. Eğer bu koşul sağlanmazsa task işleme alınmayacaktır.
-
-```
----
-
-- hosts: all # Butun hostlarda calisacak
-  become: true # Tam yetkili kullanici olarak calistirir.
-  tasks:
-
-
-  - name: Update Repository Index
-    apt:
-      update_cache: yes
-    when: ansible_distribution in ["Ubuntu", "Debian"]
-
-  - name: Apache2 Paketini Kur
-    apt: # Bu task uzerinde kullanmak istedigimiz modulun adi. Paket kurulumu yapmak icin apt modulu kullanilir
-     name: apache2
-     state: latest
-    when: ansible_distribution == "Ubuntu"
-  - name: Apache'ye PHP Paketlerini Kur.
-    apt:
-      name: libapache2-mod-php
-      state: latest
-    when: ansible_distribution == "Ubuntu"
-```

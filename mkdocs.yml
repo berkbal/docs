@@ -45,7 +45,10 @@ nav:
       - Tmux: linux/tmux.md
       - Network:
         - ss: linux/ss.md
-  - Ansible: ansible/ansible.md
+  - Ansible: 
+      - Ansible Kurulumu: ansible/ansible.md
+      - Ansible Modülleri: ansible/ansible-modulleri.md
+      - Ansible Playbook: ansible/ansible-playbook.md
   - Mail:
       - Mailu: mail/mailu.md
       - Swaks: linux/swaks.md

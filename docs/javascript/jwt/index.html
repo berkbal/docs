@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/terminal-komutlarinin-kullanimi-%28syntax%29/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/javascript/jwt/">
       
       
-        <link rel="prev" href="../komut-satirina-giris/">
+        <link rel="prev" href="../bcrypt/">
       
       
-        <link rel="next" href="../bilgisayar-icerisinde-gezinmek/">
+        <link rel="next" href="../../mongodb/mongoshell-komutlari/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Terminal Komutlarının Kullanımı(Syntax) - Docs for SysAdmins</title>
+        <title>JWT - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arguments-argumanlar" class="md-skip">
+        <a href="#jwt" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terminal Komutlarının Kullanımı(Syntax)
+              JWT
             
           </span>
         </div>
@@ -244,19 +244,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -270,7 +268,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -281,19 +279,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -307,7 +303,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux Komutları
@@ -321,7 +317,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux-komutlari/" class="md-nav__link">
+      <a href="../../linux/linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -342,7 +338,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../komut-satirina-giris/" class="md-nav__link">
+      <a href="../../linux/komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -360,28 +356,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Terminal Komutlarının Kullanımı(Syntax)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../linux/terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -390,33 +368,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#arguments-argumanlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arguments – Argümanlar
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -429,7 +380,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
+      <a href="../../linux/bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -450,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../temel-linux-komutlari/" class="md-nav__link">
+      <a href="../../linux/temel-linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -471,7 +422,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../standart-akislar/" class="md-nav__link">
+      <a href="../../linux/standart-akislar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -492,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../daha-hizli-terminal-kullanmak/" class="md-nav__link">
+      <a href="../../linux/daha-hizli-terminal-kullanmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -513,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../root-kullanicisi/" class="md-nav__link">
+      <a href="../../linux/root-kullanicisi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -534,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../yonlendirme%28operatorler%29/" class="md-nav__link">
+      <a href="../../linux/yonlendirme%28operatorler%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -555,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
+      <a href="../../linux/birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -584,7 +535,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logrotate/" class="md-nav__link">
+      <a href="../../linux/logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -605,7 +556,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swapfile/" class="md-nav__link">
+      <a href="../../linux/swapfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -626,7 +577,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaks/" class="md-nav__link">
+      <a href="../../linux/swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -647,7 +598,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tmux/" class="md-nav__link">
+      <a href="../../linux/tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -703,7 +654,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ss/" class="md-nav__link">
+      <a href="../../linux/ss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -900,7 +851,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaks/" class="md-nav__link">
+      <a href="../../linux/swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1157,17 +1108,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" checked>
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1181,7 +1134,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Javascript
@@ -1195,7 +1148,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript/bcrypt/" class="md-nav__link">
+      <a href="../bcrypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1213,10 +1166,19 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../javascript/jwt/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1225,6 +1187,7 @@
   
 
       </a>
+      
     </li>
   
 
@@ -1317,23 +1280,8 @@
   
   
   
+    
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#arguments-argumanlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arguments – Argümanlar
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -1348,45 +1296,32 @@
                   
 
 
-  <h1>Terminal Komutlarının Kullanımı(Syntax)</h1>
-
-<p>Genellikle terminale yazdığınız ilk kelime çalıştırmak istediğimiz komuttur. <a href="https://berkbal.github.io/docs/linux/linux-komutlari/">Başlamadan Önce</a> isimli yazımda sizlere <em>date</em> komutundan bahsetmiştim. Bu komut bize komutun çalıştırıldığı zamanın tarihini ve zamanını gösteriyordu.</p>
-<h2 id="arguments-argumanlar"><strong>Arguments – Argümanlar</strong></h2>
-<p>Kullanabileceğimiz diğer bir komut ise belirtilen bilgileri kullanıcıya geri gösteren <em>echo</em> komutu. Echo komutunu tek başına çalıştırdığımızda herhangi bir şey olmayacaktır çünkü echo komutu bir argüman ile birlikte çalışan bir komuttur. Echo komutu, kendisine verdiğimiz argümanı(bilgiyi) bize geri döndürür.</p>
-<pre><code>$ **echo foo** 
-foo
-</code></pre>
-<p>Yukarıdaki örnekte gördüğümüz üzere argümanımız foo olduğu için bilgisayarımız bize foo diyerek cevap verdi.</p>
-<p>Echo komutuna istediğimiz kadar argüman gönderebiliriz. <em>Echo</em> komutundan sonra ne yazarsak yazalım bilgisayarımız bunları argüman olarak algılayacaktır. Eğer birden fazla kelime yazdırmak istiyorsak <em>echo</em> komutunu bu şekilde kullanabiliriz.</p>
-<pre><code>$echo foo bar
-foo bar
-</code></pre>
-<p>Argümanlar genelde aralarında boşluklar bırakılarak birbirlerinden ayrılır. Ekstra boşluklar görmezden gelinir ve iki argüman bir adet boşluk içererek bize yansıtılır. Fakat Terminale(Komut Satırı) bu boşlukların da bir argüman olduğunu söylemek istersek “ işareti ile bunu belirtmemiz gerekir.</p>
-<pre><code>$echo&quot;foo&quot; &quot;bar&quot;
-foo bar
-</code></pre>
-<p><strong>Options –</strong> <strong>Seçenekler</strong></p>
-<p>Daha önceden gördüğümüz <em>date</em> komutunu hatırlıyor musunuz? Bu komut varsayılan haliyle bize komutun kullanıldığı tarihi ve saati söylüyor fakat ya biz UTC formatında bir bilgi istiyorsak? Bunun için <em>date</em> komutunu <em>–utc</em> optionı ile birlikte kullanabiliriz. Komutu bu şekilde kullandığımız zaman bilgisayar bizim UTC formatındaki zamanı istediğimizi bilerek bize buna uygun bir sonuç gönderiyor.</p>
-<pre><code>$ date --utc
-Tue 12 Oct 2021 12:38:44 PM UTC
-</code></pre>
-<p>Genelde komut seçeneklerini kısaltarak kullanırız. Bir seçeneğin(option) kısa versiyonu tek çizgi ile yazılan versiyonudur. Date komutunu <em>date -u</em> şeklinde kullandığımızda da aynı şekilde sonuç aldığımızı görebiliriz. Kendi terminalinizde bunu deneyebilirsiniz.</p>
-<p>Diyelim ki <em>date</em> komutundan bugünün verileri yerine bir önceki günün verilerini istiyoruz. Bunu nasıl yapabiliriz? Bunun için <em>date</em> komutuna <em>–date</em>, kısa haliyle <em>-d</em> seçeneğini gönderebiliriz. Bu seçeneğe de bir argüman göndererek bilgilerini istediğimiz tarihi belirtebiliriz. Kafa karışıklığını önlemek için oluşturduğumuz komutu parçalara bölerek göstereyim:</p>
-<ol>
-<li>date  </li>
-<li>date –date  </li>
-<li>date –date yesterday -u</li>
-</ol>
-<p>Birinci adımda çalıştırmak istediğimiz komutu girdik.<br />
-İkinci adımda çalıştırmak istediğimiz komuta bir seçenek gönderdik.<br />
-Üçüncü adımda ise komuta gönderdiğimiz seçeneğe(option) bir adet argüman gönderdik.(<em>yesterday</em>)<br />
-<em>-u</em> ise yukarıda da belirttiğim üzere <em>–utc</em> seçeneğinin kısaltılmış hali.</p>
-<pre><code>$ date --date yesterday -u
-Mon 11 Oct 2021 12:50:40 PM UTC
-</code></pre>
-<p>Yukarıdaki örnekte de gördüğünüz üzere bazı optionlar çalışmak için argümanlara ihtiyaç duyarlar.</p>
-<p>Daha önce çalıştırdığınız bir komutu tekrar hızlıca almak için Yukarı Ok tuşunu kullanabilirsiniz. Daha önceki ve sonraki komutları almak için de ok tuşlarını kullanarak yukarı ve aşağı hareket edebilirsiniz.</p>
-<p>Ayrıca Sol ok ve Sağ ok tuşları, tek bir komut içinde hareket etmenizi sağlar. Geri tuşu(backspace) ile birlikte bu tuşlar komutumuzun bölümlerini değiştirmenize ve onu isteğimize göre yeni bir komuta dönüştürmemize olanak tanır. Enter tuşuna her bastığınızda, değiştirilen komutu terminale gönderirsiniz ve tam olarak sıfırdan yazmışsınız gibi çalışır.</p>
+<h1 id="jwt">JWT</h1>
+<p>JWT’lerin en buyuk avantaji ucuncu parti yazilimlarla da senkron bir sekilde calisabiliyor olmasi. Uygulama sunucusu ve ucuncu parti sunucu arasinda aktif bir baglantiya ihtiyac duymadan calisabilir.</p>
+<p>JWT 3 Parcadan olusur, Header, Payload ve Signature.</p>
+<p><strong>Payload</strong></p>
+<p>Basit bir sekilde aciklamak gerekirse bir Javascript objesidir. Json formatindadir. Genelde kullanici hakkinda verileri icerir fakat boyle bir zorunluluk yoktur. </p>
+<p><strong>Header</strong></p>
+<p>JWT hakkindaki bilgileri kapsayan kisim. Hangi algoritma ile hashlendigi, modeli vs bu kisimda bulunur. Dumduz bir javascript objesidir.</p>
+<p><strong>Signature</strong></p>
+<p><strong>Message Authentication Code</strong> kismi bu kisimdadir. Sadece JWT’nin <strong>gizli anahtarina sahip olan</strong> kisi tarafindan uretilebilir.</p>
+<p><strong>Signature Kismi Authentication icin nasil kullanilir?</strong></p>
+<ul>
+<li>Kullanici kullanici adini ve parolasini uygulama sunucusuna gonderir, bu genelde ayri bir sunucudur.</li>
+<li>Authentication islemini gerceklestiricek sunucu kullanici adi ve parola kombinasyonunu dogruladiktan sonra Payload iceren bir JWT token’i olusturur. Bu tokenin icerisine kullanicinin kimligini belirtecek json keyleri ve JWT’nin son kullanma tarihini olusturur.</li>
+<li>Authentication sunucusu secret key ile Header ve Payload’i imzalayarak kullanicinin tarayicisina gonderir.</li>
+<li>Tarayici secret key ile imzalanmis JWT yi alir ve her HTTP requestin icerisinde bu JWT yi gonderir</li>
+<li>Bu imzalanmis JWT kullanicinin kullanici adi ve sifre kombinasyonunun yerini alan gecici bir kullanici kimlik bilgisi olarak calisir.</li>
+</ul>
+<p><strong>Sunucu JWT Token ile Ne Yapar?</strong></p>
+<ul>
+<li>HTTP Requestin icerisinde gelen JWT nin kullanicinin secret key’i ile imzalandigini dogrular. Payload kismina bakarak yapar.</li>
+<li>Secret key sadece Authentication sunucusunda bulunur. Ve imzalanmis JWT yi sadece dogru girilmis kullanici adi ve parola kombinasyonu yapan kisilere verir.</li>
+<li>Dogru bilgiler ile giris yapilinca Authentication sunucusu kullaniciya guvenerek HTTP Requestlere cevap verir. Eger kullanici guvenilmez durumda ise(yanlis kullanici adi ve sifre kombinasyonu) buna gore HTTP requeste cevap verir.</li>
+<li>JWT’li bir sistemin hacklenmesi icin ya kullanici adi ve sifre kombinasyonunun calinmasi ya da Authentication sunucusundan secret key’in calinmasi gerekir.</li>
+</ul>
+<p>Gozuktugu uzere bir JWT’nin en onemli kismi signature kismidir. Bu dogrulama sayesinde kullaniciya her seferinde kullanici adi ve parolasini sormadan olumlu bir kullanici deneyimi ve guvenlik saglanir. Authentication sunucusu ve uygulama sunucusu genelde iki ayri sunucu olur fakat bu bir zorunluluk degildir fakat bu bir artidir. Uygulama sunucusu hafif ve guvenli, butun dogrulama islemleri de Authentication sunucusunda oldugu icin.</p>
+<p>JWT Token’daki bahsedilen 3 parca “.” isareti ile ayrilir.</p>
 
 
 

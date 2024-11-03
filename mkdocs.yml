@@ -44,6 +44,7 @@ nav:
       - Swaks: linux/swaks.md
       - Tmux: linux/tmux.md
       - Network:
+        - VM Networking(Libvirt/Bridge): linux/libvirt-networking.md
         - Iptables: linux/iptables.md
         - ss: linux/ss.md
   - Ansible: 

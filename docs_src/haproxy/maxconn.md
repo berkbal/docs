@@ -15,3 +15,5 @@ global
 *    hard    nofile    30000071
 *    soft    nofile    30000071
 ```
+
+Ayrica /etc/sysctl/conf dosyasındaki fs.file-max parametresi ile daha fazla dosya sınırı verilmezse haproxynin kullanıldığı makinede performans sorunları oluşabilir.

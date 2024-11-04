@@ -59,6 +59,9 @@ nav:
   - Docker:
       - Docker-Compose Dosyaları:
         - Wireguard: docker/docker-compose-dosyalari/wireguard/wireguard.md
+  - Haproxy:
+      - Haproxy Parametreleri:
+        - Maxconn: haproxy/maxconn.md
   - Asterisk/Freepbx:
       - Sertifika Yenileme: freepbx/sertifika-yenileme.md
   - Javascript:

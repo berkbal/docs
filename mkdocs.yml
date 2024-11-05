@@ -44,7 +44,6 @@ nav:
       - Swaks: linux/swaks.md
       - Tmux: linux/tmux.md
       - Network:
-        - VM Networking(Libvirt/Bridge): linux/libvirt-networking.md
         - Iptables: linux/iptables.md
         - ss: linux/ss.md
   - Ansible: 
@@ -54,6 +53,10 @@ nav:
   - Mail:
       - Mailu: mail/mailu.md
       - Swaks: linux/swaks.md
+  - Sanallaştırma:
+      - QEMU-Libvirt: 
+        - Libvirt Networking: sanallastirma/libvirt-networking.md
+        - Gerçek Ip Adresi Ekleme İşlemi: sanallastirma/libvirt-gercek-ip.md
   - Güncelleme:
       - Gitlab: guncelleme/gitlab.md
   - Docker:

@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/haproxy/haproxy-hardening/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/sanallastirma/libvirt-gercek-ip/">
       
       
+        <link rel="prev" href="../libvirt-networking/">
+      
+      
+        <link rel="next" href="../../guncelleme/gitlab/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Haproxy hardening - Docs for SysAdmins</title>
+        <title>Gerçek Ip Adresi Ekleme İşlemi - Docs for SysAdmins</title>
       
     
     
@@ -70,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#maxconn" class="md-skip">
+        <a href="#libvirt-kvmye-gercek-ip-adresi-ekleme-islemi" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -105,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Haproxy hardening
+              Gerçek Ip Adresi Ekleme İşlemi
             
           </span>
         </div>
@@ -650,27 +654,6 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/libvirt-networking/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    VM Networking(Libvirt/Bridge)
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
       <a href="../../linux/iptables/" class="md-nav__link">
         
   
@@ -914,6 +897,195 @@
       
   
   
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sanallaştırma
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Sanallaştırma
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5_1" id="__nav_5_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    QEMU-Libvirt
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_5_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5_1">
+            <span class="md-nav__icon md-icon"></span>
+            QEMU-Libvirt
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../libvirt-networking/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Libvirt Networking
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gerçek Ip Adresi Ekleme İşlemi
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Gerçek Ip Adresi Ekleme İşlemi
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#dikkat-edilmesi-gerekenler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dikkat Edilmesi Gerekenler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sanal-makineye-yeni-bir-interface-eklenmesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sanal Makineye yeni bir Interface Eklenmesi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
   
   
     
@@ -924,10 +1096,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
         
           
-          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -938,8 +1110,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_5">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             Güncelleme
           </label>
@@ -987,10 +1159,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1001,8 +1173,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Docker
           </label>
@@ -1022,10 +1194,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
         
           
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1036,8 +1208,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_6_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_6_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7_1">
             <span class="md-nav__icon md-icon"></span>
             Docker-Compose Dosyaları
           </label>
@@ -1093,10 +1265,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
         
           
-          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1107,8 +1279,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
             <span class="md-nav__icon md-icon"></span>
             Haproxy
           </label>
@@ -1128,10 +1300,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
         
           
-          <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1142,8 +1314,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_7_1">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_8_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1">
             <span class="md-nav__icon md-icon"></span>
             Haproxy Parametreleri
           </label>
@@ -1156,7 +1328,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../maxconn/" class="md-nav__link">
+      <a href="../../haproxy/maxconn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1199,10 +1371,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
-          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1213,8 +1385,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Asterisk/Freepbx
           </label>
@@ -1262,10 +1434,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
         
           
-          <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1276,8 +1448,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_9">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_10">
             <span class="md-nav__icon md-icon"></span>
             Javascript
           </label>
@@ -1346,10 +1518,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
         
           
-          <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1360,8 +1532,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_10_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_10">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             MongoDB
           </label>
@@ -1412,6 +1584,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1420,18 +1594,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#maxconn" class="md-nav__link">
+  <a href="#dikkat-edilmesi-gerekenler" class="md-nav__link">
     <span class="md-ellipsis">
-      Maxconn
+      Dikkat Edilmesi Gerekenler
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#dikkat-edilmesi-gerekenler" class="md-nav__link">
+  <a href="#sanal-makineye-yeni-bir-interface-eklenmesi" class="md-nav__link">
     <span class="md-ellipsis">
-      Dikkat Edilmesi Gerekenler
+      Sanal Makineye yeni bir Interface Eklenmesi
     </span>
   </a>
   
@@ -1452,17 +1626,38 @@
                   
 
 
-  <h1>Haproxy hardening</h1>
-
-<h3 id="maxconn">Maxconn</h3>
-<p>Maxconn parametresi, frontend, backend veya global yapılandırmada ayarlanabilen ve aynı anda kabul edilecek maksimum bağlantı sayısını belirleyen bir ayardır. Amacı sistem kaynaklarının verimli bir şekilde kullanılmasını sağlamak ve aşırı yüklenmeyi engellemektir. Bu ayar global, frontend ve backend'de yapilabilir.</p>
-<pre><code>global
-    maxconn 4096
-</code></pre>
+<h1 id="libvirt-kvmye-gercek-ip-adresi-ekleme-islemi">Libvirt KVM'ye Gercek Ip Adresi Ekleme Islemi</h1>
+<p>Bu işlemi gerçekleştirmek için <code>virsh edit</code> komutu ile olusturulan sanal makineye yeni bir interface ekleyip bu interface uzerinden ip adresini tanimlayabiliriz.</p>
 <h2 id="dikkat-edilmesi-gerekenler">Dikkat Edilmesi Gerekenler</h2>
-<p><code>ulimit</code> gibi sistem ayarlarının maxconn değerini desteklemesi gerekmektedir. <code>/etc/security/limits.conf</code> dosyası aşağıdaki gibi editlenerek ulimit değeri kalıcı hale getirilebilir.</p>
-<pre><code>*    hard    nofile    30000071
-*    soft    nofile    30000071
+<ol>
+<li>
+<p>Sunucuya verilmek istenen ip adresinin başka bir yerde kullanımda olmaması gerekmektedir. Hypervisor üzerindeki iptables kuralları ve aynı yerde olan diğer makinelerdeki iptables kuralları kontrol edilmelidir.</p>
+</li>
+<li>
+<p>Sunucunun bu ip adresini kullanabilmesi için öntanımlı gateway olarak yeni eklenen interface gatewayi kullanılmalıdır.</p>
+</li>
+</ol>
+<h2 id="sanal-makineye-yeni-bir-interface-eklenmesi">Sanal Makineye yeni bir Interface Eklenmesi</h2>
+<pre><code>virsh edit python
+</code></pre>
+<p>Aşağıdaki satırlar makinede var olan interface tanımının altına eklenmelidir.</p>
+<pre><code>&lt;interface type='bridge'&gt;
+    &lt;mac address='00:50:56:00:ad:dc'/&gt;
+    &lt;source bridge='br0'/&gt;
+    &lt;model type='virtio'/&gt;
+    &lt;address type='pci' domain='0x0000' bus='0x00' slot='0x08' function='0x0'/&gt;
+&lt;/interface&gt;
+</code></pre>
+<p>Bu işlem gerçekleştirildikten sonra sanal makine reboot edilmelidir. Reboot edildikten sonra makine üzerinde yeni bir interface oluşmuş olmalı. Bu interface için bir ip adresi tanımlaması yapılması gerekiyor.</p>
+<pre><code>auto ens?
+iface ens? inet static
+        address IP ADRESI
+        gateway GATEWAY?
+        netmask Subnet
+        hwaddress ether MAC-ADRESI(Makineye bu interface eklenirken kullanilan mac adresi)
+</code></pre>
+<p>Sunucunun public ip adresini test etmek için aşağıdaki komut kullanılabilir.</p>
+<pre><code>dig +short myip.opendns.com @resolver1.opendns.com
 </code></pre>
 
 

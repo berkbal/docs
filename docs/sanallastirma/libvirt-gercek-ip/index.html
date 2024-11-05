@@ -1056,6 +1056,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sanal Makineye yeni bir Interface Eklenmesi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ornek-interfaces-dosyas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Örnek interfaces dosyası
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1609,6 +1624,21 @@
     </span>
   </a>
   
+    <nav class="md-nav" aria-label="Sanal Makineye yeni bir Interface Eklenmesi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ornek-interfaces-dosyas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Örnek interfaces dosyası
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
 </li>
       
     </ul>
@@ -1655,6 +1685,22 @@ iface ens? inet static
         gateway GATEWAY?
         netmask Subnet
         hwaddress ether MAC-ADRESI(Makineye bu interface eklenirken kullanilan mac adresi)
+</code></pre>
+<h3 id="ornek-interfaces-dosyas">Örnek interfaces dosyası</h3>
+<pre><code>auto ens3
+iface ens3 inet static
+    address LOCAL-STATIK
+    netmask 255.255.255.0
+    #gateway LOCAL-GATEWAY # Gateway tanimini ip adresini verdigimiz interface icin yapiyoruz.
+
+
+auto ens11
+iface ens11 inet static
+    address VERMEK ISTEDIGIMIZ IP /?
+    netmask SUBNET
+    gateway GATEWAY
+    hwaddress ether MAC-ADRESI(Makineye bu interface eklenirken kullanilan mac adresi)
+root@python:~# 
 </code></pre>
 <p>Sunucunun public ip adresini test etmek için aşağıdaki komut kullanılabilir.</p>
 <pre><code>dig +short myip.opendns.com @resolver1.opendns.com

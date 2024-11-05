@@ -36,6 +36,25 @@ iface ens? inet static
         hwaddress ether MAC-ADRESI(Makineye bu interface eklenirken kullanilan mac adresi)
 ```
 
+### Örnek interfaces dosyası
+
+```
+auto ens3
+iface ens3 inet static
+	address LOCAL-STATIK
+	netmask 255.255.255.0
+    #gateway LOCAL-GATEWAY # Gateway tanimini ip adresini verdigimiz interface icin yapiyoruz.
+
+
+auto ens11
+iface ens11 inet static
+	address VERMEK ISTEDIGIMIZ IP /?
+	netmask SUBNET
+	gateway GATEWAY
+	hwaddress ether MAC-ADRESI(Makineye bu interface eklenirken kullanilan mac adresi)
+root@python:~# 
+```
+
 Sunucunun public ip adresini test etmek için aşağıdaki komut kullanılabilir.
 
 ```

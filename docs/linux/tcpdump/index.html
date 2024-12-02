@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/komut-satirina-giris/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/tcpdump/">
       
       
-        <link rel="prev" href="../linux-komutlari/">
+        <link rel="prev" href="../ss/">
       
       
-        <link rel="next" href="../terminal-komutlarinin-kullanimi-%28syntax%29/">
+        <link rel="next" href="../../ansible/ansible/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Komut Satırına Giriş - Docs for SysAdmins</title>
+        <title>Tcpdump - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#komut-satr-kullanmann-avantajlar" class="md-skip">
+        <a href="#tcpdump-nedir" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Komut Satırına Giriş
+              Tcpdump
             
           </span>
         </div>
@@ -281,19 +281,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -307,7 +305,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux Komutları
@@ -339,28 +337,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Komut Satırına Giriş
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,33 +349,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#komut-satr-kullanmann-avantajlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Komut Satırı Kullanmanın Avantajları
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -665,17 +618,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_6" checked>
         
           
           <label class="md-nav__link" for="__nav_2_6" id="__nav_2_6_label" tabindex="0">
@@ -689,7 +644,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2_6">
             <span class="md-nav__icon md-icon"></span>
             Network
@@ -742,10 +697,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../tcpdump/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Tcpdump
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -754,6 +729,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#tcpdump-nasl-kullanlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      TcpDump Nasıl Kullanılır?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1592,6 +1596,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -1600,9 +1606,9 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#komut-satr-kullanmann-avantajlar" class="md-nav__link">
+  <a href="#tcpdump-nasl-kullanlr" class="md-nav__link">
     <span class="md-ellipsis">
-      Komut Satırı Kullanmanın Avantajları
+      TcpDump Nasıl Kullanılır?
     </span>
   </a>
   
@@ -1623,37 +1629,9 @@
                   
 
 
-  <h1>Komut Satırına Giriş</h1>
-
-<p>Komut satırı kullanarak işlemlerimizi gerçekleştirmek bizi normalden çok daha hızlı ve sistem üzerinde daha çok kontrol sahibi yapar. Kontrol sahibi yaptığı inandırıcı da gerçekten bizi daha hızlı yapıyor mu?</p>
-<p>Evet.</p>
-<p>Küçük bir örnekle açıklayalım:</p>
-<p>Diyelim ki bir fotoğraf makinesi sahibisiniz ve elinizde fotoğraflarla dolu bir dizin var ve bu dizinin içerisindeki  <em>profile.jpg</em> isimli bir fotoğrafı yeniden boyutlandırmak istediniz. Yeniden boyutlandırdıktan sonra da farklı bir isimle tekrar kaydetmek istiyorsunuz.</p>
-<p>Herhangi bir resim düzenleme programında aşağı yukarı bu adımları izlemeniz gerekir:</p>
-<p>1 – Uygulamalar menüsünden resim düzenleme programınızı açarsınız.<br />
-2 – Dosya – Aç<br />
-3 – Gelen dosya açma ekranından fotoğrafların olduğu dizine git.<br />
-4 –  <em>profile.jpg</em> isimli dosyayı bulup seçtikten sonra Aç tuşuna bas.<br />
-5 – Resim – Boyutlandır menüsünden boyutlandırma ayarlarını aç.<br />
-6 – Fotoğrafın genişliğini 300 piksel olarak ayarla.<br />
-7 – Dosya – Farklı Kaydet menüsünden kaydedilecek yeri seç.<br />
-8 – Dosya ismi olarak  <em>profile_küçük.jpg</em> yaz ve Kaydet butonuna tıkla.</p>
-<p><img alt="Gimp" src="../../images/komut_satirina_giris.png" /></p>
-<p>Komut satırını kullanarak bu işlemi tek bir satırda halledebiliriz. Nasıl mı?</p>
-<pre><code>convert -resize 300 profile.jpg profile_küçük.jpg
-</code></pre>
-<p>Komut satırındaki bir satır, neredeyse resim düzenleme programındaki sekiz işleme eşit. Şuan belki de bu işlemi yaparken geçen 15-20 saniyenizi önemsemiyorsunuz fakat 30 farklı fotoğrafı düzenlemeniz gerekseydi ne yapmak isterdiniz? 30 farklı fotoğraf için yukarıdaki sekiz adımı sürekli tekrarlamak ister miydiniz? Totalde 240 adım ediyor. Bunun yerine bütün işlerinizi tek satırda halletmek isteyeceğinizi varsayıyorum.</p>
-<h2 id="komut-satr-kullanmann-avantajlar"><strong>Komut Satırı Kullanmanın Avantajları</strong></h2>
-<p>Komut satırına bir kere şans veren insanlar genellikle asla grafik arayüz kullanmaya geri dönmüyorlar. Sebebi çok basit, Komut satırı(Terminal) kullanmak grafik arayüzü kullanmaktan hem daha  <strong>hızlı</strong>, daha  <strong>stabil</strong>, daha esnek, çok daha  <strong>eğlenceli</strong> ve çok farklı bir  <strong>deneyim</strong>. Komut satırı kullanarak bilgisayarınızla çok dafa farklı bir şekilde iletişim kurabilirsiniz.</p>
-<p><strong>Güzel Bir Özellik Daha: Scripting</strong></p>
-<p>Kullandığınız komutları text dosyalarına dönüştürebileceğinizi biliyor muydunuz? Bu text dosyalarına  <strong>script</strong> denir ve genellikle her seferinde uzun komutlar yazmak yerine kullanmak istediğimiz komutları kaydederek sürekli kullanmamızı sağlarlar.</p>
-<p><strong><code>komutlarim.sh</code></strong></p>
-<p>.sh uzantılı bir dosyanın içerisinde komutlarınızı kombine ederek kullanabilirsiniz! İlk önce komut satırını kullanmayı öğrendikten sonra Bash Scripting öğrenebilirsiniz.</p>
-<p><strong>Grafik Arayüze Sahip Olmayan Uygulamalar</strong></p>
-<p>Komut satırı kullanmanın en çok gerektiği ve en çok işe yaradığı anlar grafik arayüze sahip olmayan uygulamaları kullanmamız gerektiğinde ortaya çıkıyor. Diyelim ki bir network’ümüz var, bu network’teki bir bilgisayarı kapatmak istiyoruz. Bilgisayarın yanına kadar gidip kapatma tuşuna basmak yerine komut satırından  <strong>shutdown</strong> komutunu çalıştırmak güzel bir fikire benziyor. Tabi bu bilgisayarın kapatma düğmesine ayağınız ile erişebiliyorsanız farklı bir seçim yapabilirsiniz. 🙂</p>
-<p><strong>Aslında Grafik Arayüze Sahip Olan Programlar da Komutlarla Çalışır</strong></p>
-<p>Grafik arayüze sahip programları kullanırken menülerden tıkladığımız seçenekler aslında birer komuttur diyebiliriz. Bir programı çalıştırmak için bir menüye veya bir ikona tıkladığınızda aslında bir komut çalıştırmış olursunuz.</p>
-<p>Komut satırının faydalarından ve ne kadar eğlenceli bir şey olduğundan yeterince bahsettik. Artık başlayabiliriz. 🙂</p>
+<h1 id="tcpdump-nedir">TcpDump Nedir?</h1>
+<p>tcpdump, ağ trafiğini analiz etmek için kullanılan bir komut satırı aracıdır. Network kartı üzerinden geçen TCP/IP paketlerini yakalar ve detaylı bilgi sunar. Ağ trafiğinin analiz edilmesi, sorunların tespiti veya güvenlik denetimleri gibi durumlarda sıklıkla kullanılır. Ayrıca, yalnızca TCP paketleri değil, UDP, ICMP gibi diğer protokol paketlerini de izleyebilir.</p>
+<h2 id="tcpdump-nasl-kullanlr">TcpDump Nasıl Kullanılır?</h2>
 
 
 

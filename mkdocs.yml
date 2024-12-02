@@ -45,7 +45,8 @@ nav:
       - Tmux: linux/tmux.md
       - Network:
         - Iptables: linux/iptables.md
-        - ss: linux/ss.md
+        - Ss: linux/ss.md
+        - Tcpdump: linux/tcpdump.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

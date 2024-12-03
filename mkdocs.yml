@@ -8,6 +8,7 @@ theme:
   logo: images/berk-bal.png
   features:
     - palette.toggle  # Karanlık mod geçişini etkinleştirir
+    - content.action.edit # Edit Butonu
   language: tr
 
   palette:

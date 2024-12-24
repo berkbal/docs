@@ -1,6 +1,6 @@
 site_name: Docs for SysAdmins
 site_url: https://berkbal.github.io/docs/
-docs_dir: docs_src  # Kaynak dosyalarınızın olduğu dizin
+docs_dir: docs_src  # Kaynak dosyalarının olduğu dizin
 site_dir: docs      # Derlenmiş site dosyalarının yerleştirileceği dizin
 theme:
   name: material
@@ -41,6 +41,7 @@ nav:
         - Yönlendirme ve Operatörler: linux/yonlendirme(operatorler).md
         - Birden Fazla Dosya ile İşlem Yapmak: linux/birden-fazla-dosya-ile-islem-yapmak.md
       - Logrotate: linux/logrotate.md
+      - Bacula: linux/bacula.md
       - Swapfile: linux/swapfile.md
       - Swaks: linux/swaks.md
       - Tmux: linux/tmux.md

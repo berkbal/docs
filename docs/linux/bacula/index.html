@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/freepbx/sertifika-yenileme/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/bacula/">
       
       
-        <link rel="prev" href="../../haproxy/maxconn/">
+        <link rel="prev" href="../logrotate/">
       
       
-        <link rel="next" href="../../javascript/bcrypt/">
+        <link rel="next" href="../swapfile/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Sertifika Yenileme - Docs for SysAdmins</title>
+        <title>Bacula - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#freepbx-https-sertifikas-yenileme-islemi" class="md-skip">
+        <a href="#bacula-nedir" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Sertifika Yenileme
+              Bacula
             
           </span>
         </div>
@@ -244,17 +244,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -268,7 +270,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -317,7 +319,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/linux-komutlari/" class="md-nav__link">
+      <a href="../linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -338,7 +340,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/komut-satirina-giris/" class="md-nav__link">
+      <a href="../komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -359,7 +361,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
+      <a href="../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -380,7 +382,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
+      <a href="../bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -401,7 +403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/temel-linux-komutlari/" class="md-nav__link">
+      <a href="../temel-linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -422,7 +424,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/standart-akislar/" class="md-nav__link">
+      <a href="../standart-akislar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -443,7 +445,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/daha-hizli-terminal-kullanmak/" class="md-nav__link">
+      <a href="../daha-hizli-terminal-kullanmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -464,7 +466,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/root-kullanicisi/" class="md-nav__link">
+      <a href="../root-kullanicisi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -485,7 +487,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/yonlendirme%28operatorler%29/" class="md-nav__link">
+      <a href="../yonlendirme%28operatorler%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -506,7 +508,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
+      <a href="../birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -535,7 +537,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/logrotate/" class="md-nav__link">
+      <a href="../logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -553,10 +555,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../linux/bacula/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Bacula
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -565,6 +587,68 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#baculann-bilesenleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bacula'nın Bileşenleri
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bacula-adm-adm-nasl-calsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bacula Adım Adım Nasıl Çalışır?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sras-ile-bacula-bilesenleri-konfigurasyonu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sırası ile Bacula Bileşenleri Konfigürasyonu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sırası ile Bacula Bileşenleri Konfigürasyonu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bacula-dir-director" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bacula-dir (Director)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -577,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/swapfile/" class="md-nav__link">
+      <a href="../swapfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -598,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/swaks/" class="md-nav__link">
+      <a href="../swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -619,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/tmux/" class="md-nav__link">
+      <a href="../tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -675,7 +759,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/iptables/" class="md-nav__link">
+      <a href="../iptables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -696,7 +780,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/ss/" class="md-nav__link">
+      <a href="../ss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -717,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/tcpdump/" class="md-nav__link">
+      <a href="../tcpdump/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -914,7 +998,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../linux/swaks/" class="md-nav__link">
+      <a href="../swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1341,19 +1425,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -1367,7 +1449,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_9_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_9">
             <span class="md-nav__icon md-icon"></span>
             Asterisk/Freepbx
@@ -1378,30 +1460,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Sertifika Yenileme
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../freepbx/sertifika-yenileme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1410,35 +1472,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#pbx-arayuzunden-https-sertifikas-yenileme-islemi" class="md-nav__link">
-    <span class="md-ellipsis">
-      Pbx Arayüzünden HTTPS Sertifikası Yenileme İşlemi
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -1625,11 +1658,44 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#pbx-arayuzunden-https-sertifikas-yenileme-islemi" class="md-nav__link">
+  <a href="#baculann-bilesenleri" class="md-nav__link">
     <span class="md-ellipsis">
-      Pbx Arayüzünden HTTPS Sertifikası Yenileme İşlemi
+      Bacula'nın Bileşenleri
     </span>
   </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#bacula-adm-adm-nasl-calsr" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bacula Adım Adım Nasıl Çalışır?
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#sras-ile-bacula-bilesenleri-konfigurasyonu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Sırası ile Bacula Bileşenleri Konfigürasyonu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Sırası ile Bacula Bileşenleri Konfigürasyonu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bacula-dir-director" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bacula-dir (Director)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -1648,22 +1714,50 @@
                   
 
 
-<h1 id="freepbx-https-sertifikas-yenileme-islemi">Freepbx HTTPS Sertifikası Yenileme İşlemi</h1>
-<p>Freepbx arayüzünün https sertifikasının yenilenmesi için aşağıdaki adımlar uygulanmalıdır. Sertifika yenileme işlemi arayüz üzerinden yapılmalıdır. Eğer arayüz üzerinden yapılmazsa Pbx'in kullandığı Apache restart edildiği zaman eski sertifikaya geri dönebilir ve farkı sorunlar yaratabilir.</p>
-<h2 id="pbx-arayuzunden-https-sertifikas-yenileme-islemi">Pbx Arayüzünden HTTPS Sertifikası Yenileme İşlemi</h2>
+<h1 id="bacula-nedir">Bacula Nedir?</h1>
+<p>Bacula açık kaynak kodlu bir yedekleme ve geri yükleme yazılımıdır. Verileri otomatik olarak yedeklemek, geri yüklemek için kullanılır. Küçük ev ağlarından büyük veri merkezlerine kadar farklı ölçeklerde kullanılabilir.</p>
+<h2 id="baculann-bilesenleri">Bacula'nın Bileşenleri</h2>
+<p>Bacula belli başlı bileşenlere ayrılarak çalışır ve bu sayede kullanımı ve yönetimi kolaylaşır.</p>
+<ul>
+<li>
+<p>Director (Bacula-dir): Yedekleme işlemlerini planlar ve yönetir. Bacula'nın merkezi bileşenidir.</p>
+</li>
+<li>
+<p>Storage Daemon: Yedekleme verilerini fiziksel veeya sanal depolama cihazlarına yazar.</p>
+</li>
+<li>
+<p>File Daemon (Bacula-fd): Yedeklenecek istemci makinelerde çalışarak yedeklenecek dosyaları okuyup Storage Daemon'a iletir.</p>
+</li>
+<li>
+<p>Catalog (Veritabanı): Yedekleme ve geri yükleme işlemleriyle ilgili metadata bilgilerini saklar. Genellikle MYSQL, PostgreSQL veya SQLite kullanır.</p>
+</li>
+<li>
+<p>Console: (Bconsole): Bacula'yı komut satırından yönetmek için kullanılır.</p>
+</li>
+<li>
+<p>Baculum (Web Arayüzü): Bacula'yı web tabanlı bir arayüzden kontrol etmeyi mümkün kılar.</p>
+</li>
+</ul>
+<h2 id="bacula-adm-adm-nasl-calsr">Bacula Adım Adım Nasıl Çalışır?</h2>
+<p>Yedekleme işleminin baştan sona nasıl çalıştığını öğrendiğimizde Bacula'yı anlamak daha kolay hale geliyor. Aşağıdaki sıra ile Bacula yedekleme işlemini gerçekleştirir:</p>
 <ol>
-<li>Pbx arayüzü için bir HTTPS sertifikası generate edilerek <strong>Admin</strong> -&gt; <strong>Certificate Management</strong> menüsüne gidilir.</li>
-<li><strong>New Certificate</strong> -&gt; <strong>Upload Certificate</strong> menüsüne giriş yapılır.</li>
+<li>Director, yapılandırılmış bir plana göre yedekleme işlemini başlatır.</li>
+<li>File Daemon istemcilerdeki dosyaları okuyarak Storage Daemon'a iletir. Bu süreç gerçekleşirken Catalog yedekleme işleminin metadatasını saklar.</li>
+<li>Veriler Storage Daemon tarafından belirtilen depolama cihazına yazılır.</li>
 </ol>
-<p><img alt="Freepbx Sertifika Yükleme Menüsü" src="../sertifika.png" /></p>
-<ol>
-<li><strong>Private Key</strong> kısmına sertifikanın Private Keyi, <strong>Certificate</strong> kısmına sertifika yazılarak sağ alttan Generate Certificate butonuna basılır.</li>
-<li>Tekrar <strong>Certificate Management</strong> menüsüne dönüp yüklenen seritfika default sertifika olarak ayarlanır.</li>
-<li><strong>Admin</strong> -&gt; <strong>System Admin</strong> menüsüne gidilir.</li>
-<li><strong>System Admin</strong> menüsünün altından <strong>HTTPS Setup</strong> menüsüne gidilir(Ekranın sağ tarafında)</li>
-<li><strong>HTTPS Setup</strong> Menüsünün Settings kısmına gelip yüklenen sertifika <strong>Certificate Manager</strong> menüsü altından seçilir ve install butonuna basılır.</li>
-<li>Install işlemi bittikten sonra <strong>Save and Restart Apache</strong> butonuna basılır ve Apache yeniden başlatılır.</li>
-</ol>
+<h2 id="sras-ile-bacula-bilesenleri-konfigurasyonu">Sırası ile Bacula Bileşenleri Konfigürasyonu</h2>
+<h3 id="bacula-dir-director">Bacula-dir (Director)</h3>
+<p>Bacula director'un kurulduğu sunucuda <code>/etc/bacula/bacula-dir.conf</code> dosyası ile aşağıdaki ayarlamalar yapılır: </p>
+<pre><code>Director {                            # Director yapılandırması
+  Name = bacula-dir                  # Director adı
+  DIRport = 9101                     # Director için port
+  QueryFile = &quot;/etc/bacula/scripts/query.sql&quot;  # SQL sorgu dosyası
+  WorkingDirectory = &quot;/var/lib/bacula&quot;
+  PidDirectory = &quot;/var/run/bacula&quot;
+  Maximum Concurrent Jobs = 10      # Maksimum eş zamanlı iş
+  Password = &quot;director_password&quot;    # Şifre (File Daemon ile eşleşmeli)
+}
+</code></pre>
 
 
 

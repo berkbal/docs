@@ -640,6 +640,51 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#file-daemon-istemcilere-kurulur" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Daemon (İstemcilere Kurulur)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-daemon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Daemon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-ve-job-tanmlayarak-yedekleme-islemlerini-gerceklestirme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schedule ve Job Tanımlayarak Yedekleme İşlemlerini Gerçekleştirme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schedule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1694,6 +1739,51 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#file-daemon-istemcilere-kurulur" class="md-nav__link">
+    <span class="md-ellipsis">
+      File-Daemon (İstemcilere Kurulur)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#storage-daemon" class="md-nav__link">
+    <span class="md-ellipsis">
+      Storage Daemon
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule-ve-job-tanmlayarak-yedekleme-islemlerini-gerceklestirme" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schedule ve Job Tanımlayarak Yedekleme İşlemlerini Gerçekleştirme
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#schedule" class="md-nav__link">
+    <span class="md-ellipsis">
+      Schedule
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#job" class="md-nav__link">
+    <span class="md-ellipsis">
+      Job
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -1758,6 +1848,61 @@
   Password = &quot;director_password&quot;    # Şifre (File Daemon ile eşleşmeli)
 }
 </code></pre>
+<h3 id="file-daemon-istemcilere-kurulur">File-Daemon (İstemcilere Kurulur)</h3>
+<p>İstemcilere file-daemon kurulduktan sonra <code>/etc/bacula/bacula-fd.conf</code> dosyasına client ayarları yazılabilir.</p>
+<pre><code>Client {
+    Name = nextcloud-fd                 # İstemci adı (File Daemon'daki isimle aynı olmalı)
+    Address = 192.168.1.102             # İstemci IP adresi
+    FDPort = 9102                       # File Daemon portu
+    Catalog = MyCatalog                 # Veritabanı
+    Password = &quot;fd_password&quot;            # File Daemon şifresi (istemcidekiyle aynı olmalı)
+    File Retention = 30 days            # Yedek dosya tutulma süresi
+    Job Retention = 6 months            # İş kayıtlarının tutulma süresi
+  }
+</code></pre>
+<h3 id="storage-daemon">Storage Daemon</h3>
+<p>Storage Daemon dosyaların yedekleneceği sunucuya kurulur. Bacula Director'un bulunduğu sunucuya kurulması pratik olabilir. Ayar dosyası <code>/etc/bacula/bacula-sd.conf</code>.</p>
+<pre><code>Storage {                          # Depolama yapılandırması
+  Name = File                     # Depolama cihazının adı
+  SDPort = 9103                   # Storage Daemon için port
+  WorkingDirectory = &quot;/var/lib/bacula&quot;
+  PidDirectory = &quot;/var/run/bacula&quot;
+  Maximum Concurrent Jobs = 10
+}
+
+Device {                           # Depolama cihazı bilgisi
+  Name = FileStorage              # Depolama cihazı adı
+  MediaType = File                # Depolama türü
+  ArchiveDevice = /mnt/backup     # Yedeklerin saklanacağı dizin
+  LabelMedia = yes                # Otomatik medya etiketi
+  RandomAccess = Yes
+  AutomaticMount = yes
+  RemovableMedia = no
+  AlwaysOpen = yes
+}
+</code></pre>
+<h3 id="schedule-ve-job-tanmlayarak-yedekleme-islemlerini-gerceklestirme">Schedule ve Job Tanımlayarak Yedekleme İşlemlerini Gerçekleştirme</h3>
+<p>Bacula-dir'in ayar dosyasına bir schedule ve job tanımlayarak yedekleme işlemlerini gerçekleştirebiliriz. Schedule, Bacula'da Run anahtar kelimesiyle tanımlanır ve farklı zamanlama türleri için birden fazla Run satırı eklenebilir. Her bir Job tanımında ilgili Schedule adı belirtilir.</p>
+<p>Aşağıda bir Schedule ve bir Job tanımı mevcut. Buradaki ayar dosyalarını inceleyerek yapıyı anlayabilirsiniz. Job'da Schedule'ın adını veriyoruz ve Schedule tetikleniyor.</p>
+<h3 id="schedule">Schedule</h3>
+<pre><code>Schedule {
+    Name = &quot;WeeklyCycle&quot;             # Zamanlama adı
+    Run = Full sun at 23:05          # Her Pazar tam (full) yedekleme
+    Run = Incremental mon-sat at 23:05 # Pazartesiden Cumartesiye artımlı (incremental) yedekleme
+}
+</code></pre>
+<h3 id="job">Job</h3>
+<pre><code>Job {
+    Name = &quot;Nextcloud_Backup&quot;
+    Client = nextcloud-fd
+    FileSet = &quot;Full Set&quot;
+    Schedule = &quot;WeeklyCycle&quot;       # Schedule ile ilişkilendirme
+    Storage = File
+    Pool = Default
+    Messages = Standard
+}
+</code></pre>
+<p>Config dosyalarinda bir hata olup olmadığını kontrol etmek için <code>sudo bacula-dir -t</code> komutunu kullanabilirsiniz.</p>
 
 
 

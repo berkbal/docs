@@ -49,6 +49,8 @@ nav:
         - Iptables: linux/iptables.md
         - Ss: linux/ss.md
         - Tcpdump: linux/tcpdump.md
+        - Protokoller:
+          - SFTP: linux/sftp.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

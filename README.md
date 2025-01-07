@@ -11,7 +11,7 @@ Bu projede Linux sistem yönetimi, sistem ile alakalı yazılımlar ve yazılım
   </tr>
   <tr>
     <td><a href="https://berkbal.github.io/docs/" target=”_blank”>GitHub Pages</a></td>
-    <td><a href="https://berkbal.com.tr" target=”_blank”>Personal Website</a></td>
+    <td><a href="https://berkbal.com" target=”_blank”>Personal Website</a></td>
     <td><a href="https://www.linkedin.com/in/ben-berkbal/" target=”_blank”>Linkedin Profile</a></td>
   </tr>
 </table>

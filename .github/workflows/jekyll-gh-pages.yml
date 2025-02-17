@@ -33,4 +33,4 @@ jobs:
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           branch: gh-pages  # GitHub Pages için kullanılacak branch
-          folder: site  # MkDocs'un oluşturduğu site dizini
+          folder: docs  # MkDocs'un oluşturduğu site dizini

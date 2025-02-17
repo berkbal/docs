@@ -78,3 +78,4 @@ nav:
   - Veritabani:
       - Mongo Shell Komutları: veritabani/mongoshell-komutlari.md
   - Test:
+      - Test: test.md

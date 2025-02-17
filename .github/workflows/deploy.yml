@@ -27,7 +27,7 @@ jobs:
           pip install -r requirements.txt  # MkDocs ve diğer bağımlılıkları kur
 
       - name: Build MkDocs site
-        run: mkdocs build -d site  # HTML çıktısını oluştur
+        run: mkdocs build -d docs  # HTML çıktısını oluştur
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4

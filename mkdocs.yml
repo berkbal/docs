@@ -77,3 +77,4 @@ nav:
       - JWT: javascript/jwt.md
   - Veritabani:
       - Mongo Shell Komutları: veritabani/mongoshell-komutlari.md
+  - Test:

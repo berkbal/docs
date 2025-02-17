@@ -75,5 +75,5 @@ nav:
   - Javascript:
       - Bcrypt: javascript/bcrypt.md
       - JWT: javascript/jwt.md
-  - MongoDB:
-      - Mongo Shell Komutları: mongodb/mongoshell-komutlari.md
+  - Veritabani:
+      - Mongo Shell Komutları: veritabani/mongoshell-komutlari.md

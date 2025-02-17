@@ -63,7 +63,7 @@ nav:
         - Libvirt Networking: sanallastirma/libvirt-networking.md
         - Gerçek Ip Adresi Ekleme İşlemi: sanallastirma/libvirt-gercek-ip.md
       - Proxmox:
-      - Yeni Disk Ekleme İşlemi: sanallastirma/proxmox/disk-ekleme.md
+        - Disk Ekleme: sanallastirma/proxmox/disk-ekleme.md
   - Güncelleme:
       - Gitlab: guncelleme/gitlab.md
   - Docker:

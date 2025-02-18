@@ -2,6 +2,8 @@ site_name: Docs for SysAdmins
 site_url: https://berkbal.github.io/docs/
 docs_dir: docs_src  # Kaynak dosyalarının olduğu dizin
 site_dir: docs      # Derlenmiş site dosyalarının yerleştirileceği dizin
+repo_url: https://github.com/berkbal/docs
+edit_uri: https://github.dev/berkbal/docs/blob/master/docs_src/
 theme:
   name: material
   favicon: images/favicon.ico

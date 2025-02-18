@@ -1755,11 +1755,19 @@
 
 
 <h1 id="proxmoxa-yeni-disk-ekleme">Proxmox'a Yeni Disk Ekleme</h1>
-<ul>
+<ol>
 <li>Disk sunucuya takildiktan sonra proxmox'un arayuzune girilir.</li>
 <li><strong>Datacenter</strong> menusunden yeni eklenen disk secilerek (dev/sdb) Wipe Disk secenegine tiklanir ve disk temizlenir. (Bu islemden sonra diskinizdeki veriler kaybolacaktır. Bu islemden once yedekleme yapmaniz gerekiyorsa mutlaka yapmalisiniz.)</li>
-</ul>
+</ol>
 <p><img alt="alt text" src="../proxmox-disk-menusu.png" /></p>
+<ol>
+<li><strong>Disks</strong> menusunden <strong>Directory</strong> kismina tiklayarak <strong>Create Directory</strong> secenegi ile yeni disk bir isim ile makineye mount edilir.</li>
+</ol>
+<p><img alt="proxmox-directory-menusu" src="../proxmox-directory-menusu.png" /></p>
+<ol>
+<li>Yeni bir sanal makine veya LXC containeri olusturulurken bu diskin kullanilabilir oldugu dogrulanir.</li>
+</ol>
+<p><img alt="alt text" src="../image.png" /></p>
 
 
 

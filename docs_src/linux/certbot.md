@@ -22,9 +22,7 @@ certbot certonly --manual --preferred-challenges dns -d "*.alan-adiniz.com"
 
 4. Gelen ikinci seçeneğe Yes diyerek cevap verebilirsiniz.
 
-5. Bir adet TXT kaydi olusturmaniz gerekecek. Konsoldaki isim ile bir TXT kaydi olusturun.
-
-***Not: DNS kaydinin yayinlanmasi biraz zaman alabilir. Dig veya nslookup komutu ile kontrol edebilirsiniz.***
+5. Bir adet TXT kaydi olusturmaniz gerekecek. Konsoldaki isim ile bir TXT kaydi olusturun. ((***Not: DNS kaydinin yayinlanmasi biraz zaman alabilir. Dig veya nslookup komutu ile kontrol edebilirsiniz.***))
  
 6. Ayni islemi bir kere daha yapmaniz gerekecek, girmis oldugunuz dns kaydini yeni VALUE ile duzenleyip tekrar enter'a basabilirsiniz.
 

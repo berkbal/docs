@@ -53,6 +53,7 @@ nav:
         - Tcpdump: linux/tcpdump.md
         - Protokoller:
           - SFTP: linux/sftp.md
+      - Certbot: linux/certbot.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

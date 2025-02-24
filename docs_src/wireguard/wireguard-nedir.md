@@ -40,6 +40,8 @@ PersistentKeepalive = 21
 
 ### Server Config
 
+***Not: Belirlenen subnete gore asagidaki iptables ayarlari degisiklik gosterebilir.***
+
 ```
 [Interface]
 Address = 10.200.200.1/24

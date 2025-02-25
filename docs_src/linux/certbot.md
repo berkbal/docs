@@ -14,7 +14,7 @@ sudo apt install certbot
 2. Asagidaki komuttaki alan adi kismi degistirilerek wildcard sertifika isteginde bulunulur:
 
 ```
-certbot certonly --manual --preferred-challenges dns -d "*.alan-adiniz.com"
+sudo certbot certonly --manual --preferred-challenges dns -d "*.alan-adiniz.com"
 
 ```
 

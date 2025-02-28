@@ -73,6 +73,7 @@ nav:
       - Docker-Compose Dosyaları:
         - Wireguard: docker/docker-compose-dosyalari/wireguard/wireguard.md
   - Haproxy:
+      - Frontend ve Backend Ekleme İşlemleri: haproxy/frontend-backend-ekleme.md
       - Haproxy Parametreleri:
         - Maxconn: haproxy/maxconn.md
   - Asterisk/Freepbx:

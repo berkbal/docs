@@ -1964,6 +1964,39 @@
 
 <h1 id="haproxyde-frontend-ve-backend-ekleyip-yonlendirme">Haproxy'de Frontend ve Backend Ekleyip Yonlendirme</h1>
 <h1 id="frontend-ekleme">Frontend Ekleme</h1>
+<p>Frontend ekleme islemi duruma ve config dosyasinin hangi duzende tutulmak istenmesine gore degisebilir. Ben http ve https olarak iki ayri ana frontend tanimlayip acl tanimlarini bu frontendler icerisinde yapmayi tercih ediyorum.</p>
+<p>Asagidaki iki tanim haproxy.cfg dosyasina eklenir:</p>
+<ul>
+<li>SSL Sertifikasi bind edilen portun yanina eklenebilir. (Ayni satirda birden fazla ssl sertifikasi eklenebilir. Haproxy acl tanimlarindaki alan adlari ile sertifikalari otomatik olarak eslestirecektir.)</li>
+</ul>
+<pre><code>frontend http_in
+    bind *:80
+    mode http
+    option httplog
+
+    # ACL Tanimlari
+    acl host_cloud hdr(host) -i cloud.homelab.tr
+    acl host_zabbix hdr(host) -i zabbix.homelab.tr
+#    redirect scheme https if !{ ssl_fc } host_cloud
+#    redirect scheme https if !{ ssl_fc } host_zabbix
+
+    #Backend Yonlendirmeleri
+    use_backend cloud_backend if host_cloud
+    use_backend zabbix_backend if host_zabbix
+
+frontend https_in
+    bind *:443 ssl crt /etc/haproxy/certs/yildiz-homelab.tr.pem
+    mode http
+    option httplog
+
+    # ACL Tanimlari
+    acl host_cloud hdr(host) -i cloud.homelab.tr
+    acl host_zabbix hdr(host) -i zabbix.homelab.tr
+
+    # Backend Yonlendirmeleri
+    use_backend cloud_backend if host_cloud
+    use_backend zabbix_backend if host_zabbix
+</code></pre>
 <h2 id="acl-nedir">ACL Nedir?</h2>
 <p>HAProxy'de ACL (Access Control List), gelen istekleri belirli kriterlere göre filtreleyerek, yönlendirme veya erişim kontrolü yapmaya olanak tanıyan bir mekanizmadır. ACL'ler, belirli başlıkları (headers), kaynak IP adreslerini, istek yollarını (paths), HTTP metodlarını ve daha birçok değişkeni kontrol etmek için kullanılabilir.</p>
 <h2 id="acl-ekleme">ACL Ekleme</h2>

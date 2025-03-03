@@ -2,6 +2,41 @@
 
 # Frontend Ekleme
 
+Frontend ekleme islemi duruma ve config dosyasinin hangi duzende tutulmak istenmesine gore degisebilir. Ben http ve https olarak iki ayri ana frontend tanimlayip acl tanimlarini bu frontendler icerisinde yapmayi tercih ediyorum.
+
+Asagidaki iki tanim haproxy.cfg dosyasina eklenir:
+
+- SSL Sertifikasi bind edilen portun yanina eklenebilir. (Ayni satirda birden fazla ssl sertifikasi eklenebilir. Haproxy acl tanimlarindaki alan adlari ile sertifikalari otomatik olarak eslestirecektir.)
+
+```
+frontend http_in
+    bind *:80
+    mode http
+    option httplog
+
+    # ACL Tanimlari
+    acl host_cloud hdr(host) -i cloud.homelab.tr
+    acl host_zabbix hdr(host) -i zabbix.homelab.tr
+#    redirect scheme https if !{ ssl_fc } host_cloud
+#    redirect scheme https if !{ ssl_fc } host_zabbix
+
+    #Backend Yonlendirmeleri
+    use_backend cloud_backend if host_cloud
+    use_backend zabbix_backend if host_zabbix
+
+frontend https_in
+    bind *:443 ssl crt /etc/haproxy/certs/yildiz-homelab.tr.pem
+    mode http
+    option httplog
+
+    # ACL Tanimlari
+    acl host_cloud hdr(host) -i cloud.homelab.tr
+    acl host_zabbix hdr(host) -i zabbix.homelab.tr
+
+    # Backend Yonlendirmeleri
+    use_backend cloud_backend if host_cloud
+    use_backend zabbix_backend if host_zabbix
+```
 
 ## ACL Nedir?
 

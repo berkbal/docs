@@ -85,3 +85,5 @@ nav:
       - Mongo Shell Komutları: veritabani/mongoshell-komutlari.md
   - WireGuard:
       - Wireguard Nedir?: wireguard/wireguard-nedir.md
+  - OpenWRT:
+      - OpenWRT Kurulumu: openwrt/openwrt-kurulumu.md

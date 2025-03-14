@@ -1894,8 +1894,17 @@
       <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-        
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    OpenWRT Kurulumu
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
         
@@ -1906,6 +1915,62 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openwrt-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenWRT Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenWRT Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-arayuzu-ile-kurulum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web arayuzu ile kurulum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web arayuzu ile kurulum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adimlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adimlar:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -1936,8 +2001,53 @@
   
   
   
-    
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#openwrt-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      OpenWRT Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OpenWRT Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#web-arayuzu-ile-kurulum" class="md-nav__link">
+    <span class="md-ellipsis">
+      Web arayuzu ile kurulum
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Web arayuzu ile kurulum">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adimlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adimlar:
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1960,12 +2070,26 @@
   
 
 
-<h1 id="openwrt-kurulumu">OpenWRT Kurulumu</h1>
-<p>OpenWRT'yi routera kurmak icin asagidaki adimlar takip edilir. Buradaki kurulum adimlari Zyxel Wsm20 routerlara yapilarak yazilmistir.</p>
+  <h1>OpenWRT Kurulumu</h1>
+
+<h2 id="openwrt-kurulumu">OpenWRT Kurulumu</h2>
+<h3 id="web-arayuzu-ile-kurulum">Web arayuzu ile kurulum</h3>
+<p>Cihaz cloud uzerinden yonetiliyor ama gizli bir firmware guncelleme sayfasi var. Bu sayfaya kayit olmadan erisilebilir. Eger calismazsa, cloud kaydi ile denenebilir.</p>
+<p>Cihazda iki firmware var ve hangisinin aktif oldugunu anlamak mumkun degil. Bu yuzden once <strong>-initramfs</strong> surumu yuklenmeli.</p>
+<h4 id="adimlar">Adimlar:</h4>
 <ol>
-<li>OpenWRT kurulumu cihazlar arasında farklılık gösterebilir. Kullanılacak olan cihazın modeline özel firmware indirilmelidir. Cıhaza ozel olan surum OpenWRT'nin web sitesindeki <a href="https://openwrt.org/toh/start">Table of Hardware</a> menusunden indirilir.</li>
+<li><strong>OEM web arayuzune giris yap</strong> (Bekleyerek de devam edebilirsin).</li>
+<li>Gizli guncelleme sayfasina git: <code>http://192.168.212.1/gui/#/main/debug/firmwareupgrade</code></li>
+<li>Sayfa 1 dakika boyunca yuklenir (yenilemek bir pop-up gosterir ama ise yaramaz). Bir sure sonra <strong>Upload</strong> butonu gorunur ve aktif olur.</li>
+<li><strong>-initramfs-kernel.bin</strong> dosyasini yukleyip flashla.</li>
+<li>Modemin yeniden baslamasini bekle ve OpenWrt arayuzune gir (<code>192.168.1.1</code>). (IP degistigi icin ethernet kablosunu cikarip takabilirsin).</li>
+<li><strong>Go to firmware upgrade...</strong> butonuna tikla.</li>
+<li>Sayfayi asagi kaydir ve <strong>Flash new firmware image</strong> bolumunde <strong>Flash Image</strong> butonuna tikla.</li>
+<li><strong>squashfs-sysupgrade.bin</strong> dosyasini sec ve <strong>Upload</strong> butonuna bas.</li>
+<li><strong>Keep Setting...</strong> seceneginin isaretini kaldir.</li>
+<li><strong>Continue</strong> butonuna bas ve yeni firmware'i flashla.</li>
 </ol>
-<p>2.</p>
+<p>Firmware yuklenirken LED yaklasik 10 saniye boyunca kirmizi yanar. Sonra yesil olur. Ardindan beyaz renkte hizli yanip soner, sonra yavaslar. LED beyaz sabit yaninca OpenWRT yuklenmis olur.</p>
 
 
 

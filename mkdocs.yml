@@ -48,6 +48,7 @@ nav:
       - Swaks: linux/swaks.md
       - Tmux: linux/tmux.md
       - Rsync: linux/rsync.md
+      - Truncate: linux/truncate.md
       - Network:
         - Iptables: linux/iptables.md
         - Ss: linux/ss.md

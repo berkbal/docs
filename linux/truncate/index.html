@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/terminal-komutlarinin-kullanimi-%28syntax%29/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/truncate/">
       
       
-        <link rel="prev" href="../komut-satirina-giris/">
+        <link rel="prev" href="../rsync/">
       
       
-        <link rel="next" href="../bilgisayar-icerisinde-gezinmek/">
+        <link rel="next" href="../iptables/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Terminal Komutlarının Kullanımı(Syntax) - Docs for SysAdmins</title>
+        <title>Truncate - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#arguments-argumanlar" class="md-skip">
+        <a href="#truncate-nedir" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Terminal Komutlarının Kullanımı(Syntax)
+              Truncate
             
           </span>
         </div>
@@ -305,19 +305,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -331,7 +329,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_1">
             <span class="md-nav__icon md-icon"></span>
             Linux Komutları
@@ -384,28 +382,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Terminal Komutlarının Kullanımı(Syntax)
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -414,33 +394,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#arguments-argumanlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Arguments – Argümanlar
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -731,10 +684,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../truncate/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Truncate
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -743,6 +716,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#temel-kullanm" class="md-nav__link">
+    <span class="md-ellipsis">
+      Temel kullanımı
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pratik-ornekler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pratik örnekler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ne-zaman-kullanmal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ne zaman kullanmalı?
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1996,6 +2016,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2004,9 +2026,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#arguments-argumanlar" class="md-nav__link">
+  <a href="#temel-kullanm" class="md-nav__link">
     <span class="md-ellipsis">
-      Arguments – Argümanlar
+      Temel kullanımı
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pratik-ornekler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pratik örnekler
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ne-zaman-kullanmal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ne zaman kullanmalı?
     </span>
   </a>
   
@@ -2027,7 +2067,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/linux/terminal-komutlarinin-kullanimi-(syntax).md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/linux/truncate.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2035,45 +2075,37 @@
   
 
 
-  <h1>Terminal Komutlarının Kullanımı(Syntax)</h1>
-
-<p>Genellikle terminale yazdığınız ilk kelime çalıştırmak istediğimiz komuttur. <a href="https://berkbal.github.io/docs/linux/linux-komutlari/">Başlamadan Önce</a> isimli yazımda sizlere <em>date</em> komutundan bahsetmiştim. Bu komut bize komutun çalıştırıldığı zamanın tarihini ve zamanını gösteriyordu.</p>
-<h2 id="arguments-argumanlar"><strong>Arguments – Argümanlar</strong></h2>
-<p>Kullanabileceğimiz diğer bir komut ise belirtilen bilgileri kullanıcıya geri gösteren <em>echo</em> komutu. Echo komutunu tek başına çalıştırdığımızda herhangi bir şey olmayacaktır çünkü echo komutu bir argüman ile birlikte çalışan bir komuttur. Echo komutu, kendisine verdiğimiz argümanı(bilgiyi) bize geri döndürür.</p>
-<pre><code>$ **echo foo** 
-foo
+<h1 id="truncate-nedir">Truncate nedir?</h1>
+<p>Linux'ta 'truncate' komutu, bir dosyanın boyutunu değiştirmek için kullanılır. En önemli özelliği, dosyayı silmeden içeriğini boşaltabilmesidir. Yani dosya yerinde kalır ama içi boşalır.</p>
+<p>Bu özellikle log dosyaları veya çalışan uygulamaların kullandığı dosyalarla uğraşırken hayat kurtarıcı olabilir. Dosyayı silsem, uygulama hata verebilir. Ama boşaltırsam, hem yer açarım hem de yapı bozulmaz.</p>
+<h2 id="temel-kullanm">Temel kullanımı</h2>
+<p>Temel kullanımı oldukça basit:</p>
+<pre><code class="language-bash">truncate -s BOYUT DOSYA_ADI
 </code></pre>
-<p>Yukarıdaki örnekte gördüğümüz üzere argümanımız foo olduğu için bilgisayarımız bize foo diyerek cevap verdi.</p>
-<p>Echo komutuna istediğimiz kadar argüman gönderebiliriz. <em>Echo</em> komutundan sonra ne yazarsak yazalım bilgisayarımız bunları argüman olarak algılayacaktır. Eğer birden fazla kelime yazdırmak istiyorsak <em>echo</em> komutunu bu şekilde kullanabiliriz.</p>
-<pre><code>$echo foo bar
-foo bar
+<p>Burada <code>-s</code> parametresi "size" yani boyut anlamına gelir. Boyut için çeşitli birimler kullanılabilir.</p>
+<h2 id="pratik-ornekler">Pratik örnekler</h2>
+<p>En yaygın kullanım, bir dosyayı tamamen boşaltmaktır:</p>
+<pre><code class="language-bash">truncate -s 0 buyuk_log_dosyasi.log
 </code></pre>
-<p>Argümanlar genelde aralarında boşluklar bırakılarak birbirlerinden ayrılır. Ekstra boşluklar görmezden gelinir ve iki argüman bir adet boşluk içererek bize yansıtılır. Fakat Terminale(Komut Satırı) bu boşlukların da bir argüman olduğunu söylemek istersek “ işareti ile bunu belirtmemiz gerekir.</p>
-<pre><code>$echo&quot;foo&quot; &quot;bar&quot;
-foo bar
+<p>Bu komut, dosyanın içeriğini sıfırlar ama dosya hala vardır. Uygulama çalışmaya devam eder ve yeni loglar bu dosyaya yazılır.</p>
+<p>Belirli bir boyuta da ayarlayabilirsiniz:</p>
+<pre><code class="language-bash">truncate -s 1M veritabani.dat
 </code></pre>
-<p><strong>Options –</strong> <strong>Seçenekler</strong></p>
-<p>Daha önceden gördüğümüz <em>date</em> komutunu hatırlıyor musunuz? Bu komut varsayılan haliyle bize komutun kullanıldığı tarihi ve saati söylüyor fakat ya biz UTC formatında bir bilgi istiyorsak? Bunun için <em>date</em> komutunu <em>–utc</em> optionı ile birlikte kullanabiliriz. Komutu bu şekilde kullandığımız zaman bilgisayar bizim UTC formatındaki zamanı istediğimizi bilerek bize buna uygun bir sonuç gönderiyor.</p>
-<pre><code>$ date --utc
-Tue 12 Oct 2021 12:38:44 PM UTC
+<p>Bu, dosyayı 1 megabayta keser.</p>
+<p>Mevcut boyuta göre ayarlama da yapabilirsiniz:</p>
+<pre><code class="language-bash">truncate -s +500K dosya.txt    # 500 KB ekle
+truncate -s -2M dosya.txt      # 2 MB çıkar
 </code></pre>
-<p>Genelde komut seçeneklerini kısaltarak kullanırız. Bir seçeneğin(option) kısa versiyonu tek çizgi ile yazılan versiyonudur. Date komutunu <em>date -u</em> şeklinde kullandığımızda da aynı şekilde sonuç aldığımızı görebiliriz. Kendi terminalinizde bunu deneyebilirsiniz.</p>
-<p>Diyelim ki <em>date</em> komutundan bugünün verileri yerine bir önceki günün verilerini istiyoruz. Bunu nasıl yapabiliriz? Bunun için <em>date</em> komutuna <em>–date</em>, kısa haliyle <em>-d</em> seçeneğini gönderebiliriz. Bu seçeneğe de bir argüman göndererek bilgilerini istediğimiz tarihi belirtebiliriz. Kafa karışıklığını önlemek için oluşturduğumuz komutu parçalara bölerek göstereyim:</p>
-<ol>
-<li>date  </li>
-<li>date –date  </li>
-<li>date –date yesterday -u</li>
-</ol>
-<p>Birinci adımda çalıştırmak istediğimiz komutu girdik.<br />
-İkinci adımda çalıştırmak istediğimiz komuta bir seçenek gönderdik.<br />
-Üçüncü adımda ise komuta gönderdiğimiz seçeneğe(option) bir adet argüman gönderdik.(<em>yesterday</em>)<br />
-<em>-u</em> ise yukarıda da belirttiğim üzere <em>–utc</em> seçeneğinin kısaltılmış hali.</p>
-<pre><code>$ date --date yesterday -u
-Mon 11 Oct 2021 12:50:40 PM UTC
-</code></pre>
-<p>Yukarıdaki örnekte de gördüğünüz üzere bazı optionlar çalışmak için argümanlara ihtiyaç duyarlar.</p>
-<p>Daha önce çalıştırdığınız bir komutu tekrar hızlıca almak için Yukarı Ok tuşunu kullanabilirsiniz. Daha önceki ve sonraki komutları almak için de ok tuşlarını kullanarak yukarı ve aşağı hareket edebilirsiniz.</p>
-<p>Ayrıca Sol ok ve Sağ ok tuşları, tek bir komut içinde hareket etmenizi sağlar. Geri tuşu(backspace) ile birlikte bu tuşlar komutumuzun bölümlerini değiştirmenize ve onu isteğimize göre yeni bir komuta dönüştürmemize olanak tanır. Enter tuşuna her bastığınızda, değiştirilen komutu terminale gönderirsiniz ve tam olarak sıfırdan yazmışsınız gibi çalışır.</p>
+<h2 id="ne-zaman-kullanmal">Ne zaman kullanmalı?</h2>
+<p>Şu durumlarda truncate kullanmak mantıklıdır:</p>
+<ul>
+<li>Log dosyaları biriktiğinde</li>
+<li>Docker konteynerlerinde silme yetkisi olmadığında</li>
+<li>Çalışan bir sistemi bozmadan yer açmak gerektiğinde</li>
+<li>Dosya yapısını korumak ama içeriği temizlemek istediğinizde</li>
+</ul>
+<p>Geçen haftaki sorunumda, konteyner içindeki 8GB'lık log dosyasını <code>truncate -s 0</code> ile anında temizledim ve sistem çalışmaya devam etti.</p>
+<p>Bu basit ama güçlü komut, sistem yöneticisinin alet çantasında bulunması gereken araçlardan biridir.</p>
 
 
 

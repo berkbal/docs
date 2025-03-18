@@ -71,6 +71,7 @@ nav:
         - Gerçek Ip Adresi Ekleme İşlemi: sanallastirma/libvirt-gercek-ip.md
       - Proxmox:
         - Disk Ekleme: sanallastirma/proxmox/disk-ekleme.md
+        - Subnet Oluşturma: sanallastirma/proxmox/subnet-olusturma.md
   - Güncelleme:
       - Gitlab: guncelleme/gitlab.md
   - Docker:

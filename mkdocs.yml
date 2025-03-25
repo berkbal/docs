@@ -50,6 +50,7 @@ nav:
       - Rsync: linux/rsync.md
       - Truncate: linux/truncate.md
       - Network:
+        - Routing Tablosu: linux/routing-tablosu-nedir.md
         - Iptables: linux/iptables.md
         - Ss: linux/ss.md
         - Tcpdump: linux/tcpdump.md

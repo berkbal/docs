@@ -2114,7 +2114,7 @@ sudo apt install certbot
 <ol>
 <li>Asagidaki komuttaki alan adi kismi degistirilerek wildcard sertifika isteginde bulunulur:</li>
 </ol>
-<pre><code>sudo certbot certonly --manual --preferred-challenges dns -d &quot;*.alan-adiniz.com&quot;
+<pre><code>certbot certonly -d &quot;*.alan-adi.com.tr&quot; -d alan-adi.com.tr --manual --preferred-challenges dns --server https://acme-v02.api.letsencrypt.org/directory
 
 </code></pre>
 <ol>

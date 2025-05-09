@@ -79,6 +79,7 @@ nav:
       - Docker-Compose Dosyaları:
         - Wireguard: docker/docker-compose-dosyalari/wireguard/wireguard.md
         - Nextcloud: docker/docker-compose-dosyalari/nextcloud/nextcloud.md
+        - Roundcube: docker/docker-compose-dosyalari/roundcube/roundcube.md
   - Haproxy:
       - Frontend ve Backend Ekleme İşlemleri: haproxy/frontend-backend-ekleme.md
       - Haproxy Parametreleri:

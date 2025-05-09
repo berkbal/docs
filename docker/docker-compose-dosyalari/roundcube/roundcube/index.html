@@ -8,28 +8,28 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/tmux/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/docker/docker-compose-dosyalari/roundcube/roundcube/">
       
       
-        <link rel="prev" href="../swaks/">
+        <link rel="prev" href="../../nextcloud/nextcloud/">
       
       
-        <link rel="next" href="../rsync/">
+        <link rel="next" href="../../../../haproxy/frontend-backend-ekleme/">
       
       
-      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="icon" href="../../../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Tmux - Docs for SysAdmins</title>
+        <title>Roundcube - Docs for SysAdmins</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#tmux-nedir" class="md-skip">
+        <a href="#roundcube" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -90,9 +90,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Başlık">
-    <a href="../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../../../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
-  <img src="../../images/berk-bal.png" alt="logo">
+  <img src="../../../../images/berk-bal.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tmux
+              Roundcube
             
           </span>
         </div>
@@ -222,9 +222,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../../../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
-  <img src="../../images/berk-bal.png" alt="logo">
+  <img src="../../../../images/berk-bal.png" alt="logo">
 
     </a>
     Docs for SysAdmins
@@ -251,7 +251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -268,19 +268,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -294,7 +292,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -343,7 +341,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux-komutlari/" class="md-nav__link">
+      <a href="../../../../linux/linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -364,7 +362,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../komut-satirina-giris/" class="md-nav__link">
+      <a href="../../../../linux/komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -385,7 +383,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
+      <a href="../../../../linux/terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -406,7 +404,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
+      <a href="../../../../linux/bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -427,7 +425,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../temel-linux-komutlari/" class="md-nav__link">
+      <a href="../../../../linux/temel-linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -448,7 +446,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../standart-akislar/" class="md-nav__link">
+      <a href="../../../../linux/standart-akislar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -469,7 +467,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../daha-hizli-terminal-kullanmak/" class="md-nav__link">
+      <a href="../../../../linux/daha-hizli-terminal-kullanmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -490,7 +488,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../root-kullanicisi/" class="md-nav__link">
+      <a href="../../../../linux/root-kullanicisi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -511,7 +509,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../yonlendirme%28operatorler%29/" class="md-nav__link">
+      <a href="../../../../linux/yonlendirme%28operatorler%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -532,7 +530,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
+      <a href="../../../../linux/birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -561,7 +559,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logrotate/" class="md-nav__link">
+      <a href="../../../../linux/logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -582,7 +580,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bacula/" class="md-nav__link">
+      <a href="../../../../linux/bacula/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -603,7 +601,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swapfile/" class="md-nav__link">
+      <a href="../../../../linux/swapfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -624,7 +622,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaks/" class="md-nav__link">
+      <a href="../../../../linux/swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -642,30 +640,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Tmux
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../../../linux/tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -674,83 +652,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#nasil-kurulur" class="md-nav__link">
-    <span class="md-ellipsis">
-      Nasil Kurulur?
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Nasil Kurulur?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tmux-ksayollar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tmux Kısayolları
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ekran-bolme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ekran Bölme
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ekran Bölme">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bolmeler-arasnda-gezinme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bölmeler Arasında Gezinme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onerilen-tmux-ayarlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Önerilen Tmux Ayarları
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -763,7 +664,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rsync/" class="md-nav__link">
+      <a href="../../../../linux/rsync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -784,7 +685,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../truncate/" class="md-nav__link">
+      <a href="../../../../linux/truncate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -840,7 +741,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routing-tablosu-nedir/" class="md-nav__link">
+      <a href="../../../../linux/routing-tablosu-nedir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -861,7 +762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iptables/" class="md-nav__link">
+      <a href="../../../../linux/iptables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -882,7 +783,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ss/" class="md-nav__link">
+      <a href="../../../../linux/ss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -903,7 +804,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tcpdump/" class="md-nav__link">
+      <a href="../../../../linux/tcpdump/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -959,7 +860,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sftp/" class="md-nav__link">
+      <a href="../../../../linux/sftp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -980,7 +881,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../websocket/" class="md-nav__link">
+      <a href="../../../../linux/websocket/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1017,7 +918,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../certbot/" class="md-nav__link">
+      <a href="../../../../linux/certbot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1038,7 +939,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../masaustu-ikon-olusturma/" class="md-nav__link">
+      <a href="../../../../linux/masaustu-ikon-olusturma/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1101,7 +1002,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/ansible/" class="md-nav__link">
+      <a href="../../../../ansible/ansible/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1122,7 +1023,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/ansible-modulleri/" class="md-nav__link">
+      <a href="../../../../ansible/ansible-modulleri/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1143,7 +1044,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/ansible-playbook/" class="md-nav__link">
+      <a href="../../../../ansible/ansible-playbook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1206,7 +1107,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mail/mailu/" class="md-nav__link">
+      <a href="../../../../mail/mailu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1227,7 +1128,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaks/" class="md-nav__link">
+      <a href="../../../../linux/swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1325,7 +1226,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/libvirt-networking/" class="md-nav__link">
+      <a href="../../../../sanallastirma/libvirt-networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1346,7 +1247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/libvirt-gercek-ip/" class="md-nav__link">
+      <a href="../../../../sanallastirma/libvirt-gercek-ip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1410,7 +1311,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/proxmox/disk-ekleme/" class="md-nav__link">
+      <a href="../../../../sanallastirma/proxmox/disk-ekleme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1431,7 +1332,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/proxmox/subnet-olusturma/" class="md-nav__link">
+      <a href="../../../../sanallastirma/proxmox/subnet-olusturma/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1502,7 +1403,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guncelleme/gitlab/" class="md-nav__link">
+      <a href="../../../../guncelleme/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1527,17 +1428,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1551,7 +1454,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7">
             <span class="md-nav__icon md-icon"></span>
             Docker
@@ -1562,17 +1465,19 @@
                 
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7_1" checked>
         
           
           <label class="md-nav__link" for="__nav_7_1" id="__nav_7_1_label" tabindex="0">
@@ -1586,7 +1491,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_7_1_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_7_1">
             <span class="md-nav__icon md-icon"></span>
             Docker-Compose Dosyaları
@@ -1600,7 +1505,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
+      <a href="../../wireguard/wireguard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1621,7 +1526,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-dosyalari/nextcloud/nextcloud/" class="md-nav__link">
+      <a href="../../nextcloud/nextcloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1639,10 +1544,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../docker/docker-compose-dosyalari/roundcube/roundcube/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Roundcube
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -1651,6 +1576,35 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docker-composeyml" class="md-nav__link">
+    <span class="md-ellipsis">
+      docker-compose.yml
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -1713,7 +1667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../haproxy/frontend-backend-ekleme/" class="md-nav__link">
+      <a href="../../../../haproxy/frontend-backend-ekleme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1769,7 +1723,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../haproxy/maxconn/" class="md-nav__link">
+      <a href="../../../../haproxy/maxconn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1840,7 +1794,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../freepbx/sertifika-yenileme/" class="md-nav__link">
+      <a href="../../../../freepbx/sertifika-yenileme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1903,7 +1857,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript/bcrypt/" class="md-nav__link">
+      <a href="../../../../javascript/bcrypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1924,7 +1878,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript/jwt/" class="md-nav__link">
+      <a href="../../../../javascript/jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1987,7 +1941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../veritabani/mongoshell-komutlari/" class="md-nav__link">
+      <a href="../../../../veritabani/mongoshell-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2050,7 +2004,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wireguard/wireguard-nedir/" class="md-nav__link">
+      <a href="../../../../wireguard/wireguard-nedir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2113,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/openwrt-kurulumu/" class="md-nav__link">
+      <a href="../../../../openwrt/openwrt-kurulumu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2161,59 +2115,11 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#nasil-kurulur" class="md-nav__link">
+  <a href="#docker-composeyml" class="md-nav__link">
     <span class="md-ellipsis">
-      Nasil Kurulur?
+      docker-compose.yml
     </span>
   </a>
-  
-    <nav class="md-nav" aria-label="Nasil Kurulur?">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#tmux-ksayollar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Tmux Kısayolları
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ekran-bolme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ekran Bölme
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Ekran Bölme">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#bolmeler-arasnda-gezinme" class="md-nav__link">
-    <span class="md-ellipsis">
-      Bölmeler Arasında Gezinme
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#onerilen-tmux-ayarlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Önerilen Tmux Ayarları
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -2232,7 +2138,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/linux/tmux.md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/docker/docker-compose-dosyalari/roundcube/roundcube.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2240,30 +2146,27 @@
   
 
 
-<h1 id="tmux-nedir">Tmux Nedir?</h1>
-<p>Tmux, Screen'in modern bir alternatifidir. Birden fazla terminal oturumunu aynı anda yönetmenizi sağlar. .tmux.conf dosyası ile özelleştirilenbilir. Daha moderndir. Adamdır.</p>
-<h2 id="nasil-kurulur">Nasil Kurulur?</h2>
-<pre><code>apt-get install tmux
+<h1 id="roundcube">Roundcube</h1>
+<p>Roundcube kullanicilarin mail okuyup gonderebildigi ve posta kutularina filtreler ekleyebildigi bir webmail uygulamasidir. Buradaki docker compose dosyasi lokal mail istemcisi amaciyla kullanmak icin olusturulmustur. Eger hostlanip baska insanlar ile paylasilacaksa degistirilmesi ve duruma gore ayarlanmasi gerekmektedir.</p>
+<h2 id="docker-composeyml">docker-compose.yml</h2>
+<pre><code>version: '2'
+
+services:
+  roundcubemail:
+    image: roundcube/roundcubemail:latest
+    container_name: roundcubemail
+#    restart: unless-stopped
+    volumes:
+      - ./www:/var/www/html
+      - ./db/sqlite:/var/roundcube/db
+    ports:
+      - 127.0.0.1:9002:80 # Sadece localhost tarafindan erisilmesi icin portun bu sekilde ayarlanmasi gerekiyor. Normalde docker iptables ve ufw ile tanimlanan kurallari ezecektir.
+    environment:
+      - ROUNDCUBEMAIL_DB_TYPE=sqlite
+      - ROUNDCUBEMAIL_SKIN=elastic # Tema?
+      - ROUNDCUBEMAIL_DEFAULT_HOST=tls://mail.domain.com.tr # Posta Kutusu
+      - ROUNDCUBEMAIL_SMTP_SERVER=tls://smtp.domain.com.tr # SMTP Sunucusu
 </code></pre>
-<h3 id="tmux-ksayollar">Tmux Kısayolları</h3>
-<ol>
-<li>Ctrl+b <strong>c</strong> ile yeni bir pencere açar.</li>
-<li>Ctrl+b <strong>,</strong> ile bulunan pencereye isim verir(kullanıcıdan isim için input alır)</li>
-<li>Ctrl+b <strong>ID</strong> ile oluşturulan pencereler arasında geçiş yapılır. Pencerelerin isimleri ve idleri terminalin altında yazar.</li>
-</ol>
-<h2 id="ekran-bolme">Ekran Bölme</h2>
-<ol>
-<li>Ctrl + b ve " ile ekranı yatay olarak böler.</li>
-<li>Ctrl + b ve % ile ekranı dikey olarak böler.</li>
-</ol>
-<h3 id="bolmeler-arasnda-gezinme">Bölmeler Arasında Gezinme</h3>
-<ul>
-<li>Ctrl + b ve ok tuşları ile bölmeler değiştirilebilir.</li>
-</ul>
-<h3 id="onerilen-tmux-ayarlar">Önerilen Tmux Ayarları</h3>
-<ol>
-<li><code>set -g mouse on</code> Tmux üzerinde fare kullanımını mümkün kılar.</li>
-</ol>
 
 
 
@@ -2310,10 +2213,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["palette.toggle", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    <script id="__config" type="application/json">{"base": "../../../..", "features": ["palette.toggle", "content.action.edit"], "search": "../../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

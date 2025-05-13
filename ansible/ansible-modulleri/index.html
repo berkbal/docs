@@ -1034,6 +1034,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Ansible Modülleri
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1043,6 +1054,52 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apt-modulu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Modulu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gather-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gather Facts:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2067,6 +2124,41 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#apt-modulu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Apt Modulu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gather-facts" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gather Facts:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#package" class="md-nav__link">
+    <span class="md-ellipsis">
+      Package:
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2090,26 +2182,15 @@
 
 <h1 id="ansible-modulleri">Ansible Modülleri</h1>
 <p>Ansible yonetimi kolaylastirmak icin bazi modullere sahiptir. Bu modullerin dokumantasyonlari incelenerek yapabilecegi islemler hakkinda fikir edinilebilir.</p>
-<ol>
-<li>
-<p>Apt Modulu: Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.</p>
-<ul>
-<li>https://docs.ansible.com/ansible/2.9/modules/apt_module.html</li>
-</ul>
-</li>
-<li>
-<p>Gather Facts: Sunucular hakkında bilgi toplar ve ekrana yazdırır. Buradaki bilgileri sunucular üzerinde değişiklik yapmak için veya playbooklar yazarken kullanabiliriz. Örneğin "ansible_distribution" özelliği kurulu olan Linux'un distrosu hakkında fikir verebilir.</p>
-<ul>
-<li>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gather_facts_module.html#</li>
-</ul>
-</li>
-<li>
-<p>Package: Otomatik olarak işletim sisteminin paket yöneticisini kullanır. Debian için apt, CentOS için dnf kullanmaya gerek kalmaz. Playbooklarda sıkça kullanılır.</p>
-<ul>
-<li>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_module.html</li>
-</ul>
-</li>
-</ol>
+<h2 id="apt-modulu">Apt Modulu</h2>
+<p>Ansible ile yonetilen bilgisayarlarda apt işlemleri yapmaya yarar. Aşağıdaki linkten erişilebilir.</p>
+<p>https://docs.ansible.com/ansible/2.9/modules/apt_module.html</p>
+<h2 id="gather-facts">Gather Facts:</h2>
+<p>Sunucular hakkında bilgi toplar ve ekrana yazdırır. Buradaki bilgileri sunucular üzerinde değişiklik yapmak için veya playbooklar yazarken kullanabiliriz. Örneğin "ansible_distribution" özelliği kurulu olan Linux'un distrosu hakkında fikir verebilir.</p>
+<p>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/gather_facts_module.html#</p>
+<h2 id="package">Package:</h2>
+<p>Otomatik olarak işletim sisteminin paket yöneticisini kullanır. Debian için apt, CentOS için dnf kullanmaya gerek kalmaz. Playbooklarda sıkça kullanılır.</p>
+<p>https://docs.ansible.com/ansible/latest/collections/ansible/builtin/package_module.html</p>
 
 
 

@@ -25,6 +25,8 @@ Aşağıdaki satırlar makinede var olan interface tanımının altına eklenmel
 </interface>
 ```
 
+**Not: Eger sorun cikarsa address kismini silerek dosyaya eklenebilir. Address kismi verilmezse libvirt otomatik olarak bunlari belirleyecektir.**
+
 Bu işlem gerçekleştirildikten sonra sanal makine reboot edilmelidir. Reboot edildikten sonra makine üzerinde yeni bir interface oluşmuş olmalı. Bu interface için bir ip adresi tanımlaması yapılması gerekiyor.
 
 ```

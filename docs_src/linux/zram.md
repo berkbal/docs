@@ -68,7 +68,18 @@ sudo pacman -S zram-generator
 ```
 
 
-`sudo vim /etc/systemd/zram-generator.conf`
+sudo vim /etc/systemd/zram-generator.conf
+
+```
 [zram0]
 zram-size = min(ram / 2, 4096)
 compression-algorithm = zstd
+```
+
+```
+systemctl daemon-reload
+```
+
+```
+sudo systemctl restart systemd-zram-setup@zram0.service
+```

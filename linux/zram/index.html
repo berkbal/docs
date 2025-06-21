@@ -2177,10 +2177,15 @@ Disk yıpranması: Özellikle SSD'ler için sık sık takas alanı kullanımı, 
 <p>Zram en kolay şekilde zram-generator ile ayarlanır. Diğer yöntemlere Arch Wiki'den göz atılabilir. İşlemler dağıtım gözetmeksizin aynıdır. Ubuntu vs için de zram-generator paketini kurarak işlem yapılabilir.</p>
 <pre><code>sudo pacman -S zram-generator
 </code></pre>
-<p><code>sudo vim /etc/systemd/zram-generator.conf</code>
-[zram0]
+<p>sudo vim /etc/systemd/zram-generator.conf</p>
+<pre><code>[zram0]
 zram-size = min(ram / 2, 4096)
-compression-algorithm = zstd</p>
+compression-algorithm = zstd
+</code></pre>
+<pre><code>systemctl daemon-reload
+</code></pre>
+<pre><code>sudo systemctl restart systemd-zram-setup@zram0.service
+</code></pre>
 
 
 

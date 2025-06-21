@@ -59,6 +59,7 @@ nav:
           - Websocket: linux/websocket.md
       - Certbot: linux/certbot.md
       - Kategorisiz: linux/masaustu-ikon-olusturma.md
+          - Zram: linux/zram.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

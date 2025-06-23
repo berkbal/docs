@@ -2401,7 +2401,46 @@ berk@berk-notebook:~/Documents/repos/docs$
     inet6 fe80::146f:bbff:fe49:6a09/64 scope link 
        valid_lft forever preferred_lft forever
 </code></pre>
-<p><code>route add default gw 192.168.1.1</code>&lt;&gt;</p>
+<pre><code>route add default gw 192.168.1.1 dev br1
+</code></pre>
+<h3 id="libvirte-olusturdugumuz-bridgei-entegre-etmek">Libvirt'e Oluşturduğumuz Bridge'i Entegre Etmek</h3>
+<p>Manuel olarak oluşturduğumuz br1 isimli köprüyü Libvirt'in tanıması ve kullanabilmesi için bir Libvirt ağ tanımı (network definition) oluşturmamız gerekiyor.</p>
+<p>Öncelikle, yeni köprümüz için bir XML tanım dosyası oluşturalım. Örneğin, br1-network.xml adında bir dosya yaratabiliriz:</p>
+<pre><code>&lt;network&gt;
+  &lt;name&gt;br1-network&lt;/name&gt;
+  &lt;forward mode='bridge'/&gt;
+  &lt;bridge name='br1'/&gt;
+  &lt;ip address='192.168.4.1' netmask='255.255.255.0'&gt;
+    &lt;dhcp&gt;
+      &lt;range start='192.168.4.100' end='192.168.4.200'/&gt;
+    &lt;/dhcp&gt;
+  &lt;/ip&gt;
+&lt;/network&gt;
+</code></pre>
+<p>XML dosyasını oluşturduktan sonra, bu tanımı Libvirt'e eklemeliyiz.</p>
+<pre><code>virsh net-define br1-network.xml
+</code></pre>
+<p>Tanımladığımız ağı başlatmak için:</p>
+<pre><code>virsh net-start br1-network
+</code></pre>
+<p>Sistem yeniden başlatıldığında bu ağın otomatik olarak başlamasını istersek:</p>
+<pre><code>virsh net-autostart br1-network
+</code></pre>
+<p>Artık <code>virsh net-list --all</code> komutuyla yeni br1-network ağını listede görebiliriz.</p>
+<h3 id="sanal-makineleri-yeni-bridgee-baglamak">Sanal Makineleri Yeni Bridge'e Bağlamak</h3>
+<p>Sanal makinelerimizi bu bridge yapısına bağlamak istersek sanal makinenin XML dosyasını düzenlememşiz gerekmektedir.</p>
+<p>Örneğin, virsh edit debian12-fresh komutunu kullanarak sanal makinenin XML dosyasını aç ve ağ arayüzü (network interface) tanımını aşağıdaki gibi güncelle:</p>
+<p><interface type='network'>
+  <mac address='52:54:00:xx:xx:xx'/> <!-- Mevcut MAC adresini aynı bırakıyoruz -->
+  <source network='br1-network'/> <!-- Buradaki 'default' yerine 'br1-network' yazıyoruz -->
+  <model type='virtio'/>
+  <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/></p>
+<p></interface></p>
+<p>Bu değişikliği yaptıktan sonra sanal makineyi kapatıp tekrar başlatmak gerekecek:</p>
+<pre><code>virsh shutdown debian12-fresh
+virsh start debian12-fresh
+</code></pre>
+<p>Sanal makine başladığında, artık br1 köprüsü üzerinden bağlanacak.</p>
 
 
 

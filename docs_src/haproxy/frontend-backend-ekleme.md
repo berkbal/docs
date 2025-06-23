@@ -56,6 +56,19 @@ host_SERVIS_ADI kismini siz belirleyebilirsiniz. Burada belirledigimiz isimi bac
 
 Bu islemi yaptiktan sonra belirledigimiz alan adina gelen trafik BACKEND-ADI ile gosterdigimiz backende yonlenecek.
 
+### ACL Anahtar Kelimeleri
+
+Bazı anahtar kelimeler acl tanımlarında esneklik uygulamamızı sağlar. Bu kısımda bu keywordleri ve işlevlerini listeleyeceğim
+
+1. path_beg(path **beginning**): Bir HTTP isteğinin URL yolunun **başlangıcının** belirli bir dizeyle eşleşip eşleşmediğini kontrol etmek için kullanılır. Genelde /admin /api yönlendirmeleri yaparken kullanılabilir.
+
+```
+acl is_blog_path path_beg /blog
+
+use_backend blog_backend if is_blog_path
+```
+Bu örnek Haproxy'e gelen ve /blog pathine gelen butun istekleri **blog_backend** isimli backende yönlendirecektir.
+
 
 # Backend Ekleme
 

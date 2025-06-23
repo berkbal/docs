@@ -2200,6 +2200,16 @@ frontend https_in
 </ol>
 <p><code>use_backend BACKEND-ADI if BELIRLEDIGIMIZ-HOST-SERVIS-ADI</code></p>
 <p>Bu islemi yaptiktan sonra belirledigimiz alan adina gelen trafik BACKEND-ADI ile gosterdigimiz backende yonlenecek.</p>
+<h3 id="acl-anahtar-kelimeleri">ACL Anahtar Kelimeleri</h3>
+<p>Bazı anahtar kelimeler acl tanımlarında esneklik uygulamamızı sağlar. Bu kısımda bu keywordleri ve işlevlerini listeleyeceğim</p>
+<ol>
+<li>path_beg(path <strong>beginning</strong>): Bir HTTP isteğinin URL yolunun <strong>başlangıcının</strong> belirli bir dizeyle eşleşip eşleşmediğini kontrol etmek için kullanılır. Genelde /admin /api yönlendirmeleri yaparken kullanılabilir.</li>
+</ol>
+<pre><code>acl is_blog_path path_beg /blog
+
+use_backend blog_backend if is_blog_path
+</code></pre>
+<p>Bu örnek Haproxy'e gelen ve /blog pathine gelen butun istekleri <strong>blog_backend</strong> isimli backende yönlendirecektir.</p>
 <h1 id="backend-ekleme">Backend Ekleme</h1>
 <ol>
 <li>Backend Tanimini Yapalim:</li>

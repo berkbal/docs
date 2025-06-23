@@ -199,5 +199,66 @@ Tekrar ip a komutu ile kontrol ettigimizde state UP olarak gormeliyiz.
 ```
 
 ```
-route add default gw 192.168.1.1
-```<>
+route add default gw 192.168.1.1 dev br1
+```
+
+### Libvirt'e Oluşturduğumuz Bridge'i Entegre Etmek
+
+Manuel olarak oluşturduğumuz br1 isimli köprüyü Libvirt'in tanıması ve kullanabilmesi için bir Libvirt ağ tanımı (network definition) oluşturmamız gerekiyor.
+
+Öncelikle, yeni köprümüz için bir XML tanım dosyası oluşturalım. Örneğin, br1-network.xml adında bir dosya yaratabiliriz:
+
+```
+<network>
+  <name>br1-network</name>
+  <forward mode='bridge'/>
+  <bridge name='br1'/>
+  <ip address='192.168.4.1' netmask='255.255.255.0'>
+    <dhcp>
+      <range start='192.168.4.100' end='192.168.4.200'/>
+    </dhcp>
+  </ip>
+</network>
+```
+
+XML dosyasını oluşturduktan sonra, bu tanımı Libvirt'e eklemeliyiz.
+
+```
+virsh net-define br1-network.xml
+```
+
+Tanımladığımız ağı başlatmak için:
+
+```
+virsh net-start br1-network
+```
+
+Sistem yeniden başlatıldığında bu ağın otomatik olarak başlamasını istersek:
+
+```
+virsh net-autostart br1-network
+```
+
+Artık ```virsh net-list --all``` komutuyla yeni br1-network ağını listede görebiliriz.
+
+### Sanal Makineleri Yeni Bridge'e Bağlamak
+
+Sanal makinelerimizi bu bridge yapısına bağlamak istersek sanal makinenin XML dosyasını düzenlememşiz gerekmektedir.
+
+Örneğin, virsh edit debian12-fresh komutunu kullanarak sanal makinenin XML dosyasını aç ve ağ arayüzü (network interface) tanımını aşağıdaki gibi güncelle:
+
+<interface type='network'>
+  <mac address='52:54:00:xx:xx:xx'/> <!-- Mevcut MAC adresini aynı bırakıyoruz -->
+  <source network='br1-network'/> <!-- Buradaki 'default' yerine 'br1-network' yazıyoruz -->
+  <model type='virtio'/>
+  <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/>
+</interface>
+
+Bu değişikliği yaptıktan sonra sanal makineyi kapatıp tekrar başlatmak gerekecek:
+
+```
+virsh shutdown debian12-fresh
+virsh start debian12-fresh
+```
+
+Sanal makine başladığında, artık br1 köprüsü üzerinden bağlanacak.

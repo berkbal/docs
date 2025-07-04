@@ -36,7 +36,7 @@ swapon /swapfile
 5. Sistemi yeniden başlattığımızda swap alanının otomatik olarak mount edilmesi için /etc/fstab dosyasını düzenlemek gerekmektedir. Aşağıdaki komut ile fstab dosyasına bu ayarları gireblirsiniz
 
 ```
-echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
+echo '/swapfile none swap sw 0 0' | tee -a /etc/fstab
 ```
 
 6. Swap Durumunu kontrol etmek için ```swapon --show``` veya ```free -h``` komutunu kullanabilirsiniz. Fstab dosyasını da güncellediğimiz için sistemimiz reboot olduğunda swap dosyası otomatik olarak swap alanı olarak mount edilecektir.

@@ -2390,7 +2390,7 @@ systemctl enable fail2ban
 <p>Dosyanın içeriği aşağıdaki gibi düzenlenir.</p>
 <pre><code class="language-bash">[INCLUDES]
 before = common.conf
-# failregex Nginx'in erişim loglarındaki her satırı yakalar.
+# failregex Nginx'in erişim loglarındaki her satırı yakalar. Log formatina gore regexpin degistirilmesi gerekmektedir.
 # &lt;HOST&gt; Fail2ban'ın IP adresini yakalamak için kullandığı özel bir etikettir.
 [Definition]
 failregex = ^&lt;HOST&gt; - - \[.*\] &quot;(GET|POST|HEAD|PUT|DELETE|OPTIONS).*&quot;\s+\d+\s+\d+\s+&quot;(?:[^&quot;]*)&quot;\s+&quot;(?:[^&quot;]*)&quot;$

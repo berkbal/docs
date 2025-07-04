@@ -2,44 +2,46 @@
 
 **Başlamadan önce sanal makinenin yedeği mutlaka alınmalı.**
 
-### **1. Sanal Disk Boyutunu Artırma (Host Üzerinde)**
+## Sanal Disk Boyutunu Artırma (Host Üzerinde)
 
-İlk iş, sanal makinenin ana disk dosyasının toplam boyutunu host (ana makine) üzerinden büyütmek.
+Sanal makinenin ana disk dosyasının toplam boyutunu host (ana makine) üzerinden büyütülmesi gerekmektedir.
 
-1.  **Sanal Makineyi Kapatma:**
-    Disk boyutunu güvenli artırmak için sanal makine kapalı olmalı.
+### 1. Sanal Makine Kapatılır:
+Disk boyutunu güvenli artırmak için sanal makine kapalı olmalı.
 
-    ```bash
-    virsh shutdown sanal_makine_adı
-    # Sanal makinenin kapandığından emin olunur. Durumu "shut off" olmalı.
-    ```
+```bash
+virsh shutdown sanal_makine_adı
+```
 
-2.  **Sanal Disk Dosyasının Boyutunu Artırma:**
-    Sanal disk 10 GB büyütmek için `qemu-img resize` komutu host makinede çalıştırılır.
+### 2. Sanal Disk Dosyasının Boyutunu Artırma
 
-    ```bash
-    qemu-img resize /vm/disk/disk.qcow2 +10G
-    ```
+Sanal disk 10 GB büyütmek için `qemu-img resize` komutu host makinede çalıştırılır.
 
-    Bu komut diskin toplam boyutuna 10 GB ekler (örneğin 20G'den 30G'ye çıkarır).
+```bash
+qemu-img resize /vm/disk/disk.qcow2 +10G
+```
+
+Bu komut diskin toplam boyutuna 10 GB ekler (örneğin 20G'den 30G'ye çıkarır).
 
 -----
 
-### **2. Disk Bölümlerini Düzenleme (Sanal Makine İçinde)**
+### 1. Disk Bölümlerini Düzenleme (Sanal Makine İçinde)
 
-Şimdi sanal makineyi başlatıp içinde disk bölümleme tablosunu güncelleyeceğiz. `qemu-img resize` ile eklenen 10 GB'lık alan şu an "boş" durumda. Kök bölüm (`/dev/vda1`) ile bu boş alan arasında `vda2` ve `vda5` gibi başka bölümler varsa bunlar kaldırılıp `vda1` genişletilir.
+Sanal makineyi başlatıp içindeki partition tablosunun düzenlenmesi gerekmektedir. `qemu-img resize` ile eklenen 10 GB'lık alan şu an "boş" durumda. Kök bölüm (`/dev/vda1`) ile bu boş alan arasında `vda2` ve `vda5` gibi başka bölümler varsa bunlar kaldırılıp `vda1` genişletilir.
 
-1.  **Sanal Makineyi Başlatma:**
-    Host üzerinden sanal makine başlatılır.
+### 1.  Sanal Makineyi Başlatma
 
-    ```bash
-    virsh start sanal_makine_adı
-    ```
+Host üzerinden sanal makine başlatılır.
 
-2.  **Disk Alanını Doğrulama (İşlem Öncesi `lsblk` Çıktısı):**
-    Sanal makine içine girince `lsblk` komutu çalıştırılır. `vda` diskinin yeni boyutu (30G) doğrulanır. Eski bölümler hala görünmeli. Örnek çıktı aşağıdaki gibidir:
+ ```bash
+virsh start sanal_makine_adı
+```
 
-    ```bash
+### 2.  lsblk ile Disk Alanı Doğrulanır
+
+Sanal makine içine girince `lsblk` komutu çalıştırılır. `vda` diskinin yeni boyutu (30G) doğrulanır. Eski bölümler hala görünmeli. Örnek çıktı:
+
+```bash
     root@python:~# lsblk
     NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
     sr0     11:0    1 1024M  0 rom  
@@ -47,30 +49,29 @@
     ├─vda1 254:1    0   19G  0 part /
     ├─vda2 254:2    0    1K  0 part 
     └─vda5 254:5    0  975M  0 part [SWAP]
-    ```
+```
 
-    Çıktı, `vda` diskinin 30G olduğunu göstermeli.
+### 3. Swap Alanını Devre Dışı Bırakma
 
-3.  **Swap Alanını Devre Dışı Bırakma:**
-    Sistemde takas (swap) alanı olarak kullanılan bir bölüm varsa (örneğin `/dev/vda5`), `fdisk` işlemleri öncesinde devre dışı bırakılmalı. Diski sağa doğru genişletileceği için sağ tarafının boş olması önemli. Sonrasında disk bölümü yerine `swapfile` (takas dosyası) kullanılabilir.
+Sistemde swap alanı olarak kullanılan bir bölüm varsa (örneğin `/dev/vda5`), `fdisk` işlemleri öncesinde devre dışı bırakılmalı. Diski sağa doğru genişletileceği için sağ tarafının boş olması önemli. Sonrasında disk bölümü yerine `swapfile` (takas dosyası) kullanılabilir.
 
     ```bash
     swapoff SWAP-ALANININ-BULUNDUGU-PARTITION
     # Örneğin: swapoff /dev/vda5
     ```
 
-    Swap'ın devre dışı kaldığı `free -h` komutuyla teyit edilir.
+Swap'ın devre dışı kaldığı `free -h` komutuyla teyit edilir.
 
-4.  **Disk Bölümlerini Silme ve Yeniden Oluşturma (`fdisk` ile):**
-    `fdisk` aracını kullanarak disk üzerindeki eski bölümler (`vda1`, `vda2`, `vda5`) silinir. `vda1` bölümü tüm diski kaplayacak şekilde yeniden oluşturulur. Böylece diskin başındaki veriler korunur. Sonundaki yeni alan da `vda1`'e dahil edilir.
+### 4. Disk Bölümlerini Silme ve Yeniden Oluşturma 
 
-    ```bash
-    sudo fdisk /dev/vda
-    ```
+`fdisk` aracını kullanarak disk üzerindeki eski bölümler (`vda1`, `vda2`, `vda5`) silinir. `vda1` bölümü tüm diski kaplayacak şekilde yeniden oluşturulur. Böylece diskin başındaki veriler korunur. Sonundaki yeni alan da `vda1`'e dahil edilir.
 
-    `fdisk` komut isteminde şunlar yapılır. Örnek çıktı aşağıdaki gibidir:
+```bash
+fdisk /dev/vda
+```
 
-    ```
+`fdisk` komut isteminde şunlar yapılır. Örnek çıktı aşağıdaki gibidir:
+```
     root@python:~# fdisk /dev/vda
 
     Welcome to fdisk (util-linux 2.38.1).
@@ -139,11 +140,11 @@
     Command (m for help): w
     The partition table has been altered.
     Syncing disks.
-    ```
+```
 
 -----
 
-### **3. Sistemi Yeniden Başlatma**
+### 3. Sistemi Yeniden Başlatma
 
 `fdisk`'te yapılan disk bölümleme tablosu değişikliklerinin işletim sistemi tarafından algılanması için sanal makine yeniden başlatılır.
 
@@ -159,29 +160,32 @@ Sanal makine yeniden başlatılıp tekrar oturum açıldıktan sonra bir sonraki
 
 Disk bölümü (`/dev/vda1`) fiziksel olarak genişlese de, üzerindeki dosya sistemi (genelde `ext4`) bu yeni boyutu henüz kullanmaz. Şimdi dosya sistemi de bölümün tamamını kaplayacak şekilde büyütülür.
 
-1.  **Disk Bölümü Boyutunu Doğrulama (İşlem Sonrası `lsblk` Çıktısı):**
-    Sanal makine içinde `lsblk` komutu çalıştırılır. `vda1` bölümünün yeni boyutu (30G) teyit edilir. Örnek çıktı aşağıdaki gibidir:
+### 1.  Disk Bölümü Boyutunu Doğrulama
 
-    ```bash
-    root@python:~# lsblk
+Sanal makine içinde `lsblk` komutu çalıştırılır. `vda1` bölümünün yeni boyutu (30G) teyit edilir. Örnek çıktı aşağıdaki gibidir:
+
+```bash
+root@python:~# lsblk
     NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
     sr0     11:0    1 1024M  0 rom  
     vda    254:0    0   30G  0 disk 
     └─vda1 254:1    0   30G  0 part /
-    ```
+```
 
-2.  **Dosya Sistemini Genişletme:**
-    Kök dizinin (`/`) bağlı olduğu `/dev/vda1` bölümündeki `ext4` dosya sistemi genişletmek için `resize2fs` komutu kullanılır:
+### 2. Dosya Sistemini Genişletme
 
-    ```bash
-    sudo resize2fs /dev/vda1
-    ```
+Root dizinin (`/`) bağlı olduğu `/dev/vda1` bölümündeki `ext4` dosya sistemi genişletmek için `resize2fs` komutu kullanılır:
 
-    Bu komut, dosya sistemini otomatik olarak bölümün tamamını kaplayacak şekilde "çevrimiçi" (makine açıkken) genişletir.
+```bash
+resize2fs /dev/vda1
+```
 
-3.  **Genişletmeyi Doğrulama:**
-    İşlem bitince `df -h` komutu tekrar çalıştırılır. `/dev/vda1`'in boyutunun **30G**'ye yaklaştığı ve boş alanın arttığı görülür.
+Bu komut dosya sistemini otomatik olarak bölümün tamamını kaplayacak şekilde genişletir.
 
-    ```bash
-    df -h
-    ```
+### 3. Genişletmeyi Doğrulama
+
+İşlem bitince `df -h` komutu tekrar çalıştırılır. `/dev/vda1`'in boyutunun **30G**'ye yaklaştığı ve boş alanın arttığı görülür.
+
+```bash
+df -h
+```

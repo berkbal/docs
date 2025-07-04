@@ -9,7 +9,7 @@ theme:
   favicon: images/favicon.ico
   logo: images/berk-bal.png
   features:
-    - palette.toggle  # Karanlık mod geçişini etkinleştirir
+    - palette.toggle  # Karanlık mod/Aydinlik Mod
     - content.action.edit # Edit Butonu
   language: tr
 

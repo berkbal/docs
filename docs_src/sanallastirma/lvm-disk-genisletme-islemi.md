@@ -6,16 +6,13 @@
 
 Sanal makinenin ana disk dosyasının toplam boyutunu host (ana makine) üzerinden büyütülmesi gerekmektedir.
 
-### 1. Sanal Makine Kapatılır:
-Disk boyutunu güvenli artırmak için sanal makine kapalı olmalı.
+### 1. Sanal Makine Kapatılır
 
 ```bash
 virsh shutdown sanal_makine_adı
 ```
 
 ### 2. Sanal Disk Dosyasının Boyutunu Artırma
-
-Sanal disk 10 GB büyütmek için `qemu-img resize` komutu host makinede çalıştırılır.
 
 ```bash
 qemu-img resize /vm/disk/disk.qcow2 +10G
@@ -42,23 +39,23 @@ virsh start sanal_makine_adı
 Sanal makine içine girince `lsblk` komutu çalıştırılır. `vda` diskinin yeni boyutu (30G) doğrulanır. Eski bölümler hala görünmeli. Örnek çıktı:
 
 ```bash
-    root@python:~# lsblk
-    NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-    sr0     11:0    1 1024M  0 rom  
-    vda    254:0    0   30G  0 disk 
-    ├─vda1 254:1    0   19G  0 part /
-    ├─vda2 254:2    0    1K  0 part 
-    └─vda5 254:5    0  975M  0 part [SWAP]
+root@python:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0     11:0    1 1024M  0 rom  
+vda    254:0    0   30G  0 disk 
+├─vda1 254:1    0   19G  0 part /
+├─vda2 254:2    0    1K  0 part 
+└─vda5 254:5    0  975M  0 part [SWAP]
 ```
 
 ### 3. Swap Alanını Devre Dışı Bırakma
 
 Sistemde swap alanı olarak kullanılan bir bölüm varsa (örneğin `/dev/vda5`), `fdisk` işlemleri öncesinde devre dışı bırakılmalı. Diski sağa doğru genişletileceği için sağ tarafının boş olması önemli. Sonrasında disk bölümü yerine `swapfile` (takas dosyası) kullanılabilir.
 
-    ```bash
-    swapoff SWAP-ALANININ-BULUNDUGU-PARTITION
-    # Örneğin: swapoff /dev/vda5
-    ```
+```bash
+swapoff SWAP-ALANININ-BULUNDUGU-PARTITION
+# Örneğin: swapoff /dev/vda5
+```
 
 Swap'ın devre dışı kaldığı `free -h` komutuyla teyit edilir.
 
@@ -162,19 +159,19 @@ Disk bölümü (`/dev/vda1`) fiziksel olarak genişlese de, üzerindeki dosya si
 
 ### 1.  Disk Bölümü Boyutunu Doğrulama
 
-Sanal makine içinde `lsblk` komutu çalıştırılır. `vda1` bölümünün yeni boyutu (30G) teyit edilir. Örnek çıktı aşağıdaki gibidir:
+Sanal makine içinde `lsblk` komutu çalıştırılır. `vda1` bölümünün yeni boyutu (30G) teyit edilir.
 
 ```bash
 root@python:~# lsblk
-    NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-    sr0     11:0    1 1024M  0 rom  
-    vda    254:0    0   30G  0 disk 
-    └─vda1 254:1    0   30G  0 part /
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0     11:0    1 1024M  0 rom  
+vda    254:0    0   30G  0 disk 
+└─vda1 254:1    0   30G  0 part /
 ```
 
 ### 2. Dosya Sistemini Genişletme
 
-Root dizinin (`/`) bağlı olduğu `/dev/vda1` bölümündeki `ext4` dosya sistemi genişletmek için `resize2fs` komutu kullanılır:
+Root dizinin bağlı olduğu `/dev/vda1` bölümündeki `ext4` dosya sistemi genişletmek için `resize2fs` komutu kullanılır:
 
 ```bash
 resize2fs /dev/vda1

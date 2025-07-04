@@ -52,7 +52,7 @@ Dosyanın içeriği aşağıdaki gibi düzenlenir.
 ```bash
 [INCLUDES]
 before = common.conf
-# failregex Nginx'in erişim loglarındaki her satırı yakalar.
+# failregex Nginx'in erişim loglarındaki her satırı yakalar. Log formatina gore regexpin degistirilmesi gerekmektedir.
 # <HOST> Fail2ban'ın IP adresini yakalamak için kullandığı özel bir etikettir.
 [Definition]
 failregex = ^<HOST> - - \[.*\] "(GET|POST|HEAD|PUT|DELETE|OPTIONS).*"\s+\d+\s+\d+\s+"(?:[^"]*)"\s+"(?:[^"]*)"$

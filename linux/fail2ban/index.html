@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/zram/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/fail2ban/">
       
       
-        <link rel="prev" href="../masaustu-ikon-olusturma/">
+        <link rel="prev" href="../logrotate/">
       
       
-        <link rel="next" href="../certbot/">
+        <link rel="next" href="../bacula/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Zram - Docs for SysAdmins</title>
+        <title>Fail2Ban - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#zram-nedir" class="md-skip">
+        <a href="#fail2ban-nedir-ve-nasl-calsr" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Zram
+              Fail2Ban
             
           </span>
         </div>
@@ -579,10 +579,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../fail2ban/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Fail2Ban
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -591,6 +611,101 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#fail2ban-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail2Ban Kurulumu
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fail2ban-yaplandrma-dosyalar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Fail2ban Yapılandırma Dosyaları
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Fail2ban Yapılandırma Dosyaları">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#etcfail2banjailconf" class="md-nav__link">
+    <span class="md-ellipsis">
+      /etc/fail2ban/jail.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etcfail2banjaillocal" class="md-nav__link">
+    <span class="md-ellipsis">
+      /etc/fail2ban/jail.local
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaillocal-dosyas-olusturmak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jail.local Dosyası Oluşturmak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jail.local Dosyası Oluşturmak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-icin-fail2ban-yaplandrmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx için Fail2ban Yapılandırması
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#olusturulan-hapishanelerin-goruntulenmesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oluşturulan Hapishanelerin Görüntülenmesi
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -917,19 +1032,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -943,7 +1056,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_10_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_10">
             <span class="md-nav__icon md-icon"></span>
             İşe Yarar
@@ -975,30 +1088,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Zram
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../zram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1007,59 +1100,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#normal-swap-alan-nasl-calsr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Normal Swap Alanı Nasıl Çalışır?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#zramin-avantajlar-ve-dezavantajlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Zram'in Avantajları ve Dezavantajları
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Zram'in Avantajları ve Dezavantajları">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#zram-nasil-kurulur-ve-kullanlr" class="md-nav__link">
-    <span class="md-ellipsis">
-      Zram Nasil Kurulur ve Kullanılır?
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2224,28 +2264,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#normal-swap-alan-nasl-calsr" class="md-nav__link">
+  <a href="#fail2ban-kurulumu" class="md-nav__link">
     <span class="md-ellipsis">
-      Normal Swap Alanı Nasıl Çalışır?
+      Fail2Ban Kurulumu
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#zramin-avantajlar-ve-dezavantajlar" class="md-nav__link">
+  <a href="#fail2ban-yaplandrma-dosyalar" class="md-nav__link">
     <span class="md-ellipsis">
-      Zram'in Avantajları ve Dezavantajları
+      Fail2ban Yapılandırma Dosyaları
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Zram'in Avantajları ve Dezavantajları">
+    <nav class="md-nav" aria-label="Fail2ban Yapılandırma Dosyaları">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#zram-nasil-kurulur-ve-kullanlr" class="md-nav__link">
+  <a href="#etcfail2banjailconf" class="md-nav__link">
     <span class="md-ellipsis">
-      Zram Nasil Kurulur ve Kullanılır?
+      /etc/fail2ban/jail.conf
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#etcfail2banjaillocal" class="md-nav__link">
+    <span class="md-ellipsis">
+      /etc/fail2ban/jail.local
     </span>
   </a>
   
@@ -2253,6 +2302,39 @@
         
       </ul>
     </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#jaillocal-dosyas-olusturmak" class="md-nav__link">
+    <span class="md-ellipsis">
+      Jail.local Dosyası Oluşturmak
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Jail.local Dosyası Oluşturmak">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nginx-icin-fail2ban-yaplandrmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      Nginx için Fail2ban Yapılandırması
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#olusturulan-hapishanelerin-goruntulenmesi" class="md-nav__link">
+    <span class="md-ellipsis">
+      Oluşturulan Hapishanelerin Görüntülenmesi
+    </span>
+  </a>
   
 </li>
       
@@ -2271,7 +2353,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/linux/zram.md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/linux/fail2ban.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2279,78 +2361,84 @@
   
 
 
-<h1 id="zram-nedir">Zram Nedir?</h1>
-<p>Bilgisayarın RAM'inin bir bölümünü sıkıştırıp depolama birimi gibi kullanmayı sağlayan teknoloji. Bu sayede fiziksel ramin kapasitesi artırılmış olur.</p>
-<p>Bu oluşturulan sıkıştırılmış blok aygıtı, genellikle takas alanı (swap space) olarak kullanılır. İlk çıktığında adı "compcache" (compressed cache - sıkıştırılmış önbellek) idi ve temel amacı buydu. Ancak artık genel amaçlı bir RAM diski olarak da kullanılıyor.</p>
-<p>Avantajlarını anlayabilmek için normal swap alanı ile zram'i karşılaştırabiliriz.</p>
-<h2 id="normal-swap-alan-nasl-calsr">Normal Swap Alanı Nasıl Çalışır?</h2>
-<p>Normal swap, sabit diskinizin (HDD veya SSD) bir bölümünü veya tamamını kullanan bir tür sanal bellektir. Sistemde fiziksel RAM bittiğinde, az kullanılan veriler veya programlar swap alanına taşınır. Bu sayede fiziksel RAM'de yer açılır ve sistem daha fazla uygulama çalıştırabilir.</p>
-<p>Avantajları:</p>
-<ul>
-<li>Veri kalıcılığı: Elektrik kesilse bile takas alanındaki veriler diskinizde kalır.</li>
-<li>Daha büyük kapasite: Sabit diskinizdeki alan kadar büyük olabilir.</li>
-</ul>
-<p>Dezavantajları:</p>
-<ul>
-<li>
-<p>Yavaşlık: Sabit diskler RAM'den çok daha yavaştır. Bu yüzden swapa veri yazmak veya okumak performansta düşüşlere neden olur. Özellikle çok fazla takas kullanımı varsa sistem donmuş gibi hissedilebilir.</p>
-</li>
-<li>
-<p>Disk yıpranması: Özellikle SSD'ler için sık sık takas alanı kullanımı, diskin ömrünü kısaltabilir.</p>
-</li>
-</ul>
-<p>Sysadm
-Custom Gem
-Zram ve Swap Karşılaştırması</p>
-<p>Şimdi zram ile geleneksel takas alanı (swap space) arasındaki farklara ve zram'ın sunduğu avantajlara bakalım.
-Geleneksel Takas Alanı (Swap Space)</p>
-<p>Geleneksel takas alanı, sabit diskinizin (HDD veya SSD) bir bölümünü veya tamamını kullanan bir tür sanal bellektir. Sisteminizde fiziksel RAM bittiğinde, az kullanılan veriler veya programlar takas alanına taşınır. Bu sayede fiziksel RAM'de yer açılır ve sistem daha fazla uygulama çalıştırabilir.
-Avantajları:</p>
-<pre><code>Veri kalıcılığı: Elektrik kesilse bile takas alanındaki veriler diskinizde kalır.
-Daha büyük kapasite: Sabit diskinizdeki alan kadar büyük olabilir.
+<h1 id="fail2ban-nedir-ve-nasl-calsr">Fail2ban Nedir ve Nasıl Çalışır?</h1>
+<p>Fail2ban Linux sunucularda log dosyalarını izleyen bir güvenlik yazılımıdır. Bu log dosyalarında belirli patternları arar. Örneğin, bir kullanıcının yanlış parola girmesi gibi başarısız giriş denemeleri veya belirli bir porta yapılan aşırı istekler bu desenlere örnek olabilir.</p>
+<p>Belirlenen eşik değerlerine (thresholds) ulaşıldığında, Fail2ban bu saldırgan IP adresini güvenlik duvarına (firewall) bildirir ve o IP adresinin belirli bir süre veya kalıcı olarak engellenmesini sağlar.</p>
+<hr />
+<h2 id="fail2ban-kurulumu">Fail2Ban Kurulumu</h2>
+<pre><code class="language-bash">apt update
+apt install fail2ban
 </code></pre>
-<p>Dezavantajları:</p>
-<pre><code>Yavaşlık: Sabit diskler, RAM'den çok daha yavaştır. Bu yüzden takas alanına veri yazmak veya okumak, performansta ciddi düşüşlere neden olur. Özellikle çok fazla takas kullanımı varsa sistem donmuş gibi hissedilebilir.
-Disk yıpranması: Özellikle SSD'ler için sık sık takas alanı kullanımı, diskin ömrünü kısaltabilir.
+<pre><code class="language-bash">systemctl start fail2ban
+systemctl enable fail2ban
 </code></pre>
-<h2 id="zramin-avantajlar-ve-dezavantajlar">Zram'in Avantajları ve Dezavantajları</h2>
-<p>Zram yukarıda bahsedilen gibi RAM üzerinde sıkıştırılmış bir blok aygıtıdır. Geleneksel swap alanından temel farkı verileri fiziksel diske değil RAM içinde sıkıştırarak depolamasıdır.</p>
-<p>Avantajları:</p>
-<ul>
-<li>
-<p>Hız: Zram RAM üzerinde çalıştığı için disk tabanlı swap alanından çok daha hızlı. Veri okuma ve yazma işlemleri neredeyse RAM hızında gerçekleşir. Bu sistemin hızını artırır ve takas kullanımından kaynaklanan performans düşüşlerini en aza indirir.</p>
-</li>
-<li>
-<p>Disk ömrü: Veriler diske yazılmadığı için SSD'lerin ömrünü uzatır. </p>
-</li>
-<li>
-<p>Verimli RAM kullanımı: Verileri sıkıştırarak depoladığı için, mevcut RAM kapasitenizi sanal olarak artırır. Örneğin, 1GB veriyi sıkıştırarak 500MB alana sığdırabilir ve böylece RAM'de daha fazla boş yer kalmasını sağlar.</p>
-</li>
-</ul>
-<p>Dezavantajları:</p>
-<ul>
-<li>
-<p>CPU kullanımı: Verilerin sıkıştırılması ve açılması işlemci (CPU) kullanımı gerektirir. Ancak günümüz modern işlemcileri için bu genellikle ihmal edilebilir bir yüktür.</p>
-</li>
-<li>
-<p>Geçici veri: Zram'daki veriler RAM'de olduğu için, elektrik kesintisi veya sistem kapanması durumunda kaybolur. Bu nedenle kalıcı depolama için uygun değildir.</p>
-</li>
-<li>
-<p>Sınırlı kapasite: Zram'ın boyutu, fiziksel RAM'inizin bir kısmıyla sınırlıdır. Disk tabanlı takas alanı gibi sınırsız büyüyemez.</p>
-</li>
-</ul>
-<h3 id="zram-nasil-kurulur-ve-kullanlr">Zram Nasil Kurulur ve Kullanılır?</h3>
-<p>Zram en kolay şekilde zram-generator ile ayarlanır. Diğer yöntemlere Arch Wiki'den göz atılabilir. İşlemler dağıtım gözetmeksizin aynıdır. Ubuntu vs için de zram-generator paketini kurarak işlem yapılabilir.</p>
-<pre><code>sudo pacman -S zram-generator
+<h2 id="fail2ban-yaplandrma-dosyalar">Fail2ban Yapılandırma Dosyaları</h2>
+<h3 id="etcfail2banjailconf">/etc/fail2ban/jail.conf</h3>
+<p>Bu dosya Fail2ban'ın ana yapılandırma dosyasıdır ve varsayılan ayarları içerir. Genelde bu dosyayı doğrudan değiştirmemek önerilir. Fail2ban güncellemeleri sırasında bu dosya üzerine yazılabilir ve yaptığınız değişiklikler kaybolabilir.</p>
+<h3 id="etcfail2banjaillocal">/etc/fail2ban/jail.local</h3>
+<p>Bu dosya jail.conf dosyasındaki ayarları geçersiz kılmak (override etmek) veya yeni ayarlar eklemek için kullanılır. Bu dosyayı elle oluştururuz ve tüm özel yapılandırmalarımızı buraya yazarız. Bu sayede güncellemelerden etkilenmeyiz.</p>
+<hr />
+<h2 id="jaillocal-dosyas-olusturmak">Jail.local Dosyası Oluşturmak</h2>
+<p>Aşağıdaki komut ile dosya oluşturulur.</p>
+<pre><code class="language-bash">cp /etc/fail2ban/jail.conf /etc/fail2ban/jail.local
 </code></pre>
-<p>sudo vim /etc/systemd/zram-generator.conf</p>
-<pre><code>[zram0]
-zram-size = min(ram / 2, 4096)
-compression-algorithm = zstd
+<hr />
+<h3 id="nginx-icin-fail2ban-yaplandrmas">Nginx için Fail2ban Yapılandırması</h3>
+<p>Belirli bir ip adresinden 30 saniyede 100 istekten fazla geliyorsa 5 dakika boyunca 443 ve 80 numaralı portlara erişememesini sağlamak için aşağıdaki işlemler uygulanır.</p>
+<pre><code class="language-bash">vim /etc/fail2ban/filter.d/nginx-request-bot.conf
 </code></pre>
-<pre><code>systemctl daemon-reload
+<p>Dosyanın içeriği aşağıdaki gibi düzenlenir.</p>
+<pre><code class="language-bash">[INCLUDES]
+before = common.conf
+# failregex Nginx'in erişim loglarındaki her satırı yakalar.
+# &lt;HOST&gt; Fail2ban'ın IP adresini yakalamak için kullandığı özel bir etikettir.
+[Definition]
+failregex = ^&lt;HOST&gt; -.*&quot;(GET|POST|HEAD|PUT|DELETE|OPTIONS).*&quot;\s+(?:HTTP/1\.[01])?&quot;\s+\d+\s+\d+\s+&quot;.*?&quot;\s+&quot;.*?&quot;$
+
+ignoreregex =
+
 </code></pre>
-<pre><code>sudo systemctl restart systemd-zram-setup@zram0.service
+<p>Özel filtreyi oluşturduktan sonra oluşturduğumuz <code>jail.local</code> dosyasını düzenleyerek bu filtreyi uygulayabiliriz.</p>
+<hr />
+<p>jail.local dosyası açılır ve dosyanın en alt satırına aşağıdaki içerik eklenir</p>
+<pre><code class="language-bash">[nginx-request-bot]
+enabled = true
+# Kullandığımız özel filtre dosyasının adını belirtiyoruz.
+filter = nginx-request-bot
+# Nginx access log dosyasının pathi.
+logpath = /var/log/nginx/access.log
+# Yasaklama süresi: 5 dakika (300 saniye).
+bantime = 300
+# Fail2ban'in istekleri saymak için geriye dönük bakacağı süre: 30 saniye.
+findtime = 30
+# 30 saniye içinde 100'den fazla istek gelirse yasakla.
+maxretry = 100
+# Sadece 80 ve 443 portlarına gelen istekler için geçerli olmasını istiyorsanız:
+port = http,https
+# Veya port numaralari da belirtilebilir.
+# port = 80,443
+</code></pre>
+<p>Bu ayarlar yapıldıktan sonra fail2ban restartlanır.</p>
+<pre><code class="language-bash">systemctl reload fail2ban
+</code></pre>
+<h2 id="olusturulan-hapishanelerin-goruntulenmesi">Oluşturulan Hapishanelerin Görüntülenmesi</h2>
+<p>Aşağıdaki komutla oluşturulan hapishaneler görüntülenebilir.</p>
+<pre><code class="language-bash">root@sunwell:/etc/fail2ban/filter.d# fail2ban-client status                  
+Status
+|- Number of jail:  2
+`- Jail list:   nginx-request-bot, sshd
+</code></pre>
+<p>İstediğimiz jail hakkında bilgi almak için komutun sonuna jailin adını ekleyebiliriz.</p>
+<pre><code class="language-bash">root@sunwell:/etc/fail2ban/filter.d# fail2ban-client status nginx-request-bot
+Status for the jail: nginx-request-bot
+|- Filter
+|  |- Currently failed: 0
+|  |- Total failed: 0
+|  `- File list:    /var/log/nginx/access.log
+`- Actions
+   |- Currently banned: 0
+   |- Total banned: 0
+   `- Banned IP list:   
 </code></pre>
 
 

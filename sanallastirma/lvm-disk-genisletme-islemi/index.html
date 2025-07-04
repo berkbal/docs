@@ -1394,7 +1394,7 @@
           <li class="md-nav__item">
   <a href="#1-sanal-makine-kapatlr" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Sanal Makine Kapatılır:
+      1. Sanal Makine Kapatılır
     </span>
   </a>
   
@@ -2317,7 +2317,7 @@
           <li class="md-nav__item">
   <a href="#1-sanal-makine-kapatlr" class="md-nav__link">
     <span class="md-ellipsis">
-      1. Sanal Makine Kapatılır:
+      1. Sanal Makine Kapatılır
     </span>
   </a>
   
@@ -2445,12 +2445,10 @@
 <p><strong>Başlamadan önce sanal makinenin yedeği mutlaka alınmalı.</strong></p>
 <h2 id="sanal-disk-boyutunu-artrma-host-uzerinde">Sanal Disk Boyutunu Artırma (Host Üzerinde)</h2>
 <p>Sanal makinenin ana disk dosyasının toplam boyutunu host (ana makine) üzerinden büyütülmesi gerekmektedir.</p>
-<h3 id="1-sanal-makine-kapatlr">1. Sanal Makine Kapatılır:</h3>
-<p>Disk boyutunu güvenli artırmak için sanal makine kapalı olmalı.</p>
+<h3 id="1-sanal-makine-kapatlr">1. Sanal Makine Kapatılır</h3>
 <pre><code class="language-bash">virsh shutdown sanal_makine_adı
 </code></pre>
 <h3 id="2-sanal-disk-dosyasnn-boyutunu-artrma">2. Sanal Disk Dosyasının Boyutunu Artırma</h3>
-<p>Sanal disk 10 GB büyütmek için <code>qemu-img resize</code> komutu host makinede çalıştırılır.</p>
 <pre><code class="language-bash">qemu-img resize /vm/disk/disk.qcow2 +10G
 </code></pre>
 <p>Bu komut diskin toplam boyutuna 10 GB ekler (örneğin 20G'den 30G'ye çıkarır).</p>
@@ -2467,20 +2465,18 @@ virsh start sanal_makine_adı</p>
 Sanal makine içine girince `lsblk` komutu çalıştırılır. `vda` diskinin yeni boyutu (30G) doğrulanır. Eski bölümler hala görünmeli. Örnek çıktı:
 
 ```bash
-    root@python:~# lsblk
-    NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-    sr0     11:0    1 1024M  0 rom  
-    vda    254:0    0   30G  0 disk 
-    ├─vda1 254:1    0   19G  0 part /
-    ├─vda2 254:2    0    1K  0 part 
-    └─vda5 254:5    0  975M  0 part [SWAP]
+root@python:~# lsblk
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0     11:0    1 1024M  0 rom  
+vda    254:0    0   30G  0 disk 
+├─vda1 254:1    0   19G  0 part /
+├─vda2 254:2    0    1K  0 part 
+└─vda5 254:5    0  975M  0 part [SWAP]
 </code></pre>
 <h3 id="3-swap-alann-devre-ds-brakma">3. Swap Alanını Devre Dışı Bırakma</h3>
 <p>Sistemde swap alanı olarak kullanılan bir bölüm varsa (örneğin <code>/dev/vda5</code>), <code>fdisk</code> işlemleri öncesinde devre dışı bırakılmalı. Diski sağa doğru genişletileceği için sağ tarafının boş olması önemli. Sonrasında disk bölümü yerine <code>swapfile</code> (takas dosyası) kullanılabilir.</p>
-<pre><code>```bash
-swapoff SWAP-ALANININ-BULUNDUGU-PARTITION
+<pre><code class="language-bash">swapoff SWAP-ALANININ-BULUNDUGU-PARTITION
 # Örneğin: swapoff /dev/vda5
-```
 </code></pre>
 <p>Swap'ın devre dışı kaldığı <code>free -h</code> komutuyla teyit edilir.</p>
 <h3 id="4-disk-bolumlerini-silme-ve-yeniden-olusturma">4. Disk Bölümlerini Silme ve Yeniden Oluşturma</h3>
@@ -2567,15 +2563,15 @@ swapoff SWAP-ALANININ-BULUNDUGU-PARTITION
 <h3 id="4-dosya-sistemini-genisletme-sanal-makine-icinde"><strong>4. Dosya Sistemini Genişletme (Sanal Makine İçinde)</strong></h3>
 <p>Disk bölümü (<code>/dev/vda1</code>) fiziksel olarak genişlese de, üzerindeki dosya sistemi (genelde <code>ext4</code>) bu yeni boyutu henüz kullanmaz. Şimdi dosya sistemi de bölümün tamamını kaplayacak şekilde büyütülür.</p>
 <h3 id="1-disk-bolumu-boyutunu-dogrulama">1.  Disk Bölümü Boyutunu Doğrulama</h3>
-<p>Sanal makine içinde <code>lsblk</code> komutu çalıştırılır. <code>vda1</code> bölümünün yeni boyutu (30G) teyit edilir. Örnek çıktı aşağıdaki gibidir:</p>
+<p>Sanal makine içinde <code>lsblk</code> komutu çalıştırılır. <code>vda1</code> bölümünün yeni boyutu (30G) teyit edilir.</p>
 <pre><code class="language-bash">root@python:~# lsblk
-    NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
-    sr0     11:0    1 1024M  0 rom  
-    vda    254:0    0   30G  0 disk 
-    └─vda1 254:1    0   30G  0 part /
+NAME   MAJ:MIN RM  SIZE RO TYPE MOUNTPOINTS
+sr0     11:0    1 1024M  0 rom  
+vda    254:0    0   30G  0 disk 
+└─vda1 254:1    0   30G  0 part /
 </code></pre>
 <h3 id="2-dosya-sistemini-genisletme">2. Dosya Sistemini Genişletme</h3>
-<p>Root dizinin (<code>/</code>) bağlı olduğu <code>/dev/vda1</code> bölümündeki <code>ext4</code> dosya sistemi genişletmek için <code>resize2fs</code> komutu kullanılır:</p>
+<p>Root dizinin bağlı olduğu <code>/dev/vda1</code> bölümündeki <code>ext4</code> dosya sistemi genişletmek için <code>resize2fs</code> komutu kullanılır:</p>
 <pre><code class="language-bash">resize2fs /dev/vda1
 </code></pre>
 <p>Bu komut dosya sistemini otomatik olarak bölümün tamamını kaplayacak şekilde genişletir.</p>

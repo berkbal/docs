@@ -72,6 +72,7 @@ nav:
       - QEMU-Libvirt: 
         - Libvirt Networking: sanallastirma/libvirt-networking.md
         - Gerçek Ip Adresi Ekleme İşlemi: sanallastirma/libvirt-gercek-ip.md
+        - Lvm Disk Genisletme Islemi: sanallastirma/lvm-disk-genisletme-islemi.md
       - Proxmox:
         - Disk Ekleme: sanallastirma/proxmox/disk-ekleme.md
         - Subnet Oluşturma: sanallastirma/proxmox/subnet-olusturma.md

@@ -2393,7 +2393,7 @@ before = common.conf
 # failregex Nginx'in erişim loglarındaki her satırı yakalar.
 # &lt;HOST&gt; Fail2ban'ın IP adresini yakalamak için kullandığı özel bir etikettir.
 [Definition]
-failregex = ^&lt;HOST&gt; -.*&quot;(GET|POST|HEAD|PUT|DELETE|OPTIONS).*&quot;\s+(?:HTTP/1\.[01])?&quot;\s+\d+\s+\d+\s+&quot;.*?&quot;\s+&quot;.*?&quot;$
+failregex = ^&lt;HOST&gt; - - \[.*\] &quot;(GET|POST|HEAD|PUT|DELETE|OPTIONS).*&quot;\s+\d+\s+\d+\s+&quot;(?:[^&quot;]*)&quot;\s+&quot;(?:[^&quot;]*)&quot;$
 
 ignoreregex =
 

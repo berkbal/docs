@@ -57,10 +57,6 @@ nav:
         - Protokoller:
           - SFTP: linux/sftp.md
           - Websocket: linux/websocket.md
-      - İşe Yarar:
-          - Masaüstü İkon Oluşturma: linux/masaustu-ikon-olusturma.md
-          - Zram: linux/zram.md
-          - Certbot: linux/certbot.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md
@@ -97,7 +93,11 @@ nav:
         - veritabani/postgresql/postgresql-cluster-kurulumu.md
       - MongoDB:
         - Mongo Shell Komutları: veritabani/mongoshell-komutlari.md
-  - WireGuard:
-      - Wireguard Nedir?: wireguard/wireguard-nedir.md
-  - OpenWRT:
-      - OpenWRT Kurulumu: openwrt/openwrt-kurulumu.md
+  - İşe Yarar:
+      - Masaüstü İkon Oluşturma: linux/masaustu-ikon-olusturma.md
+      - Zram: linux/zram.md
+      - Certbot: linux/certbot.md
+      - WireGuard:
+        - Wireguard Nedir?: wireguard/wireguard-nedir.md
+      - OpenWRT:
+        - OpenWRT Kurulumu: openwrt/openwrt-kurulumu.md

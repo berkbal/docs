@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://berkbal.github.io/docs/veritabani/postgresql/postgresql-cluster-kurulumu/">
       
       
+        <link rel="prev" href="../../../javascript/jwt/">
+      
+      
+        <link rel="next" href="../../mongoshell-komutlari/">
       
       
       <link rel="icon" href="../../../images/favicon.ico">
@@ -1931,17 +1935,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" checked>
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -1955,10 +1961,223 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_11_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_11">
             <span class="md-nav__icon md-icon"></span>
             Veritabani
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_11_1" id="__nav_11_1_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Postgresql
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_11_1">
+            <span class="md-nav__icon md-icon"></span>
+            Postgresql
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    PostgreSQL Cluster Kurulumu
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    PostgreSQL Cluster Kurulumu
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#10-slave-sunucuda-postgresql-durdurulur" class="md-nav__link">
+    <span class="md-ellipsis">
+      10. Slave Sunucuda Postgresql Durdurulur
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#11-slave-sunucudaki-postgresql-data-dizini-silinir" class="md-nav__link">
+    <span class="md-ellipsis">
+      11. Slave sunucudaki postgreSQL data dizini silinir.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#12-maste-sunucuda-alnan-yedek-slave-sunucusuna-kopyalanr" class="md-nav__link">
+    <span class="md-ellipsis">
+      12. Maste Sunucuda Alınan Yedek Slave Sunucusuna Kopyalanır
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#13-slave-sunucuda-izinler-ayarlanr" class="md-nav__link">
+    <span class="md-ellipsis">
+      13. Slave Sunucuda İzinler Ayarlanır
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#14-slave-sunucusundaki-cluster-ayarlari-yapilir" class="md-nav__link">
+    <span class="md-ellipsis">
+      14. Slave Sunucusundaki Cluster Ayarlari Yapilir.
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#15-slave-sunucuda-standby-signal-dosyasnn-olusturulmas" class="md-nav__link">
+    <span class="md-ellipsis">
+      15. Slave Sunucuda Standby Signal Dosyasının Oluşturulması
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#16-master-sunucuda-db2-replikasyonunun-olusturulmasi" class="md-nav__link">
+    <span class="md-ellipsis">
+      16. Master Sunucuda db2 replikasyonunun olusturulmasi
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#17-slave-sunucuda-postgresql-tekrar-baslatlr" class="md-nav__link">
+    <span class="md-ellipsis">
+      17. Slave Sunucuda PostgreSQL Tekrar Başlatılır
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_11_2" id="__nav_11_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    MongoDB
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_11_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_11_2">
+            <span class="md-nav__icon md-icon"></span>
+            MongoDB
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
             
@@ -1978,6 +2197,14 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
     </li>
   
 

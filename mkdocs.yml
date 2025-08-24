@@ -58,6 +58,9 @@ nav:
           - SFTP: linux/sftp.md
           - Websocket: linux/websocket.md
           - NFS: linux/nfs.md
+  - Kubernetes: 
+      - Kubernetes Nedir?: kubernetes/kubernetes.md
+      - Namespace: kubernetes/namespace.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

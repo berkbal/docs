@@ -1013,6 +1013,17 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Namespace
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
@@ -1022,6 +1033,58 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ornekler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ornekler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ornekler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kubectl-ile-namespace-kullanma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubectl ile namespace kullanma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-namespacei-degistirmek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default namespace'i degistirmek
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -2365,6 +2428,47 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ornekler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ornekler
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Ornekler">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#kubectl-ile-namespace-kullanma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kubectl ile namespace kullanma
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#default-namespacei-degistirmek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Default namespace'i degistirmek
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -2387,6 +2491,28 @@
 
 
 <h1 id="namespace">Namespace</h1>
+<p>Namespace, cluster içindeki kaynakları mantıksal olarak ayırmaya yarayan bir objedir. Amaci İzolasyon saglamaktir. Her namespace kendi içinde Pod, Service, ConfigMap, Secret gibi objeleri tutar. Farklı namespace’lerde aynı isimli objeler olabilir.</p>
+<p>Kullanıcı ve servis hesaplarının erişim yetkilerini namespace bazında sinirlandirmak mumkun.</p>
+<h2 id="ornekler">Ornekler</h2>
+<pre><code class="language-bash"># Yeni namespace oluştur
+kubectl create namespace dev
+
+# Belirli namespace’e bir pod deploy et
+kubectl run nginx --image=nginx -n dev
+
+# Namespace içindeki objeleri listele
+kubectl get pods -n dev
+
+# Namespace sil
+kubectl delete namespace dev
+</code></pre>
+<h3 id="kubectl-ile-namespace-kullanma">Kubectl ile namespace kullanma</h3>
+<pre><code class="language-bash">kubectl get pods -n dev
+</code></pre>
+<h3 id="default-namespacei-degistirmek">Default namespace'i degistirmek</h3>
+<pre><code class="language-bash">kubectl config set-context --current --namespace=dev
+</code></pre>
+<p>Bu ayari yaptiktan sonra kullanilan butun komutlar dev isimli namespace'e uygulanacaktir.</p>
 
 
 

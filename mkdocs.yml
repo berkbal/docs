@@ -31,6 +31,8 @@ theme:
 nav:
   - Ana Sayfa: index.md
   - Linux:
+      - Rhel:
+        - linux/rhel/firewall.md
       - Linux Komutları:
         - Başlamadan Önce: linux/linux-komutlari.md
         - Komut Satırına Giriş: linux/komut-satirina-giris.md

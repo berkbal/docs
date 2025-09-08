@@ -8,28 +8,24 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/linux/komut-satirina-giris/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/linux/rhel/f%C4%B1rewall/">
       
       
-        <link rel="prev" href="../linux-komutlari/">
       
       
-        <link rel="next" href="../terminal-komutlarinin-kullanimi-%28syntax%29/">
-      
-      
-      <link rel="icon" href="../../images/favicon.ico">
+      <link rel="icon" href="../../../images/favicon.ico">
       <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.39">
     
     
       
-        <title>Komut Satırına Giriş - Docs for SysAdmins</title>
+        <title>Rhel'de Firewall - Docs for SysAdmins</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.8c3ca2c6.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.8c3ca2c6.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -48,7 +44,7 @@
       
     
     
-    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#komut-satr-kullanmann-avantajlar" class="md-skip">
+        <a href="#rhelde-firewall" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -90,9 +86,9 @@
 
 <header class="md-header md-header--shadow" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Başlık">
-    <a href="../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
-  <img src="../../images/berk-bal.png" alt="logo">
+  <img src="../../../images/berk-bal.png" alt="logo">
 
     </a>
     <label class="md-header__button md-icon" for="__drawer">
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Komut Satırına Giriş
+              Rhel'de Firewall
             
           </span>
         </div>
@@ -222,9 +218,9 @@
 
 <nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href="../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
+    <a href="../../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
-  <img src="../../images/berk-bal.png" alt="logo">
+  <img src="../../../images/berk-bal.png" alt="logo">
 
     </a>
     Docs for SysAdmins
@@ -251,7 +247,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../.." class="md-nav__link">
+      <a href="../../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -268,19 +264,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -294,7 +288,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2">
             <span class="md-nav__icon md-icon"></span>
             Linux
@@ -343,7 +337,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rhel/firewall.md" class="md-nav__link">
+      <a href="../firewall.md" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -369,19 +363,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -395,7 +387,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_2_2">
             <span class="md-nav__icon md-icon"></span>
             Linux Komutları
@@ -409,7 +401,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../linux-komutlari/" class="md-nav__link">
+      <a href="../../linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -427,28 +419,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Komut Satırına Giriş
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../komut-satirina-giris/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -457,33 +431,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#komut-satr-kullanmann-avantajlar" class="md-nav__link">
-    <span class="md-ellipsis">
-      Komut Satırı Kullanmanın Avantajları
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -496,7 +443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
+      <a href="../../terminal-komutlarinin-kullanimi-%28syntax%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -517,7 +464,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
+      <a href="../../bilgisayar-icerisinde-gezinmek/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -538,7 +485,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../temel-linux-komutlari/" class="md-nav__link">
+      <a href="../../temel-linux-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -559,7 +506,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../standart-akislar/" class="md-nav__link">
+      <a href="../../standart-akislar/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -580,7 +527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../daha-hizli-terminal-kullanmak/" class="md-nav__link">
+      <a href="../../daha-hizli-terminal-kullanmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -601,7 +548,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../root-kullanicisi/" class="md-nav__link">
+      <a href="../../root-kullanicisi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -622,7 +569,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../yonlendirme%28operatorler%29/" class="md-nav__link">
+      <a href="../../yonlendirme%28operatorler%29/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -643,7 +590,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
+      <a href="../../birden-fazla-dosya-ile-islem-yapmak/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -672,7 +619,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../logrotate/" class="md-nav__link">
+      <a href="../../logrotate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -693,7 +640,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../fail2ban/" class="md-nav__link">
+      <a href="../../fail2ban/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -714,7 +661,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../bacula/" class="md-nav__link">
+      <a href="../../bacula/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -735,7 +682,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swapfile/" class="md-nav__link">
+      <a href="../../swapfile/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -756,7 +703,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tmux/" class="md-nav__link">
+      <a href="../../tmux/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -777,7 +724,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../rsync/" class="md-nav__link">
+      <a href="../../rsync/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -798,7 +745,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../truncate/" class="md-nav__link">
+      <a href="../../truncate/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -854,7 +801,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../routing-tablosu-nedir/" class="md-nav__link">
+      <a href="../../routing-tablosu-nedir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -875,7 +822,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../iptables/" class="md-nav__link">
+      <a href="../../iptables/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -896,7 +843,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../ss/" class="md-nav__link">
+      <a href="../../ss/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -917,7 +864,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../tcpdump/" class="md-nav__link">
+      <a href="../../tcpdump/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -973,7 +920,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../sftp/" class="md-nav__link">
+      <a href="../../sftp/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -994,7 +941,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../websocket/" class="md-nav__link">
+      <a href="../../websocket/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1015,7 +962,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../nfs/" class="md-nav__link">
+      <a href="../../nfs/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1094,7 +1041,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/kubernetes/" class="md-nav__link">
+      <a href="../../../kubernetes/kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1115,7 +1062,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/namespace/" class="md-nav__link">
+      <a href="../../../kubernetes/namespace/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1178,7 +1125,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/ansible/" class="md-nav__link">
+      <a href="../../../ansible/ansible/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1199,7 +1146,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/ansible-modulleri/" class="md-nav__link">
+      <a href="../../../ansible/ansible-modulleri/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1220,7 +1167,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../ansible/ansible-playbook/" class="md-nav__link">
+      <a href="../../../ansible/ansible-playbook/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1283,7 +1230,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../mail/mailu/" class="md-nav__link">
+      <a href="../../../mail/mailu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1304,7 +1251,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../swaks/" class="md-nav__link">
+      <a href="../../swaks/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1402,7 +1349,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/libvirt-networking/" class="md-nav__link">
+      <a href="../../../sanallastirma/libvirt-networking/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1423,7 +1370,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/libvirt-gercek-ip/" class="md-nav__link">
+      <a href="../../../sanallastirma/libvirt-gercek-ip/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1444,7 +1391,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/lvm-disk-genisletme-islemi/" class="md-nav__link">
+      <a href="../../../sanallastirma/lvm-disk-genisletme-islemi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1508,7 +1455,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/proxmox/disk-ekleme/" class="md-nav__link">
+      <a href="../../../sanallastirma/proxmox/disk-ekleme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1529,7 +1476,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../sanallastirma/proxmox/subnet-olusturma/" class="md-nav__link">
+      <a href="../../../sanallastirma/proxmox/subnet-olusturma/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1600,7 +1547,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../guncelleme/gitlab/" class="md-nav__link">
+      <a href="../../../guncelleme/gitlab/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1698,7 +1645,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
+      <a href="../../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1719,7 +1666,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-dosyalari/nextcloud/nextcloud/" class="md-nav__link">
+      <a href="../../../docker/docker-compose-dosyalari/nextcloud/nextcloud/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1740,7 +1687,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../docker/docker-compose-dosyalari/roundcube/roundcube/" class="md-nav__link">
+      <a href="../../../docker/docker-compose-dosyalari/roundcube/roundcube/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1811,7 +1758,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../haproxy/frontend-backend-ekleme/" class="md-nav__link">
+      <a href="../../../haproxy/frontend-backend-ekleme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1867,7 +1814,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../haproxy/maxconn/" class="md-nav__link">
+      <a href="../../../haproxy/maxconn/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1938,7 +1885,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../freepbx/sertifika-yenileme/" class="md-nav__link">
+      <a href="../../../freepbx/sertifika-yenileme/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2001,7 +1948,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript/bcrypt/" class="md-nav__link">
+      <a href="../../../javascript/bcrypt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2022,7 +1969,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../javascript/jwt/" class="md-nav__link">
+      <a href="../../../javascript/jwt/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2120,7 +2067,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../veritabani/postgresql/postgresql-cluster-kurulumu/" class="md-nav__link">
+      <a href="../../../veritabani/postgresql/postgresql-cluster-kurulumu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2184,7 +2131,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../veritabani/mongoshell-komutlari/" class="md-nav__link">
+      <a href="../../../veritabani/mongoshell-komutlari/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2255,7 +2202,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../masaustu-ikon-olusturma/" class="md-nav__link">
+      <a href="../../masaustu-ikon-olusturma/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2276,7 +2223,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../zram/" class="md-nav__link">
+      <a href="../../zram/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2297,7 +2244,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../certbot/" class="md-nav__link">
+      <a href="../../certbot/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2353,7 +2300,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../wireguard/wireguard-nedir/" class="md-nav__link">
+      <a href="../../../wireguard/wireguard-nedir/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2417,7 +2364,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../openwrt/openwrt-kurulumu/" class="md-nav__link">
+      <a href="../../../openwrt/openwrt-kurulumu/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -2463,6 +2410,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -2471,9 +2420,18 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#komut-satr-kullanmann-avantajlar" class="md-nav__link">
+  <a href="#firewall-cmd" class="md-nav__link">
     <span class="md-ellipsis">
-      Komut Satırı Kullanmanın Avantajları
+      firewall-cmd
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#belli-bir-zoneu-bir-interfacee-bind-etmek" class="md-nav__link">
+    <span class="md-ellipsis">
+      Belli bir Zone'u Bir Interface'e Bind Etmek
     </span>
   </a>
   
@@ -2494,7 +2452,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/linux/komut-satirina-giris.md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/linux/rhel/fırewall.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2502,37 +2460,27 @@
   
 
 
-  <h1>Komut Satırına Giriş</h1>
-
-<p>Komut satırı kullanarak işlemlerimizi gerçekleştirmek bizi normalden çok daha hızlı ve sistem üzerinde daha çok kontrol sahibi yapar. Kontrol sahibi yaptığı inandırıcı da gerçekten bizi daha hızlı yapıyor mu?</p>
-<p>Evet.</p>
-<p>Küçük bir örnekle açıklayalım:</p>
-<p>Diyelim ki bir fotoğraf makinesi sahibisiniz ve elinizde fotoğraflarla dolu bir dizin var ve bu dizinin içerisindeki  <em>profile.jpg</em> isimli bir fotoğrafı yeniden boyutlandırmak istediniz. Yeniden boyutlandırdıktan sonra da farklı bir isimle tekrar kaydetmek istiyorsunuz.</p>
-<p>Herhangi bir resim düzenleme programında aşağı yukarı bu adımları izlemeniz gerekir:</p>
-<p>1 – Uygulamalar menüsünden resim düzenleme programınızı açarsınız.<br />
-2 – Dosya – Aç<br />
-3 – Gelen dosya açma ekranından fotoğrafların olduğu dizine git.<br />
-4 –  <em>profile.jpg</em> isimli dosyayı bulup seçtikten sonra Aç tuşuna bas.<br />
-5 – Resim – Boyutlandır menüsünden boyutlandırma ayarlarını aç.<br />
-6 – Fotoğrafın genişliğini 300 piksel olarak ayarla.<br />
-7 – Dosya – Farklı Kaydet menüsünden kaydedilecek yeri seç.<br />
-8 – Dosya ismi olarak  <em>profile_küçük.jpg</em> yaz ve Kaydet butonuna tıkla.</p>
-<p><img alt="Gimp" src="../../images/komut_satirina_giris.png" /></p>
-<p>Komut satırını kullanarak bu işlemi tek bir satırda halledebiliriz. Nasıl mı?</p>
-<pre><code>convert -resize 300 profile.jpg profile_küçük.jpg
+<h1 id="rhelde-firewall">Rhel'de Firewall</h1>
+<p>RHEL’de firewall, <code>firewalld</code> servisi ile yönetilen dinamik bir paket filtreleme sistemidir. Her <code>ağ arayüzü bir zone altında</code> toplanır ve zone’lar servisler, <code>portlar</code> ve <code>kurallarla</code> kontrol edilir. Kurallar geçici veya kalıcı <code>(--permanent)</code> olarak eklenebilir ve <code>firewall-cmd</code> komutu ile yönetilir.</p>
+<h2 id="firewall-cmd">firewall-cmd</h2>
+<p>Bütün paketleri droplamak için <code>default</code> zone'u <code>public</code> isimli zone'a çevirebiliriz. İzin vermek istediğimiz portlara kural yazarız.</p>
+<pre><code class="language-bash">firewall-cmd --set-default-zone=public
 </code></pre>
-<p>Komut satırındaki bir satır, neredeyse resim düzenleme programındaki sekiz işleme eşit. Şuan belki de bu işlemi yaparken geçen 15-20 saniyenizi önemsemiyorsunuz fakat 30 farklı fotoğrafı düzenlemeniz gerekseydi ne yapmak isterdiniz? 30 farklı fotoğraf için yukarıdaki sekiz adımı sürekli tekrarlamak ister miydiniz? Totalde 240 adım ediyor. Bunun yerine bütün işlerinizi tek satırda halletmek isteyeceğinizi varsayıyorum.</p>
-<h2 id="komut-satr-kullanmann-avantajlar"><strong>Komut Satırı Kullanmanın Avantajları</strong></h2>
-<p>Komut satırına bir kere şans veren insanlar genellikle asla grafik arayüz kullanmaya geri dönmüyorlar. Sebebi çok basit, Komut satırı(Terminal) kullanmak grafik arayüzü kullanmaktan hem daha  <strong>hızlı</strong>, daha  <strong>stabil</strong>, daha esnek, çok daha  <strong>eğlenceli</strong> ve çok farklı bir  <strong>deneyim</strong>. Komut satırı kullanarak bilgisayarınızla çok dafa farklı bir şekilde iletişim kurabilirsiniz.</p>
-<p><strong>Güzel Bir Özellik Daha: Scripting</strong></p>
-<p>Kullandığınız komutları text dosyalarına dönüştürebileceğinizi biliyor muydunuz? Bu text dosyalarına  <strong>script</strong> denir ve genellikle her seferinde uzun komutlar yazmak yerine kullanmak istediğimiz komutları kaydederek sürekli kullanmamızı sağlarlar.</p>
-<p><strong><code>komutlarim.sh</code></strong></p>
-<p>.sh uzantılı bir dosyanın içerisinde komutlarınızı kombine ederek kullanabilirsiniz! İlk önce komut satırını kullanmayı öğrendikten sonra Bash Scripting öğrenebilirsiniz.</p>
-<p><strong>Grafik Arayüze Sahip Olmayan Uygulamalar</strong></p>
-<p>Komut satırı kullanmanın en çok gerektiği ve en çok işe yaradığı anlar grafik arayüze sahip olmayan uygulamaları kullanmamız gerektiğinde ortaya çıkıyor. Diyelim ki bir network’ümüz var, bu network’teki bir bilgisayarı kapatmak istiyoruz. Bilgisayarın yanına kadar gidip kapatma tuşuna basmak yerine komut satırından  <strong>shutdown</strong> komutunu çalıştırmak güzel bir fikire benziyor. Tabi bu bilgisayarın kapatma düğmesine ayağınız ile erişebiliyorsanız farklı bir seçim yapabilirsiniz. 🙂</p>
-<p><strong>Aslında Grafik Arayüze Sahip Olan Programlar da Komutlarla Çalışır</strong></p>
-<p>Grafik arayüze sahip programları kullanırken menülerden tıkladığımız seçenekler aslında birer komuttur diyebiliriz. Bir programı çalıştırmak için bir menüye veya bir ikona tıkladığınızda aslında bir komut çalıştırmış olursunuz.</p>
-<p>Komut satırının faydalarından ve ne kadar eğlenceli bir şey olduğundan yeterince bahsettik. Artık başlayabiliriz. 🙂</p>
+<p>Örnek: 22 ve 80 ve 8080'i <strong>kalıcı</strong> olarak aktifleştirmek. <code>--permanent</code> ile kalıcı olarak kural eklenir. </p>
+<pre><code class="language-bash">firewall-cmd --zone=public --add-port=22/tcp --permanent
+firewall-cmd --zone=public --add-port=80/tcp --permanent
+firewall-cmd --zone=public --add-port=8080/tcp --permanent
+</code></pre>
+<p>Firewall-cmd'yi reloadlamak:</p>
+<pre><code class="language-bash">firewall-cmd --reload
+</code></pre>
+<h2 id="belli-bir-zoneu-bir-interfacee-bind-etmek">Belli bir Zone'u Bir Interface'e Bind Etmek</h2>
+<p>Belli bir kural seti (zone) belli bir network interfaceine aşağıdaki gibi eklenebilir.</p>
+<pre><code class="language-bash">firewall-cmkd --zone=public --add-interface=eno192
+</code></pre>
+<p>Zone'un bilgilerine erişip hangi interfacelere bind edildiği öğrenilebilir.</p>
+<pre><code class="language-bash">firewall-cmd --zone=public --list-all
+</code></pre>
 
 
 
@@ -2579,10 +2527,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["palette.toggle", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["palette.toggle", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
     
     
-      <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>
       
     
   </body>

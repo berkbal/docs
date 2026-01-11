@@ -67,7 +67,7 @@ nav:
       - Control Plane Bilesenleri: kubernetes/control-plane-bilesenleri.md
       - Worker Node Bilesenleri: kubernetes/worker-node-bilesenleri.md
     - Kubernetes Cluster Kurulumu:
-      - Elbet Bir Gun:
+      - Elbet Bir Gun: kubernetes/cluster-kurulumu.md
     - Kubernetes Objeleri:
       - Namespace: kubernetes/namespace.md
       

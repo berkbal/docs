@@ -11,6 +11,10 @@
         <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/control-plane-bilesenleri/">
       
       
+        <link rel="prev" href="../kubernetes-mimarisi/">
+      
+      
+        <link rel="next" href="../namespace/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -18,7 +22,7 @@
     
     
       
-        <title>Control plane bilesenleri - Docs for SysAdmins</title>
+        <title>Control Plane Bilesenleri - Docs for SysAdmins</title>
       
     
     
@@ -69,6 +73,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#control-plane-node-bilesenleri" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -100,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Control plane bilesenleri
+              Control Plane Bilesenleri
             
           </span>
         </div>
@@ -998,17 +1007,19 @@
       
   
   
+    
   
   
+  
     
     
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1022,7 +1033,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -1066,6 +1077,103 @@
   
 
       </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Control Plane Bilesenleri
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Control Plane Bilesenleri
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Server:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduler:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller Manager:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-value-data-storeetcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Value Data Store(etcd):
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2426,6 +2534,52 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      API Server:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#scheduler" class="md-nav__link">
+    <span class="md-ellipsis">
+      Scheduler:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#controller-manager" class="md-nav__link">
+    <span class="md-ellipsis">
+      Controller Manager:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-value-data-storeetcd" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key-Value Data Store(etcd):
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -2448,9 +2602,18 @@
   
 
 
-  <h1>Control plane bilesenleri</h1>
-
-
+<h1 id="control-plane-node-bilesenleri">Control Plane Node Bilesenleri</h1>
+<p>Control plane node'da asagidaki bilesenlere ek olarak container runtime, node agent (kubelet), proxy (kube-proxy), ve kisisel ihtiyaclara gore kurulan add-onlar calismaktadir.</p>
+<h2 id="api-server">API Server:</h2>
+<p>Bir clusterin butun yonetim islemleri kube-apiserver uzerinde gerceklesir. RESTful bir sekilde call alir ve sistemdeki normal kullanicilar, yoneticiler ve developerlar tarafindan talepleri alip islem gerceklestirir. </p>
+<p>Bu islemleri gerceklestirirken clusterin <code>key:value</code>(etcd) durumunu uzerinden okur, islemi gerceklestirir ve son durumu tekrar <code>key:value</code> seklinde etcd'ye ekler.</p>
+<h2 id="scheduler">Scheduler:</h2>
+<p>kube-scheduler'in rolu deploy edilen objelerin hangi nodelarda calisacagina krar vermektir. <code>API SERVER</code> araciligi ile etcd uzerinden clusterdaki calisan nodelar icin kaynak kullanim verilerini, etiketleri vs goz onunde bulundurarak hangi node'a deploy edilecegini belirler. Sonrasinda da nodelar icerisinde bulunan <code>kubelet</code>ler podlari deploy eder.</p>
+<h2 id="controller-manager">Controller Manager:</h2>
+<p>Deploy edilen uygulamalari duzenli olarak izleyerek calismasi istenen statede kalmasini saglar. Bir uygulamanin hangi kosullarda nasil calisacagini deploy ederken tanimlariz. Eger tanimlanan kosullar karsilanmazsa uygulamayi tekrar deploy eder/yeniden baslatir veya belli basli kosullar ile <code>state</code> eslesene kadar belirtilen islemleri tekrarlar.</p>
+<h2 id="key-value-data-storeetcd">Key-Value Data Store(etcd):</h2>
+<p><code>etcd</code> CNCF tarafinan yonetilen acik kaynakli bir projedir. Kubernetes clusterinin anlik olarak hangi durumda oldugunu saklamak/depolamak amaciyla kullanilir. Sadece <code>API SERVER</code> tarafindan erisilebilir ve master node uzerinden <code>etcdctl</code> adindaki komut satiri araci ile yonetilebilir. Ayrica istenirse ayri bir sekilde olusturulan bir etcd clusteri control plane node'a baglanarak yonetilebilir. Bu sayede etcd de <code>HA</code> haline getirilip daha saglam bir altyapi elde edilir. </p>
+<p>ConfigMap ve Secrets gibi k8s objeleri de etcd uzerinde saklanir.</p>
 
 
 

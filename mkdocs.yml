@@ -63,6 +63,7 @@ nav:
   - Kubernetes: 
       - Kubernetes Nedir?: kubernetes/kubernetes.md
       - Kubernetes Mimarisi: kubernetes/kubernetes-mimarisi.md
+      - Control Plane Bilesenleri: kubernetes/control-plane-bilesenleri.md
       - Namespace: kubernetes/namespace.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md

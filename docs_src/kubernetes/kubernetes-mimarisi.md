@@ -12,4 +12,6 @@ Control plane node'u kubernetes clusterini yonetmekten sorumludur. Bir clusterin
 
 Eger control plane kapanirsa cluster **erisilemez** ve **yonetilemez** durumda kalir. Bu sebepten dolayi birden fazla Control Plane yapilandirilmasi onerilir.
 
-Control Plane Node'daki bilesenler icin [buradan](control-plane-bilesenleri.md) devam et.
+Control Plane Node'daki bilesenler icin: [buradan](control-plane-bilesenleri.md) devam et.
+Worker Node'daki bilesenler icin: [buradan](worker-node-bilesenleri.md) devam.et
+Kubernetes Objeleri Icin: 

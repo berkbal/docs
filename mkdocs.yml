@@ -62,6 +62,7 @@ nav:
           - NFS: linux/nfs.md
   - Kubernetes: 
       - Kubernetes Nedir?: kubernetes/kubernetes.md
+      - Kubernetes Mimarisi: kubernetes/kubernetes-mimarisi.md
       - Namespace: kubernetes/namespace.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md

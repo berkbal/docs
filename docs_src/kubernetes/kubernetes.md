@@ -8,7 +8,12 @@ Kubernetes, Google'ın on yılı aşkın süredir kullandığı küresel operasy
 
 Kubernetes, Google tarafından başlatılmış ve Temmuz 2015'teki v1.0 sürümüyle birlikte Google, Linux Vakfı'nın en büyük alt kuruluşlarından biri olan Bulut Yerel Bilişim Vakfı'na (CNCF) bağışlamıştır.
 
-### Menu
+## Menu
 
-- [Kubernetes Mimarisi](kubernetes-mimarisi.md)
-- [Namespace](namespace.md)
+1. [Kubernetes Mimarisi](kubernetes-mimarisi.md)
+2. [Control Plane Bilesenleri](control-plane-bilesenleri.md)
+3. [Worker Node Bilesenleri](worker-node-bilesenleri.md)
+
+
+### Kubernetes Objeleri
+- Namespace](namespace.md)

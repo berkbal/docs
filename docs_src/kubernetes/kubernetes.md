@@ -10,4 +10,5 @@ Kubernetes, Google tarafından başlatılmış ve Temmuz 2015'teki v1.0 sürüm�
 
 ### Menu
 
-- Namespace
+- [Kubernetes Mimarisi](kubernetes-mimarisi.md)
+- [Namespace](namespace.md)

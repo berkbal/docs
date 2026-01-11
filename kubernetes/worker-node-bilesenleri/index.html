@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/kubernetes-mimarisi/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/worker-node-bilesenleri/">
       
       
-        <link rel="prev" href="../kubernetes/">
-      
-      
-        <link rel="next" href="../control-plane-bilesenleri/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Giris - Docs for SysAdmins</title>
+        <title>Worker Node - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubernetes-mimarisi" class="md-skip">
+        <a href="#worker-node" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Giris
+              Worker Node
             
           </span>
         </div>
@@ -1007,19 +1003,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1033,7 +1027,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -1065,19 +1059,17 @@
                 
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1091,7 +1083,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_2_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_2">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes Mimarisi
@@ -1102,30 +1094,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Giris
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../kubernetes-mimarisi/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1134,35 +1106,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#control-plane-node" class="md-nav__link">
-    <span class="md-ellipsis">
-      Control Plane Node
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2605,9 +2548,27 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#control-plane-node" class="md-nav__link">
+  <a href="#container-runtime" class="md-nav__link">
     <span class="md-ellipsis">
-      Control Plane Node
+      Container Runtime:
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#node-agentkubelet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Node Agent(Kubelet):
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kube-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kube-Proxy
     </span>
   </a>
   
@@ -2628,7 +2589,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/kubernetes-mimarisi.md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/worker-node-bilesenleri.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2636,16 +2597,24 @@
   
 
 
-<h1 id="kubernetes-mimarisi">Kubernetes Mimarisi</h1>
-<p>Olusturulan bir kubernetes clusteri asagi yukari bu sekildedir. Control plane kisminin genelde ayri bir makinede bulunmasi onerilir. Ayrica birden fazla control plane bulunabilir.</p>
-<p><img alt="Kubernetes mimarisi" src="../image.png" /></p>
-<p>Kaynak: linuxfoundation</p>
-<h2 id="control-plane-node">Control Plane Node</h2>
-<p>Control plane node'u kubernetes clusterini yonetmekten sorumludur. Bir clusterin beynidir denilebilir. Clusteri yonetmek icin Control Plane'e baglanmak gereklidir. Komut satirindan <code>kubectl</code> komutu ile veya api uzerinden kontrol edilebilir.</p>
-<p>Eger control plane kapanirsa cluster <strong>erisilemez</strong> ve <strong>yonetilemez</strong> durumda kalir. Bu sebepten dolayi birden fazla Control Plane yapilandirilmasi onerilir.</p>
-<p>Control Plane Node'daki bilesenler icin: <a href="../control-plane-bilesenleri/">buradan</a> devam et.
-Worker Node'daki bilesenler icin: <a href="../worker-node-bilesenleri/">buradan</a> devam.et
-Kubernetes Objeleri Icin: </p>
+<h1 id="worker-node">Worker Node</h1>
+<p>Worker node, deploy edilen uygulamalar icin calisma ortami saglar. Uygulamalar container'lar halinde podlar icerisinde calisir. <strong>Scheduler tarafindan bir worker node'a atanan pod, o node'daki kubelet tarafindanc alistirilir.</strong> Podlar, worker node'un CPU, bellek ve depolama kaynaklarini kullanir.</p>
+<h2 id="container-runtime">Container Runtime:</h2>
+<p>CRI-O, containerd, docker, mirantis gibi bir container runtime worker nodelar uzerinde calisir. Genelde hafif ve guvenli olmasindan dolayi <strong>containerd</strong> tercih edilir. Uygulamalarin container halinde calismasi icin worker node'da bir adet container runtime bulunmasi gerekmektedir.</p>
+<h2 id="node-agentkubelet">Node Agent(Kubelet):</h2>
+<p>kubelet, her node üzerinde (control plane ve worker'lar) çalışan bir agent'tir ve control plane ile iletişim kurar. Pod tanımlarını öncelikle API Server'dan alır ve Pod ile ilişkili container'ları çalıştırmak için node üzerindeki container runtime ile etkileşime geçer. Ayrıca container'ları çalıştıran Pod'ların sağlığını ve kaynaklarını izler.</p>
+<h2 id="kube-proxy">Kube-Proxy</h2>
+<ul>
+<li>
+<p>kube-proxy, her node üzerinde (control plane ve worker'lar) çalışan bir network agent'tır ve node üzerindeki tüm network kurallarının dinamik güncellemelerinden ve bakımından sorumludur. Pod'ların network detaylarını soyutlar ve bağlantı isteklerini Pod'lar içindeki container'lara iletir. </p>
+</li>
+<li>
+<p>Bir uygulamanın Pod backend'leri arasında TCP, UDP ve SCTP stream forwarding veya random forwarding işlemlerinden sorumludur ve kullanıcılar tarafından Service API objeleri üzerinden tanımlanan forwarding kurallarını uygular.</p>
+</li>
+<li>
+<p>kube-proxy node agent'ı, node'un iptables'ı ile birlikte çalışır. Iptables, Linux işletim sistemi için oluşturulmuş bir firewall aracıdır ve kullanıcılar tarafından aynı isimde bir CLI aracı ile yönetilebilir. Iptables aracı birçok Linux dağıtımında mevcuttur ve önceden yüklenmiş olarak gelir.</p>
+</li>
+</ul>
 
 
 

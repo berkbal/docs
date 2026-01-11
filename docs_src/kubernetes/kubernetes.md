@@ -13,7 +13,8 @@ Kubernetes, Google tarafından başlatılmış ve Temmuz 2015'teki v1.0 sürüm�
 1. [Kubernetes Mimarisi](kubernetes-mimarisi.md)
 2. [Control Plane Bilesenleri](control-plane-bilesenleri.md)
 3. [Worker Node Bilesenleri](worker-node-bilesenleri.md)
+4. [Kubernetes Cluster Kurulumu](kubernetes-cluster-kurulumu.md)
 
 
 ### Kubernetes Objeleri
-- Namespace](namespace.md)
+- [Namespace](namespace.md)

@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/kubernetes/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/control-plane-bilesenleri/">
       
       
-        <link rel="prev" href="../../linux/nfs/">
-      
-      
-        <link rel="next" href="../namespace/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Kubernetes Nedir? - Docs for SysAdmins</title>
+        <title>Control plane bilesenleri - Docs for SysAdmins</title>
       
     
     
@@ -73,11 +69,6 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
-        
-        <a href="#kubernetes" class="md-skip">
-          Ana içeriğe geç
-        </a>
-      
     </div>
     <div data-md-component="announce">
       
@@ -109,7 +100,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes Nedir?
+              Control plane bilesenleri
             
           </span>
         </div>
@@ -1007,19 +998,17 @@
       
   
   
-    
   
   
-  
     
     
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1033,7 +1022,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -1044,30 +1033,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Kubernetes Nedir?
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1076,35 +1045,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Menu
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2465,25 +2405,6 @@
   
   
   
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#menu" class="md-nav__link">
-    <span class="md-ellipsis">
-      Menu
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
   
 </nav>
                   </div>
@@ -2498,7 +2419,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/kubernetes.md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/control-plane-bilesenleri.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -2506,16 +2427,9 @@
   
 
 
-<h1 id="kubernetes">Kubernetes</h1>
-<p>Kubernetes, konteynerleştirilmiş uygulamaların dağıtımını, ölçeklenmesini ve yönetimini otomatikleştirmek için kullanılan açık kaynaklı bir konteyner yönetim aracıdır.</p>
-<p>Kubernetes, dümenci veya gemi pilotu anlamına gelen Yunanca κυβερνήτης kelimesinden gelir. Bu benzetmeyi akılda tutarak, Kubernetes'i bir konteyner gemisinin pilotu olarak düşünebiliriz.</p>
-<p>Kubernetes, Google'ın on yılı aşkın süredir kullandığı küresel operasyonları için bir konteyner ve iş yükü düzenleyicisi olan Google Borg sisteminden büyük ölçüde ilham almıştır. Go dilinde yazılmış ve 2.0 Lisansı altında lisanslanmış açık kaynaklı bir projedir.</p>
-<p>Kubernetes, Google tarafından başlatılmış ve Temmuz 2015'teki v1.0 sürümüyle birlikte Google, Linux Vakfı'nın en büyük alt kuruluşlarından biri olan Bulut Yerel Bilişim Vakfı'na (CNCF) bağışlamıştır.</p>
-<h3 id="menu">Menu</h3>
-<ul>
-<li><a href="../kubernetes-mimarisi/">Kubernetes Mimarisi</a></li>
-<li><a href="../namespace/">Namespace</a></li>
-</ul>
+  <h1>Control plane bilesenleri</h1>
+
+
 
 
 

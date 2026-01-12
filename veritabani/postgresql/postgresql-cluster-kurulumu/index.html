@@ -65,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -88,7 +88,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Başlık">
     <a href="../../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
@@ -122,9 +122,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Karanlık moda geç"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Karanlık moda geç" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -132,9 +132,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Aydınlık moda geç"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Aydınlık moda geç" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -164,11 +164,18 @@
       </label>
       <nav class="md-search__options" aria-label="Ara">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Paylaş" aria-label="Paylaş" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -199,13 +206,319 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Sekmeler" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../../.." class="md-tabs__link">
+        
+  
+    
+  
+  Ana Sayfa
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../linux/rhel/firewall/" class="md-tabs__link">
+          
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../kubernetes/kubernetes/" class="md-tabs__link">
+          
+  
+    
+  
+  Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../ansible/ansible/" class="md-tabs__link">
+          
+  
+    
+  
+  Ansible
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../mail/mailu/" class="md-tabs__link">
+          
+  
+    
+  
+  Mail
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../sanallastirma/libvirt-networking/" class="md-tabs__link">
+          
+  
+    
+  
+  Sanallaştırma
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../guncelleme/gitlab/" class="md-tabs__link">
+          
+  
+    
+  
+  Güncelleme
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-tabs__link">
+          
+  
+    
+  
+  Docker
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../haproxy/frontend-backend-ekleme/" class="md-tabs__link">
+          
+  
+    
+  
+  Haproxy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../freepbx/sertifika-yenileme/" class="md-tabs__link">
+          
+  
+    
+  
+  Asterisk/Freepbx
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../javascript/bcrypt/" class="md-tabs__link">
+          
+  
+    
+  
+  Javascript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Veritabani
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../../linux/masaustu-ikon-olusturma/" class="md-tabs__link">
+          
+  
+    
+  
+  İşe Yarar
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -219,8 +532,10 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasyon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
@@ -272,13 +587,42 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -307,13 +651,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -371,13 +726,42 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -771,13 +1155,32 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -890,13 +1293,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_5" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10_5" >
         
           
           <label class="md-nav__link" for="__nav_2_10_5" id="__nav_2_10_5_label" tabindex="0">
@@ -1011,13 +1429,30 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1067,13 +1502,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1173,13 +1623,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1237,13 +1698,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -1263,6 +1737,27 @@
             Kubernetes Objeleri
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../kubernetes/node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1308,13 +1803,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1413,13 +1923,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1497,13 +2020,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
         
           
           <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
@@ -1532,13 +2068,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_1" >
         
           
           <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
@@ -1638,13 +2189,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
         
           
           <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
@@ -1730,13 +2294,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1793,13 +2368,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1828,13 +2414,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
         
           
           <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
@@ -1941,13 +2542,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -1997,13 +2611,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_2" >
         
           
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
@@ -2068,13 +2693,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2131,13 +2767,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -2217,16 +2866,30 @@
   
     
     
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" checked>
         
           
-          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2254,16 +2917,28 @@
   
     
     
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2430,16 +3105,30 @@
   
     
     
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_2" >
         
           
-          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -2501,13 +3190,32 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
         
           
           <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
@@ -2599,13 +3307,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_4" >
         
           
           <label class="md-nav__link" for="__nav_13_4" id="__nav_13_4_label" tabindex="0">
@@ -2663,13 +3382,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_5" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_5" >
         
           
           <label class="md-nav__link" for="__nav_13_5" id="__nav_13_5_label" tabindex="0">
@@ -2847,126 +3577,126 @@
   
 
 
-<h1 id="postgresql-cluster-kurulumu">PostgreSQL Cluster Kurulumu</h1>
+<h1 id="postgresql-cluster-kurulumu">PostgreSQL Cluster Kurulumu<a class="headerlink" href="#postgresql-cluster-kurulumu" title="Permanent link">&para;</a></h1>
 <p>1 Master 1 adet Slave olacak sekilde kurulum tariflenmistir.</p>
 <ol>
 <li>Her iki sunucuda Postgresql kurulur</li>
 </ol>
-<pre><code>apt update
-apt-get install postgresql postgresql-contrib
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>apt update
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>apt-get install postgresql postgresql-contrib
+</span></code></pre></div>
 <ol>
 <li>Her iki sunucuda postgresql.conf'a asagidaki satir eklenir.</li>
 </ol>
 <p><code>/etc/postgresql/16/main/postgresql.conf</code></p>
-<p>Not: buradaki "16" postgres sürümü ile alakalıdır. Kullanılan işletim sistemi sürümüne göre değişir.</p>
-<pre><code class="language-bash">shared_listen_addresses = '*'
-</code></pre>
+<p>Not: buradaki "16" postgres sürümü ile alakalıdır. Kullanılan işletim sistemi sürümüne göre değişir.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nv">shared_listen_addresses</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;*&#39;</span>
+</span></code></pre></div></p>
 <ol>
-<li>Her iki sunucuda Firewall Ayarlamalari Yapilir.</li>
-</ol>
-<pre><code class="language-bash">ufw allow 5432/tcp
-ufw reload
-</code></pre>
-<ol>
-<li>Her iki sunucuda Erişim kontrolü ayarlanır.</li>
+<li>
+<p>Her iki sunucuda Firewall Ayarlamalari Yapilir.
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>ufw<span class="w"> </span>allow<span class="w"> </span><span class="m">5432</span>/tcp
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>ufw<span class="w"> </span>reload
+</span></code></pre></div></p>
+</li>
+<li>
+<p>Her iki sunucuda Erişim kontrolü ayarlanır.</p>
+</li>
 </ol>
 <p><code>/etc/postgresql/15/main/pg_hba.conf</code></p>
-<pre><code class="language-bash">host    all             all             MASTER-SUNUCU-IP-ADRESI/32   md5
-host    all             all             SLAVE-SUNUCU-IP-ADRESI/32   md5
-host    replication     all             MASTER-SUNUCU-IP-ADRESI/32   md5
-host    replication     all             SLAVE-SUNUCU-IP-ADRESI/32   md5
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>host<span class="w">    </span>all<span class="w">             </span>all<span class="w">             </span>MASTER-SUNUCU-IP-ADRESI/32<span class="w">   </span>md5
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>host<span class="w">    </span>all<span class="w">             </span>all<span class="w">             </span>SLAVE-SUNUCU-IP-ADRESI/32<span class="w">   </span>md5
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>host<span class="w">    </span>replication<span class="w">     </span>all<span class="w">             </span>MASTER-SUNUCU-IP-ADRESI/32<span class="w">   </span>md5
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>host<span class="w">    </span>replication<span class="w">     </span>all<span class="w">             </span>SLAVE-SUNUCU-IP-ADRESI/32<span class="w">   </span>md5
+</span></code></pre></div>
 <ol>
 <li>Master sunucuda yeni bir replikasyon kullanıcısı oluşturulur(eğer böyle bir kullanıcı varsa duruma göre bu adım atlanabilir fakat güvenlik amacıyla önerilir)</li>
 </ol>
-<pre><code>sudo -i -u postgres psql (sudo yoksa postgres kullanicisina geçilip psql'a bağlanılır)
-CREATE USER sysadm WITH REPLICATION ENCRYPTED PASSWORD 'PAROLA-BURAYA*GELECEK';
-\q
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>sudo -i -u postgres psql (sudo yoksa postgres kullanicisina geçilip psql&#39;a bağlanılır)
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>CREATE USER sysadm WITH REPLICATION ENCRYPTED PASSWORD &#39;PAROLA-BURAYA*GELECEK&#39;;
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>\q
+</span></code></pre></div>
 <ol>
 <li>Her iki sunucuda PostgreSQL yeniden başlatılır</li>
 </ol>
-<pre><code class="language-bash">sudo systemctl restart postgresql
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>sudo<span class="w"> </span>systemctl<span class="w"> </span>restart<span class="w"> </span>postgresql
+</span></code></pre></div>
 <ol>
 <li>Master sunucuda replikasyon işleminin yapılandırılması gerekmektedir. Master sunucudaki postgresql.conf dosyası açılır;</li>
 </ol>
-<pre><code class="language-bash">/etc/postgresql/15/main/postgresql.conf
-</code></pre>
-<pre><code>wal_level = replica # Write-Ahead Log Seviyesi. Cluster için replica veya logical seviyesi gerekir.
-max_wal_senders = 5 # Aynı anda kaç adet slave sunucunun bağlanabileceği
-hot_standby = on # Slave sunucuların sadece okuma amaçlı sorguları kabul edip etmeyeceğini belirler
-wal_log_hints = on # Backup alırken veri bozulmalarını önlemeye yardımcı olabilir.
-synchronous_commit = off #
-max_replication_slots = 2 # Cluster Sayısı Kadar Ayarlanmali
-</code></pre>
-<ol>
-<li>Yapılan ayarlamalardan sonra postgresql yeniden başlatılır.</li>
-</ol>
-<pre><code>systemctl restart postgresql
-</code></pre>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>/etc/postgresql/15/main/postgresql.conf
+</span></code></pre></div>
+<p><div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>wal_level = replica # Write-Ahead Log Seviyesi. Cluster için replica veya logical seviyesi gerekir.
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>max_wal_senders = 5 # Aynı anda kaç adet slave sunucunun bağlanabileceği
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>hot_standby = on # Slave sunucuların sadece okuma amaçlı sorguları kabul edip etmeyeceğini belirler
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>wal_log_hints = on # Backup alırken veri bozulmalarını önlemeye yardımcı olabilir.
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>synchronous_commit = off #
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>max_replication_slots = 2 # Cluster Sayısı Kadar Ayarlanmali
+</span></code></pre></div>
+8. Yapılan ayarlamalardan sonra postgresql yeniden başlatılır.</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>systemctl restart postgresql
+</span></code></pre></div>
 <ol>
 <li>Slave sunucularda kullanılmak için bir <code>base backup</code> alınması gerekmektedir.</li>
 </ol>
-<pre><code>sudo mkdir -p /tmp/pg_master_backup
-sudo chown postgres:postgres /tmp/pg_master_backup
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>sudo mkdir -p /tmp/pg_master_backup
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>sudo chown postgres:postgres /tmp/pg_master_backup
+</span></code></pre></div>
 <p>Komuttaki -X Stream parametresi WAL dosyalarinin yedekleme sirasinda surekli olarak alinmasini saglar. Slave olan sunucuya bu dosya import edildikten sonra master ile hemen senkronize olmasi icin onemlidir.</p>
-<pre><code>sudo -i -u postgres pg_basebackup -h &lt;Master IP Adresi&gt; -D /tmp/pg_master_backup -U sysadm -v -P -X stream
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>sudo -i -u postgres pg_basebackup -h &lt;Master IP Adresi&gt; -D /tmp/pg_master_backup -U sysadm -v -P -X stream
+</span></code></pre></div>
 <p>Daha önce oluşturulan <code>sysadm</code> kullanıcısının Parolası girildikten sonra aşağıdaki gibi bir çıktı oluşacaktır</p>
-<pre><code>root@db-1[192.168.122.50] /etc/postgresql/15/main &gt; sudo -i -u postgres pg_basebackup -h 192.168.122.50 -D /tmp/pg_master_backup -U sysadm -v -P -X stream
-Password: 
-pg_basebackup: initiating base backup, waiting for checkpoint to complete
-pg_basebackup: checkpoint completed
-pg_basebackup: write-ahead log start point: 0/2000028 on timeline 1
-pg_basebackup: starting background WAL receiver
-pg_basebackup: created temporary replication slot &quot;pg_basebackup_1864&quot;
-30596/30596 kB (100%), 1/1 tablespace                                         
-pg_basebackup: write-ahead log end point: 0/2000100
-pg_basebackup: waiting for background process to finish streaming ...
-pg_basebackup: syncing data to disk ...
-pg_basebackup: renaming backup_manifest.tmp to backup_manifest
-pg_basebackup: base backup completed
-</code></pre>
-<h2 id="10-slave-sunucuda-postgresql-durdurulur">10. Slave Sunucuda Postgresql Durdurulur</h2>
-<pre><code>systemctl stop postgresql
-</code></pre>
-<h2 id="11-slave-sunucudaki-postgresql-data-dizini-silinir">11. Slave sunucudaki postgreSQL data dizini silinir.</h2>
-<p><strong>ÖNEMLİ BİR DATA VARSA MUTLAKA YEDEĞİ ALINMALIDIR</strong></p>
-<pre><code>rm -rf /var/lib/postgresql/15/main/*
-</code></pre>
-<h2 id="12-maste-sunucuda-alnan-yedek-slave-sunucusuna-kopyalanr">12. Maste Sunucuda Alınan Yedek Slave Sunucusuna Kopyalanır</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>root@db-1[192.168.122.50] /etc/postgresql/15/main &gt; sudo -i -u postgres pg_basebackup -h 192.168.122.50 -D /tmp/pg_master_backup -U sysadm -v -P -X stream
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>Password: 
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a>pg_basebackup: initiating base backup, waiting for checkpoint to complete
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a>pg_basebackup: checkpoint completed
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a>pg_basebackup: write-ahead log start point: 0/2000028 on timeline 1
+</span><span id="__span-11-6"><a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a>pg_basebackup: starting background WAL receiver
+</span><span id="__span-11-7"><a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a>pg_basebackup: created temporary replication slot &quot;pg_basebackup_1864&quot;
+</span><span id="__span-11-8"><a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a>30596/30596 kB (100%), 1/1 tablespace                                         
+</span><span id="__span-11-9"><a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a>pg_basebackup: write-ahead log end point: 0/2000100
+</span><span id="__span-11-10"><a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a>pg_basebackup: waiting for background process to finish streaming ...
+</span><span id="__span-11-11"><a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a>pg_basebackup: syncing data to disk ...
+</span><span id="__span-11-12"><a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a>pg_basebackup: renaming backup_manifest.tmp to backup_manifest
+</span><span id="__span-11-13"><a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a>pg_basebackup: base backup completed
+</span></code></pre></div>
+<h2 id="10-slave-sunucuda-postgresql-durdurulur">10. Slave Sunucuda Postgresql Durdurulur<a class="headerlink" href="#10-slave-sunucuda-postgresql-durdurulur" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>systemctl stop postgresql
+</span></code></pre></div>
+<h2 id="11-slave-sunucudaki-postgresql-data-dizini-silinir">11. Slave sunucudaki postgreSQL data dizini silinir.<a class="headerlink" href="#11-slave-sunucudaki-postgresql-data-dizini-silinir" title="Permanent link">&para;</a></h2>
+<p><strong>ÖNEMLİ BİR DATA VARSA MUTLAKA YEDEĞİ ALINMALIDIR</strong>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>rm -rf /var/lib/postgresql/15/main/*
+</span></code></pre></div></p>
+<h2 id="12-maste-sunucuda-alnan-yedek-slave-sunucusuna-kopyalanr">12. Maste Sunucuda Alınan Yedek Slave Sunucusuna Kopyalanır<a class="headerlink" href="#12-maste-sunucuda-alnan-yedek-slave-sunucusuna-kopyalanr" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Master'daki <code>/tmp/pg_master_backup</code> dizini slave sunucuya kopyalanir.</li>
 </ul>
 <p>Master sunucudan alınan yedekler Slave sunucusunda <code>/var/lib/postgresql/15/main/</code> dizinine kopyalanir.</p>
-<h2 id="13-slave-sunucuda-izinler-ayarlanr">13. Slave Sunucuda İzinler Ayarlanır</h2>
-<pre><code>chown -R postgres:postgres /var/lib/postgresql/15/main
-chmod -R 0700 /var/lib/postgresql/15/main
-</code></pre>
-<h2 id="14-slave-sunucusundaki-cluster-ayarlari-yapilir">14. Slave Sunucusundaki Cluster Ayarlari Yapilir.</h2>
-<pre><code>vim /etc/postgresql/15/main/postgresql.conf
-</code></pre>
-<pre><code>hot_standby = on # Mutlaka ON olmali. Read sorgulari kabul ederken ayni zamanda verileri replike etmesini saglar.
-primary_conninfo = 'host=MASTER-DB-IP port=5432 user=sysadm password=parola_buraya_gelecek'
-primary_slot_name = 'db2'
-</code></pre>
-<h2 id="15-slave-sunucuda-standby-signal-dosyasnn-olusturulmas">15. Slave Sunucuda Standby Signal Dosyasının Oluşturulması</h2>
-<p>PostgreSQL 12 ve sonraki sürümlerde, bir sunucunun standby (kopya) olarak başlatılacağını belirtmek için boş bir standby.signal dosyası kullanılır. Main dizininin içerisinde olur.</p>
-<pre><code>touch /var/lib/postgresql/15/main/standby.signal
-chown postgres:postgres /var/lib/postgresql/15/main/standby.signal
-</code></pre>
-<h2 id="16-master-sunucuda-db2-replikasyonunun-olusturulmasi">16. Master Sunucuda db2 replikasyonunun olusturulmasi</h2>
-<pre><code>psql -U postgres
-
-SELECT pg_create_physical_replication_slot('db2');
-\q
-</code></pre>
-<h2 id="17-slave-sunucuda-postgresql-tekrar-baslatlr">17. Slave Sunucuda PostgreSQL Tekrar Başlatılır</h2>
-<pre><code>systemctl start postgresql
-</code></pre>
+<h2 id="13-slave-sunucuda-izinler-ayarlanr">13. Slave Sunucuda İzinler Ayarlanır<a class="headerlink" href="#13-slave-sunucuda-izinler-ayarlanr" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>chown -R postgres:postgres /var/lib/postgresql/15/main
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>chmod -R 0700 /var/lib/postgresql/15/main
+</span></code></pre></div>
+<h2 id="14-slave-sunucusundaki-cluster-ayarlari-yapilir">14. Slave Sunucusundaki Cluster Ayarlari Yapilir.<a class="headerlink" href="#14-slave-sunucusundaki-cluster-ayarlari-yapilir" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>vim /etc/postgresql/15/main/postgresql.conf
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>hot_standby = on # Mutlaka ON olmali. Read sorgulari kabul ederken ayni zamanda verileri replike etmesini saglar.
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>primary_conninfo = &#39;host=MASTER-DB-IP port=5432 user=sysadm password=parola_buraya_gelecek&#39;
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>primary_slot_name = &#39;db2&#39;
+</span></code></pre></div>
+<h2 id="15-slave-sunucuda-standby-signal-dosyasnn-olusturulmas">15. Slave Sunucuda Standby Signal Dosyasının Oluşturulması<a class="headerlink" href="#15-slave-sunucuda-standby-signal-dosyasnn-olusturulmas" title="Permanent link">&para;</a></h2>
+<p>PostgreSQL 12 ve sonraki sürümlerde, bir sunucunun standby (kopya) olarak başlatılacağını belirtmek için boş bir standby.signal dosyası kullanılır. Main dizininin içerisinde olur.
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>touch /var/lib/postgresql/15/main/standby.signal
+</span><span id="__span-17-2"><a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>chown postgres:postgres /var/lib/postgresql/15/main/standby.signal
+</span></code></pre></div></p>
+<h2 id="16-master-sunucuda-db2-replikasyonunun-olusturulmasi">16. Master Sunucuda db2 replikasyonunun olusturulmasi<a class="headerlink" href="#16-master-sunucuda-db2-replikasyonunun-olusturulmasi" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>psql -U postgres
+</span><span id="__span-18-2"><a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a>
+</span><span id="__span-18-3"><a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a>SELECT pg_create_physical_replication_slot(&#39;db2&#39;);
+</span><span id="__span-18-4"><a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a>\q
+</span></code></pre></div>
+<h2 id="17-slave-sunucuda-postgresql-tekrar-baslatlr">17. Slave Sunucuda PostgreSQL Tekrar Başlatılır<a class="headerlink" href="#17-slave-sunucuda-postgresql-tekrar-baslatlr" title="Permanent link">&para;</a></h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>systemctl start postgresql
+</span></code></pre></div>
 <p>Sorunsuz bir sekilde cluster yapisi kurulmus durumdadir.</p>
 
 
@@ -2985,12 +3715,60 @@ SELECT pg_create_physical_replication_slot('db2');
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Başa dön
+</button>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../../../javascript/jwt/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: JWT">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                JWT
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../../mongoshell-komutlari/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Mongo Shell Komutları">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sonraki
+              </span>
+              <div class="md-ellipsis">
+                Mongo Shell Komutları
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -3014,7 +3792,7 @@ SELECT pg_create_physical_replication_slot('db2');
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../../..", "features": ["palette.toggle", "content.action.edit"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    <script id="__config" type="application/json">{"base": "../../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.code.copy", "content.code.annotate", "content.tabs.link", "palette.toggle"], "search": "../../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
     
     
       <script src="../../../assets/javascripts/bundle.525ec568.min.js"></script>

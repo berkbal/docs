@@ -65,7 +65,7 @@
     
     
     
-    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue">
   
     
     <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
@@ -88,7 +88,7 @@
 
   
 
-<header class="md-header md-header--shadow" data-md-component="header">
+<header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Başlık">
     <a href="../.." title="Docs for SysAdmins" class="md-header__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
@@ -122,9 +122,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Karanlık moda geç"  type="radio" name="__palette" id="__palette_0">
     
-      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+      <label class="md-header__button md-icon" title="Karanlık moda geç" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -132,9 +132,9 @@
     
     
     
-    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="blue"  aria-label="Aydınlık moda geç"  type="radio" name="__palette" id="__palette_1">
     
-      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+      <label class="md-header__button md-icon" title="Aydınlık moda geç" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
       </label>
     
@@ -164,11 +164,18 @@
       </label>
       <nav class="md-search__options" aria-label="Ara">
         
+          <a href="javascript:void(0)" class="md-search__icon md-icon" title="Paylaş" aria-label="Paylaş" data-clipboard data-clipboard-text="" data-md-component="search-share" tabindex="-1">
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.15c-.05.21-.08.43-.08.66 0 1.61 1.31 2.91 2.92 2.91s2.92-1.3 2.92-2.91A2.92 2.92 0 0 0 18 16.08"/></svg>
+          </a>
+        
         <button type="reset" class="md-search__icon md-icon" title="Temizle" aria-label="Temizle" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
       
     </form>
     <div class="md-search__output">
@@ -199,13 +206,319 @@
     
   </nav>
   
+    
+      
+<nav class="md-tabs" aria-label="Sekmeler" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../.." class="md-tabs__link">
+        
+  
+    
+  
+  Ana Sayfa
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../linux/rhel/firewall/" class="md-tabs__link">
+          
+  
+    
+  
+  Linux
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../kubernetes/kubernetes/" class="md-tabs__link">
+          
+  
+    
+  
+  Kubernetes
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../ansible/ansible/" class="md-tabs__link">
+          
+  
+    
+  
+  Ansible
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../mail/mailu/" class="md-tabs__link">
+          
+  
+    
+  
+  Mail
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+    
+  
+  Sanallaştırma
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../guncelleme/gitlab/" class="md-tabs__link">
+          
+  
+    
+  
+  Güncelleme
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../docker/docker-compose-dosyalari/wireguard/wireguard/" class="md-tabs__link">
+          
+  
+    
+  
+  Docker
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../haproxy/frontend-backend-ekleme/" class="md-tabs__link">
+          
+  
+    
+  
+  Haproxy
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../freepbx/sertifika-yenileme/" class="md-tabs__link">
+          
+  
+    
+  
+  Asterisk/Freepbx
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../javascript/bcrypt/" class="md-tabs__link">
+          
+  
+    
+  
+  Javascript
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../veritabani/postgresql/postgresql-cluster-kurulumu/" class="md-tabs__link">
+          
+  
+    
+  
+  Veritabani
+
+        </a>
+      </li>
+    
+  
+
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../../linux/masaustu-ikon-olusturma/" class="md-tabs__link">
+          
+  
+    
+  
+  İşe Yarar
+
+        </a>
+      </li>
+    
+  
+
+      
+    </ul>
+  </div>
+</nav>
+    
+  
 </header>
     
     <div class="md-container" data-md-component="container">
       
       
-        
-          
         
       
       <main class="md-main" data-md-component="main">
@@ -219,8 +532,10 @@
                     
 
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigasyon" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigasyon" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href="../.." title="Docs for SysAdmins" class="md-nav__button md-logo" aria-label="Docs for SysAdmins" data-md-component="logo">
       
@@ -272,13 +587,42 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2" >
         
           
           <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
@@ -307,13 +651,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_1" >
         
           
           <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
@@ -371,13 +726,42 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_2" >
         
           
           <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
@@ -771,13 +1155,32 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10" >
         
           
           <label class="md-nav__link" for="__nav_2_10" id="__nav_2_10_label" tabindex="0">
@@ -890,13 +1293,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_10_5" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_2_10_5" >
         
           
           <label class="md-nav__link" for="__nav_2_10_5" id="__nav_2_10_5_label" tabindex="0">
@@ -1011,13 +1429,30 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3" >
         
           
           <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
@@ -1067,13 +1502,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_2" >
         
           
           <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
@@ -1173,13 +1623,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_3" >
         
           
           <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
@@ -1237,13 +1698,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_3_4" >
         
           
           <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
@@ -1263,6 +1737,27 @@
             Kubernetes Objeleri
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../kubernetes/node/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Node
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -1308,13 +1803,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
         
           
           <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
@@ -1413,13 +1923,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
         
           
           <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
@@ -1499,16 +2022,30 @@
   
     
     
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+      
+      
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
-          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1536,16 +2073,32 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_1" checked>
         
           
-          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_1" id="__nav_6_1_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1718,16 +2271,32 @@
   
     
     
+      
+        
+      
+        
+      
     
     
-    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        
+          
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6_2" >
         
           
-          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_6_2" id="__nav_6_2_label" tabindex="">
             
   
   <span class="md-ellipsis">
@@ -1810,13 +2379,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_7" >
         
           
           <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
@@ -1873,13 +2453,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8" >
         
           
           <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
@@ -1908,13 +2499,28 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_8_1" >
         
           
           <label class="md-nav__link" for="__nav_8_1" id="__nav_8_1_label" tabindex="0">
@@ -2021,13 +2627,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9" >
         
           
           <label class="md-nav__link" for="__nav_9" id="__nav_9_label" tabindex="0">
@@ -2077,13 +2696,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_9_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_9_2" >
         
           
           <label class="md-nav__link" for="__nav_9_2" id="__nav_9_2_label" tabindex="0">
@@ -2148,13 +2778,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_10" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_10" >
         
           
           <label class="md-nav__link" for="__nav_10" id="__nav_10_label" tabindex="0">
@@ -2211,13 +2852,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_11" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_11" >
         
           
           <label class="md-nav__link" for="__nav_11" id="__nav_11_label" tabindex="0">
@@ -2295,13 +2949,26 @@
   
     
     
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12" >
         
           
           <label class="md-nav__link" for="__nav_12" id="__nav_12_label" tabindex="0">
@@ -2330,13 +2997,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_1" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_1" >
         
           
           <label class="md-nav__link" for="__nav_12_1" id="__nav_12_1_label" tabindex="0">
@@ -2394,13 +3072,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_12_2" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_12_2" >
         
           
           <label class="md-nav__link" for="__nav_12_2" id="__nav_12_2_label" tabindex="0">
@@ -2465,13 +3154,32 @@
   
     
     
+      
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13" >
         
           
           <label class="md-nav__link" for="__nav_13" id="__nav_13_label" tabindex="0">
@@ -2563,13 +3271,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_4" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_4" >
         
           
           <label class="md-nav__link" for="__nav_13_4" id="__nav_13_4_label" tabindex="0">
@@ -2627,13 +3346,24 @@
   
     
     
+      
+        
+      
+    
+    
+      
+      
+        
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_13_5" >
+          
+        
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_13_5" >
         
           
           <label class="md-nav__link" for="__nav_13_5" id="__nav_13_5_label" tabindex="0">
@@ -2775,170 +3505,170 @@
   
 
 
-<h1 id="libvirtin-network-sistemi">Libvirt'in Network Sistemi</h1>
-<h2 id="libvirt-uzerinde-calisan-default-network">Libvirt Uzerinde Calisan Default Network</h2>
+<h1 id="libvirtin-network-sistemi">Libvirt'in Network Sistemi<a class="headerlink" href="#libvirtin-network-sistemi" title="Permanent link">&para;</a></h1>
+<h2 id="libvirt-uzerinde-calisan-default-network">Libvirt Uzerinde Calisan Default Network<a class="headerlink" href="#libvirt-uzerinde-calisan-default-network" title="Permanent link">&para;</a></h2>
 <p>Asagidaki komut ile libvirt ile birlikte calisan networkler listelenebilir.</p>
-<pre><code>virsh net-list --all
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>virsh net-list --all
+</span></code></pre></div>
 <p>Libvirt kurulumu ile birlikte gelen varsayilan networkun adi defaultdur. Ilk kurulumda otomatik olarak baslamaz, el ile baslastilmasi ve duruma gore autostart hale getirilmesi gerekebilir.</p>
 <p>Bu network baslatildiktan sonra virbr0 adinda bir network interfaceinin olustugunu gorebiliriz. 4 numarali interface. <strong>Bu interface sanal bir switch gorevi gorur. Olusturulan sanal makineler bu switch'e bagliymis gibi davranir.</strong></p>
-<pre><code>berk@berk-notebook:~/Documents/repos/docs$ ip a
-1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
-    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
-       valid_lft forever preferred_lft forever
-    inet6 ::1/128 scope host noprefixroute 
-       valid_lft forever preferred_lft forever
-2: enp4s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
-    link/ether 88:a4:c2:54:35:af brd ff:ff:ff:ff:ff:ff
-3: wlp0s20f3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether cc:15:31:ea:8d:ff brd ff:ff:ff:ff:ff:ff
-    inet 192.168.1.178/24 brd 192.168.1.255 scope global dynamic noprefixroute wlp0s20f3
-       valid_lft 70988sec preferred_lft 70988sec
-    inet6 fd00::bdfb:aa4a:5494:e47d/64 scope global temporary dynamic 
-       valid_lft 29sec preferred_lft 29sec
-    inet6 fd00::a54a:d2b6:a31e:cbc2/64 scope global dynamic mngtmpaddr noprefixroute 
-       valid_lft 29sec preferred_lft 29sec
-    inet6 fe80::e6c3:321a:f4cc:d0c2/64 scope link noprefixroute 
-       valid_lft forever preferred_lft forever
-4: virbr0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether 52:54:00:91:e2:8d brd ff:ff:ff:ff:ff:ff
-    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
-       valid_lft forever preferred_lft forever
-</code></pre>
-<h2 id="dhcp-ve-dnsmasq">DHCP ve DNSMASQ</h2>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>berk@berk-notebook:~/Documents/repos/docs$ ip a
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>1: lo: &lt;LOOPBACK,UP,LOWER_UP&gt; mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    inet 127.0.0.1/8 scope host lo
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>       valid_lft forever preferred_lft forever
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>    inet6 ::1/128 scope host noprefixroute 
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>       valid_lft forever preferred_lft forever
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>2: enp4s0: &lt;NO-CARRIER,BROADCAST,MULTICAST,UP&gt; mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>    link/ether 88:a4:c2:54:35:af brd ff:ff:ff:ff:ff:ff
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>3: wlp0s20f3: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>    link/ether cc:15:31:ea:8d:ff brd ff:ff:ff:ff:ff:ff
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>    inet 192.168.1.178/24 brd 192.168.1.255 scope global dynamic noprefixroute wlp0s20f3
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>       valid_lft 70988sec preferred_lft 70988sec
+</span><span id="__span-1-14"><a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>    inet6 fd00::bdfb:aa4a:5494:e47d/64 scope global temporary dynamic 
+</span><span id="__span-1-15"><a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>       valid_lft 29sec preferred_lft 29sec
+</span><span id="__span-1-16"><a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    inet6 fd00::a54a:d2b6:a31e:cbc2/64 scope global dynamic mngtmpaddr noprefixroute 
+</span><span id="__span-1-17"><a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>       valid_lft 29sec preferred_lft 29sec
+</span><span id="__span-1-18"><a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>    inet6 fe80::e6c3:321a:f4cc:d0c2/64 scope link noprefixroute 
+</span><span id="__span-1-19"><a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a>       valid_lft forever preferred_lft forever
+</span><span id="__span-1-20"><a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a>4: virbr0: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+</span><span id="__span-1-21"><a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a>    link/ether 52:54:00:91:e2:8d brd ff:ff:ff:ff:ff:ff
+</span><span id="__span-1-22"><a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a>    inet 192.168.122.1/24 brd 192.168.122.255 scope global virbr0
+</span><span id="__span-1-23"><a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a>       valid_lft forever preferred_lft forever
+</span></code></pre></div>
+<h2 id="dhcp-ve-dnsmasq">DHCP ve DNSMASQ<a class="headerlink" href="#dhcp-ve-dnsmasq" title="Permanent link">&para;</a></h2>
 <p>Libvirt kurulumu ile birlikte gelen, arkada calisan bir process mevcut. Adi dnsmasq.</p>
-<pre><code>berk@berk-notebook:~/Documents/repos/docs$ ps aux | grep -i dnsmasq
-libvirt+    3777  0.0  0.0  11484  2348 ?        S    09:19   0:01 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
-root        3778  0.0  0.0  11484  1708 ?        S    09:19   0:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
-dnsmasq     4765  0.7  2.9 2037796 470492 ?      Ssl  09:19   6:04 mysqld
-berk      911011  0.0  0.0   9144  2304 pts/0    S+   23:22   0:00 grep --color=auto -i dnsmasq
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>berk@berk-notebook:~/Documents/repos/docs$ ps aux | grep -i dnsmasq
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>libvirt+    3777  0.0  0.0  11484  2348 ?        S    09:19   0:01 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>root        3778  0.0  0.0  11484  1708 ?        S    09:19   0:00 /usr/sbin/dnsmasq --conf-file=/var/lib/libvirt/dnsmasq/default.conf --leasefile-ro --dhcp-script=/usr/lib/libvirt/libvirt_leaseshelper
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>dnsmasq     4765  0.7  2.9 2037796 470492 ?      Ssl  09:19   6:04 mysqld
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>berk      911011  0.0  0.0   9144  2304 pts/0    S+   23:22   0:00 grep --color=auto -i dnsmasq
+</span></code></pre></div>
 <p>Dnsmasq, kucuk networkler icin tasarlanmis DNS ve DHCP sunucusudur. Genellikle local networklerde DNS isteklerini cozmek, ip adresleri atamak ve ag yonetimini kolaylastirmak amaciyla kullanilir. Yani libvirt'in default networkunu kullandigimizda aslinda ipleri dagitan yazilim dnsmasq diyebiliriz.</p>
 <p>Buradan dnsmasq'in configine bakarak dhcp-range'ini ogrenebiliriz. Bu ayarlar libvirt tarafindan otomatik olarak yapilir.</p>
-<pre><code>berk@berk-notebook:~/Documents/repos/docs$ sudo cat /var/lib/libvirt/dnsmasq/default.conf 
-[sudo] password for berk: 
-##WARNING:  THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
-##OVERWRITTEN AND LOST.  Changes to this configuration should be made using:
-##    virsh net-edit default
-## or other application using the libvirt API.
-##
-## dnsmasq conf file created by libvirt
-strict-order
-user=libvirt-dnsmasq
-pid-file=/run/libvirt/network/default.pid
-except-interface=lo
-bind-dynamic
-interface=virbr0
-dhcp-range=192.168.122.2,192.168.122.254,255.255.255.0
-dhcp-no-override
-dhcp-authoritative
-dhcp-lease-max=253
-dhcp-hostsfile=/var/lib/libvirt/dnsmasq/default.hostsfile
-addn-hosts=/var/lib/libvirt/dnsmasq/default.addnhosts
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>berk@berk-notebook:~/Documents/repos/docs$ sudo cat /var/lib/libvirt/dnsmasq/default.conf 
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>[sudo] password for berk: 
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>##WARNING:  THIS IS AN AUTO-GENERATED FILE. CHANGES TO IT ARE LIKELY TO BE
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>##OVERWRITTEN AND LOST.  Changes to this configuration should be made using:
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>##    virsh net-edit default
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>## or other application using the libvirt API.
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>##
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>## dnsmasq conf file created by libvirt
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>strict-order
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>user=libvirt-dnsmasq
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>pid-file=/run/libvirt/network/default.pid
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>except-interface=lo
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>bind-dynamic
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>interface=virbr0
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>dhcp-range=192.168.122.2,192.168.122.254,255.255.255.0
+</span><span id="__span-3-16"><a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>dhcp-no-override
+</span><span id="__span-3-17"><a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>dhcp-authoritative
+</span><span id="__span-3-18"><a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>dhcp-lease-max=253
+</span><span id="__span-3-19"><a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>dhcp-hostsfile=/var/lib/libvirt/dnsmasq/default.hostsfile
+</span><span id="__span-3-20"><a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>addn-hosts=/var/lib/libvirt/dnsmasq/default.addnhosts
+</span></code></pre></div>
 <p>Linux bir makineye libvirt kurulumu yapildiginda ve default network aktif edildiginde otomatik olarak sanal bir bridge ve dhcp serveri otomatik olarak kuruluyor.</p>
-<h2 id="sanal-makineler-ve-libvirtin-network-sistemi">Sanal Makineler ve Libvirt'in Network Sistemi</h2>
+<h2 id="sanal-makineler-ve-libvirtin-network-sistemi">Sanal Makineler ve Libvirt'in Network Sistemi<a class="headerlink" href="#sanal-makineler-ve-libvirtin-network-sistemi" title="Permanent link">&para;</a></h2>
 <p>Simdi sanal makinelerimizin durumlarini inceleyelim.</p>
-<pre><code>berk@berk-notebook:~/Documents/repos/docs$ virsh list --all
- Id   Name             State
----------------------------------
- -    debian12-fresh   shut off
- -    ubuntu24.04      shut off
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>berk@berk-notebook:~/Documents/repos/docs$ virsh list --all
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a> Id   Name             State
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>---------------------------------
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a> -    debian12-fresh   shut off
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a> -    ubuntu24.04      shut off
+</span></code></pre></div>
 <p>Goruldugu uzere 2 adet sanal makine var ve ikisi de kapali gozukuyor. <code>virsh dumpxml</code> komutu ile bu sanal makinelerin ayar dosyalarini terminal uzerinde gorunteleyebiliriz.</p>
-<pre><code>berk@berk-notebook:~/Documents/repos/docs$ virsh dumpxml debian12-fresh | grep 'network='
-      &lt;source network='default'/&gt;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>berk@berk-notebook:~/Documents/repos/docs$ virsh dumpxml debian12-fresh | grep &#39;network=&#39;
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>      &lt;source network=&#39;default&#39;/&gt;
+</span></code></pre></div>
 <p>debian12-fresh isimli sanal makine network olarak <strong>default</strong> isimli networku kullaniyor. Yani Hypervisor olarak gorev yapan ana makinemizin uzerindeki virbr0 isimli interface uzerinden baglanti sagliyor.</p>
 <p>Bu sanal makineyi calistirdiktan sonra gerceklesen degisiklikleri gozlemleyelim;</p>
-<pre><code>virsh start debian12-fresh
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>virsh start debian12-fresh
+</span></code></pre></div>
 <p>Sanal makinemizi baslattiktan sonra ip a komutu ile interfacelerimizi tekrar kontrol edelim:</p>
-<pre><code>14: vnet1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue master virbr0 state UNKNOWN group default qlen 1000
-    link/ether fe:54:00:81:86:f7 brd ff:ff:ff:ff:ff:ff
-    inet6 fe80::fc54:ff:fe81:86f7/64 scope link 
-    valid_lft forever preferred_lft forever
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>14: vnet1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue master virbr0 state UNKNOWN group default qlen 1000
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>    link/ether fe:54:00:81:86:f7 brd ff:ff:ff:ff:ff:ff
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    inet6 fe80::fc54:ff:fe81:86f7/64 scope link 
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>    valid_lft forever preferred_lft forever
+</span></code></pre></div>
 <p>Yeni bir network interface'in belirdigini gozlemleyebiliriz. Bu olusan interface sanal makinenin bagli oldugu interfacedir. Gercekte sanal makinenin bagli oldugu switch olarak dusunebiliriz. </p>
 <p>Ayrica Interface'in detaylarina baktigimizda <code>master virbr0 state UNKNOWN</code> yazdigini gorebiliriz. Yani bu interface <code>virbr0</code> isimli interface'e bagli. <strong>virbr0</strong> da default isimli libvirt networkunun olusturdugu interface. <strong>Basitce</strong> asagidaki gibi gorsellestirebiliriz.</p>
 <p><img alt="libvirt default bridge yapisi" src="../../images/libvirt-1.png" /></p>
-<h2 id="hypervisor-kvm-host-uzerindeki-routing-table">Hypervisor (KVM Host) Uzerindeki Routing Table</h2>
+<h2 id="hypervisor-kvm-host-uzerindeki-routing-table">Hypervisor (KVM Host) Uzerindeki Routing Table<a class="headerlink" href="#hypervisor-kvm-host-uzerindeki-routing-table" title="Permanent link">&para;</a></h2>
 <p>Trafik host uzerindeki routing table kurallarina gore yonlenir. Host berkbal.com'a ulasmak istediginde gateway uzerinden yonlenir. Asagidaki komut ile routing table'a goz atabiliriz.</p>
-<pre><code>berk@berk-notebook:~/Documents/repos/docs$ route
-Kernel IP routing table
-Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
-default         _gateway        0.0.0.0         UG    600    0        0 wlp0s20f3
-172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
-172.18.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-970466c5d983
-172.19.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-4b58726a0486
-172.20.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-8fdaf0fbab2e
-192.168.1.0     0.0.0.0         255.255.255.0   U     600    0        0 wlp0s20f3
-192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 virbr0
-berk@berk-notebook:~/Documents/repos/docs$ 
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>berk@berk-notebook:~/Documents/repos/docs$ route
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>Kernel IP routing table
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a>default         _gateway        0.0.0.0         UG    600    0        0 wlp0s20f3
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a>172.17.0.0      0.0.0.0         255.255.0.0     U     0      0        0 docker0
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a>172.18.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-970466c5d983
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a>172.19.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-4b58726a0486
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a>172.20.0.0      0.0.0.0         255.255.0.0     U     0      0        0 br-8fdaf0fbab2e
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a>192.168.1.0     0.0.0.0         255.255.255.0   U     600    0        0 wlp0s20f3
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a>192.168.122.0   0.0.0.0         255.255.255.0   U     0      0        0 virbr0
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a>berk@berk-notebook:~/Documents/repos/docs$ 
+</span></code></pre></div>
 <p>default isimli kaynak <code>wlp0s20f3</code> isimli interface uzerinden internete cikis yapiyor.</p>
 <p>Lıbvırt'in varsayılan network yapisi bu sekilde calisiyor.</p>
-<h1 id="bridge-olusturmak">Bridge Olusturmak</h1>
+<h1 id="bridge-olusturmak">Bridge Olusturmak<a class="headerlink" href="#bridge-olusturmak" title="Permanent link">&para;</a></h1>
 <p>Varsayilan bridge'i kullanmak istemiyorsak veya baska bir bridge ihtiyaci duyuyorsak yeni bir birdge olusturabiliriz.</p>
 <p><code>ip</code> isimli araci kullanarak yeni bir bridge aygiti ekleyebiliriz.</p>
-<pre><code>ip link add name br1 type bridge
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>ip link add name br1 type bridge
+</span></code></pre></div>
 <p>Bu sekilde bir bridge tanimladiktan sonra bunu default libvirt network yapisinda oldugu gibi fiziksel ethernet cihazina baglamamiz gerekiyor.</p>
-<pre><code>ip link set eno1 master br1
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>ip link set eno1 master br1
+</span></code></pre></div>
 <p><strong>Buradaki eno1 fiziksel cihazinizi temsil eden interface olmali.</strong></p>
 <p>Simdi ekledigimiz bridge'e bir ip adresi verelim.</p>
-<pre><code>ip addr add 192.168.1.4/24 dev br1 brd 192.168.1.255
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>ip addr add 192.168.1.4/24 dev br1 brd 192.168.1.255
+</span></code></pre></div>
 <p><code>ip a</code> komutunun ciktisina baktigimizda bu interfacein bir ip adresine sahip oldugunu gorebiliriz. </p>
-<pre><code>18: br1: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN group default qlen 1000
-    link/ether 16:6f:bb:49:6a:09 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.4.7/16 brd 192.168.255.255 scope global br1
-    valid_lft forever preferred_lft forever
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>18: br1: &lt;BROADCAST,MULTICAST&gt; mtu 1500 qdisc noop state DOWN group default qlen 1000
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>    link/ether 16:6f:bb:49:6a:09 brd ff:ff:ff:ff:ff:ff
+</span><span id="__span-12-3"><a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>    inet 192.168.4.7/16 brd 192.168.255.255 scope global br1
+</span><span id="__span-12-4"><a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>    valid_lft forever preferred_lft forever
+</span></code></pre></div>
 <p>interface'in state'i DOWN durumda. Ayaga kaldiralim:</p>
-<pre><code>ip link set up br1
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>ip link set up br1
+</span></code></pre></div>
 <p>Tekrar ip a komutu ile kontrol ettigimizde state UP olarak gormeliyiz.</p>
-<pre><code>18: br1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether 16:6f:bb:49:6a:09 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.4.7/16 brd 192.168.255.255 scope global br1
-       valid_lft forever preferred_lft forever
-    inet6 fd00::d287:2e0d:95f7:bee6/64 scope global temporary dynamic 
-       valid_lft 30sec preferred_lft 30sec
-    inet6 fd00::146f:bbff:fe49:6a09/64 scope global dynamic mngtmpaddr 
-       valid_lft 30sec preferred_lft 30sec
-    inet6 fe80::146f:bbff:fe49:6a09/64 scope link 
-       valid_lft forever preferred_lft forever
-</code></pre>
-<pre><code>route add default gw 192.168.1.1 dev br1
-</code></pre>
-<h3 id="libvirte-olusturdugumuz-bridgei-entegre-etmek">Libvirt'e Oluşturduğumuz Bridge'i Entegre Etmek</h3>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>18: br1: &lt;BROADCAST,MULTICAST,UP,LOWER_UP&gt; mtu 1500 qdisc noqueue state UP group default qlen 1000
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>    link/ether 16:6f:bb:49:6a:09 brd ff:ff:ff:ff:ff:ff
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a>    inet 192.168.4.7/16 brd 192.168.255.255 scope global br1
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a>       valid_lft forever preferred_lft forever
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a>    inet6 fd00::d287:2e0d:95f7:bee6/64 scope global temporary dynamic 
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>       valid_lft 30sec preferred_lft 30sec
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a>    inet6 fd00::146f:bbff:fe49:6a09/64 scope global dynamic mngtmpaddr 
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a>       valid_lft 30sec preferred_lft 30sec
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a>    inet6 fe80::146f:bbff:fe49:6a09/64 scope link 
+</span><span id="__span-14-10"><a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a>       valid_lft forever preferred_lft forever
+</span></code></pre></div>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-15-1"><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>route add default gw 192.168.1.1 dev br1
+</span></code></pre></div>
+<h3 id="libvirte-olusturdugumuz-bridgei-entegre-etmek">Libvirt'e Oluşturduğumuz Bridge'i Entegre Etmek<a class="headerlink" href="#libvirte-olusturdugumuz-bridgei-entegre-etmek" title="Permanent link">&para;</a></h3>
 <p>Manuel olarak oluşturduğumuz br1 isimli köprüyü Libvirt'in tanıması ve kullanabilmesi için bir Libvirt ağ tanımı (network definition) oluşturmamız gerekiyor.</p>
 <p>Öncelikle, yeni köprümüz için bir XML tanım dosyası oluşturalım. Örneğin, br1-network.xml adında bir dosya yaratabiliriz:</p>
-<pre><code>&lt;network&gt;
-  &lt;name&gt;br1-network&lt;/name&gt;
-  &lt;forward mode='bridge'/&gt;
-  &lt;bridge name='br1'/&gt;
-  &lt;ip address='192.168.4.1' netmask='255.255.255.0'&gt;
-    &lt;dhcp&gt;
-      &lt;range start='192.168.4.100' end='192.168.4.200'/&gt;
-    &lt;/dhcp&gt;
-  &lt;/ip&gt;
-&lt;/network&gt;
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-16-1"><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a>&lt;network&gt;
+</span><span id="__span-16-2"><a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a>  &lt;name&gt;br1-network&lt;/name&gt;
+</span><span id="__span-16-3"><a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a>  &lt;forward mode=&#39;bridge&#39;/&gt;
+</span><span id="__span-16-4"><a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a>  &lt;bridge name=&#39;br1&#39;/&gt;
+</span><span id="__span-16-5"><a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a>  &lt;ip address=&#39;192.168.4.1&#39; netmask=&#39;255.255.255.0&#39;&gt;
+</span><span id="__span-16-6"><a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a>    &lt;dhcp&gt;
+</span><span id="__span-16-7"><a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a>      &lt;range start=&#39;192.168.4.100&#39; end=&#39;192.168.4.200&#39;/&gt;
+</span><span id="__span-16-8"><a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a>    &lt;/dhcp&gt;
+</span><span id="__span-16-9"><a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a>  &lt;/ip&gt;
+</span><span id="__span-16-10"><a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a>&lt;/network&gt;
+</span></code></pre></div>
 <p>XML dosyasını oluşturduktan sonra, bu tanımı Libvirt'e eklemeliyiz.</p>
-<pre><code>virsh net-define br1-network.xml
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-17-1"><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>virsh net-define br1-network.xml
+</span></code></pre></div>
 <p>Tanımladığımız ağı başlatmak için:</p>
-<pre><code>virsh net-start br1-network
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-18-1"><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a>virsh net-start br1-network
+</span></code></pre></div>
 <p>Sistem yeniden başlatıldığında bu ağın otomatik olarak başlamasını istersek:</p>
-<pre><code>virsh net-autostart br1-network
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-19-1"><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a>virsh net-autostart br1-network
+</span></code></pre></div>
 <p>Artık <code>virsh net-list --all</code> komutuyla yeni br1-network ağını listede görebiliriz.</p>
-<h3 id="sanal-makineleri-yeni-bridgee-baglamak">Sanal Makineleri Yeni Bridge'e Bağlamak</h3>
+<h3 id="sanal-makineleri-yeni-bridgee-baglamak">Sanal Makineleri Yeni Bridge'e Bağlamak<a class="headerlink" href="#sanal-makineleri-yeni-bridgee-baglamak" title="Permanent link">&para;</a></h3>
 <p>Sanal makinelerimizi bu bridge yapısına bağlamak istersek sanal makinenin XML dosyasını düzenlememşiz gerekmektedir.</p>
 <p>Örneğin, virsh edit debian12-fresh komutunu kullanarak sanal makinenin XML dosyasını aç ve ağ arayüzü (network interface) tanımını aşağıdaki gibi güncelle:</p>
 <p><interface type='network'>
@@ -2948,9 +3678,9 @@ berk@berk-notebook:~/Documents/repos/docs$
   <address type='pci' domain='0x0000' bus='0x01' slot='0x00' function='0x0'/></p>
 <p></interface></p>
 <p>Bu değişikliği yaptıktan sonra sanal makineyi kapatıp tekrar başlatmak gerekecek:</p>
-<pre><code>virsh shutdown debian12-fresh
-virsh start debian12-fresh
-</code></pre>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-20-1"><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>virsh shutdown debian12-fresh
+</span><span id="__span-20-2"><a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>virsh start debian12-fresh
+</span></code></pre></div>
 <p>Sanal makine başladığında, artık br1 köprüsü üzerinden bağlanacak.</p>
 
 
@@ -2969,12 +3699,60 @@ virsh start debian12-fresh
             </div>
           
           
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
 <script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Başa dön
+</button>
         
       </main>
       
         <footer class="md-footer">
+  
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../../linux/swaks/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Swaks">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                Swaks
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../libvirt-gercek-ip/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Gerçek Ip Adresi Ekleme İşlemi">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sonraki
+              </span>
+              <div class="md-ellipsis">
+                Gerçek Ip Adresi Ekleme İşlemi
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    
   
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
@@ -2998,7 +3776,7 @@ virsh start debian12-fresh
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "../..", "features": ["palette.toggle", "content.action.edit"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["navigation.instant", "navigation.tracking", "navigation.tabs", "navigation.tabs.sticky", "navigation.sections", "navigation.expand", "navigation.top", "navigation.footer", "navigation.indexes", "search.suggest", "search.highlight", "search.share", "content.action.edit", "content.code.copy", "content.code.annotate", "content.tabs.link", "palette.toggle"], "search": "../../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Kopyaland\u0131", "clipboard.copy": "Kopyala", "search.result.more.one": "Bu sayfada 1 tane daha", "search.result.more.other": "Bu sayfada # tane daha", "search.result.none": "E\u015fle\u015fen dok\u00fcman bulunamad\u0131", "search.result.one": "1 dok\u00fcman bulundu", "search.result.other": "# dok\u00fcman bulundu", "search.result.placeholder": "Aramaya ba\u015flamak i\u00e7in yaz\u0131n", "search.result.term.missing": "Eksik", "select.version": "Versiyon se\u00e7"}}</script>
     
     
       <script src="../../assets/javascripts/bundle.525ec568.min.js"></script>

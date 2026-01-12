@@ -140,17 +140,17 @@ nav:
   - Kubernetes:
     - Kubernetes Nedir?: kubernetes/kubernetes.md
     - Kubernetes Mimarisi:
-      - Giris: kubernetes/kubernetes-mimarisi.md
+      - kubernetes/kubernetes-mimarisi.md
       - Control Plane Bilesenleri: kubernetes/control-plane-bilesenleri.md
       - Worker Node Bilesenleri: kubernetes/worker-node-bilesenleri.md
     - Kubernetes Cluster Kurulumu:
       - Elbet Bir Gun: kubernetes/cluster-kurulumu.md
     - Kubernetes Objeleri:
+      - kubernetes/kubernetes-objeleri.md
       - Node: kubernetes/node.md
       - Pod: kubernetes/pod.md
       - Namespace: kubernetes/namespace.md
       - Label: kubernetes/label.md
-      
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

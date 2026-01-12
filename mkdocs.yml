@@ -140,7 +140,7 @@ nav:
   - Kubernetes:
     - kubernetes/kubernetes.md
     - Kubernetes Mimarisi:
-      - kubernetes/kubernetes-mimarisi.md
+      - Genel Bakis: kubernetes/kubernetes-mimarisi.md
       - Control Plane Bilesenleri: kubernetes/control-plane-bilesenleri.md
       - Worker Node Bilesenleri: kubernetes/worker-node-bilesenleri.md
     - Kubernetes Cluster Kurulumu:

@@ -1159,6 +1159,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#worker-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worker Node
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2698,6 +2707,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#worker-node" class="md-nav__link">
+    <span class="md-ellipsis">
+      Worker Node
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2729,8 +2747,11 @@
 <p>Control plane node'u kubernetes clusterini yonetmekten sorumludur. Bir clusterin beynidir denilebilir. Clusteri yonetmek icin Control Plane'e baglanmak gereklidir. Komut satirindan <code>kubectl</code> komutu ile veya api uzerinden kontrol edilebilir.</p>
 <p>Eger control plane kapanirsa cluster <strong>erisilemez</strong> ve <strong>yonetilemez</strong> durumda kalir. Bu sebepten dolayi birden fazla Control Plane yapilandirilmasi onerilir.</p>
 <p>Control Plane Node'daki bilesenler icin: <a href="../control-plane-bilesenleri/">buradan</a> devam et.
-Worker Node'daki bilesenler icin: <a href="../worker-node-bilesenleri/">buradan</a> devam.et
+Worker Node'daki bilesenler icin: <a href="../worker-node-bilesenleri/">buradan</a> devam et.
 Kubernetes Objeleri Icin: </p>
+<h2 id="worker-node">Worker Node</h2>
+<p>Worker node, deploy edilen uygulamalar icin calisma ortami saglar. Uygulamalar container'lar halinde podlar icerisinde calisir. Scheduler tarafindan bir worker node'a atanan pod, o node'daki kubelet tarafindanc alistirilir. Podlar, worker node'un CPU, bellek ve depolama kaynaklarini kullanir.</p>
+<p>Worker Node'daki bilesenler icin: <a href="../worker-node-bilesenleri/">buradan</a> devam et.</p>
 
 
 

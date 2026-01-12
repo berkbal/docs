@@ -1,8 +1,0 @@
-# Kubernetes klasörü için sıralama
-arrange:
-  - kubernetes.md
-  - kubernetes-mimarisi.md
-  - control-plane-bilesenleri.md
-  - worker-node-bilesenleri.md
-  - cluster-kurulumu.md
-  - ...  # Diğer dosyalar otomatik eklenecek

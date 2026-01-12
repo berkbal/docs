@@ -145,9 +145,11 @@ nav:
       - Worker Node Bilesenleri: kubernetes/worker-node-bilesenleri.md
     - Kubernetes Cluster Kurulumu:
       - Elbet Bir Gun: kubernetes/cluster-kurulumu.md
-    # - Kubernetes Objeleri:
-    #   - Node: kubernetes/node.md
-    #   - Namespace: kubernetes/namespace.md
+    - Kubernetes Objeleri:
+      - Node: kubernetes/node.md
+      - Pod: kubernetes/pod.md
+      - Namespace: kubernetes/namespace.md
+      - Label: kubernetes/label.md
       
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md

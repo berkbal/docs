@@ -105,6 +105,9 @@ markdown_extensions:
   - pymdownx.tasklist:          # Görev listeleri
       custom_checkbox: true
 
+extra:
+  generator: false  # Footer'daki "Made with Material for MkDocs" yazısını kaldırır
+
 nav:
   - Ana Sayfa: index.md
   - Linux:

@@ -12,8 +12,9 @@ theme:
     # Navigation
     - navigation.instant        # Hızlı sayfa geçişleri (SPA benzeri)
     - navigation.tracking       # URL'de aktif sayfa takibi
+    - navigation.tabs           # Üst menüde tab görünümü
+    - navigation.tabs.sticky    # Tab'ları üstte sabitle
     - navigation.sections       # Bölümleri grupla
-    - navigation.expand         # Alt menüleri otomatik aç
     - navigation.top            # "Yukarı çık" butonu
     - navigation.footer         # Önceki/Sonraki sayfa butonları
     - navigation.indexes        # Bölüm index sayfaları

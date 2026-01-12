@@ -9,25 +9,103 @@ theme:
   favicon: images/favicon.ico
   logo: images/berk-bal.png
   features:
-    - palette.toggle  # Karanlık mod/Aydinlik Mod
-    - content.action.edit # Edit Butonu
+    # Navigation
+    - navigation.instant        # Hızlı sayfa geçişleri (SPA benzeri)
+    - navigation.tracking       # URL'de aktif sayfa takibi
+    - navigation.tabs           # Üst menüde tab görünümü
+    - navigation.tabs.sticky    # Tab'ları üstte sabitle
+    - navigation.sections       # Bölümleri grupla
+    - navigation.expand         # Alt menüleri otomatik aç
+    - navigation.top            # "Yukarı çık" butonu
+    - navigation.footer         # Önceki/Sonraki sayfa butonları
+    - navigation.indexes        # Bölüm index sayfaları
+
+    # Search
+    - search.suggest            # Arama önerileri
+    - search.highlight          # Arama sonuçlarını vurgula
+    - search.share              # Arama sonuçlarını paylaş
+
+    # Content
+    - content.action.edit       # Edit butonu
+    - content.code.copy         # Kod bloklarına kopyala butonu
+    - content.code.annotate     # Kod açıklamaları
+    - content.tabs.link         # Tab'ları linklendirme
+
+    # Theme
+    - palette.toggle            # Karanlık mod toggle
+
   language: tr
 
   palette:
-
     # Palette toggle for light mode
     - media: "(prefers-color-scheme: light)"
       scheme: default
+      primary: indigo
+      accent: blue
       toggle:
         icon: material/brightness-7
-        name: Switch to dark mode
+        name: Karanlık moda geç
 
     # Palette toggle for dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate
+      primary: indigo
+      accent: blue
       toggle:
         icon: material/brightness-4
-        name: Switch to light mode
+        name: Aydınlık moda geç
+
+plugins:
+  - search:
+      lang: tr
+  - awesome-pages
+
+# Markdown Extensions - Güzel görünen içerikler için
+markdown_extensions:
+  # Python Markdown Extensions
+  - abbr                        # Kısaltmalar
+  - admonition                  # Uyarı kutuları (Note, Warning, vb.)
+  - attr_list                   # HTML özellikleri ekleme
+  - def_list                    # Tanım listeleri
+  - footnotes                   # Dipnotlar
+  - md_in_html                  # Markdown içinde HTML
+  - tables                      # Tablolar
+  - toc:                        # Table of Contents
+      permalink: true           # Başlıklara link ikonu ekle
+      toc_depth: 3              # 3 seviye derinlik
+
+  # PyMdown Extensions
+  - pymdownx.arithmatex:        # LaTeX matematik
+      generic: true
+  - pymdownx.betterem:          # Daha iyi emphasis
+      smart_enable: all
+  - pymdownx.caret              # Üst simge ^ işareti
+  - pymdownx.mark               # Metin vurgulama ==text==
+  - pymdownx.tilde              # Alt çizgi ~~strikethrough~~
+  - pymdownx.critic             # Değişiklikleri göster
+  - pymdownx.details            # Katlanabilir detaylar
+  - pymdownx.emoji:             # Emoji desteği
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:         # Kod vurgulama
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite       # Satır içi kod vurgulama
+  - pymdownx.keys               # Klavye tuşları ++ctrl+alt+del++
+  - pymdownx.magiclink          # Otomatik link dönüşümü
+  - pymdownx.smartsymbols       # Akıllı semboller
+  - pymdownx.snippets           # Dosya parçalarını dahil et
+  - pymdownx.superfences:       # Gelişmiş kod blokları
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:            # İçerik sekmeleri
+      alternate_style: true
+  - pymdownx.tasklist:          # Görev listeleri
+      custom_checkbox: true
+
 nav:
   - Ana Sayfa: index.md
   - Linux:
@@ -69,6 +147,7 @@ nav:
     - Kubernetes Cluster Kurulumu:
       - Elbet Bir Gun: kubernetes/cluster-kurulumu.md
     - Kubernetes Objeleri:
+      - Node: kubernetes/node.md
       - Namespace: kubernetes/namespace.md
       
   - Ansible: 

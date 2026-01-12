@@ -1,6 +1,7 @@
 # Python3 Virtual
 venv/
 env/
+.venv/
 
 # MkDocs Content
 

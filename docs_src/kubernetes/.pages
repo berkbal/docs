@@ -5,6 +5,4 @@ arrange:
   - control-plane-bilesenleri.md
   - worker-node-bilesenleri.md
   - cluster-kurulumu.md
-  - node.md
-  - namespace.md
   - ...  # Diğer dosyalar otomatik eklenecek

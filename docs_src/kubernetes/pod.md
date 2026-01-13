@@ -12,7 +12,7 @@ Podlar dogalari geregi kendi kendilerini onarma yetisine sahip degillerdir. Gene
 
 Asagidaki ornekte bir buyuk objeye bagimli olmadan bir pod nasil tanimlanir bunun ornegi mevcut:
 
-```
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:

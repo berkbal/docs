@@ -17,4 +17,7 @@ Kubernetes, Google tarafından başlatılmış ve Temmuz 2015'teki v1.0 sürüm�
 
 
 ### Kubernetes Objeleri
+- [Node](node.md)
+- [Pod](pod.md)
 - [Namespace](namespace.md)
+- [Label](label.md)

@@ -6,4 +6,4 @@ Eğer istenen sayıdan fazla Pod varsa, ReplicationController fazla olan sayıda
 
 ReplicationController operatörü, replikasyonun yanı sıra uygulama güncellemelerini de destekler. Ancak, varsayılan olarak önerilen denetleyici; uygulama Pod'larının yaşam döngüsünü yönetmek için bir ReplicaSet denetleyicisi yapılandıran Deployment nesnesidir.
 
-[ReplıcaSet](replicaset.md)'den devam edilmeli.
+[ReplicaSet](replicaset.md)'den devam edilmeli.

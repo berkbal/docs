@@ -61,6 +61,10 @@
          <lastmod>2026-01-21</lastmod>
     </url>
     <url>
+         <loc>https://berkbal.github.io/docs/kubernetes/deployment/</loc>
+         <lastmod>2026-01-21</lastmod>
+    </url>
+    <url>
          <loc>https://berkbal.github.io/docs/kubernetes/kubernetes-mimarisi/</loc>
          <lastmod>2026-01-21</lastmod>
     </url>
@@ -86,6 +90,10 @@
     </url>
     <url>
          <loc>https://berkbal.github.io/docs/kubernetes/pod/</loc>
+         <lastmod>2026-01-21</lastmod>
+    </url>
+    <url>
+         <loc>https://berkbal.github.io/docs/kubernetes/replicaset/</loc>
          <lastmod>2026-01-21</lastmod>
     </url>
     <url>

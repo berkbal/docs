@@ -38,3 +38,13 @@ kubectl create deployment nginx-deployment \
 --image=nginx:1.20.2 --port=80 --replicas=3 \
 --dry-run=client -o yaml > nginx-deploy.yaml
 ```
+
+# Update
+
+Deployment nesnesi oluşturulduktan sonra, Kubernetes sistemi nesneye status (durum) alanını ekler ve bunu gerekli tüm durum bilgileriyle doldurur.
+
+Aşağıdaki örnekte, yeni bir Deployment ReplicaSet A'yı oluşturur; o da ardından, her biri bir adet nginx:1.20.2 konteyner imajını çalıştıracak şekilde yapılandırılmış Pod Şablonuna sahip 3 Pod yaratır. Bu durumda ReplicaSet A, Deployment'ın bir durumunu temsil eden nginx:1.20.2 ile ilişkilendirilir. Bu belirli durum, Revizyon 1 olarak kaydedilir.
+
+![Deployment tarafından oluşturulan ReplicaSetler](image-4.png)
+
+Deployment nesnesinde güncelleme yaptığımızda ReplicaSet B devreye girer fakat ReplicaSet A geçmişte saklanır. İstediğimiz zaman buna geri dönebiliriz.

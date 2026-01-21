@@ -3571,6 +3571,11 @@
 </span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--image<span class="o">=</span>nginx:1.20.2<span class="w"> </span>--port<span class="o">=</span><span class="m">80</span><span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
 </span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>nginx-deploy.yaml
 </span></code></pre></div>
+<h1 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h1>
+<p>Deployment nesnesi oluşturulduktan sonra, Kubernetes sistemi nesneye status (durum) alanını ekler ve bunu gerekli tüm durum bilgileriyle doldurur.</p>
+<p>Aşağıdaki örnekte, yeni bir Deployment ReplicaSet A'yı oluşturur; o da ardından, her biri bir adet nginx:1.20.2 konteyner imajını çalıştıracak şekilde yapılandırılmış Pod Şablonuna sahip 3 Pod yaratır. Bu durumda ReplicaSet A, Deployment'ın bir durumunu temsil eden nginx:1.20.2 ile ilişkilendirilir. Bu belirli durum, Revizyon 1 olarak kaydedilir.</p>
+<p><img alt="Deployment tarafından oluşturulan ReplicaSetler" src="../image-4.png" /></p>
+<p>Deployment nesnesinde güncelleme yaptığımızda ReplicaSet B devreye girer fakat ReplicaSet A geçmişte saklanır. İstediğimiz zaman buna geri dönebiliriz.</p>
 
 
 

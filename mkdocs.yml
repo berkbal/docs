@@ -154,6 +154,7 @@ nav:
       - Pod: kubernetes/pod.md
       - Namespace: kubernetes/namespace.md
       - Label: kubernetes/label.md
+      - ReplicationController: kubernetes/replication-controller.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

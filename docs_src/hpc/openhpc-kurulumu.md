@@ -6,9 +6,9 @@
 
 Kurulum sirasinda dikkat edilecekler:
 
-- **System Role**: Server
+- **System Role**: Server seçilmeli (Desktop environment gereksiz)
 - **Partitioning**: LVM + ext4, swap 2GB yeterli
-- **Network**: Kurulumda DHCP, sonra statik IP verilecek
+- **Network**: Kurulumda DHCP, sonra statik IP atanacak
 
 ### 2. Temel Paket Kurulumu
 
@@ -25,7 +25,7 @@ Her sunucuda ilgili hostname atanir:
 ```bash
 hostnamectl set-hostname master    # veya node01, node02
 ```
-    
+
 ### 4. Hosts Dosyasi (Tüm Sunucularda Ayni)
 
 `/etc/hosts` dosyasina asagidaki satirlar eklenir:
@@ -327,6 +327,145 @@ normal*      up   infinite      2   idle node[01-02]
 ```
 
 Node'larin `idle` durumunda olmasi cluster'in hazir oldugunu gösterir.
+
+---
+
+## Compiler ve MPI Kurulumu
+
+### 1. Paket Kurulumu (Tüm Sunucularda)
+
+Master'da:
+
+```bash
+zypper --no-gpg-checks install -y gnu14-compilers-ohpc openmpi5-gnu14-ohpc
+```
+
+Node'larda (master üzerinden):
+
+```bash
+ssh node01 "zypper --no-gpg-checks install -y gnu14-compilers-ohpc openmpi5-gnu14-ohpc"
+ssh node02 "zypper --no-gpg-checks install -y gnu14-compilers-ohpc openmpi5-gnu14-ohpc"
+```
+
+### 2. Modül Sistemi
+
+OpenHPC hiyerarsik modül sistemi (Lmod) kullanir. Önce compiler yüklenir, sonra ona bagli MPI modülleri görünür:
+
+```bash
+module load gnu14        # GCC 14 compiler'i aktif eder
+module avail             # Simdi openmpi5 ve mpich görünür
+module load openmpi5     # Open MPI 5 aktif eder
+```
+
+Yüklü modülleri görmek icin:
+
+```bash
+module list
+```
+
+### 3. NFS Paylasim Dizini
+
+MPI programlarinin tüm node'lardan erisilebilir olmasi icin NFS gereklidir.
+
+**Master'da:**
+
+```bash
+zypper install -y nfs-kernel-server
+mkdir -p /shared
+echo "/shared 192.168.122.0/24(rw,sync,no_root_squash)" >> /etc/exports
+systemctl enable nfs-server --now
+exportfs -a
+```
+
+**Node'larda:**
+
+```bash
+zypper install -y nfs-client
+mkdir -p /shared
+mount master:/shared /shared
+echo 'master:/shared /shared nfs defaults 0 0' >> /etc/fstab
+```
+
+Dogrulama (master'da):
+
+```bash
+touch /shared/test
+ssh node01 "ls /shared/test"
+```
+
+### 4. MPI Testi
+
+Master'da basit bir MPI programi olusturulur:
+
+```bash
+module load gnu14
+module load openmpi5
+
+cat > /shared/hello_mpi.c << 'EOF'
+#include <mpi.h>
+#include <stdio.h>
+#include <unistd.h>
+
+int main(int argc, char** argv) {
+    MPI_Init(&argc, &argv);
+
+    int rank, size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    char hostname[256];
+    gethostname(hostname, 256);
+
+    printf("Merhaba! Ben rank %d/%d, hostname: %s\n", rank, size, hostname);
+
+    MPI_Finalize();
+    return 0;
+}
+EOF
+
+mpicc /shared/hello_mpi.c -o /shared/hello_mpi
+```
+
+Slurm üzerinden sbatch ile calistirilir:
+
+```bash
+cat > /shared/test_mpi.sh << 'EOF'
+#!/bin/bash
+#SBATCH --job-name=mpi_test
+#SBATCH --output=/shared/mpi_test_%j.out
+#SBATCH --nodes=2
+#SBATCH --ntasks=6
+
+module load gnu14
+module load openmpi5
+
+export OMPI_MCA_pml=ob1
+srun --mpi=pmix /shared/hello_mpi
+EOF
+
+sbatch /shared/test_mpi.sh
+```
+
+Birkaç saniye sonra ciktiyi kontrol et:
+
+```bash
+cat /shared/mpi_test_*.out
+```
+
+Beklenen cikti:
+
+```
+Merhaba! Ben rank 0/6, hostname: node01
+Merhaba! Ben rank 3/6, hostname: node02
+Merhaba! Ben rank 1/6, hostname: node01
+Merhaba! Ben rank 4/6, hostname: node02
+Merhaba! Ben rank 2/6, hostname: node01
+Merhaba! Ben rank 5/6, hostname: node02
+```
+
+6 MPI process'in 2 node'a dagitildigi ve her birinin farkli rank numarasiyla calistigi görülmelidir.
+
+> **Not:** `srun` ile dogrudan calistirirken `--mpi=pmix` parametresi ve sbatch scriptinde `module load` komutlari gereklidir. Aksi halde node'larda MPI kütüphaneleri bulunamaz veya rank'ler birbirinden habersiz calisir.
 
 ---
 

@@ -3203,6 +3203,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compiler-ve-mpi-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiler ve MPI Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compiler ve MPI Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-paket-kurulumu-tum-sunucularda" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Paket Kurulumu (Tüm Sunucularda)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modul-sistemi" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Modül Sistemi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-nfs-paylasim-dizini" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. NFS Paylasim Dizini
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mpi-testi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. MPI Testi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lab-ortami-bilgileri" class="md-nav__link">
     <span class="md-ellipsis">
       Lab Ortami Bilgileri
@@ -4200,6 +4251,57 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#compiler-ve-mpi-kurulumu" class="md-nav__link">
+    <span class="md-ellipsis">
+      Compiler ve MPI Kurulumu
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compiler ve MPI Kurulumu">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-paket-kurulumu-tum-sunucularda" class="md-nav__link">
+    <span class="md-ellipsis">
+      1. Paket Kurulumu (Tüm Sunucularda)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-modul-sistemi" class="md-nav__link">
+    <span class="md-ellipsis">
+      2. Modül Sistemi
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-nfs-paylasim-dizini" class="md-nav__link">
+    <span class="md-ellipsis">
+      3. NFS Paylasim Dizini
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-mpi-testi" class="md-nav__link">
+    <span class="md-ellipsis">
+      4. MPI Testi
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#lab-ortami-bilgileri" class="md-nav__link">
     <span class="md-ellipsis">
       Lab Ortami Bilgileri
@@ -4296,9 +4398,9 @@
 <h3 id="1-temiz-opensuse-leap-156-kurulumu">1. Temiz openSUSE Leap 15.6 Kurulumu<a class="headerlink" href="#1-temiz-opensuse-leap-156-kurulumu" title="Permanent link">&para;</a></h3>
 <p>Kurulum sirasinda dikkat edilecekler:</p>
 <ul>
-<li><strong>System Role</strong>: Server</li>
+<li><strong>System Role</strong>: Server seçilmeli (Desktop environment gereksiz)</li>
 <li><strong>Partitioning</strong>: LVM + ext4, swap 2GB yeterli</li>
-<li><strong>Network</strong>: Kurulumda DHCP, sonra statik IP verilecek</li>
+<li><strong>Network</strong>: Kurulumda DHCP, sonra statik IP atanacak</li>
 </ul>
 <h3 id="2-temel-paket-kurulumu">2. Temel Paket Kurulumu<a class="headerlink" href="#2-temel-paket-kurulumu" title="Permanent link">&para;</a></h3>
 <div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>zypper<span class="w"> </span>refresh<span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span>zypper<span class="w"> </span>update
@@ -4508,6 +4610,105 @@
 </span></code></pre></div>
 <p>Node'larin <code>idle</code> durumunda olmasi cluster'in hazir oldugunu gösterir.</p>
 <hr />
+<h2 id="compiler-ve-mpi-kurulumu">Compiler ve MPI Kurulumu<a class="headerlink" href="#compiler-ve-mpi-kurulumu" title="Permanent link">&para;</a></h2>
+<h3 id="1-paket-kurulumu-tum-sunucularda">1. Paket Kurulumu (Tüm Sunucularda)<a class="headerlink" href="#1-paket-kurulumu-tum-sunucularda" title="Permanent link">&para;</a></h3>
+<p>Master'da:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>zypper<span class="w"> </span>--no-gpg-checks<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>gnu14-compilers-ohpc<span class="w"> </span>openmpi5-gnu14-ohpc
+</span></code></pre></div>
+<p>Node'larda (master üzerinden):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-33-1"><a id="__codelineno-33-1" name="__codelineno-33-1" href="#__codelineno-33-1"></a>ssh<span class="w"> </span>node01<span class="w"> </span><span class="s2">&quot;zypper --no-gpg-checks install -y gnu14-compilers-ohpc openmpi5-gnu14-ohpc&quot;</span>
+</span><span id="__span-33-2"><a id="__codelineno-33-2" name="__codelineno-33-2" href="#__codelineno-33-2"></a>ssh<span class="w"> </span>node02<span class="w"> </span><span class="s2">&quot;zypper --no-gpg-checks install -y gnu14-compilers-ohpc openmpi5-gnu14-ohpc&quot;</span>
+</span></code></pre></div>
+<h3 id="2-modul-sistemi">2. Modül Sistemi<a class="headerlink" href="#2-modul-sistemi" title="Permanent link">&para;</a></h3>
+<p>OpenHPC hiyerarsik modül sistemi (Lmod) kullanir. Önce compiler yüklenir, sonra ona bagli MPI modülleri görünür:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-34-1"><a id="__codelineno-34-1" name="__codelineno-34-1" href="#__codelineno-34-1"></a>module<span class="w"> </span>load<span class="w"> </span>gnu14<span class="w">        </span><span class="c1"># GCC 14 compiler&#39;i aktif eder</span>
+</span><span id="__span-34-2"><a id="__codelineno-34-2" name="__codelineno-34-2" href="#__codelineno-34-2"></a>module<span class="w"> </span>avail<span class="w">             </span><span class="c1"># Simdi openmpi5 ve mpich görünür</span>
+</span><span id="__span-34-3"><a id="__codelineno-34-3" name="__codelineno-34-3" href="#__codelineno-34-3"></a>module<span class="w"> </span>load<span class="w"> </span>openmpi5<span class="w">     </span><span class="c1"># Open MPI 5 aktif eder</span>
+</span></code></pre></div>
+<p>Yüklü modülleri görmek icin:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-35-1"><a id="__codelineno-35-1" name="__codelineno-35-1" href="#__codelineno-35-1"></a>module<span class="w"> </span>list
+</span></code></pre></div>
+<h3 id="3-nfs-paylasim-dizini">3. NFS Paylasim Dizini<a class="headerlink" href="#3-nfs-paylasim-dizini" title="Permanent link">&para;</a></h3>
+<p>MPI programlarinin tüm node'lardan erisilebilir olmasi icin NFS gereklidir.</p>
+<p><strong>Master'da:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-36-1"><a id="__codelineno-36-1" name="__codelineno-36-1" href="#__codelineno-36-1"></a>zypper<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nfs-kernel-server
+</span><span id="__span-36-2"><a id="__codelineno-36-2" name="__codelineno-36-2" href="#__codelineno-36-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/shared
+</span><span id="__span-36-3"><a id="__codelineno-36-3" name="__codelineno-36-3" href="#__codelineno-36-3"></a><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;/shared 192.168.122.0/24(rw,sync,no_root_squash)&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/exports
+</span><span id="__span-36-4"><a id="__codelineno-36-4" name="__codelineno-36-4" href="#__codelineno-36-4"></a>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>nfs-server<span class="w"> </span>--now
+</span><span id="__span-36-5"><a id="__codelineno-36-5" name="__codelineno-36-5" href="#__codelineno-36-5"></a>exportfs<span class="w"> </span>-a
+</span></code></pre></div>
+<p><strong>Node'larda:</strong></p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-37-1"><a id="__codelineno-37-1" name="__codelineno-37-1" href="#__codelineno-37-1"></a>zypper<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>nfs-client
+</span><span id="__span-37-2"><a id="__codelineno-37-2" name="__codelineno-37-2" href="#__codelineno-37-2"></a>mkdir<span class="w"> </span>-p<span class="w"> </span>/shared
+</span><span id="__span-37-3"><a id="__codelineno-37-3" name="__codelineno-37-3" href="#__codelineno-37-3"></a>mount<span class="w"> </span>master:/shared<span class="w"> </span>/shared
+</span><span id="__span-37-4"><a id="__codelineno-37-4" name="__codelineno-37-4" href="#__codelineno-37-4"></a><span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;master:/shared /shared nfs defaults 0 0&#39;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>/etc/fstab
+</span></code></pre></div>
+<p>Dogrulama (master'da):</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-38-1"><a id="__codelineno-38-1" name="__codelineno-38-1" href="#__codelineno-38-1"></a>touch<span class="w"> </span>/shared/test
+</span><span id="__span-38-2"><a id="__codelineno-38-2" name="__codelineno-38-2" href="#__codelineno-38-2"></a>ssh<span class="w"> </span>node01<span class="w"> </span><span class="s2">&quot;ls /shared/test&quot;</span>
+</span></code></pre></div>
+<h3 id="4-mpi-testi">4. MPI Testi<a class="headerlink" href="#4-mpi-testi" title="Permanent link">&para;</a></h3>
+<p>Master'da basit bir MPI programi olusturulur:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-39-1"><a id="__codelineno-39-1" name="__codelineno-39-1" href="#__codelineno-39-1"></a>module<span class="w"> </span>load<span class="w"> </span>gnu14
+</span><span id="__span-39-2"><a id="__codelineno-39-2" name="__codelineno-39-2" href="#__codelineno-39-2"></a>module<span class="w"> </span>load<span class="w"> </span>openmpi5
+</span><span id="__span-39-3"><a id="__codelineno-39-3" name="__codelineno-39-3" href="#__codelineno-39-3"></a>
+</span><span id="__span-39-4"><a id="__codelineno-39-4" name="__codelineno-39-4" href="#__codelineno-39-4"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>/shared/hello_mpi.c<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+</span><span id="__span-39-5"><a id="__codelineno-39-5" name="__codelineno-39-5" href="#__codelineno-39-5"></a><span class="s">#include &lt;mpi.h&gt;</span>
+</span><span id="__span-39-6"><a id="__codelineno-39-6" name="__codelineno-39-6" href="#__codelineno-39-6"></a><span class="s">#include &lt;stdio.h&gt;</span>
+</span><span id="__span-39-7"><a id="__codelineno-39-7" name="__codelineno-39-7" href="#__codelineno-39-7"></a><span class="s">#include &lt;unistd.h&gt;</span>
+</span><span id="__span-39-8"><a id="__codelineno-39-8" name="__codelineno-39-8" href="#__codelineno-39-8"></a>
+</span><span id="__span-39-9"><a id="__codelineno-39-9" name="__codelineno-39-9" href="#__codelineno-39-9"></a><span class="s">int main(int argc, char** argv) {</span>
+</span><span id="__span-39-10"><a id="__codelineno-39-10" name="__codelineno-39-10" href="#__codelineno-39-10"></a><span class="s">    MPI_Init(&amp;argc, &amp;argv);</span>
+</span><span id="__span-39-11"><a id="__codelineno-39-11" name="__codelineno-39-11" href="#__codelineno-39-11"></a>
+</span><span id="__span-39-12"><a id="__codelineno-39-12" name="__codelineno-39-12" href="#__codelineno-39-12"></a><span class="s">    int rank, size;</span>
+</span><span id="__span-39-13"><a id="__codelineno-39-13" name="__codelineno-39-13" href="#__codelineno-39-13"></a><span class="s">    MPI_Comm_rank(MPI_COMM_WORLD, &amp;rank);</span>
+</span><span id="__span-39-14"><a id="__codelineno-39-14" name="__codelineno-39-14" href="#__codelineno-39-14"></a><span class="s">    MPI_Comm_size(MPI_COMM_WORLD, &amp;size);</span>
+</span><span id="__span-39-15"><a id="__codelineno-39-15" name="__codelineno-39-15" href="#__codelineno-39-15"></a>
+</span><span id="__span-39-16"><a id="__codelineno-39-16" name="__codelineno-39-16" href="#__codelineno-39-16"></a><span class="s">    char hostname[256];</span>
+</span><span id="__span-39-17"><a id="__codelineno-39-17" name="__codelineno-39-17" href="#__codelineno-39-17"></a><span class="s">    gethostname(hostname, 256);</span>
+</span><span id="__span-39-18"><a id="__codelineno-39-18" name="__codelineno-39-18" href="#__codelineno-39-18"></a>
+</span><span id="__span-39-19"><a id="__codelineno-39-19" name="__codelineno-39-19" href="#__codelineno-39-19"></a><span class="s">    printf(&quot;Merhaba! Ben rank %d/%d, hostname: %s\n&quot;, rank, size, hostname);</span>
+</span><span id="__span-39-20"><a id="__codelineno-39-20" name="__codelineno-39-20" href="#__codelineno-39-20"></a>
+</span><span id="__span-39-21"><a id="__codelineno-39-21" name="__codelineno-39-21" href="#__codelineno-39-21"></a><span class="s">    MPI_Finalize();</span>
+</span><span id="__span-39-22"><a id="__codelineno-39-22" name="__codelineno-39-22" href="#__codelineno-39-22"></a><span class="s">    return 0;</span>
+</span><span id="__span-39-23"><a id="__codelineno-39-23" name="__codelineno-39-23" href="#__codelineno-39-23"></a><span class="s">}</span>
+</span><span id="__span-39-24"><a id="__codelineno-39-24" name="__codelineno-39-24" href="#__codelineno-39-24"></a><span class="s">EOF</span>
+</span><span id="__span-39-25"><a id="__codelineno-39-25" name="__codelineno-39-25" href="#__codelineno-39-25"></a>
+</span><span id="__span-39-26"><a id="__codelineno-39-26" name="__codelineno-39-26" href="#__codelineno-39-26"></a>mpicc<span class="w"> </span>/shared/hello_mpi.c<span class="w"> </span>-o<span class="w"> </span>/shared/hello_mpi
+</span></code></pre></div>
+<p>Slurm üzerinden sbatch ile calistirilir:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-40-1"><a id="__codelineno-40-1" name="__codelineno-40-1" href="#__codelineno-40-1"></a>cat<span class="w"> </span>&gt;<span class="w"> </span>/shared/test_mpi.sh<span class="w"> </span><span class="s">&lt;&lt; &#39;EOF&#39;</span>
+</span><span id="__span-40-2"><a id="__codelineno-40-2" name="__codelineno-40-2" href="#__codelineno-40-2"></a><span class="s">#!/bin/bash</span>
+</span><span id="__span-40-3"><a id="__codelineno-40-3" name="__codelineno-40-3" href="#__codelineno-40-3"></a><span class="s">#SBATCH --job-name=mpi_test</span>
+</span><span id="__span-40-4"><a id="__codelineno-40-4" name="__codelineno-40-4" href="#__codelineno-40-4"></a><span class="s">#SBATCH --output=/shared/mpi_test_%j.out</span>
+</span><span id="__span-40-5"><a id="__codelineno-40-5" name="__codelineno-40-5" href="#__codelineno-40-5"></a><span class="s">#SBATCH --nodes=2</span>
+</span><span id="__span-40-6"><a id="__codelineno-40-6" name="__codelineno-40-6" href="#__codelineno-40-6"></a><span class="s">#SBATCH --ntasks=6</span>
+</span><span id="__span-40-7"><a id="__codelineno-40-7" name="__codelineno-40-7" href="#__codelineno-40-7"></a>
+</span><span id="__span-40-8"><a id="__codelineno-40-8" name="__codelineno-40-8" href="#__codelineno-40-8"></a><span class="s">module load gnu14</span>
+</span><span id="__span-40-9"><a id="__codelineno-40-9" name="__codelineno-40-9" href="#__codelineno-40-9"></a><span class="s">module load openmpi5</span>
+</span><span id="__span-40-10"><a id="__codelineno-40-10" name="__codelineno-40-10" href="#__codelineno-40-10"></a>
+</span><span id="__span-40-11"><a id="__codelineno-40-11" name="__codelineno-40-11" href="#__codelineno-40-11"></a><span class="s">export OMPI_MCA_pml=ob1</span>
+</span><span id="__span-40-12"><a id="__codelineno-40-12" name="__codelineno-40-12" href="#__codelineno-40-12"></a><span class="s">srun --mpi=pmix /shared/hello_mpi</span>
+</span><span id="__span-40-13"><a id="__codelineno-40-13" name="__codelineno-40-13" href="#__codelineno-40-13"></a><span class="s">EOF</span>
+</span><span id="__span-40-14"><a id="__codelineno-40-14" name="__codelineno-40-14" href="#__codelineno-40-14"></a>
+</span><span id="__span-40-15"><a id="__codelineno-40-15" name="__codelineno-40-15" href="#__codelineno-40-15"></a>sbatch<span class="w"> </span>/shared/test_mpi.sh
+</span></code></pre></div>
+<p>Birkaç saniye sonra ciktiyi kontrol et:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-41-1"><a id="__codelineno-41-1" name="__codelineno-41-1" href="#__codelineno-41-1"></a>cat<span class="w"> </span>/shared/mpi_test_*.out
+</span></code></pre></div>
+<p>Beklenen cikti:</p>
+<div class="language-text highlight"><pre><span></span><code><span id="__span-42-1"><a id="__codelineno-42-1" name="__codelineno-42-1" href="#__codelineno-42-1"></a>Merhaba! Ben rank 0/6, hostname: node01
+</span><span id="__span-42-2"><a id="__codelineno-42-2" name="__codelineno-42-2" href="#__codelineno-42-2"></a>Merhaba! Ben rank 3/6, hostname: node02
+</span><span id="__span-42-3"><a id="__codelineno-42-3" name="__codelineno-42-3" href="#__codelineno-42-3"></a>Merhaba! Ben rank 1/6, hostname: node01
+</span><span id="__span-42-4"><a id="__codelineno-42-4" name="__codelineno-42-4" href="#__codelineno-42-4"></a>Merhaba! Ben rank 4/6, hostname: node02
+</span><span id="__span-42-5"><a id="__codelineno-42-5" name="__codelineno-42-5" href="#__codelineno-42-5"></a>Merhaba! Ben rank 2/6, hostname: node01
+</span><span id="__span-42-6"><a id="__codelineno-42-6" name="__codelineno-42-6" href="#__codelineno-42-6"></a>Merhaba! Ben rank 5/6, hostname: node02
+</span></code></pre></div>
+<p>6 MPI process'in 2 node'a dagitildigi ve her birinin farkli rank numarasiyla calistigi görülmelidir.</p>
+<blockquote>
+<p><strong>Not:</strong> <code>srun</code> ile dogrudan calistirirken <code>--mpi=pmix</code> parametresi ve sbatch scriptinde <code>module load</code> komutlari gereklidir. Aksi halde node'larda MPI kütüphaneleri bulunamaz veya rank'ler birbirinden habersiz calisir.</p>
+</blockquote>
+<hr />
 <h2 id="lab-ortami-bilgileri">Lab Ortami Bilgileri<a class="headerlink" href="#lab-ortami-bilgileri" title="Permanent link">&para;</a></h2>
 <table>
 <thead>
@@ -4562,8 +4763,8 @@
 <h3 id="slurmctld-log-dosyasi-bulunamadi">slurmctld log dosyasi bulunamadi<a class="headerlink" href="#slurmctld-log-dosyasi-bulunamadi" title="Permanent link">&para;</a></h3>
 <p><strong>Sebep:</strong> <code>/var/log/slurm/</code> dizini var ama log dosyasi olusturulmamis.</p>
 <p><strong>Cözüm:</strong></p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-32-1"><a id="__codelineno-32-1" name="__codelineno-32-1" href="#__codelineno-32-1"></a>touch<span class="w"> </span>/var/log/slurm/slurmctld.log
-</span><span id="__span-32-2"><a id="__codelineno-32-2" name="__codelineno-32-2" href="#__codelineno-32-2"></a>chown<span class="w"> </span>slurm:slurm<span class="w"> </span>/var/log/slurm/slurmctld.log
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-43-1"><a id="__codelineno-43-1" name="__codelineno-43-1" href="#__codelineno-43-1"></a>touch<span class="w"> </span>/var/log/slurm/slurmctld.log
+</span><span id="__span-43-2"><a id="__codelineno-43-2" name="__codelineno-43-2" href="#__codelineno-43-2"></a>chown<span class="w"> </span>slurm:slurm<span class="w"> </span>/var/log/slurm/slurmctld.log
 </span></code></pre></div>
 <h3 id="gpg-key-hatasi-ohpc-release-kurulumunda">GPG key hatasi (ohpc-release kurulumunda)<a class="headerlink" href="#gpg-key-hatasi-ohpc-release-kurulumunda" title="Permanent link">&para;</a></h3>
 <p><strong>Sebep:</strong> ohpc-release RPM'i GPG key'i iceriyor ama zypper RPM'i kurmadan önce imzasini dogrulamaya calisiyor.</p>

@@ -184,6 +184,9 @@ nav:
       - Frontend ve Backend Ekleme İşlemleri: haproxy/frontend-backend-ekleme.md
       - Haproxy Parametreleri:
         - Maxconn: haproxy/maxconn.md
+  - HPC:
+      - HPC Nedir?: hpc/hpc-nedir.md
+      - OpenHPC Kurulumu: hpc/openhpc-kurulumu.md
   - Asterisk/Freepbx:
       - Sertifika Yenileme: freepbx/sertifika-yenileme.md
   - Javascript:

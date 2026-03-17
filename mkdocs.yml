@@ -158,6 +158,7 @@ nav:
       - ReplicaSet: kubernetes/replicaset.md
       - Deployment: kubernetes/deployment.md
       - DaemonSet: kubernetes/daemonset.md
+      - Service: kubernetes/service.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

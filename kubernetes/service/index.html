@@ -2029,6 +2029,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#kube-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kube-Proxy
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3696,6 +3705,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#kube-proxy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kube-Proxy
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3724,7 +3742,7 @@
 <p>Kube-proxy ile birlikte calisir.</p>
 <p><strong>Birden fazla pod halinde deploy edilmis bir uygulamayi ek bir dns kaydi ile erisilebilir kilmaya olanak saglar.</strong></p>
 <h2 id="uygulamalara-erisim">Uygulamalara Erisim<a class="headerlink" href="#uygulamalara-erisim" title="Permanent link">&para;</a></h2>
-<p>Bir uygulamaya erisebilmek icin uygulamalari deploy ettigimiz podlara erisilmelidir fakat podlarin yapisi geregi sabit bir ip adresleri yoktur. Ayrica gereksinimlere gore podlar en cok kapatilan veya hata alarak kendi kendine kapanan yapilardir. Bu sebepten dolayi uygulamaya erisim saglarken podlarin ip adrseerini kullanamayiz.</p>
+<p>Bir uygulamaya erisebilmek icin uygulamalari deploy ettigimiz podlara erisilmelidir fakat podlarin yapisi geregi sabit bir ip adresleri yoktur. Ayrica gereksinimlere gore podlar en cok kapatilan veya hata alarak kendi kendine kapanan yapilardir. Bu sebepten dolayi uygulamaya erisim saglarken podlarin ip adreslerini kullanamayiz.</p>
 <p><img alt="service-pod-yenileme" src="../image-5.png" /></p>
 <p>Yukaridaki gorseldeki gibi bir durum yasandiginda podun ip adresi degisir ve bu ip adresini diger uygulamalar veya kullanicilar bilemez. Bu sorunu cozmek icin Kubernetes'de bulunan service objesini kullanabiliriz. Service objesi podlari mantiksal olarak gruplar ve bu podlara erisim icin bir police belirler. Bu gruplama Label ve Selector ile saglanir.</p>
 <p>Ornek:</p>
@@ -3771,6 +3789,7 @@
 <p>Yukaridaki tanim en temel service tanimidir. Istege ve ihtiyaca gore daha komplike hale getirilebilir. Bu servis tanimi <code>app</code> degeri <code>frontend</code> olan objelere trafik yonlendirecektir. </p>
 <p>Service'lerin type'lari vardir. Bos biraktigimiz icin default type olan <code>ClusterIP</code> typei ile olusur.</p>
 <p><strong><em>Not: Expose komutu ile bir deployment veya baska bir obje disariya acildiginda aslinda arkaplanda bir service tanimi olusur. Olusan bu service kendi taniminda otomatik olarak expose edilen objenin labelina baglanir.</em></strong></p>
+<h2 id="kube-proxy">Kube-Proxy<a class="headerlink" href="#kube-proxy" title="Permanent link">&para;</a></h2>
 
 
 

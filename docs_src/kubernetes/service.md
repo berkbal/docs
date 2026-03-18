@@ -8,7 +8,7 @@ Kube-proxy ile birlikte calisir.
 
 ## Uygulamalara Erisim
 
-Bir uygulamaya erisebilmek icin uygulamalari deploy ettigimiz podlara erisilmelidir fakat podlarin yapisi geregi sabit bir ip adresleri yoktur. Ayrica gereksinimlere gore podlar en cok kapatilan veya hata alarak kendi kendine kapanan yapilardir. Bu sebepten dolayi uygulamaya erisim saglarken podlarin ip adrseerini kullanamayiz.
+Bir uygulamaya erisebilmek icin uygulamalari deploy ettigimiz podlara erisilmelidir fakat podlarin yapisi geregi sabit bir ip adresleri yoktur. Ayrica gereksinimlere gore podlar en cok kapatilan veya hata alarak kendi kendine kapanan yapilardir. Bu sebepten dolayi uygulamaya erisim saglarken podlarin ip adreslerini kullanamayiz.
 
 ![service-pod-yenileme](image-5.png)
 
@@ -71,3 +71,6 @@ Yukaridaki tanim en temel service tanimidir. Istege ve ihtiyaca gore daha kompli
 Service'lerin type'lari vardir. Bos biraktigimiz icin default type olan `ClusterIP` typei ile olusur.
 
 ***Not: Expose komutu ile bir deployment veya baska bir obje disariya acildiginda aslinda arkaplanda bir service tanimi olusur. Olusan bu service kendi taniminda otomatik olarak expose edilen objenin labelina baglanir.***
+
+## Kube-Proxy
+

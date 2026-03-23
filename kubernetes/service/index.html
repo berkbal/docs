@@ -3790,6 +3790,9 @@
 <p>Service'lerin type'lari vardir. Bos biraktigimiz icin default type olan <code>ClusterIP</code> typei ile olusur.</p>
 <p><strong><em>Not: Expose komutu ile bir deployment veya baska bir obje disariya acildiginda aslinda arkaplanda bir service tanimi olusur. Olusan bu service kendi taniminda otomatik olarak expose edilen objenin labelina baglanir.</em></strong></p>
 <h2 id="kube-proxy">Kube-Proxy<a class="headerlink" href="#kube-proxy" title="Permanent link">&para;</a></h2>
+<p>Control Plane'de bulunan API Server'i duzenli olarak izleyen ve buna gore service ve endpointleri duzenleyen yapidir. Her node'da bir adet bulunur. Tanimlamalara gore networku yonetir. Arkaplanda <code>iptables</code> kullanir. Trafigi alir ve ilgili service objesine yonlendirir.</p>
+<p><img alt="kube-proxy" src="../image-7.png" /></p>
+<p>kaynak: linuxfoundation</p>
 
 
 

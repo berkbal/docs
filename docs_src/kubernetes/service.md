@@ -74,3 +74,9 @@ Service'lerin type'lari vardir. Bos biraktigimiz icin default type olan `Cluster
 
 ## Kube-Proxy
 
+Control Plane'de bulunan API Server'i duzenli olarak izleyen ve buna gore service ve endpointleri duzenleyen yapidir. Her node'da bir adet bulunur. Tanimlamalara gore networku yonetir. Arkaplanda `iptables` kullanir. Trafigi alir ve ilgili service objesine yonlendirir.
+
+![kube-proxy](image-7.png)
+
+kaynak: linuxfoundation
+

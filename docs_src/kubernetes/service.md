@@ -80,3 +80,11 @@ Control Plane'de bulunan API Server'i duzenli olarak izleyen ve buna gore servic
 
 kaynak: linuxfoundation
 
+## Trafik Policeleri
+
+Kube-proxy arkaplanda iptables kullandigi icin yuk dengeleme ozelligi varsayilan olarak tamamen random bir sekilde ilerler. Bu yontem de pratikte ne efektif ne de trafiksel olarak en optimal podu secmeye yarar. Daha iyi trafik policileri istiyorsak Kubernetes'in bize sunduklarini kullanabiliriz.
+
+Iki adet trafik policesi vardir:
+
+- Cluster Opsiyonu: Bu opsiyon hazirda bulunan butun endpointlere trafik yonlendirir. Herhangi ek bir tanim yapilmazsa kubernetes default olarak Cluster opsiyonunu kullanir.
+- Local Opsiyonu: Yük dengeleme sürecini izole eder; trafiği sadece isteği gönderen Pod ile aynı node uzerinde bulunan veya harici trafiği karşılayan NodePort'un bulunduğu düğümdeki Endpoint'lerle sınırlandırır.

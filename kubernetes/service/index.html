@@ -2038,6 +2038,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#trafik-policeleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trafik Policeleri
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3714,6 +3723,15 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#trafik-policeleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trafik Policeleri
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3793,6 +3811,13 @@
 <p>Control Plane'de bulunan API Server'i duzenli olarak izleyen ve buna gore service ve endpointleri duzenleyen yapidir. Her node'da bir adet bulunur. Tanimlamalara gore networku yonetir. Arkaplanda <code>iptables</code> kullanir. Trafigi alir ve ilgili service objesine yonlendirir.</p>
 <p><img alt="kube-proxy" src="../image-7.png" /></p>
 <p>kaynak: linuxfoundation</p>
+<h2 id="trafik-policeleri">Trafik Policeleri<a class="headerlink" href="#trafik-policeleri" title="Permanent link">&para;</a></h2>
+<p>Kube-proxy arkaplanda iptables kullandigi icin yuk dengeleme ozelligi varsayilan olarak tamamen random bir sekilde ilerler. Bu yontem de pratikte ne efektif ne de trafiksel olarak en optimal podu secmeye yarar. Daha iyi trafik policileri istiyorsak Kubernetes'in bize sunduklarini kullanabiliriz.</p>
+<p>Iki adet trafik policesi vardir:</p>
+<ul>
+<li>Cluster Opsiyonu: Bu opsiyon hazirda bulunan butun endpointlere trafik yonlendirir. Herhangi ek bir tanim yapilmazsa kubernetes default olarak Cluster opsiyonunu kullanir.</li>
+<li>Local Opsiyonu: Yük dengeleme sürecini izole eder; trafiği sadece isteği gönderen Pod ile aynı node uzerinde bulunan veya harici trafiği karşılayan NodePort'un bulunduğu düğümdeki Endpoint'lerle sınırlandırır.</li>
+</ul>
 
 
 

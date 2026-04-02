@@ -2047,6 +2047,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#servis-tipleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servis Tipleri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Servis Tipleri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clusterip-ve-nodeport" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterIP ve NodePort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3732,6 +3756,30 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#servis-tipleri" class="md-nav__link">
+    <span class="md-ellipsis">
+      Servis Tipleri
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Servis Tipleri">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#clusterip-ve-nodeport" class="md-nav__link">
+    <span class="md-ellipsis">
+      ClusterIP ve NodePort
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -3819,6 +3867,29 @@
 <li>Local Opsiyonu: Sadece ayni node uzerinde bulunan endpointlere trafik yonlendirir.</li>
 </ul>
 <p><strong>Not: Eğer trafiğin geldiği Node üzerinde ilgili uygulamaya ait "Ready" (hazır) durumda bir Pod yoksa, Kubernetes trafiği başka bir Node'a aktarmaz ve istek başarısız olur (drop edilir).</strong></p>
+<h2 id="servis-tipleri">Servis Tipleri<a class="headerlink" href="#servis-tipleri" title="Permanent link">&para;</a></h2>
+<p>Servis tanimlarken bu servisin nerelerden/nasil erisilebilecegini ayarlayabiliriz. </p>
+<h3 id="clusterip-ve-nodeport">ClusterIP ve NodePort<a class="headerlink" href="#clusterip-ve-nodeport" title="Permanent link">&para;</a></h3>
+<p>ClusterIP varsayilan servis tipidir (ServiceType). Bir servis, ClusterIP olarak bilinen bir sanal IP adresi (Virtual IP) alir. Bu sanal IP adresi, servis ile iletisim kurmak icin kullanilir ve sadece cluster icerisinden erisilebilirdir. frontend-svc servis tanim manifestosu artik acikca belirtilmis bir ClusterIP tipi icermektedir. Eger bu kisim bos birakilirsa, varsayilan olarak ClusterIP servis tipi ayarlanir:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend-svc</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterIP</span><span class="w"> </span>
+</span></code></pre></div>
+<p>NodePort servis tipiyle (ServiceType) birlikte, bir ClusterIP'ye ek olarak, varsayilan 30000-32767 araligindan dinamik olarak secilen bir port, tum worker node'lar uzerinden ilgili servise eslenir. Ornegin; frontend-svc servisi icin eslenen NodePort 32233 ise, herhangi bir worker node'a 32233 portundan baglandigimizda, node tum trafigi atanan ClusterIP'ye (172.17.0.4) yonlendirir. Eger belirli bir port numarasi kullanmayi tercih edersek, servisi olustururken varsayilan araliktan istedigimiz o port numarasini NodePort'a atayabiliriz. NodePort tipi secilince arkaplanda aslinda otomatik olarak bir ClusterIP adresi de bu servise verilir.</p>
+<p>Ozetle mantik su sekilde ilerler:</p>
+<ul>
+<li>ClusterIP: Sadece bir sanal IP verir (Cluster icinden erisim).</li>
+<li>NodePort: Arka planda otomatik olarak bir ClusterIP olusturur, sonra bunun uzerine bir de "disaridan su portla gelince icerideki bu ClusterIP'ye git" kuralini ekler.</li>
+</ul>
 
 
 

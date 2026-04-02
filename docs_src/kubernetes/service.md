@@ -120,3 +120,31 @@ Ozetle mantik su sekilde ilerler:
 
 - ClusterIP: Sadece bir sanal IP verir (Cluster icinden erisim).
 - NodePort: Arka planda otomatik olarak bir ClusterIP olusturur, sonra bunun uzerine bir de "disaridan su portla gelince icerideki bu ClusterIP'ye git" kuralini ekler.
+
+![alt text](image-8.png)
+kaynak: linuxfoundation
+
+NodePort servis tipi, servislerimizi dis dunyadan erisilebilir kilmak istedigimizde kullanislidir. Son kullanici, belirlenen port uzerinden herhangi bir worker node'a baglanir; node ise bu istegi dahili olarak servisin ClusterIP adresine yonlendirir ve ardindan istek kume icinde calisan uygulamalara iletilir. Servisin bu istekleri yuk dengeledigini (load balancing) ve istegi hedef uygulamayi calistiran Pod'lardan yalnizca birine ilettigini unutmamak gerekir. Dis dunyadan cok sayida uygulama servisine erisimi yonetmek icin yoneticiler bir ters vekil sunucu (reverse proxy) olan Ingress yapilandirabilir ve kume icindeki belirli servisleri hedefleyen kurallar tanimlayabilirler.
+
+NodePort tipi, servis tanim manifestosunda veya daha onceki derslerde gordugumuz expose ve create service komutlariyla acikca belirtilmelidir. nodePort: 32233 degerini manuel olarak tanimlamak opsiyoneldir; tanimlanmazsa sistem bos bir portu otomatik atar. NodePort tipi icin guncellenmis servis tanimini ve komutlari asagida gorebilirsiniz:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-svc
+spec:
+  selector:
+    app: frontend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+    nodePort: 32233
+  type: NodePort
+```
+
+Komut satiri ornekleri:
+
+```kubectl expose deploy frontend --name=frontend-svc --port=80 --target-port=5000 --type=NodePort```
+```kubectl create service nodeport frontend-svc --tcp=80:5000 --node-port=32233```

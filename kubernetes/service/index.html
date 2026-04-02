@@ -3890,6 +3890,27 @@
 <li>ClusterIP: Sadece bir sanal IP verir (Cluster icinden erisim).</li>
 <li>NodePort: Arka planda otomatik olarak bir ClusterIP olusturur, sonra bunun uzerine bir de "disaridan su portla gelince icerideki bu ClusterIP'ye git" kuralini ekler.</li>
 </ul>
+<p><img alt="alt text" src="../image-8.png" />
+kaynak: linuxfoundation</p>
+<p>NodePort servis tipi, servislerimizi dis dunyadan erisilebilir kilmak istedigimizde kullanislidir. Son kullanici, belirlenen port uzerinden herhangi bir worker node'a baglanir; node ise bu istegi dahili olarak servisin ClusterIP adresine yonlendirir ve ardindan istek kume icinde calisan uygulamalara iletilir. Servisin bu istekleri yuk dengeledigini (load balancing) ve istegi hedef uygulamayi calistiran Pod'lardan yalnizca birine ilettigini unutmamak gerekir. Dis dunyadan cok sayida uygulama servisine erisimi yonetmek icin yoneticiler bir ters vekil sunucu (reverse proxy) olan Ingress yapilandirabilir ve kume icindeki belirli servisleri hedefleyen kurallar tanimlayabilirler.</p>
+<p>NodePort tipi, servis tanim manifestosunda veya daha onceki derslerde gordugumuz expose ve create service komutlariyla acikca belirtilmelidir. nodePort: 32233 degerini manuel olarak tanimlamak opsiyoneldir; tanimlanmazsa sistem bos bir portu otomatik atar. NodePort tipi icin guncellenmis servis tanimini ve komutlari asagida gorebilirsiniz:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Service</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend-svc</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nt">ports</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">TCP</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">    </span><span class="nt">targetPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5000</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">    </span><span class="nt">nodePort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">32233</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">NodePort</span>
+</span></code></pre></div>
+<p>Komut satiri ornekleri:</p>
+<p><code>kubectl expose deploy frontend --name=frontend-svc --port=80 --target-port=5000 --type=NodePort</code>
+<code>kubectl create service nodeport frontend-svc --tcp=80:5000 --node-port=32233</code></p>
 
 
 

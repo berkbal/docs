@@ -86,5 +86,7 @@ Kube-proxy arkaplanda iptables kullandigi icin yuk dengeleme ozelligi varsayilan
 
 Iki adet trafik policesi vardir:
 
-- Cluster Opsiyonu: Bu opsiyon hazirda bulunan butun endpointlere trafik yonlendirir. Herhangi ek bir tanim yapilmazsa kubernetes default olarak Cluster opsiyonunu kullanir.
-- Local Opsiyonu: Yük dengeleme sürecini izole eder; trafiği sadece isteği gönderen Pod ile aynı node uzerinde bulunan veya harici trafiği karşılayan NodePort'un bulunduğu düğümdeki Endpoint'lerle sınırlandırır.
+- Cluster Opsiyonu: Bu opsiyon hazirda bulunan butun endpointlere(farkli nodelarda bulunan endpointler dahil) trafik yonlendirir. Herhangi ek bir tanim yapilmazsa kubernetes default olarak Cluster opsiyonunu kullanir.
+- Local Opsiyonu: Sadece ayni node uzerinde bulunan endpointlere trafik yonlendirir.
+
+**Not: Eğer trafiğin geldiği Node üzerinde ilgili uygulamaya ait "Ready" (hazır) durumda bir Pod yoksa, Kubernetes trafiği başka bir Node'a aktarmaz ve istek başarısız olur (drop edilir).**

@@ -3815,9 +3815,10 @@
 <p>Kube-proxy arkaplanda iptables kullandigi icin yuk dengeleme ozelligi varsayilan olarak tamamen random bir sekilde ilerler. Bu yontem de pratikte ne efektif ne de trafiksel olarak en optimal podu secmeye yarar. Daha iyi trafik policileri istiyorsak Kubernetes'in bize sunduklarini kullanabiliriz.</p>
 <p>Iki adet trafik policesi vardir:</p>
 <ul>
-<li>Cluster Opsiyonu: Bu opsiyon hazirda bulunan butun endpointlere trafik yonlendirir. Herhangi ek bir tanim yapilmazsa kubernetes default olarak Cluster opsiyonunu kullanir.</li>
-<li>Local Opsiyonu: Yük dengeleme sürecini izole eder; trafiği sadece isteği gönderen Pod ile aynı node uzerinde bulunan veya harici trafiği karşılayan NodePort'un bulunduğu düğümdeki Endpoint'lerle sınırlandırır.</li>
+<li>Cluster Opsiyonu: Bu opsiyon hazirda bulunan butun endpointlere(farkli nodelarda bulunan endpointler dahil) trafik yonlendirir. Herhangi ek bir tanim yapilmazsa kubernetes default olarak Cluster opsiyonunu kullanir.</li>
+<li>Local Opsiyonu: Sadece ayni node uzerinde bulunan endpointlere trafik yonlendirir.</li>
 </ul>
+<p><strong>Not: Eğer trafiğin geldiği Node üzerinde ilgili uygulamaya ait "Ready" (hazır) durumda bir Pod yoksa, Kubernetes trafiği başka bir Node'a aktarmaz ve istek başarısız olur (drop edilir).</strong></p>
 
 
 

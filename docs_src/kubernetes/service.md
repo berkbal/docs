@@ -90,3 +90,33 @@ Iki adet trafik policesi vardir:
 - Local Opsiyonu: Sadece ayni node uzerinde bulunan endpointlere trafik yonlendirir.
 
 **Not: Eğer trafiğin geldiği Node üzerinde ilgili uygulamaya ait "Ready" (hazır) durumda bir Pod yoksa, Kubernetes trafiği başka bir Node'a aktarmaz ve istek başarısız olur (drop edilir).**
+
+## Servis Tipleri
+
+Servis tanimlarken bu servisin nerelerden/nasil erisilebilecegini ayarlayabiliriz. 
+
+### ClusterIP ve NodePort
+
+ClusterIP varsayilan servis tipidir (ServiceType). Bir servis, ClusterIP olarak bilinen bir sanal IP adresi (Virtual IP) alir. Bu sanal IP adresi, servis ile iletisim kurmak icin kullanilir ve sadece cluster icerisinden erisilebilirdir. frontend-svc servis tanim manifestosu artik acikca belirtilmis bir ClusterIP tipi icermektedir. Eger bu kisim bos birakilirsa, varsayilan olarak ClusterIP servis tipi ayarlanir:
+
+```yaml
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-svc
+spec:
+  selector:
+    app: frontend
+  ports:
+  - protocol: TCP
+    port: 80
+    targetPort: 5000
+  type: ClusterIP 
+```
+
+NodePort servis tipiyle (ServiceType) birlikte, bir ClusterIP'ye ek olarak, varsayilan 30000-32767 araligindan dinamik olarak secilen bir port, tum worker node'lar uzerinden ilgili servise eslenir. Ornegin; frontend-svc servisi icin eslenen NodePort 32233 ise, herhangi bir worker node'a 32233 portundan baglandigimizda, node tum trafigi atanan ClusterIP'ye (172.17.0.4) yonlendirir. Eger belirli bir port numarasi kullanmayi tercih edersek, servisi olustururken varsayilan araliktan istedigimiz o port numarasini NodePort'a atayabiliriz. NodePort tipi secilince arkaplanda aslinda otomatik olarak bir ClusterIP adresi de bu servise verilir.
+
+Ozetle mantik su sekilde ilerler:
+
+- ClusterIP: Sadece bir sanal IP verir (Cluster icinden erisim).
+- NodePort: Arka planda otomatik olarak bir ClusterIP olusturur, sonra bunun uzerine bir de "disaridan su portla gelince icerideki bu ClusterIP'ye git" kuralini ekler.

@@ -8,13 +8,9 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/kubernetes-objeleri/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/persistent-volume/">
       
       
-        <link rel="prev" href="../cluster-kurulumu/">
-      
-      
-        <link rel="next" href="../node/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +18,7 @@
     
     
       
-        <title>Kubernetes Objeleri - Docs for SysAdmins</title>
+        <title>Persistent Volume ve Persistent Volume Claim - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +70,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#kubernetes-objeleri" class="md-skip">
+        <a href="#persistent-volume-ve-persistent-volume-claim" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +105,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Kubernetes Objeleri
+              Persistent Volume ve Persistent Volume Claim
             
           </span>
         </div>
@@ -261,12 +257,10 @@
         
   
   
-    
-  
   
     
     
-      <li class="md-tabs__item md-tabs__item--active">
+      <li class="md-tabs__item">
         <a href="../kubernetes/" class="md-tabs__link">
           
   
@@ -1433,10 +1427,8 @@
       
   
   
-    
   
   
-  
     
     
       
@@ -1451,22 +1443,19 @@
     
     
       
-        
-        
-      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1477,7 +1466,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes
@@ -1525,20 +1514,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1643,20 +1629,17 @@
       
       
         
-          
-          
-        
       
     
     
-    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1707,10 +1690,8 @@
                 
   
   
-    
   
   
-  
     
     
       
@@ -1738,21 +1719,18 @@
     
       
       
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
-        
-          
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
             
   
   <span class="md-ellipsis">
@@ -1763,7 +1741,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             Kubernetes Objeleri
@@ -1774,30 +1752,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Kubernetes Objeleri
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../kubernetes-objeleri/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1806,62 +1764,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#temel-kubernetes-objeleri" class="md-nav__link">
-    <span class="md-ellipsis">
-      Temel Kubernetes Objeleri
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#controller-objeleri" class="md-nav__link">
-    <span class="md-ellipsis">
-      Controller Objeleri
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#ag-objeleri" class="md-nav__link">
-    <span class="md-ellipsis">
-      Ağ Objeleri
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#depolama-objeleri" class="md-nav__link">
-    <span class="md-ellipsis">
-      Depolama Objeleri
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -3697,38 +3599,95 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#temel-kubernetes-objeleri" class="md-nav__link">
+  <a href="#persistentvolume-pv" class="md-nav__link">
     <span class="md-ellipsis">
-      Temel Kubernetes Objeleri
+      PersistentVolume (PV)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PersistentVolume (PV)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#erisim-modlari-access-modes" class="md-nav__link">
+    <span class="md-ellipsis">
+      Erisim Modlari (Access Modes)
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#reclaim-policy" class="md-nav__link">
+    <span class="md-ellipsis">
+      Reclaim Policy
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#persistentvolumeclaim-pvc" class="md-nav__link">
+    <span class="md-ellipsis">
+      PersistentVolumeClaim (PVC)
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#controller-objeleri" class="md-nav__link">
+  <a href="#pod-icerisinde-kullanim" class="md-nav__link">
     <span class="md-ellipsis">
-      Controller Objeleri
+      Pod Icerisinde Kullanim
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#ag-objeleri" class="md-nav__link">
+  <a href="#nfs-ile-pv-ve-pvc-kullanimi" class="md-nav__link">
     <span class="md-ellipsis">
-      Ağ Objeleri
+      NFS ile PV ve PVC Kullanimi
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="NFS ile PV ve PVC Kullanimi">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#nfs-pv-tanimi" class="md-nav__link">
+    <span class="md-ellipsis">
+      NFS PV Tanimi
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#depolama-objeleri" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#nfs-pvc-tanimi" class="md-nav__link">
     <span class="md-ellipsis">
-      Depolama Objeleri
+      NFS PVC Tanimi
     </span>
   </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#pod-icerisinde-kullanim_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pod Icerisinde Kullanim
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -3747,7 +3706,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/kubernetes-objeleri.md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/persistent-volume.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3755,37 +3714,148 @@
   
 
 
-<h1 id="kubernetes-objeleri">Kubernetes Objeleri<a class="headerlink" href="#kubernetes-objeleri" title="Permanent link">&para;</a></h1>
-<p>Kubernetes objeleri, cluster'daki kaynakları temsil eden kalıcı varlıklardır. Kubernetes API'sini kullanarak bu objeleri oluşturabilir, güncelleyebilir ve silebilirsiniz.</p>
-<p>Her Kubernetes objesi şu temel alanlara sahiptir:</p>
+<h1 id="persistent-volume-ve-persistent-volume-claim">Persistent Volume ve Persistent Volume Claim<a class="headerlink" href="#persistent-volume-ve-persistent-volume-claim" title="Permanent link">&para;</a></h1>
+<p>Podlar gecici (ephemeral) yapilardir. Bir pod kapandiginda veya yeniden basladiginda icerisindeki veriler de kaybolur. Uygulamanin veri saklamasi gerektiginde bu durum ciddi bir sorun olusturur.</p>
+<p>Bu sorunu cozmek icin Kubernetes bize <code>PersistentVolume</code> ve <code>PersistentVolumeClaim</code> objelerini sunar. Bu iki obje birlikte calisir: PersistentVolume (PV) depolama kaynagini tanimlarken, PersistentVolumeClaim (PVC) ise pod'un bu kaynaktan depolama talep etmesini saglar.</p>
+<h2 id="persistentvolume-pv">PersistentVolume (PV)<a class="headerlink" href="#persistentvolume-pv" title="Permanent link">&para;</a></h2>
+<p>PV, cluster uzerinde olusturulan bir depolama kaynagindir. Pod'lardan bagimsiz olarak yasayan bir objedir; pod kapansa bile PV uzerindeki veriler korunur.</p>
+<p>Bir yonetici tarafindan onceden olusturulabilecegi gibi StorageClass yardimiyla dinamik olarak da saglanabilir.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pv-example</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">capacity</span><span class="p">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Retain</span>
+</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">  </span><span class="nt">hostPath</span><span class="p">:</span>
+</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/mnt/data&quot;</span>
+</span></code></pre></div>
 <ul>
-<li><strong>apiVersion</strong>: Kullanılacak API versiyonu</li>
-<li><strong>kind</strong>: Objenin türü (Pod, Service, Deployment vb.)</li>
-<li><strong>metadata</strong>: Objeyi tanımlayan bilgiler (isim, namespace, label vb.)</li>
-<li><strong>spec</strong>: Objenin istenen durumunu belirtir</li>
+<li><code>capacity</code>: PV'nin depolama kapasitesini belirtir.</li>
+<li><code>accessModes</code>: PV'ye hangi modda erisilecegini belirler.</li>
+<li><code>persistentVolumeReclaimPolicy</code>: Bagli oldugu PVC silindiginde PV'ye ne yapilacagini belirler.</li>
+<li><code>hostPath</code>: Depolamanin gerceklesecegi node uzerindeki dizini belirtir. Production ortaminda <code>hostPath</code> yerine NFS, cloud storage gibi cozumler tercih edilir.</li>
 </ul>
-<h2 id="temel-kubernetes-objeleri">Temel Kubernetes Objeleri<a class="headerlink" href="#temel-kubernetes-objeleri" title="Permanent link">&para;</a></h2>
+<h3 id="erisim-modlari-access-modes">Erisim Modlari (Access Modes)<a class="headerlink" href="#erisim-modlari-access-modes" title="Permanent link">&para;</a></h3>
+<p>Uc farkli erisim modu vardir:</p>
 <ul>
-<li><strong><a href="../pod/">Pod</a></strong>: En küçük deployable birim, bir veya daha fazla container barındırır</li>
-<li><strong><a href="../node/">Node</a></strong>: Cluster'daki fiziksel veya sanal makineler</li>
-<li><strong><a href="../namespace/">Namespace</a></strong>: Kaynakları mantıksal olarak izole etmek için kullanılır</li>
-<li><strong><a href="../label/">Label</a></strong>: Objeleri organize etmek ve seçmek için anahtar-değer çiftleri</li>
+<li><strong>ReadWriteOnce (RWO)</strong>: Yalnizca tek bir node tarafindan okuma-yazma modunda baglanabilir.</li>
+<li><strong>ReadOnlyMany (ROX)</strong>: Birden fazla node tarafindan yalnizca okuma modunda baglanabilir.</li>
+<li><strong>ReadWriteMany (RWX)</strong>: Birden fazla node tarafindan okuma-yazma modunda baglanabilir.</li>
 </ul>
-<h2 id="controller-objeleri">Controller Objeleri<a class="headerlink" href="#controller-objeleri" title="Permanent link">&para;</a></h2>
+<h3 id="reclaim-policy">Reclaim Policy<a class="headerlink" href="#reclaim-policy" title="Permanent link">&para;</a></h3>
+<p>PVC silindiginde PV'ye ne yapilacagini belirler:</p>
 <ul>
-<li><strong><a href="../replication-controller/">ReplicationController</a></strong>: Pod replikasyonunu yöneten eski nesil controller (artık önerilmez)</li>
-<li><strong><a href="../replicaset/">ReplicaSet</a></strong>: ReplicationController'ın yeni nesil hali, gelişmiş selector desteği sunar</li>
-<li><strong><a href="../deployment/">Deployment</a></strong>: ReplicaSet'i yöneten üst seviye obje, güncelleme stratejilerini destekler</li>
-<li><strong><a href="../daemonset/">DaemonSet</a></strong>: Her node üzerinde bir pod çalıştırılmasını garanti eder</li>
+<li><strong>Retain</strong>: PV ve icerisindeki veriler korunur. Manuel olarak temizlenip tekrar kullanima hazir hale getirilmesi gerekir.</li>
+<li><strong>Delete</strong>: PV ve icerisindeki veriler otomatik olarak silinir.</li>
+<li><strong>Recycle</strong>: Icerik silinir ve PV yeniden kullanima hazir hale getirilir. (Deprecated, kullanimi onerilmez)</li>
 </ul>
-<h2 id="ag-objeleri">Ağ Objeleri<a class="headerlink" href="#ag-objeleri" title="Permanent link">&para;</a></h2>
+<h2 id="persistentvolumeclaim-pvc">PersistentVolumeClaim (PVC)<a class="headerlink" href="#persistentvolumeclaim-pvc" title="Permanent link">&para;</a></h2>
+<p>PVC, pod'un bir PV'den depolama talep etmek icin kullandigi objedir. PVC olusturuldugunda Kubernetes belirtilen ozelliklere uygun bir PV arar ve eslesirse bu ikisi birbirine baglanir (<strong>Bound</strong> durumuna gecer).</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pvc-example</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteOnce</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">5Gi</span>
+</span></code></pre></div>
 <ul>
-<li><strong><a href="../service/">Service</a></strong>: Podlara ağ erişimi sağlar, yük dengeleme yapar</li>
+<li><code>accessModes</code>: Talep edilen erisim modu. Baglanacak PV'nin desteklemesi gerekir.</li>
+<li><code>resources.requests.storage</code>: Talep edilen minimum depolama kapasitesi.</li>
 </ul>
-<h2 id="depolama-objeleri">Depolama Objeleri<a class="headerlink" href="#depolama-objeleri" title="Permanent link">&para;</a></h2>
+<p>PVC olusturulduktan sonra <code>kubectl get pvc</code> komutu ile durumu kontrol edilebilir. Uygun bir PV bulunamazsa PVC <code>Pending</code> durumunda bekler.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pv
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pvc
+</span></code></pre></div>
+<h2 id="pod-icerisinde-kullanim">Pod Icerisinde Kullanim<a class="headerlink" href="#pod-icerisinde-kullanim" title="Permanent link">&para;</a></h2>
+<p>PVC olusturulduktan sonra pod tanimi icerisinde <code>volumes</code> ve <code>volumeMounts</code> alanlari ile pod'a baglanir.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama-pod</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.22.1</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/nginx/html&quot;</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pvc-depolama</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pvc-depolama</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">    </span><span class="nt">persistentVolumeClaim</span><span class="p">:</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pvc-example</span>
+</span></code></pre></div>
 <ul>
-<li><strong><a href="../persistent-volume/">Persistent Volume</a></strong>: Pod'lardan bağımsız depolama kaynağı ve talep mekanizması (PV/PVC)</li>
+<li><code>volumes</code> alaninda hangi PVC'nin kullanilacagi <code>claimName</code> ile belirtilir.</li>
+<li><code>volumeMounts</code> alaninda bu volumun container icerisinde hangi dizine baglanacagi tanimlanir.</li>
 </ul>
+<p><strong><em>Not: Birden fazla pod ayni anda ayni PVC'yi okuma-yazma modunda kullanmak istiyorsa PV'nin erisim modunun <code>ReadWriteMany</code> olmasi gerekir. <code>ReadWriteOnce</code> modundaki bir PV ayni anda yalnizca tek bir node tarafindan baglanabilir.</em></strong></p>
+<h2 id="nfs-ile-pv-ve-pvc-kullanimi">NFS ile PV ve PVC Kullanimi<a class="headerlink" href="#nfs-ile-pv-ve-pvc-kullanimi" title="Permanent link">&para;</a></h2>
+<p><code>hostPath</code> yalnizca tek bir node uzerinde calisir ve o node'a bagimlidir. Pod farkli bir node'a schedule edildiginde veriye erisemez. Bunu cozmek icin tum node'lardan erisilebilen paylasimli bir depolama alani kullanmak gerekir. NFS (Network File System) bu amac icin yaygin tercihlerden biridir.</p>
+<p>Oncelikle NFS sunucu adresi ve paylasim yolu bilinmesi gerekir. Asagidaki ornekte NFS sunucusu <code>192.168.1.100</code> adresinde, paylasilan dizin ise <code>/srv/nfs/kubernetes</code>'tir.</p>
+<h3 id="nfs-pv-tanimi">NFS PV Tanimi<a class="headerlink" href="#nfs-pv-tanimi" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolume</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pv-nfs</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nt">capacity</span><span class="p">:</span>
+</span><span id="__span-4-7"><a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10Gi</span>
+</span><span id="__span-4-8"><a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
+</span><span id="__span-4-9"><a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
+</span><span id="__span-4-10"><a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="nt">persistentVolumeReclaimPolicy</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Retain</span>
+</span><span id="__span-4-11"><a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="w">  </span><span class="nt">nfs</span><span class="p">:</span>
+</span><span id="__span-4-12"><a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a><span class="w">    </span><span class="nt">server</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">192.168.1.100</span>
+</span><span id="__span-4-13"><a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a><span class="w">    </span><span class="nt">path</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/srv/nfs/kubernetes&quot;</span>
+</span></code></pre></div>
+<ul>
+<li><code>nfs.server</code>: NFS sunucusunun IP adresi veya hostname'i.</li>
+<li><code>nfs.path</code>: NFS sunucusu uzerinde paylasilan dizin. Onceden olusturulmus olmasi gerekir.</li>
+<li><code>accessModes</code> olarak <code>ReadWriteMany</code> kullanildi; NFS birden fazla node tarafindan ayni anda okunup yazilabilir.</li>
+</ul>
+<p><strong><em>Not: NFS paylasiminin Kubernetes node'larinda calisabilmesi icin her node uzerinde <code>nfs-common</code> (Debian/Ubuntu) veya <code>nfs-utils</code> (RHEL/CentOS) paketinin yuklu olmasi gerekir.</em></strong></p>
+<h3 id="nfs-pvc-tanimi">NFS PVC Tanimi<a class="headerlink" href="#nfs-pvc-tanimi" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PersistentVolumeClaim</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pvc-nfs</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nt">accessModes</span><span class="p">:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ReadWriteMany</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="nt">resources</span><span class="p">:</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">    </span><span class="nt">requests</span><span class="p">:</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">      </span><span class="nt">storage</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10Gi</span>
+</span></code></pre></div>
+<p>PVC olusturuldugunda Kubernetes kapasite ve erisim modu eslestiginden <code>pv-nfs</code> ile otomatik olarak eslesir ve <code>Bound</code> durumuna gecer.</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pv-nfs.yaml
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>kubectl<span class="w"> </span>apply<span class="w"> </span>-f<span class="w"> </span>pvc-nfs.yaml
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>kubectl<span class="w"> </span>get<span class="w"> </span>pv,pvc
+</span></code></pre></div>
+<h3 id="pod-icerisinde-kullanim_1">Pod Icerisinde Kullanim<a class="headerlink" href="#pod-icerisinde-kullanim_1" title="Permanent link">&para;</a></h3>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama-pod</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.22.1</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="nt">volumeMounts</span><span class="p">:</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">mountPath</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;/usr/share/nginx/html&quot;</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">      </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nfs-depolama</span>
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">  </span><span class="nt">volumes</span><span class="p">:</span>
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nfs-depolama</span>
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="nt">persistentVolumeClaim</span><span class="p">:</span>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">      </span><span class="nt">claimName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pvc-nfs</span>
+</span></code></pre></div>
+<p>Pod hangi node'a schedule edilirse edilsin NFS uzerinden ayni veriye erisir. Birden fazla pod ayni PVC'yi ayni anda kullanabilir.</p>
 
 
 
@@ -3818,44 +3888,6 @@
       
         <footer class="md-footer">
   
-    
-      
-      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
-        
-          
-          <a href="../cluster-kurulumu/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Elbet Bir Gun">
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
-            </div>
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Önceki
-              </span>
-              <div class="md-ellipsis">
-                Elbet Bir Gun
-              </div>
-            </div>
-          </a>
-        
-        
-          
-          <a href="../node/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Node">
-            <div class="md-footer__title">
-              <span class="md-footer__direction">
-                Sonraki
-              </span>
-              <div class="md-ellipsis">
-                Node
-              </div>
-            </div>
-            <div class="md-footer__button md-icon">
-              
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
-            </div>
-          </a>
-        
-      </nav>
     
   
   <div class="md-footer-meta md-typeset">

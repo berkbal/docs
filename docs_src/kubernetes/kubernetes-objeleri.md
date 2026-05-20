@@ -11,12 +11,22 @@ Her Kubernetes objesi şu temel alanlara sahiptir:
 
 ## Temel Kubernetes Objeleri
 
-Kubernetes'te en sık kullanılan objeler:
+- **[Pod](pod.md)**: En küçük deployable birim, bir veya daha fazla container barındırır
+- **[Node](node.md)**: Cluster'daki fiziksel veya sanal makineler
+- **[Namespace](namespace.md)**: Kaynakları mantıksal olarak izole etmek için kullanılır
+- **[Label](label.md)**: Objeleri organize etmek ve seçmek için anahtar-değer çiftleri
 
-- **Pod**: En küçük deployable birim, bir veya daha fazla container barındırır
-- **Node**: Cluster'daki fiziksel veya sanal makineler
-- **Namespace**: Kaynakları mantıksal olarak izole etmek için kullanılır
-- **Label**: Objeleri organize etmek ve seçmek için anahtar-değer çiftleri
-- **Service**: Podlara ağ erişimi sağlar
-- **ConfigMap**: Uygulama yapılandırma verilerini saklar
-- **Secret**: Hassas bilgileri (şifreler, token'lar) güvenli şekilde saklar
+## Controller Objeleri
+
+- **[ReplicationController](replication-controller.md)**: Pod replikasyonunu yöneten eski nesil controller (artık önerilmez)
+- **[ReplicaSet](replicaset.md)**: ReplicationController'ın yeni nesil hali, gelişmiş selector desteği sunar
+- **[Deployment](deployment.md)**: ReplicaSet'i yöneten üst seviye obje, güncelleme stratejilerini destekler
+- **[DaemonSet](daemonset.md)**: Her node üzerinde bir pod çalıştırılmasını garanti eder
+
+## Ağ Objeleri
+
+- **[Service](service.md)**: Podlara ağ erişimi sağlar, yük dengeleme yapar
+
+## Depolama Objeleri
+
+- **[Persistent Volume](persistent-volume.md)**: Pod'lardan bağımsız depolama kaynağı ve talep mekanizması (PV/PVC)

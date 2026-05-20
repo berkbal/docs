@@ -159,6 +159,7 @@ nav:
       - Deployment: kubernetes/deployment.md
       - DaemonSet: kubernetes/daemonset.md
       - Service: kubernetes/service.md
+      - Persistent Volume: kubernetes/persistent-volume.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

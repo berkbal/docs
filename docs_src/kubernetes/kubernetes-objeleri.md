@@ -26,6 +26,8 @@ Her Kubernetes objesi şu temel alanlara sahiptir:
 ## Ağ Objeleri
 
 - **[Service](service.md)**: Podlara ağ erişimi sağlar, yük dengeleme yapar
+- **[Ingress](ingress.md)**: HTTP/HTTPS trafiğini host ve path bazlı olarak servislere yönlendirir
+- **[Gateway API](gateway-api.md)**: Ingress'in yeni nesil, rol bazlı ve daha esnek halefi
 
 ## Depolama Objeleri
 

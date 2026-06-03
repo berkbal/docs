@@ -159,6 +159,8 @@ nav:
       - Deployment: kubernetes/deployment.md
       - DaemonSet: kubernetes/daemonset.md
       - Service: kubernetes/service.md
+      - Ingress: kubernetes/ingress.md
+      - Gateway API: kubernetes/gateway-api.md
       - Persistent Volume: kubernetes/persistent-volume.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md

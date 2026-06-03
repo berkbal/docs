@@ -32,3 +32,4 @@ Her Kubernetes objesi şu temel alanlara sahiptir:
 ## Depolama Objeleri
 
 - **[Persistent Volume](persistent-volume.md)**: Pod'lardan bağımsız depolama kaynağı ve talep mekanizması (PV/PVC)
+- **[StorageClass](storage-class.md)**: Depolamanın dinamik olarak sağlanmasını (dynamic provisioning) tanımlar

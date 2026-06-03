@@ -162,6 +162,7 @@ nav:
       - Ingress: kubernetes/ingress.md
       - Gateway API: kubernetes/gateway-api.md
       - Persistent Volume: kubernetes/persistent-volume.md
+      - StorageClass: kubernetes/storage-class.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

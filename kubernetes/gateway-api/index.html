@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/deployment/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/gateway-api/">
       
       
-        <link rel="prev" href="../replicaset/">
+        <link rel="prev" href="../ingress/">
       
       
-        <link rel="next" href="../daemonset/">
+        <link rel="next" href="../persistent-volume/">
       
       
       <link rel="icon" href="../../images/favicon.ico">
@@ -22,7 +22,7 @@
     
     
       
-        <title>Deployment - Docs for SysAdmins</title>
+        <title>Gateway API - Docs for SysAdmins</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#deployment" class="md-skip">
+        <a href="#gateway-api-nedir" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deployment
+              Gateway API
             
           </span>
         </div>
@@ -1927,30 +1927,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Deployment
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../deployment/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -1959,35 +1939,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#ornek-deployment-tanm" class="md-nav__link">
-    <span class="md-ellipsis">
-      Örnek Deployment Tanımı
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2060,10 +2011,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../gateway-api/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Gateway API
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -2072,6 +2043,89 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#rol-bazli-tasarim" class="md-nav__link">
+    <span class="md-ellipsis">
+      Rol Bazli Tasarim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gatewayclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      GatewayClass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httproute" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTPRoute
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trafik-agirliklandirma-traffic-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trafik Agirliklandirma (Traffic Splitting)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingress-ile-karsilastirma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingress ile Karsilastirma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kullanisli-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kullanisli Komutlar
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -3739,9 +3793,63 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#ornek-deployment-tanm" class="md-nav__link">
+  <a href="#rol-bazli-tasarim" class="md-nav__link">
     <span class="md-ellipsis">
-      Örnek Deployment Tanımı
+      Rol Bazli Tasarim
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gatewayclass" class="md-nav__link">
+    <span class="md-ellipsis">
+      GatewayClass
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Gateway
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#httproute" class="md-nav__link">
+    <span class="md-ellipsis">
+      HTTPRoute
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#trafik-agirliklandirma-traffic-splitting" class="md-nav__link">
+    <span class="md-ellipsis">
+      Trafik Agirliklandirma (Traffic Splitting)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#ingress-ile-karsilastirma" class="md-nav__link">
+    <span class="md-ellipsis">
+      Ingress ile Karsilastirma
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kullanisli-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      Kullanisli Komutlar
     </span>
   </a>
   
@@ -3762,7 +3870,7 @@
                   
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/deployment.md" title="Düzenle" class="md-content__button md-icon">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/gateway-api.md" title="Düzenle" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -3770,42 +3878,143 @@
   
 
 
-<h1 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h1>
-<p>Deployment objesi podları ve ReplicaSet'leri dolaylı yoldan yöneten üst seviye bir objedir. Deployment tanımı ReplicaSet'i yönetir, ReplicaSet de podları yönetir. RollingUpdate ve Recreate güncelleme stratejilerini destekler.</p>
-<h3 id="ornek-deployment-tanm">Örnek Deployment Tanımı<a class="headerlink" href="#ornek-deployment-tanm" title="Permanent link">&para;</a></h3>
-<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">apps/v1</span>
-</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Deployment</span>
+<h1 id="gateway-api-nedir">Gateway API Nedir?<a class="headerlink" href="#gateway-api-nedir" title="Permanent link">&para;</a></h1>
+<p>Ingress, uzun sure Kubernetes'te HTTP/HTTPS trafigini yonetmenin standart yolu oldu fakat bazi sinirlamalari vardir. Ingress yalnizca HTTP/HTTPS odaklidir, gelismis yonlendirme ozellikleri (header bazli routing, trafik agirliklandirma vb.) icin standart bir yapi sunmaz ve bu eksiklikler her controller'in kendi annotation'lari ile doldurulur. Bu da tasinabilirligi (portability) bozar.</p>
+<p>Gateway API, bu sorunlari cozmek icin gelistirilen yeni nesil bir networking standardidir. Ingress'in yerini almak uzere tasarlanmistir; daha esnek, daha guclu ve rol bazli (role-oriented) bir yapi sunar. HTTP disinda TCP, UDP, TLS gibi protokolleri de destekler.</p>
+<p><strong>Not: Gateway API, Kubernetes'in cekirdek (core) parcasi degildir. CRD (Custom Resource Definition) olarak cluster'a ayrica kurulmalidir.</strong></p>
+<h2 id="rol-bazli-tasarim">Rol Bazli Tasarim<a class="headerlink" href="#rol-bazli-tasarim" title="Permanent link">&para;</a></h2>
+<p>Gateway API'nin en onemli farki, sorumluluklari farkli rollere ayirmasidir. Boylece cluster yoneticisi ile uygulama gelistiricisinin sorumluluk alanlari net bir sekilde ayrilir. Uc temel kaynak (resource) bu rollere karsilik gelir:</p>
+<ul>
+<li><strong>GatewayClass</strong>: Altyapiyi saglayan ekip (infrastructure provider) tarafindan tanimlanir. Hangi controller'in kullanilacagini belirtir. Ingress'teki <code>IngressClass</code>'in karsiligidir.</li>
+<li><strong>Gateway</strong>: Cluster yoneticisi (cluster operator) tarafindan tanimlanir. Trafigin cluster'a girdigi noktayi, dinlenecek portlari ve protokolleri belirler.</li>
+<li><strong>HTTPRoute (ve TCPRoute, GRPCRoute vb.)</strong>: Uygulama gelistiricisi tarafindan tanimlanir. Trafigin hangi servise nasil yonlendirilecegini belirler.</li>
+</ul>
+<p>Bu ayrim sayesinde bir gelistirici, altyapiya dokunmadan yalnizca kendi route kurallarini yonetebilir.</p>
+<h2 id="gatewayclass">GatewayClass<a class="headerlink" href="#gatewayclass" title="Permanent link">&para;</a></h2>
+<p>Kullanilacak controller'i tanimlar. Genellikle controller kurulumu ile birlikte hazir gelir.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gateway.networking.k8s.io/v1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">GatewayClass</span>
 </span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">metadata</span><span class="p">:</span>
-</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx-deployment</span>
-</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">labels</span><span class="p">:</span>
-</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">    </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx-deployment</span>
-</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="nt">spec</span><span class="p">:</span>
-</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">replicas</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span>
-</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">selector</span><span class="p">:</span>
-</span><span id="__span-0-10"><a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a><span class="w">    </span><span class="nt">matchLabels</span><span class="p">:</span>
-</span><span id="__span-0-11"><a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a><span class="w">      </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx-deployment</span>
-</span><span id="__span-0-12"><a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a><span class="w">  </span><span class="nt">template</span><span class="p">:</span>
-</span><span id="__span-0-13"><a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a><span class="w">    </span><span class="nt">metadata</span><span class="p">:</span>
-</span><span id="__span-0-14"><a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a><span class="w">      </span><span class="nt">labels</span><span class="p">:</span>
-</span><span id="__span-0-15"><a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a><span class="w">        </span><span class="nt">app</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx-deployment</span>
-</span><span id="__span-0-16"><a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a><span class="w">    </span><span class="nt">spec</span><span class="p">:</span>
-</span><span id="__span-0-17"><a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a><span class="w">      </span><span class="nt">containers</span><span class="p">:</span>
-</span><span id="__span-0-18"><a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a><span class="w">      </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx</span>
-</span><span id="__span-0-19"><a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="w">        </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.20.2</span>
-</span><span id="__span-0-20"><a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a><span class="w">        </span><span class="nt">ports</span><span class="p">:</span>
-</span><span id="__span-0-21"><a id="__codelineno-0-21" name="__codelineno-0-21" href="#__codelineno-0-21"></a><span class="w">        </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">containerPort</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-gateway-class</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="nt">controllerName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example.com/gateway-controller</span>
 </span></code></pre></div>
-<p>apiVersion alanı ilk zorunlu alandır ve bağlanmak istediğimiz API sunucusu üzerindeki API uç noktasını (endpoint) belirtir; bu alan, tanımlanan nesne türü için mevcut bir sürümle eşleşmelidir. İkinci zorunlu alan, nesne türünü belirten kind alanıdır; bizim durumumuzda bu Deployment'tır ancak Pod, ReplicaSet, Namespace, Service vb. de olabilir. Üçüncü zorunlu alan olan metadata, nesnenin isim, notlar (annotations), etiketler (labels), ad alanları (namespaces) gibi temel bilgilerini tutar. Örneğimiz iki spec alanı göstermektedir: <code>spec</code> Deployment'ın özelliklerini, <code>spec.template.spec</code> ise oluşturulacak Pod'ların özelliklerini tanımlar.</p>
-<p>Aşağıdaki komut ile bu tanımı <code>kubectl</code> ile generate edebiliriz.</p>
-<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>kubectl<span class="w"> </span>create<span class="w"> </span>deployment<span class="w"> </span>nginx-deployment<span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>--image<span class="o">=</span>nginx:1.20.2<span class="w"> </span>--port<span class="o">=</span><span class="m">80</span><span class="w"> </span>--replicas<span class="o">=</span><span class="m">3</span><span class="w"> </span><span class="se">\</span>
-</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>--dry-run<span class="o">=</span>client<span class="w"> </span>-o<span class="w"> </span>yaml<span class="w"> </span>&gt;<span class="w"> </span>nginx-deploy.yaml
+<ul>
+<li><code>controllerName</code>: Bu GatewayClass'i isleyecek controller'in adi.</li>
+</ul>
+<h2 id="gateway">Gateway<a class="headerlink" href="#gateway" title="Permanent link">&para;</a></h2>
+<p>Trafigin cluster'a girdigi noktayi tanimlar. Hangi portun, hangi protokol ile dinlenecegini ve hangi route'larin bu Gateway'e baglanabilecegini belirler.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gateway.networking.k8s.io/v1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Gateway</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-gateway</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">  </span><span class="nt">gatewayClassName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-gateway-class</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="nt">listeners</span><span class="p">:</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">http</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="nt">protocol</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTP</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="nt">allowedRoutes</span><span class="p">:</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">namespaces</span><span class="p">:</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">        </span><span class="nt">from</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Same</span>
 </span></code></pre></div>
-<h1 id="update">Update<a class="headerlink" href="#update" title="Permanent link">&para;</a></h1>
-<p>Deployment nesnesi oluşturulduktan sonra, Kubernetes sistemi nesneye status (durum) alanını ekler ve bunu gerekli tüm durum bilgileriyle doldurur.</p>
-<p>Aşağıdaki örnekte, yeni bir Deployment ReplicaSet A'yı oluşturur; o da ardından, her biri bir adet nginx:1.20.2 konteyner imajını çalıştıracak şekilde yapılandırılmış Pod Şablonuna sahip 3 Pod yaratır. Bu durumda ReplicaSet A, Deployment'ın bir durumunu temsil eden nginx:1.20.2 ile ilişkilendirilir. Bu belirli durum, Revizyon 1 olarak kaydedilir.</p>
-<p><img alt="Deployment tarafından oluşturulan ReplicaSetler" src="../image-4.png" /></p>
-<p>Deployment nesnesinde güncelleme yaptığımızda ReplicaSet B devreye girer fakat ReplicaSet A geçmişte saklanır. İstediğimiz zaman buna geri dönebiliriz.</p>
+<ul>
+<li><code>gatewayClassName</code>: Bu Gateway'in hangi GatewayClass'i kullanacagi.</li>
+<li><code>listeners</code>: Dinlenecek port ve protokol tanimlari.</li>
+<li><code>allowedRoutes</code>: Bu Gateway'e hangi namespace'lerden route baglanabilecegini belirler (<code>Same</code>, <code>All</code>, <code>Selector</code>).</li>
+</ul>
+<h2 id="httproute">HTTPRoute<a class="headerlink" href="#httproute" title="Permanent link">&para;</a></h2>
+<p>Gelen trafigin nasil yonlendirilecegini belirler. Bir Gateway'e baglanir ve <code>host</code>, <code>path</code>, <code>header</code> gibi kriterlere gore eslesme yapar.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gateway.networking.k8s.io/v1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTPRoute</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend-route</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">parentRefs</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-gateway</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">hostnames</span><span class="p">:</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="s">&quot;app.example.com&quot;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">matches</span><span class="p">:</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">path</span><span class="p">:</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">        </span><span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">PathPrefix</span>
+</span><span id="__span-2-14"><a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">/</span>
+</span><span id="__span-2-15"><a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nt">backendRefs</span><span class="p">:</span>
+</span><span id="__span-2-16"><a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">frontend-svc</span>
+</span><span id="__span-2-17"><a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span></code></pre></div>
+<ul>
+<li><code>parentRefs</code>: Bu route'un baglanacagi Gateway.</li>
+<li><code>hostnames</code>: Kuralin gecerli oldugu domainler.</li>
+<li><code>matches</code>: Eslesme kriterleri (path, header, method vb.).</li>
+<li><code>backendRefs</code>: Trafigin yonlendirilecegi hedef service'ler.</li>
+</ul>
+<h2 id="trafik-agirliklandirma-traffic-splitting">Trafik Agirliklandirma (Traffic Splitting)<a class="headerlink" href="#trafik-agirliklandirma-traffic-splitting" title="Permanent link">&para;</a></h2>
+<p>Gateway API'nin guclu yanlarindan biri, trafigi birden fazla servise belirli oranlarda dagitabilmesidir. Bu ozellik canary deployment veya A/B testing icin idealdir. Ingress'te bu islem ancak controller'a ozel annotation'lar ile yapilabilirken, Gateway API'de standart bir alandir.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gateway.networking.k8s.io/v1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">HTTPRoute</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">canary-route</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">parentRefs</span><span class="p">:</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">example-gateway</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nt">rules</span><span class="p">:</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">backendRefs</span><span class="p">:</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-v1</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">90</span>
+</span><span id="__span-3-13"><a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">    </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">app-v2</span>
+</span><span id="__span-3-14"><a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">      </span><span class="nt">port</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">80</span>
+</span><span id="__span-3-15"><a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a><span class="w">      </span><span class="nt">weight</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">10</span>
+</span></code></pre></div>
+<ul>
+<li><code>weight</code>: Trafigin yuzde kaclik kismi bu backend'e yonlendirilecek. Yukaridaki ornekte trafigin %90'i <code>app-v1</code>'e, %10'u <code>app-v2</code>'ye gider.</li>
+</ul>
+<h2 id="ingress-ile-karsilastirma">Ingress ile Karsilastirma<a class="headerlink" href="#ingress-ile-karsilastirma" title="Permanent link">&para;</a></h2>
+<table>
+<thead>
+<tr>
+<th>Ozellik</th>
+<th>Ingress</th>
+<th>Gateway API</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Protokol destegi</td>
+<td>HTTP/HTTPS</td>
+<td>HTTP, HTTPS, TCP, UDP, TLS, gRPC</td>
+</tr>
+<tr>
+<td>Rol ayrimi</td>
+<td>Yok</td>
+<td>Var (GatewayClass / Gateway / Route)</td>
+</tr>
+<tr>
+<td>Gelismis routing</td>
+<td>Annotation ile</td>
+<td>Standart alanlarla</td>
+</tr>
+<tr>
+<td>Trafik agirliklandirma</td>
+<td>Standart degil</td>
+<td>Standart</td>
+</tr>
+<tr>
+<td>Cekirdek parcasi mi?</td>
+<td>Evet</td>
+<td>Hayir (CRD olarak kurulur)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Not: Gateway API, Ingress'i tamamen ortadan kaldirmaz; ancak Kubernetes toplulugu yeni projeler icin Gateway API'yi onermektedir. Ingress halen genis bir sekilde kullanilmaktadir.</strong></p>
+<h2 id="kullanisli-komutlar">Kullanisli Komutlar<a class="headerlink" href="#kullanisli-komutlar" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>kubectl<span class="w"> </span>get<span class="w"> </span>gatewayclass
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>gateway
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>kubectl<span class="w"> </span>get<span class="w"> </span>httproute
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>gateway<span class="w"> </span>example-gateway
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>httproute<span class="w"> </span>frontend-route
+</span></code></pre></div>
 
 
 
@@ -3843,7 +4052,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
         
           
-          <a href="../replicaset/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: ReplicaSet">
+          <a href="../ingress/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Ingress">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -3853,20 +4062,20 @@
                 Önceki
               </span>
               <div class="md-ellipsis">
-                ReplicaSet
+                Ingress
               </div>
             </div>
           </a>
         
         
           
-          <a href="../daemonset/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: DaemonSet">
+          <a href="../persistent-volume/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Persistent Volume">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Sonraki
               </span>
               <div class="md-ellipsis">
-                DaemonSet
+                Persistent Volume
               </div>
             </div>
             <div class="md-footer__button md-icon">

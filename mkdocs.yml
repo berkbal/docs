@@ -163,6 +163,8 @@ nav:
       - Gateway API: kubernetes/gateway-api.md
       - Persistent Volume: kubernetes/persistent-volume.md
       - StorageClass: kubernetes/storage-class.md
+  - Sık Tekrarlanan İşlemler:
+      - Etcd Yedekleme: kubernetes/etcd-yedekleme.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

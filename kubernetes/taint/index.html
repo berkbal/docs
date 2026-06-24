@@ -8,9 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/main/mail/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/taint/">
       
       
+        <link rel="prev" href="../label/">
+      
+      
+        <link rel="next" href="../replication-controller/">
       
       
         
@@ -21,7 +25,7 @@
     
     
       
-        <title>Mail - Docs for SysAdmins</title>
+        <title>Taint ve Toleration - Docs for SysAdmins</title>
       
     
     
@@ -71,6 +75,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#taint-ve-toleration" class="md-skip">
+          Ana içeriğe geç
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -102,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Mail
+              Taint ve Toleration
             
           </span>
         </div>
@@ -263,11 +272,13 @@
   
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../../kubernetes/kubernetes/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../kubernetes/" class="md-tabs__link">
           
   
   
@@ -1701,8 +1712,10 @@
       
   
   
+    
   
   
+  
     
     
       
@@ -1720,19 +1733,22 @@
     
     
       
+        
+        
+      
       
         
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
         
           
-          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="">
             
   
   
@@ -1750,7 +1766,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3">
             <span class="md-nav__icon md-icon"></span>
             
@@ -1768,7 +1784,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/kubernetes/" class="md-nav__link">
+      <a href="../kubernetes/" class="md-nav__link">
         
   
   
@@ -1810,17 +1826,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_2" >
         
           
-          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_2" id="__nav_3_2_label" tabindex="">
             
   
   
@@ -1856,7 +1875,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/kubernetes-mimarisi/" class="md-nav__link">
+      <a href="../kubernetes-mimarisi/" class="md-nav__link">
         
   
   
@@ -1884,7 +1903,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/control-plane-bilesenleri/" class="md-nav__link">
+      <a href="../control-plane-bilesenleri/" class="md-nav__link">
         
   
   
@@ -1912,7 +1931,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/worker-node-bilesenleri/" class="md-nav__link">
+      <a href="../worker-node-bilesenleri/" class="md-nav__link">
         
   
   
@@ -1958,17 +1977,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_3" >
         
           
-          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_3" id="__nav_3_3_label" tabindex="">
             
   
   
@@ -2004,7 +2026,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/cluster-kurulumu/" class="md-nav__link">
+      <a href="../cluster-kurulumu/" class="md-nav__link">
         
   
   
@@ -2037,8 +2059,10 @@
                 
   
   
+    
   
   
+  
     
     
       
@@ -2077,18 +2101,21 @@
     
       
       
-        
-      
-    
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-        
-        
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" >
         
           
-          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="0">
+          
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3_4" id="__nav_3_4_label" tabindex="">
             
   
   
@@ -2106,7 +2133,7 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_4_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_3_4">
             <span class="md-nav__icon md-icon"></span>
             
@@ -2124,7 +2151,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/kubernetes-objeleri/" class="md-nav__link">
+      <a href="../kubernetes-objeleri/" class="md-nav__link">
         
   
   
@@ -2152,7 +2179,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/node/" class="md-nav__link">
+      <a href="../node/" class="md-nav__link">
         
   
   
@@ -2180,7 +2207,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/pod/" class="md-nav__link">
+      <a href="../pod/" class="md-nav__link">
         
   
   
@@ -2208,7 +2235,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/namespace/" class="md-nav__link">
+      <a href="../namespace/" class="md-nav__link">
         
   
   
@@ -2236,7 +2263,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/label/" class="md-nav__link">
+      <a href="../label/" class="md-nav__link">
         
   
   
@@ -2261,10 +2288,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../../kubernetes/taint/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Taint ve Toleration
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2280,6 +2334,103 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ne-zaman-kullanilir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ne Zaman Kullanilir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taint-yapisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taint Yapisi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodea-taint-uygulamak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node'a Taint Uygulamak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poda-toleration-eklemek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pod'a Toleration Eklemek
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noexecute-ve-tolerationseconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NoExecute ve tolerationSeconds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taint-ve-label-farki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taint ve Label Farki
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kullanisli-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kullanisli Komutlar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -2292,7 +2443,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/replication-controller/" class="md-nav__link">
+      <a href="../replication-controller/" class="md-nav__link">
         
   
   
@@ -2320,7 +2471,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/replicaset/" class="md-nav__link">
+      <a href="../replicaset/" class="md-nav__link">
         
   
   
@@ -2348,7 +2499,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/deployment/" class="md-nav__link">
+      <a href="../deployment/" class="md-nav__link">
         
   
   
@@ -2376,7 +2527,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/daemonset/" class="md-nav__link">
+      <a href="../daemonset/" class="md-nav__link">
         
   
   
@@ -2404,7 +2555,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/service/" class="md-nav__link">
+      <a href="../service/" class="md-nav__link">
         
   
   
@@ -2432,7 +2583,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/ingress/" class="md-nav__link">
+      <a href="../ingress/" class="md-nav__link">
         
   
   
@@ -2460,7 +2611,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/gateway-api/" class="md-nav__link">
+      <a href="../gateway-api/" class="md-nav__link">
         
   
   
@@ -2488,7 +2639,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/persistent-volume/" class="md-nav__link">
+      <a href="../persistent-volume/" class="md-nav__link">
         
   
   
@@ -2516,7 +2667,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/storage-class/" class="md-nav__link">
+      <a href="../storage-class/" class="md-nav__link">
         
   
   
@@ -2562,17 +2713,20 @@
       
       
         
+          
+          
+        
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_5" >
         
           
-          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_3_5" id="__nav_3_5_label" tabindex="">
             
   
   
@@ -2608,7 +2762,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../kubernetes/etcd-yedekleme/" class="md-nav__link">
+      <a href="../etcd-yedekleme/" class="md-nav__link">
         
   
   
@@ -4684,6 +4838,93 @@
   
   
   
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#ne-zaman-kullanilir" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Ne Zaman Kullanilir?
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taint-yapisi" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taint Yapisi
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#nodea-taint-uygulamak" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Node'a Taint Uygulamak
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#poda-toleration-eklemek" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pod'a Toleration Eklemek
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#noexecute-ve-tolerationseconds" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        NoExecute ve tolerationSeconds
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#taint-ve-label-farki" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Taint ve Label Farki
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kullanisli-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kullanisli Komutlar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -4700,7 +4941,7 @@
 
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/main/mail.md" title="Düzenle" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/taint.md" title="Düzenle" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4708,9 +4949,123 @@
   
 
 
-  <h1>Mail</h1>
-
-
+<h1 id="taint-ve-toleration">Taint ve Toleration<a class="headerlink" href="#taint-ve-toleration" title="Permanent link">&para;</a></h1>
+<p>Label'lar objeleri secmeye yararken, Taint'ler tam tersini yapar: bir node'a uygulanir ve o node'a pod schedule edilmesini <strong>engeller</strong>. Yani Taint, node'un "beni rahat birak, uygun olmayan podlari uzerime alma" demesidir.</p>
+<p>Taint node tarafinda tanimlanir. Pod tarafinda ise bu engeli asmaya yarayan karsiligi <strong>Toleration</strong>'dir. Bir pod, ancak node'daki taint'e uygun bir toleration tasiyorsa o node'a yerlesebilir.</p>
+<p><strong>Taint iter, Toleration podun bu itmeye ragmen yerlesmesine izin verir.</strong></p>
+<h2 id="ne-zaman-kullanilir">Ne Zaman Kullanilir?<a class="headerlink" href="#ne-zaman-kullanilir" title="Permanent link">&para;</a></h2>
+<ul>
+<li>Belirli node'lari ozel is yukleri icin ayirmak (ornegin GPU'lu node'lari yalnizca makine ogrenmesi podlarina vermek).</li>
+<li>Control plane node'larina normal uygulama podlarinin gelmesini engellemek (kubeadm bunu varsayilan olarak yapar).</li>
+<li>Bakima alinan veya sorunlu node'lardan podlari uzak tutmak ya da tahliye etmek.</li>
+</ul>
+<h2 id="taint-yapisi">Taint Yapisi<a class="headerlink" href="#taint-yapisi" title="Permanent link">&para;</a></h2>
+<p>Bir taint <code>key=value:effect</code> formatinda tanimlanir. Asil belirleyici kisim <code>effect</code> alanidir; podun akibetini bu belirler.</p>
+<table>
+<thead>
+<tr>
+<th>Effect</th>
+<th>Anlami</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>NoSchedule</code></td>
+<td>Uygun toleration'i olmayan yeni podlar bu node'a schedule edilmez. Halihazirda calisan podlara dokunulmaz.</td>
+</tr>
+<tr>
+<td><code>PreferNoSchedule</code></td>
+<td>Scheduler mumkun oldugunca bu node'dan kacinir, ama baska secenek yoksa yine de yerlestirebilir. "Yumusak" versiyondur.</td>
+</tr>
+<tr>
+<td><code>NoExecute</code></td>
+<td>Yeni podlar schedule edilmez; ayrica uygun toleration'i olmayan <strong>mevcut podlar da node'dan tahliye edilir</strong> (evict).</td>
+</tr>
+</tbody>
+</table>
+<h2 id="nodea-taint-uygulamak">Node'a Taint Uygulamak<a class="headerlink" href="#nodea-taint-uygulamak" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>kubectl<span class="w"> </span>taint<span class="w"> </span>nodes<span class="w"> </span>node1<span class="w"> </span><span class="nv">gpu</span><span class="o">=</span>true:NoSchedule
+</span></code></pre></div>
+<p>Bu komut <code>node1</code>'e <code>gpu=true</code> taint'ini <code>NoSchedule</code> etkisiyle ekler. Artik <code>gpu=true</code> toleration'i tasimayan hicbir pod bu node'a yerlesemez.</p>
+<p>Taint'i kaldirmak icin komutun sonuna <code>-</code> eklenir:</p>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>kubectl<span class="w"> </span>taint<span class="w"> </span>nodes<span class="w"> </span>node1<span class="w"> </span><span class="nv">gpu</span><span class="o">=</span>true:NoSchedule-
+</span></code></pre></div>
+<h2 id="poda-toleration-eklemek">Pod'a Toleration Eklemek<a class="headerlink" href="#poda-toleration-eklemek" title="Permanent link">&para;</a></h2>
+<p>Pod, node'daki taint'e cevap verecek toleration'i <code>spec.tolerations</code> altinda tanimlar. Asagidaki pod yukaridaki <code>gpu=true:NoSchedule</code> taint'ini tolere eder:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">gpu-pod</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">cuda-app</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nvidia/cuda:12.0-base</span>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">  </span><span class="nt">tolerations</span><span class="p">:</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gpu&quot;</span>
+</span><span id="__span-2-11"><a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Equal&quot;</span>
+</span><span id="__span-2-12"><a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">    </span><span class="nt">value</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;true&quot;</span>
+</span><span id="__span-2-13"><a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;NoSchedule&quot;</span>
+</span></code></pre></div>
+<ul>
+<li><code>key</code> / <code>value</code> / <code>effect</code>: Node'daki taint ile <strong>birebir eslesmelidir</strong>, aksi halde toleration gecersiz kalir.</li>
+<li><code>operator</code>: <code>Equal</code> (varsayilan) key ve value'nun eslesmesini ister. <code>Exists</code> ise value alanini yok sayar, sadece key'in varligina bakar.</li>
+</ul>
+<p><code>Exists</code> ile bir node'daki o key'e sahip tum taint'leri (value'su ne olursa olsun) tolere edebilirsiniz:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="w">  </span><span class="nt">tolerations</span><span class="p">:</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;gpu&quot;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">    </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Exists&quot;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;NoSchedule&quot;</span>
+</span></code></pre></div>
+<h2 id="noexecute-ve-tolerationseconds">NoExecute ve tolerationSeconds<a class="headerlink" href="#noexecute-ve-tolerationseconds" title="Permanent link">&para;</a></h2>
+<p><code>NoExecute</code> etkisinde, toleration'a <code>tolerationSeconds</code> eklenirse pod node'da sonsuza kadar degil, belirtilen sure kadar kalir. Sure dolunca tahliye edilir. Genelde bir node <code>NotReady</code> duruma dustugunde podu hemen atmak yerine bir sure beklemek icin kullanilir.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="w">  </span><span class="nt">tolerations</span><span class="p">:</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">key</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;node.kubernetes.io/not-ready&quot;</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">operator</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Exists&quot;</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">effect</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;NoExecute&quot;</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">    </span><span class="nt">tolerationSeconds</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">300</span>
+</span></code></pre></div>
+<p><strong>Not: Toleration bir podu o node'a zorla yerlestirmez, yalnizca yerlesmesine izin verir. Podu belirli bir node'a cekmek istiyorsaniz <code>nodeSelector</code> veya <code>nodeAffinity</code> kullanmalisiniz. Taint/Toleration "itme", affinity ise "cekme" mekanizmasidir.</strong></p>
+<h2 id="taint-ve-label-farki">Taint ve Label Farki<a class="headerlink" href="#taint-ve-label-farki" title="Permanent link">&para;</a></h2>
+<p>Ikisi de node'a key:value seklinde yazilir ama amaclari zittir:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>Label</th>
+<th>Taint</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Amac</td>
+<td>Secmek / cekmek</td>
+<td>Itmek / uzak tutmak</td>
+</tr>
+<tr>
+<td>Kullanan</td>
+<td><code>nodeSelector</code>, selector</td>
+<td><code>tolerations</code></td>
+</tr>
+<tr>
+<td>Etkisi</td>
+<td>Pasiftir, kendiliginden bir sey yapmaz</td>
+<td>Aktiftir, podu engeller/tahliye eder</td>
+</tr>
+</tbody>
+</table>
+<h2 id="kullanisli-komutlar">Kullanisli Komutlar<a class="headerlink" href="#kullanisli-komutlar" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="c1"># Bir node&#39;a taint ekle</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>kubectl<span class="w"> </span>taint<span class="w"> </span>nodes<span class="w"> </span>node1<span class="w"> </span><span class="nv">key</span><span class="o">=</span>value:NoSchedule
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="c1"># Taint&#39;i kaldir</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>kubectl<span class="w"> </span>taint<span class="w"> </span>nodes<span class="w"> </span>node1<span class="w"> </span><span class="nv">key</span><span class="o">=</span>value:NoSchedule-
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="c1"># Bir node&#39;un taint&#39;lerini gor</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>node<span class="w"> </span>node1<span class="w"> </span><span class="p">|</span><span class="w"> </span>grep<span class="w"> </span>-i<span class="w"> </span>taint
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="c1"># Tum node&#39;larin taint&#39;lerini tek bakista listele</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>kubectl<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>-o<span class="w"> </span>custom-columns<span class="o">=</span>NAME:.metadata.name,TAINTS:.spec.taints
+</span></code></pre></div>
 
 
 
@@ -4743,6 +5098,44 @@
       
         <footer class="md-footer">
   
+    
+      
+      <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
+        
+          
+          <a href="../label/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Label">
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+            </div>
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Önceki
+              </span>
+              <div class="md-ellipsis">
+                Label
+              </div>
+            </div>
+          </a>
+        
+        
+          
+          <a href="../replication-controller/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: ReplicationController">
+            <div class="md-footer__title">
+              <span class="md-footer__direction">
+                Sonraki
+              </span>
+              <div class="md-ellipsis">
+                ReplicationController
+              </div>
+            </div>
+            <div class="md-footer__button md-icon">
+              
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
     
   
   <div class="md-footer-meta md-typeset">

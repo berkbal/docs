@@ -154,6 +154,7 @@ nav:
       - Pod: kubernetes/pod.md
       - Namespace: kubernetes/namespace.md
       - Label: kubernetes/label.md
+      - Taint ve Toleration: kubernetes/taint.md
       - ReplicationController: kubernetes/replication-controller.md
       - ReplicaSet: kubernetes/replicaset.md
       - Deployment: kubernetes/deployment.md
@@ -163,7 +164,7 @@ nav:
       - Gateway API: kubernetes/gateway-api.md
       - Persistent Volume: kubernetes/persistent-volume.md
       - StorageClass: kubernetes/storage-class.md
-  - Sık Tekrarlanan İşlemler:
+    - Sık Tekrarlanan İşlemler:
       - Etcd Yedekleme: kubernetes/etcd-yedekleme.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md

@@ -83,6 +83,39 @@ spec:
 
 - `storageClassName`: Kullanilacak StorageClass'in adi. Bu alan bos birakilirsa default StorageClass devreye girer.
 
+## Pod'a Baglanmasi
+
+PVC tek basina bir depolama talebidir; asil kullanim podun bu PVC'yi bir volume olarak mount etmesiyle gerceklesir. Pod, PVC'nin ismini referans gosterir, arkaplandaki PV ve gercek diskle hic ugrasmaz.
+
+Asagidaki ornekte yukarida tanimladigimiz `app-pvc` isimli PVC, bir nginx podunun icine `/usr/share/nginx/html` dizinine baglaniyor:
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  name: app-pod
+spec:
+  containers:
+  - name: nginx
+    image: nginx:1.22.1
+    volumeMounts:
+    - name: app-storage
+      mountPath: /usr/share/nginx/html
+  volumes:
+  - name: app-storage
+    persistentVolumeClaim:
+      claimName: app-pvc
+```
+
+Yapinin iki parcasi vardir:
+
+- `volumes`: Pod seviyesinde tanimlanir. `persistentVolumeClaim.claimName` ile hangi PVC'nin kullanilacagi belirtilir. Buradaki `name` (`app-storage`) sadece pod icinde gecerli bir takma addir.
+- `volumeMounts`: Container seviyesinde tanimlanir. `name` ile yukaridaki volume'u esler, `mountPath` ile bu depolamanin container icinde hangi dizine baglanacagini belirler.
+
+Akis su sekilde ilerler: pod schedule edilir -> PVC (`app-pvc`) StorageClass uzerinden dinamik olarak bir PV olusturur -> olusan PV pod'un calistigi node'a baglanir -> container `/usr/share/nginx/html` dizininden bu depolamaya erisir. Pod silinip yeniden olussa bile PVC ayakta kaldigi surece veri korunur.
+
+**Not: PVC ile pod'un ayni namespace'de olmasi gerekir. Farkli namespace'deki bir PVC referans gosterilemez.**
+
 ## Default StorageClass
 
 Bir cluster'da bir StorageClass `default` olarak isaretlenebilir. PVC, `storageClassName` belirtmediginde bu default class kullanilir. Default class, asagidaki annotation ile tanimlanir:

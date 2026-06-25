@@ -8,13 +8,13 @@
       
       
       
-        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/node/">
+        <link rel="canonical" href="https://berkbal.github.io/docs/kubernetes/rbac/">
       
       
-        <link rel="prev" href="../kubernetes-objeleri/">
+        <link rel="prev" href="../storage-class/">
       
       
-        <link rel="next" href="../pod/">
+        <link rel="next" href="../etcd-yedekleme/">
       
       
         
@@ -25,7 +25,7 @@
     
     
       
-        <title>Node - Docs for SysAdmins</title>
+        <title>RBAC - Docs for SysAdmins</title>
       
     
     
@@ -76,7 +76,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#node" class="md-skip">
+        <a href="#rbac-nedir" class="md-skip">
           Ana içeriğe geç
         </a>
       
@@ -111,7 +111,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Node
+              RBAC
             
           </span>
         </div>
@@ -2178,37 +2178,10 @@
                 
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    Node
-  
-
-    
-  </span>
-  
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../node/" class="md-nav__link">
         
   
   
@@ -2224,48 +2197,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      İçindekiler
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#kubelet-tarafindan-gerceklesen-islemler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kubelet Tarafindan Gerceklesen Islemler:
-      
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#kube-proxy-tarafindan-gerceklesen-islemler" class="md-nav__link">
-    <span class="md-ellipsis">
-      
-        Kube-Proxy Tarafindan Gerceklesen Islemler:
-      
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -2639,10 +2570,37 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../rbac/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RBAC
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   
@@ -2658,6 +2616,120 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="İçindekiler">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      İçindekiler
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#temel-bilesenler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Temel Bilesenler
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#role" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Role
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verbs-islemler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verbs (Islemler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rolebinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RoleBinding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subjects-ozneler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subjects (Ozneler)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clusterrole-ve-clusterrolebinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClusterRole ve ClusterRoleBinding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serviceaccount-ile-kullanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ServiceAccount ile Kullanim
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kullanisli-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kullanisli Komutlar
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -4823,10 +4895,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#kubelet-tarafindan-gerceklesen-islemler" class="md-nav__link">
+  <a href="#temel-bilesenler" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kubelet Tarafindan Gerceklesen Islemler:
+        Temel Bilesenler
       
     </span>
   </a>
@@ -4834,10 +4906,82 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#kube-proxy-tarafindan-gerceklesen-islemler" class="md-nav__link">
+  <a href="#role" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Kube-Proxy Tarafindan Gerceklesen Islemler:
+        Role
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Role">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#verbs-islemler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Verbs (Islemler)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rolebinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        RoleBinding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#subjects-ozneler" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Subjects (Ozneler)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clusterrole-ve-clusterrolebinding" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClusterRole ve ClusterRoleBinding
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#serviceaccount-ile-kullanim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ServiceAccount ile Kullanim
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#kullanisli-komutlar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Kullanisli Komutlar
       
     </span>
   </a>
@@ -4861,7 +5005,7 @@
 
 
   
-    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/node.md" title="Düzenle" class="md-content__button md-icon" rel="edit">
+    <a href="https://github.dev/berkbal/docs/blob/master/docs_src/kubernetes/rbac.md" title="Düzenle" class="md-content__button md-icon" rel="edit">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -4869,20 +5013,168 @@
   
 
 
-<h1 id="node">Node<a class="headerlink" href="#node" title="Permanent link">&para;</a></h1>
-<p>Nodelar k8s clusterlari icerisinde bulunan fiziksel veya sanal kaynaklardir. Deploy edilen uygulamalar eklenen nodelar uzerinde calisir. Iki farkli node turu vardir: Control-plane ve worker node. Tipik bir k8s clusteri 1 adet control plane ve birden fazla worker node icerir. Yuksek erisilebilirlik icin genelde 3 veya daha fazla control plane node yapilandirilmasi onerilir.</p>
-<p>Her worker node kubelet ve kube-proxy yardimiyla yonetilir ve icerisinde bir adet container runtime barindirir (genelde containerd). Runtime, nodelar uzerindeki container haline getirilmis uygulamalari calistirir. Kubelet container'larin yasam dongusunu yonetirken, kube-proxy ag trafigini yonlendirir.</p>
-<h2 id="kubelet-tarafindan-gerceklesen-islemler">Kubelet Tarafindan Gerceklesen Islemler:<a class="headerlink" href="#kubelet-tarafindan-gerceklesen-islemler" title="Permanent link">&para;</a></h2>
+<h1 id="rbac-nedir">RBAC Nedir?<a class="headerlink" href="#rbac-nedir" title="Permanent link">&para;</a></h1>
+<p>Bir cluster buyudukce, ona kimlerin ne yapabilecegini kontrol etmek kritik hale gelir. Bir gelistiricinin sadece kendi namespace'indeki pod'lari gorebilmesi, bir CI/CD servisinin yalnizca deployment guncelleyebilmesi ama secret'lari okuyamamasi gibi ihtiyaclar dogar. Bu yetkilendirmeyi her kullanici icin tek tek elle yonetmek hem zahmetli hem de hataya acik olur.</p>
+<p>RBAC (Role-Based Access Control), bu sorunu cozerek <strong>yetkileri rollere baglayan</strong> bir yetkilendirme mekanizmasi sunar. Mantik basittir: bir rol "neyin yapilabilecegini" tanimlar, bir baglama (binding) ise bu rolu "kime verecegimizi" belirler.</p>
+<p><strong>RBAC, cluster icinde kimin hangi kaynak uzerinde hangi islemi yapabilecegini tanimlayan yetkilendirme sistemidir.</strong></p>
+<p>RBAC, API Server seviyesinde calisir. Bir istek geldiginde API Server once kullanicinin kim oldugunu dogrular (authentication), ardindan RBAC kurallarina bakarak bu istegin yetkili olup olmadigina karar verir (authorization).</p>
+<h2 id="temel-bilesenler">Temel Bilesenler<a class="headerlink" href="#temel-bilesenler" title="Permanent link">&para;</a></h2>
+<p>RBAC dort temel objeden olusur. Bunlari iki gruba ayirabiliriz:</p>
 <ul>
-<li>Containerlari calistirmak</li>
-<li>Containerlarin ve node'un calisir durumda olup olmadigini kontrol etmek</li>
-<li>API sunucusuna olusan gelismeleri bildirmek</li>
+<li><strong>Role / ClusterRole</strong>: Hangi islemlerin yapilabilecegini tanimlar (yetki kumesi).</li>
+<li><strong>RoleBinding / ClusterRoleBinding</strong>: Bu yetki kumesini bir kullaniciya, gruba veya servis hesabina baglar.</li>
 </ul>
-<h2 id="kube-proxy-tarafindan-gerceklesen-islemler">Kube-Proxy Tarafindan Gerceklesen Islemler:<a class="headerlink" href="#kube-proxy-tarafindan-gerceklesen-islemler" title="Permanent link">&para;</a></h2>
+<p>Aralarindaki fark ise kapsamdir (scope):</p>
 <ul>
-<li>Containerlara giden ag trafigini yonetmek</li>
-<li>Service'lerin ag kurallarini yapilandirmak</li>
+<li><strong>Role</strong> ve <strong>RoleBinding</strong> namespace seviyesinde calisir. Yalnizca tanimlandiklari namespace icinde gecerlidir.</li>
+<li><strong>ClusterRole</strong> ve <strong>ClusterRoleBinding</strong> ise cluster geneline yayilir. Tum namespace'leri ve namespace'e bagli olmayan kaynaklari (node, persistentvolume gibi) kapsar.</li>
 </ul>
+<h2 id="role">Role<a class="headerlink" href="#role" title="Permanent link">&para;</a></h2>
+<p>Role, belirli bir namespace icinde hangi kaynaklara hangi islemlerin yapilabilecegini tanimlayan objedir. Tek basina bir ise yaramaz; bir RoleBinding ile bir kullaniciya baglanana kadar hicbir etkisi yoktur.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+</span><span id="__span-0-5"><a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pod-okuyucu</span>
+</span><span id="__span-0-6"><a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="nt">rules</span><span class="p">:</span>
+</span><span id="__span-0-7"><a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-8"><a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a><span class="w">  </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;pods&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-0-9"><a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a><span class="w">  </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+<ul>
+<li><code>namespace</code>: Rolun gecerli olacagi namespace. Role objesi namespace'e bagimlidir.</li>
+<li><code>rules</code>: Yetki kurallarinin listesi. Bir rolde birden fazla kural tanimlanabilir.</li>
+<li><code>apiGroups</code>: Kaynagin ait oldugu API grubu. Core grup (pod, service, configmap vb.) icin bos string <code>""</code> kullanilir. Deployment gibi kaynaklar icin <code>"apps"</code> yazilir.</li>
+<li><code>resources</code>: Kuralin uygulanacagi kaynak turleri (<code>pods</code>, <code>deployments</code>, <code>secrets</code> vb.).</li>
+<li><code>verbs</code>: Bu kaynaklar uzerinde izin verilen islemler (<code>get</code>, <code>list</code>, <code>create</code> vb.).</li>
+</ul>
+<p>Yukaridaki ornek, <code>dev</code> namespace'inde pod'lari okumaya (gor, izle, listele) izin verir ama silme veya olusturma yetkisi vermez.</p>
+<h3 id="verbs-islemler">Verbs (Islemler)<a class="headerlink" href="#verbs-islemler" title="Permanent link">&para;</a></h3>
+<p><code>verbs</code> alani, kaynak uzerinde hangi islemlere izin verildigini belirler. En cok kullanilanlar:</p>
+<ul>
+<li><strong>get</strong>: Tek bir kaynagi getirir.</li>
+<li><strong>list</strong>: Kaynaklari listeler.</li>
+<li><strong>watch</strong>: Kaynaklardaki degisiklikleri izler.</li>
+<li><strong>create</strong>: Yeni kaynak olusturur.</li>
+<li><strong>update</strong>: Var olan kaynagi gunceller.</li>
+<li><strong>patch</strong>: Kaynagin bir kismini gunceller.</li>
+<li><strong>delete</strong>: Kaynagi siler.</li>
+</ul>
+<p>Bir kaynak uzerindeki tum islemlere izin vermek icin tek tek yazmak yerine <code>["*"]</code> kullanilabilir.</p>
+<h2 id="rolebinding">RoleBinding<a class="headerlink" href="#rolebinding" title="Permanent link">&para;</a></h2>
+<p>RoleBinding, bir Role'u (veya ClusterRole'u) bir oznelere (subject) baglar. Yani "su yetkiyi su kisiye ver" demektir. Baglama yapilmadan rolun hicbir etkisi olmaz.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pod-okuyucu-binding</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="nt">subjects</span><span class="p">:</span>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">berk</span>
+</span><span id="__span-1-9"><a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</span><span id="__span-1-10"><a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="nt">roleRef</span><span class="p">:</span>
+</span><span id="__span-1-11"><a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
+</span><span id="__span-1-12"><a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pod-okuyucu</span>
+</span><span id="__span-1-13"><a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</span></code></pre></div>
+<ul>
+<li><code>subjects</code>: Yetkinin verilecegi oznelerin listesi. Bir kullanici (<code>User</code>), bir grup (<code>Group</code>) veya bir servis hesabi (<code>ServiceAccount</code>) olabilir.</li>
+<li><code>roleRef</code>: Hangi rolun baglanacagini belirtir. <code>kind</code> alani <code>Role</code> veya <code>ClusterRole</code> olabilir.</li>
+</ul>
+<p>Bu ornek, <code>pod-okuyucu</code> rolunu <code>berk</code> kullanicisina <code>dev</code> namespace'i icinde baglar. Artik <code>berk</code> kullanicisi sadece <code>dev</code> namespace'indeki pod'lari okuyabilir.</p>
+<p><strong><em>Not: roleRef bir kez olusturulduktan sonra degistirilemez. Farkli bir rol baglamak isteniyorsa RoleBinding silinip yeniden olusturulmalidir.</em></strong></p>
+<h2 id="subjects-ozneler">Subjects (Ozneler)<a class="headerlink" href="#subjects-ozneler" title="Permanent link">&para;</a></h2>
+<p>RBAC'da yetki verilen uc tur ozne vardir:</p>
+<ul>
+<li><strong>User</strong>: Insan kullanicilarini temsil eder. Kubernetes kullanicilari kendi icinde tutmaz; bunlar genellikle sertifikalar, OIDC veya harici bir kimlik saglayici uzerinden gelir.</li>
+<li><strong>Group</strong>: Birden fazla kullaniciyi tek seferde yetkilendirmek icin kullanilan gruptur.</li>
+<li><strong>ServiceAccount</strong>: Cluster icindeki uygulamalarin/pod'larin API Server ile konusurken kullandigi hesaptir. Insan degil, makine kimligidir.</li>
+</ul>
+<h2 id="clusterrole-ve-clusterrolebinding">ClusterRole ve ClusterRoleBinding<a class="headerlink" href="#clusterrole-ve-clusterrolebinding" title="Permanent link">&para;</a></h2>
+<p>Role namespace ile sinirlidir. Ancak bazi kaynaklar namespace'e bagli degildir (node, persistentvolume, namespace'in kendisi gibi) veya bir yetkinin tum namespace'lerde gecerli olmasi istenebilir. Bu durumlarda ClusterRole kullanilir.</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node-okuyucu</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="nt">rules</span><span class="p">:</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">apiGroups</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="nt">resources</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;nodes&quot;</span><span class="p p-Indicator">]</span>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">  </span><span class="nt">verbs</span><span class="p">:</span><span class="w"> </span><span class="p p-Indicator">[</span><span class="s">&quot;get&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;watch&quot;</span><span class="p p-Indicator">,</span><span class="w"> </span><span class="s">&quot;list&quot;</span><span class="p p-Indicator">]</span>
+</span></code></pre></div>
+<p>ClusterRole'un namespace alani yoktur; cunku cluster geneline aittir. Bu rolu bir ozneye baglamak icin ClusterRoleBinding kullanilir:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRoleBinding</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node-okuyucu-binding</span>
+</span><span id="__span-3-5"><a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="nt">subjects</span><span class="p">:</span>
+</span><span id="__span-3-6"><a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">User</span>
+</span><span id="__span-3-7"><a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">berk</span>
+</span><span id="__span-3-8"><a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</span><span id="__span-3-9"><a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="nt">roleRef</span><span class="p">:</span>
+</span><span id="__span-3-10"><a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ClusterRole</span>
+</span><span id="__span-3-11"><a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">node-okuyucu</span>
+</span><span id="__span-3-12"><a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</span></code></pre></div>
+<p>Bu baglama ile <code>berk</code> kullanicisi cluster'daki tum node'lari okuyabilir.</p>
+<p><strong><em>Not: Bir ClusterRole, bir RoleBinding ile de baglanabilir. Bu sik kullanilan bir desendir: ortak bir yetki kumesi (ClusterRole olarak) bir kez tanimlanir, ardindan her namespace'te ayri RoleBinding'ler ile o namespace'e ozel olarak verilir. Boylece ayni rolu her namespace icin tekrar tekrar yazmaya gerek kalmaz.</em></strong></p>
+<h2 id="serviceaccount-ile-kullanim">ServiceAccount ile Kullanim<a class="headerlink" href="#serviceaccount-ile-kullanim" title="Permanent link">&para;</a></h2>
+<p>Cluster icinde calisan bir uygulamanin API Server ile konusmasi gerektiginde (ornegin pod'lari listeleyen bir operator), bu uygulamaya bir ServiceAccount uzerinden yetki verilir. Her namespace'te varsayilan olarak <code>default</code> adinda bir ServiceAccount bulunur, ancak guvenlik acisindan her uygulama icin ayri ve sinirli yetkili bir ServiceAccount olusturmak daha dogrudur.</p>
+<p>Once bir ServiceAccount olusturulur:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama-sa</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+</span></code></pre></div>
+<p>Ardindan bu ServiceAccount bir RoleBinding ile bir role baglanir:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io/v1</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">RoleBinding</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama-sa-binding</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="nt">subjects</span><span class="p">:</span>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">ServiceAccount</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama-sa</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="nt">roleRef</span><span class="p">:</span>
+</span><span id="__span-5-11"><a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">  </span><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Role</span>
+</span><span id="__span-5-12"><a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">pod-okuyucu</span>
+</span><span id="__span-5-13"><a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="nt">apiGroup</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">rbac.authorization.k8s.io</span>
+</span></code></pre></div>
+<p>Son olarak pod tanimi icinde bu ServiceAccount <code>serviceAccountName</code> alani ile belirtilir:</p>
+<div class="language-yaml highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">apiVersion</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">v1</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="nt">kind</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">Pod</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="nt">metadata</span><span class="p">:</span>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">  </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama-pod</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="nt">namespace</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">dev</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="nt">spec</span><span class="p">:</span>
+</span><span id="__span-6-7"><a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="nt">serviceAccountName</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama-sa</span>
+</span><span id="__span-6-8"><a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">  </span><span class="nt">containers</span><span class="p">:</span>
+</span><span id="__span-6-9"><a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">  </span><span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">uygulama</span>
+</span><span id="__span-6-10"><a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="nt">image</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">nginx:1.22.1</span>
+</span></code></pre></div>
+<p>Boylece pod icinde calisan uygulama, yalnizca <code>pod-okuyucu</code> rolunun verdigi yetkilerle (yani <code>dev</code> namespace'indeki pod'lari okumakla) sinirli kalir.</p>
+<p><strong>Not: En az yetki prensibi (least privilege) RBAC'da temel kuraldir. Bir ozneye, isini yapmasi icin gereken minimum yetkiden fazlasini vermemek gerekir. Ozellikle ServiceAccount'lara genis yetki vermek, ele gecirilen bir pod'un tum cluster'i tehlikeye atmasina yol acabilir.</strong></p>
+<h2 id="kullanisli-komutlar">Kullanisli Komutlar<a class="headerlink" href="#kullanisli-komutlar" title="Permanent link">&para;</a></h2>
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="c1"># Role ve binding&#39;leri listele</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>kubectl<span class="w"> </span>get<span class="w"> </span>roles<span class="w"> </span>-n<span class="w"> </span>dev
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>kubectl<span class="w"> </span>get<span class="w"> </span>rolebindings<span class="w"> </span>-n<span class="w"> </span>dev
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>kubectl<span class="w"> </span>get<span class="w"> </span>clusterroles
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>kubectl<span class="w"> </span>get<span class="w"> </span>clusterrolebindings
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="c1"># Detayli inceleme</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>kubectl<span class="w"> </span>describe<span class="w"> </span>role<span class="w"> </span>pod-okuyucu<span class="w"> </span>-n<span class="w"> </span>dev
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="c1"># Bir kullanicinin/servis hesabinin bir islemi yapip yapamayacagini test et</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>kubectl<span class="w"> </span>auth<span class="w"> </span>can-i<span class="w"> </span>list<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>dev
+</span><span id="__span-7-12"><a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>kubectl<span class="w"> </span>auth<span class="w"> </span>can-i<span class="w"> </span>delete<span class="w"> </span>pods<span class="w"> </span>-n<span class="w"> </span>dev<span class="w"> </span>--as<span class="o">=</span>berk
+</span><span id="__span-7-13"><a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>kubectl<span class="w"> </span>auth<span class="w"> </span>can-i<span class="w"> </span>get<span class="w"> </span>nodes<span class="w"> </span>--as<span class="o">=</span>system:serviceaccount:dev:uygulama-sa
+</span><span id="__span-7-14"><a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>
+</span><span id="__span-7-15"><a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="c1"># Hizlica role ve binding olusturmak</span>
+</span><span id="__span-7-16"><a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>kubectl<span class="w"> </span>create<span class="w"> </span>role<span class="w"> </span>pod-okuyucu<span class="w"> </span>--verb<span class="o">=</span>get,list,watch<span class="w"> </span>--resource<span class="o">=</span>pods<span class="w"> </span>-n<span class="w"> </span>dev
+</span><span id="__span-7-17"><a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a>kubectl<span class="w"> </span>create<span class="w"> </span>rolebinding<span class="w"> </span>pod-okuyucu-binding<span class="w"> </span>--role<span class="o">=</span>pod-okuyucu<span class="w"> </span>--user<span class="o">=</span>berk<span class="w"> </span>-n<span class="w"> </span>dev
+</span></code></pre></div>
+<p><strong><em>Not: <code>kubectl auth can-i</code> komutu, RBAC kurallarini fiilen denemeden test etmenin en pratik yoludur. <code>--as</code> parametresi ile baska bir kullanici veya servis hesabi gibi davranarak (impersonation) onlarin yetkilerini kontrol edebilirsiniz.</em></strong></p>
 
 
 
@@ -4920,7 +5212,7 @@
       <nav class="md-footer__inner md-grid" aria-label="Altbilgi" >
         
           
-          <a href="../kubernetes-objeleri/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: Kubernetes Objeleri">
+          <a href="../storage-class/" class="md-footer__link md-footer__link--prev" aria-label="Önceki: StorageClass">
             <div class="md-footer__button md-icon">
               
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
@@ -4930,20 +5222,20 @@
                 Önceki
               </span>
               <div class="md-ellipsis">
-                Kubernetes Objeleri
+                StorageClass
               </div>
             </div>
           </a>
         
         
           
-          <a href="../pod/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Pod">
+          <a href="../etcd-yedekleme/" class="md-footer__link md-footer__link--next" aria-label="Sonraki: Etcd Yedekleme">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Sonraki
               </span>
               <div class="md-ellipsis">
-                Pod
+                Etcd Yedekleme
               </div>
             </div>
             <div class="md-footer__button md-icon">

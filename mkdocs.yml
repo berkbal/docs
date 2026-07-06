@@ -155,6 +155,7 @@ nav:
       - Namespace: kubernetes/namespace.md
       - Label: kubernetes/label.md
       - Taint ve Toleration: kubernetes/taint.md
+      - Node Affinity ve nodeSelector: kubernetes/node-affinity.md
       - ReplicationController: kubernetes/replication-controller.md
       - ReplicaSet: kubernetes/replicaset.md
       - Deployment: kubernetes/deployment.md
@@ -165,8 +166,13 @@ nav:
       - Persistent Volume: kubernetes/persistent-volume.md
       - StorageClass: kubernetes/storage-class.md
       - RBAC: kubernetes/rbac.md
+      - NetworkPolicy: kubernetes/network-policy.md
+    - Uygulama Paketleme:
+      - Helm: kubernetes/helm.md
+      - Kustomize: kubernetes/kustomize.md
     - Sık Tekrarlanan İşlemler:
       - Etcd Yedekleme: kubernetes/etcd-yedekleme.md
+      - API Server'a curl ile Erisim: kubernetes/api-server-curl.md
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md

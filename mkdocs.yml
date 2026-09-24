@@ -170,6 +170,8 @@ nav:
     - Uygulama Paketleme:
       - Helm: kubernetes/helm.md
       - Kustomize: kubernetes/kustomize.md
+    - Rancher:
+      - Rancher Nedir?: kubernetes/rancher.md
     - Sık Tekrarlanan İşlemler:
       - Etcd Yedekleme: kubernetes/etcd-yedekleme.md
       - API Server'a curl ile Erisim: kubernetes/api-server-curl.md

@@ -175,6 +175,9 @@ nav:
     - Sık Tekrarlanan İşlemler:
       - Etcd Yedekleme: kubernetes/etcd-yedekleme.md
       - API Server'a curl ile Erisim: kubernetes/api-server-curl.md
+  - OpenShift:
+    - openshift/openshift.md
+    
   - Ansible: 
       - Ansible Kurulumu: ansible/ansible.md
       - Ansible Modülleri: ansible/ansible-modulleri.md
